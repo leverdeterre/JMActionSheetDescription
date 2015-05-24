@@ -20,6 +20,9 @@ it, simply add the following line to your Podfile:
 pod "JMActionSheetDescription"
 ```
 
+![Image](./screenshots/demo.gif)
+
+
 ```objective-c
 //init your description
 JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
