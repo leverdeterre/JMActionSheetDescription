@@ -188,6 +188,7 @@
 		C0D1AA6DF8231094E4FF50A5 /* KWEqualMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E39F584BB3D1E9DA0C06A5 /* KWEqualMatcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C0F217FA850188DCECE83A4F /* KWContainStringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 56365B605C8896011B518D34 /* KWContainStringMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C29EF235F45CBB5DA916022F /* NSObject+KiwiVerifierAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EC88410ADFD54DC0C4391F44 /* NSObject+KiwiVerifierAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C2CA9A091B1264B600CAEA92 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C2CA9A081B1264B600CAEA92 /* README.md */; };
 		C2F9C1CD112287C700ADE37F /* KWBeSubclassOfClassMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 77147A6147330AB4BE5A211E /* KWBeSubclassOfClassMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C60A063A72C56F2B2852FDAA /* KWCaptureSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7BFF776A22625792D77DA /* KWCaptureSpy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C70BE005AF37BF2F6C3AA8D0 /* KWBeforeEachNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8BC5EFE16A3D73D2E21780 /* KWBeforeEachNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -499,6 +500,7 @@
 		C0C89F94AD7A268D9F3EB9DD /* KWStringUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWStringUtilities.m; path = Classes/Core/KWStringUtilities.m; sourceTree = "<group>"; };
 		C0D5D9D928EAB1427CA7EA10 /* KWAsyncVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWAsyncVerifier.h; path = Classes/Verifiers/KWAsyncVerifier.h; sourceTree = "<group>"; };
 		C219EB98895EDBC962683A82 /* Pods-JMActionSheetDescription_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C2CA9A081B1264B600CAEA92 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		C4652DD40E227BB8A64C4628 /* KWBeforeAllNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWBeforeAllNode.m; path = Classes/Nodes/KWBeforeAllNode.m; sourceTree = "<group>"; };
 		C4D556C16AFE2F0635FE02F2 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C4E7BFF776A22625792D77DA /* KWCaptureSpy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWCaptureSpy.m; path = Classes/Core/KWCaptureSpy.m; sourceTree = "<group>"; };
@@ -963,6 +965,7 @@
 			isa = PBXGroup;
 			children = (
 				586EB3562A5C1AEF1F76C641 /* Podfile */,
+				C2CA9A081B1264B600CAEA92 /* README.md */,
 				779AAEB75B7F2F386BBBD234 /* Development Pods */,
 				8B7AC5EF64483819A8E042D0 /* Frameworks */,
 				44AEAAB1CB9F8A90308A073C /* Pods */,
@@ -1519,6 +1522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CA9A091B1264B600CAEA92 /* README.md in Sources */,
 				5EAEC052FC89B0D253BDECE7 /* Pods-JMActionSheetDescription_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

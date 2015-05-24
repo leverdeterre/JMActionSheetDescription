@@ -61,7 +61,7 @@ desc.items = @[itemShare,otherItem];
 
 ## Author
 
-Jerome Morissard, jerome.morissard@backelite.com
+Jérôme Morissard, morissardj@gmail.com
 
 ## License
 
