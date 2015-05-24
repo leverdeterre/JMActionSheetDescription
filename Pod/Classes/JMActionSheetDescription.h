@@ -10,13 +10,11 @@
 #import <UIKit/UIKit.h>
 
 @class JMActionSheetItem;
-@class JMActionContextItem;
 @interface JMActionSheetDescription : NSObject
 
 @property (copy, nonatomic) NSString *title;
 
 @property (strong, nonatomic) JMActionSheetItem *cancelItem;
-@property (strong, nonatomic) JMActionContextItem *contextItem;
 
 @property (strong, nonatomic) NSArray *items;   //Array of JMActionSheetItem
 

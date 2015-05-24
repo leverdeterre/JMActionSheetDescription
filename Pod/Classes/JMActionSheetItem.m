@@ -7,7 +7,6 @@
 //
 
 #import "JMActionSheetItem.h"
-#import "JMActionSheetItem.h"
 
 @implementation JMActionSheetItem
 

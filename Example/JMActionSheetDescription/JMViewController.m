@@ -8,6 +8,7 @@
 
 #import "JMViewController.h"
 #import "JMActionSheet.h"
+#import "JMActionSheet.h"
 
 @interface JMViewController ()
 @end
@@ -27,31 +28,33 @@
     cancelItem.title = @"Cancel";
     desc.cancelItem = cancelItem;
     
-    if (tag == 2) {
-        JMActionContextItem *contextItem = [[JMActionContextItem alloc] init];
-        contextItem.image = [UIImage imageNamed:@"gif_experiments"];
-        contextItem.imageHeight = 200.0f;
-        desc.contextItem = contextItem;
+    if (tag >= 1) {
         desc.title = @"Available actions for component";
     }
     
-    if (tag == 1) {
-        desc.title = @"Available actions for component";
-    }
-    
+    NSMutableArray *items = [[NSMutableArray alloc] init];
     JMActionSheetItem *itemShare = [[JMActionSheetItem alloc] init];
     itemShare.title = @"last action";
     itemShare.action = ^(void){
         NSLog(@"last action pressed");
     };
-    
+    [items addObject:itemShare];
+
     JMActionSheetItem *otherItem = [[JMActionSheetItem alloc] init];
     otherItem.title = @"otherItem";
     otherItem.action = ^(void){
         NSLog(@"otherItem pressed");
     };
+    [items addObject:otherItem];
     
-    desc.items = @[itemShare,otherItem];
+    if (tag == 2) {
+        JMActionSheetImageItem *imageItem = [[JMActionSheetImageItem alloc] init];
+        imageItem.image = [UIImage imageNamed:@"gif_experiments"];
+        imageItem.imageHeight = 200.0f;
+        [items addObject:imageItem];
+    }
+
+    desc.items = items;
     [JMActionSheet showActionSheetDescription:desc inViewController:self];
 }
 

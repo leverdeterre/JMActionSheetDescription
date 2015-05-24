@@ -15,6 +15,6 @@ typedef void (^JMActionSheetItemAction)(void);
 
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) JMActionSheetItemAction action;
-@property (strong, nonatomic) UIImage *picto;
+@property (strong, nonatomic) UIImage *icon;
 
 @end

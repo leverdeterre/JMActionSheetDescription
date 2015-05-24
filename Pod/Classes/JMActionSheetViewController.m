@@ -81,10 +81,6 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
     yOffset = yOffset - JMActionSheetPadding;
     
     NSMutableArray *items = [NSMutableArray arrayWithArray:actionSheetDescription.items];
-    if (actionSheetDescription.contextItem.image) {
-        [items addObject:actionSheetDescription.contextItem.image];
-    }
-    
     if (actionSheetDescription.title) {
         [items addObject:actionSheetDescription.title];
     }
@@ -128,15 +124,16 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
             [self.view addSubview:label];
             yOffset = CGRectGetMinY(label.frame) - JMActionSheetInterlineSpacing;
             
-        }  else if ([item isKindOfClass:[UIImage class]]) {
+        }  else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {
+            JMActionSheetImageItem *imageItem = (JMActionSheetImageItem *)item;
             CGFloat imageHeight = JMActionSheetImageViewHeight;
-            if (actionSheetDescription.contextItem.imageHeight > 0.0f) {
-                imageHeight = actionSheetDescription.contextItem.imageHeight;
+            if (imageItem.imageHeight > 0.0f) {
+                imageHeight = imageItem.imageHeight;
             }
             
             CGFloat y = yOffset - imageHeight;
             CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-            UIImageView *imageView = [self imageViewWithImage:actionSheetDescription.contextItem.image];
+            UIImageView *imageView = [self imageViewWithImage:imageItem.image];
             CGRect frame = CGRectMake(JMActionSheetPadding, y, width, imageHeight);
             imageView.frame = frame;
             [imageView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
@@ -198,8 +195,8 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
     [otherButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [otherButton setBackgroundImage:backgroundImageSelected forState:UIControlStateHighlighted];
     [otherButton setBackgroundImage:backgroundImageNormal forState:UIControlStateNormal];
-    if (item.picto) {
-        [otherButton setImage:item.picto forState:UIControlStateNormal];
+    if (item.icon) {
+        [otherButton setImage:item.icon forState:UIControlStateNormal];
     }
     
     return otherButton;

@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #import "JMActionSheetItem.h"
-#import "JMActionContextItem.h"
+#import "JMActionSheetImageItem.h"
 #import "JMActionSheetDescription.h"
 
 @interface JMActionSheet : NSObject
