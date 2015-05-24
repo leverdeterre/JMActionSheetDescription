@@ -14,12 +14,10 @@ static const CGFloat JMActionSheetItemControlSize = 30.0f;
 
 @implementation JMActionSheetItemControl
 
-/*
 - (CGRect)titleRectForContentRect:(CGRect)contentRect
 {
-    return CGRectMake(30.0f,0.0f , CGRectGetWidth(contentRect), CGRectGetHeight(contentRect));
+    return CGRectMake(0.0f,0.0f , CGRectGetWidth(contentRect), CGRectGetHeight(contentRect));
 }
-*/
 
 - (CGRect)imageRectForContentRect:(CGRect)contentRect
 {

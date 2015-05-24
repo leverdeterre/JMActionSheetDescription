@@ -1,8 +1,8 @@
 #import <UIKit/UIKit.h>
 
-#import "JMActionContextItem.h"
 #import "JMActionSheet.h"
 #import "JMActionSheetDescription.h"
+#import "JMActionSheetImageItem.h"
 #import "JMActionSheetItem.h"
 #import "JMActionSheetItemControl.h"
 #import "JMActionSheetViewController.h"

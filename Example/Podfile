@@ -3,11 +3,5 @@ use_frameworks!
 
 target 'JMActionSheetDescription_Example', :exclusive => true do
   pod "JMActionSheetDescription", :path => "../"
-end
-
-target 'Tests', :exclusive => true do
-  pod "JMActionSheetDescription", :path => "../"
-
-  pod 'Kiwi'
-  pod 'FBSnapshotTestCase'
+  pod 'ionicons'
 end

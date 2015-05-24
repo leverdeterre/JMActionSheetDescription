@@ -14,32 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-JMActionSheetDescription_Example-ionicons.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JMActionSheetDescription_Example.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Tests-FBSnapshotTestCase.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Tests-JMActionSheetDescription-JMActionSheetDescription.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Tests-JMActionSheetDescription.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Tests-Kiwi.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1695BDFDAC7BE478A7BEE27A</key>
+		<key>56B450F947BD3922AB3BFF4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1D446454CE876B75D02AADE1</key>
+		<key>69BBF860CF4EA2BE28101E11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>311193C46091131F76E31193</key>
+		<key>DAA2668090C90BF3A2CE2B1D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93E095AC0F579292DC354A39</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>96B704C8D8320F1FC71950F3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9C6109AE0DDA91F43CD9056B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8CC73D9B49BDAF798EBCE79</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FB275414CF99088B62AC16AE</key>
+		<key>E2F5329570FDF742BFE0A8E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

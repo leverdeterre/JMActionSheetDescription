@@ -49,7 +49,9 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'JMActionSheetDescription.framework'
+  install_framework 'ionicons.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'JMActionSheetDescription.framework'
+  install_framework 'ionicons.framework'
 fi

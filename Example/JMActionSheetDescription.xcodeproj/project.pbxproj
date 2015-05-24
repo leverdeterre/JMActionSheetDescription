@@ -23,6 +23,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		C2CA9A191B128AE800CAEA92 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CA9A181B128AE800CAEA92 /* ionicons.ttf */; };
 		F010553D5083B579B13C838E /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A747F8FA7F9D4854358C000B /* Pods_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B07E1318FA8FA59F343F0E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A747F8FA7F9D4854358C000B /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CA9A181B128AE800CAEA92 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		C94A66FDF3C41B789ECDF8D9 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3734AA4CB0BB4D800A084E8 /* Pods-JMActionSheetDescription_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMActionSheetDescription_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JMActionSheetDescription_Example/Pods-JMActionSheetDescription_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E629FBB1D48E386083D0EE50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C2CA9A181B128AE800CAEA92 /* ionicons.ttf */,
 				6003F595195388D20070C39A /* JMActionSheetDescription-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
+				C2CA9A191B128AE800CAEA92 /* ionicons.ttf in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,

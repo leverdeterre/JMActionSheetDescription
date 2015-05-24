@@ -1,6 +1,0 @@
-framework module JMActionSheetDescription {
-  umbrella header "Pods-Tests-JMActionSheetDescription-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -41,7 +41,12 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
 
 @interface JMActionSheetViewController ()
 @property (weak, nonatomic) id <JMActionSheetViewControllerDelegate> delegate;
-@property (strong, nonatomic) NSArray *actions;
+@property (strong, nonatomic) NSMutableArray *actions;
+
+//Appearance
+@property (strong, nonatomic) UIColor *actionSheetTintColor;
+@property (strong, nonatomic) UIFont *actionSheetCancelButtonFont;
+@property (strong, nonatomic) UIFont *actionSheetOtherButtonFont;
 @end
 
 @implementation JMActionSheetViewController
@@ -50,34 +55,24 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
                              andDelegate:(id <JMActionSheetViewControllerDelegate>)delegate
 {
     self.delegate = delegate;
+    self.actions = [[NSMutableArray alloc] init];
     self.view.backgroundColor = [UIColor clearColor];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dimmingViewPressed:)];
     [self.view addGestureRecognizer:tapGesture];
     
-    //Load subViews
-    NSMutableArray *actions = [[NSMutableArray alloc] init];
+    self.actionSheetTintColor = actionSheetDescription.actionSheetTintColor;
+    self.actionSheetCancelButtonFont = actionSheetDescription.actionSheetCancelButtonFont;
+    self.actionSheetOtherButtonFont = actionSheetDescription.actionSheetOtherButtonFont;
 
+    //Load buttons
     //Cancel button
     NSInteger tag = 0;
-    JMActionSheetItemControl *cancelButton = [self buttonWithActionSheetItem:actionSheetDescription.cancelItem withDescription:(JMActionSheetDescription *)actionSheetDescription];
-    if (actionSheetDescription.actionSheetCancelButtonFont) {
-        cancelButton.titleLabel.font = actionSheetDescription.actionSheetCancelButtonFont;
-    }
-
     CGFloat yOffset = CGRectGetMaxY(self.view.bounds) - JMActionSheetButtonHeight - JMActionSheetPadding;
     CGFloat width = CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding;
-    cancelButton.frame = CGRectMake(JMActionSheetPadding, yOffset, width, JMActionSheetButtonHeight);
-    [cancelButton applyRoundedCorners:UIRectCornerAllCorners withRadius:JMActionSheetRoundedCornerRadius];
-    JMActionSheetItemAction action = ^(void){
-        if (actionSheetDescription.cancelItem.action) {
-            actionSheetDescription.cancelItem.action();
-        }
-    };
-    [self.view addSubview:cancelButton];
-    [actions addObject:action];
+    CGRect frame = CGRectMake(JMActionSheetPadding, yOffset, width, JMActionSheetButtonHeight);
+    yOffset = [self offsetAfterAddingItem:actionSheetDescription.cancelItem forTag:tag frame:frame corners:UIRectCornerAllCorners];
     
     //Other buttons
-    yOffset = CGRectGetMinY(cancelButton.frame);
     yOffset = yOffset - JMActionSheetPadding;
     
     NSMutableArray *items = [NSMutableArray arrayWithArray:actionSheetDescription.items];
@@ -97,52 +92,29 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
 
         if ([item isKindOfClass:[JMActionSheetItem class]]) {
             JMActionSheetItem *asItem = item;
-            UIButton *otherButton = [self buttonWithActionSheetItem:item withDescription:actionSheetDescription];
-            if (actionSheetDescription.actionSheetOtherButtonFont) {
-                otherButton.titleLabel.font = actionSheetDescription.actionSheetOtherButtonFont;
-            }
             CGFloat y = yOffset - JMActionSheetButtonHeight;
-            CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-            otherButton.frame = CGRectMake(JMActionSheetPadding, y, width, JMActionSheetButtonHeight);
-            [otherButton applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-            [otherButton setTag:tag];
-            [self.view addSubview:otherButton];
-            
-            JMActionSheetItemAction action = ^(void){
-                if (asItem.action) {
-                    asItem.action();
-                }
-            };
-            [actions addObject:action];
-            yOffset = CGRectGetMinY(otherButton.frame) - JMActionSheetInterlineSpacing;
-            
+            frame = CGRectMake(JMActionSheetPadding, y, width, JMActionSheetButtonHeight);
+            yOffset = [self offsetAfterAddingItem:asItem forTag:tag frame:frame corners:corners];
+            yOffset = yOffset - JMActionSheetInterlineSpacing;
+
         } else if ([item isKindOfClass:[NSString class]]) {
-            UILabel *label = [self labelWithText:item withDescription:actionSheetDescription];
             CGFloat y = yOffset - JMActionSheetButtonHeight;
-            label.frame = CGRectMake(JMActionSheetPadding, y, width, JMActionSheetButtonHeight);
-            [label applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-            [self.view addSubview:label];
-            yOffset = CGRectGetMinY(label.frame) - JMActionSheetInterlineSpacing;
-            
+            frame = CGRectMake(JMActionSheetPadding, y, width, JMActionSheetButtonHeight);
+            yOffset = [self offsetAfterAddingItem:item forTag:tag frame:frame corners:corners];
+            yOffset = yOffset - JMActionSheetInterlineSpacing;
+
         }  else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {
             JMActionSheetImageItem *imageItem = (JMActionSheetImageItem *)item;
             CGFloat imageHeight = JMActionSheetImageViewHeight;
-            if (imageItem.imageHeight > 0.0f) {
-                imageHeight = imageItem.imageHeight;
-            }
+            if (imageItem.imageHeight > 0.0f) { imageHeight = imageItem.imageHeight; }
             
             CGFloat y = yOffset - imageHeight;
             CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-            UIImageView *imageView = [self imageViewWithImage:imageItem.image];
             CGRect frame = CGRectMake(JMActionSheetPadding, y, width, imageHeight);
-            imageView.frame = frame;
-            [imageView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-            [self.view addSubview:imageView];
-            yOffset = CGRectGetMinY(imageView.frame) - JMActionSheetInterlineSpacing;
+            yOffset = [self offsetAfterAddingItem:item forTag:tag frame:frame corners:corners];
+            yOffset = yOffset - JMActionSheetInterlineSpacing;
         }
     }
-    
-    self.actions = actions;
 }
 
 #pragma mark - Actions
@@ -178,15 +150,54 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
 
 #pragma mark - SubViews generators
 
-- (JMActionSheetItemControl *)buttonWithActionSheetItem:(JMActionSheetItem *)item withDescription:(JMActionSheetDescription *)actionSheetDescription
+- (CGFloat)offsetAfterAddingItem:(JMActionSheetItem *)item forTag:(NSInteger)tag frame:(CGRect)frame corners:(UIRectCorner)corners
+{
+    if ([item isKindOfClass:[JMActionSheetItem class]]) {
+        JMActionSheetItemControl *button = [self buttonWithActionSheetItem:item];
+        button.titleLabel.textAlignment = NSTextAlignmentCenter;
+        button.frame = frame;
+        button.tag = tag;
+        [button applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+        JMActionSheetItemAction action = ^(void){
+            if (item.action) {
+                item.action();
+            }
+        };
+        [self.view addSubview:button];
+        [self.actions addObject:action];
+        return CGRectGetMinY(button.frame);
+        
+    } else if ([item isKindOfClass:[NSString class]]) {
+        UILabel *label = [self labelWithText:(NSString *)item];
+        label.frame = frame;
+        [label applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+        [self.view addSubview:label];
+        [self.actions addObject:[NSNull null]];
+        return CGRectGetMinY(label.frame);
+
+    } else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {
+        JMActionSheetImageItem *imageitem = (JMActionSheetImageItem *)item;
+        UIImageView *imageView = [self imageViewWithImage:imageitem.image];
+        imageView.frame = frame;
+        [imageView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+        [self.view addSubview:imageView];
+        [self.actions addObject:[NSNull null]];
+        return CGRectGetMinY(imageView.frame);
+    }
+    
+    return 0.0f;
+}
+
+
+- (JMActionSheetItemControl *)buttonWithActionSheetItem:(JMActionSheetItem *)item
 {
     UIImage *backgroundImageSelected = [self oneByOneImageWithColor:[UIColor colorWithRed:216.0f/254.0f green:216.0f/254.0f blue:216.0f/254.0f alpha:1.0f]];
     UIImage *backgroundImageNormal = [self oneByOneImageWithColor:[UIColor whiteColor]];
 
-    JMActionSheetItemControl *otherButton = [JMActionSheetItemControl buttonWithType:UIButtonTypeCustom];
+    JMActionSheetItemControl *otherButton = [[JMActionSheetItemControl alloc] init];
     [otherButton setTitle:item.title forState:UIControlStateNormal];
-    if (actionSheetDescription.actionSheetTintColor) {
-        [otherButton setTitleColor:actionSheetDescription.actionSheetTintColor forState:UIControlStateNormal];
+    if (self.actionSheetTintColor) {
+        [otherButton setTitleColor:self.actionSheetTintColor forState:UIControlStateNormal];
         
     } else {
         [otherButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -202,12 +213,12 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
     return otherButton;
 }
 
-- (UILabel *)labelWithText:(NSString *)text withDescription:(JMActionSheetDescription *)actionSheetDescription
+- (UILabel *)labelWithText:(NSString *)text
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.textAlignment = NSTextAlignmentCenter;
-    if (actionSheetDescription.actionSheetTintColor) {
-        [label setTextColor:actionSheetDescription.actionSheetTintColor];
+    if (self.actionSheetTintColor) {
+        [label setTextColor:self.actionSheetTintColor];
         
     } else {
         [label setTextColor:[UIColor blackColor]];

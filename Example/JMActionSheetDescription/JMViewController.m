@@ -10,6 +10,8 @@
 #import "JMActionSheet.h"
 #import "JMActionSheet.h"
 
+#import "IonIcons.h"
+
 @interface JMViewController ()
 @end
 
@@ -35,6 +37,7 @@
     NSMutableArray *items = [[NSMutableArray alloc] init];
     JMActionSheetItem *itemShare = [[JMActionSheetItem alloc] init];
     itemShare.title = @"last action";
+    itemShare.icon = [IonIcons imageWithIcon:ion_share  iconColor:[UIColor redColor] iconSize:30.0f imageSize:CGSizeMake(30.0f, 30.0f)];;
     itemShare.action = ^(void){
         NSLog(@"last action pressed");
     };
@@ -42,6 +45,7 @@
 
     JMActionSheetItem *otherItem = [[JMActionSheetItem alloc] init];
     otherItem.title = @"otherItem";
+    otherItem.icon = [IonIcons imageWithIcon:ion_social_github  iconColor:[UIColor greenColor] iconSize:30.0f imageSize:CGSizeMake(30.0f, 30.0f)];;
     otherItem.action = ^(void){
         NSLog(@"otherItem pressed");
     };
