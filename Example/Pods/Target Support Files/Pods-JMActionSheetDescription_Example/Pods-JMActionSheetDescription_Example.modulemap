@@ -1,0 +1,6 @@
+framework module Pods_JMActionSheetDescription_Example {
+  umbrella header "Pods-JMActionSheetDescription_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
