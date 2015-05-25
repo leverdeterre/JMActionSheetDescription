@@ -1,12 +1,3 @@
-#
-# Be sure to run `pod lib lint JMActionSheetDescription.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "JMActionSheetDescription"
   s.version          = "0.1.0"
@@ -15,7 +6,7 @@ Pod::Spec.new do |s|
                        
                        DESC
   s.homepage         = "https://github.com/leverdeterre/JMActionSheetDescription"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.screenshots      = "https://github.com/leverdeterre/JMActionSheetDescription/screenshots/demo.gif"
   s.license          = 'MIT'
   s.author           = { "Jérôme Morissard" => "morissardj@gmail.com" }
   s.source           = { :git => "https://github.com/leverdeterre/JMActionSheetDescription.git", :tag => s.version.to_s }
@@ -25,11 +16,11 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'JMActionSheetDescription' => ['Pod/Assets/*.png']
-  }
+  #s.resource_bundles = {
+  #  'JMActionSheetDescription' => ['Pod/Assets/*.png']
+  #}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  #s.dependency 'AFNetworking', '~> 2.3'
+  # s.dependency 'AFNetworking', '~> 2.3'
 end
