@@ -1,9 +1,14 @@
 Pod::Spec.new do |s|
   s.name             = "JMActionSheetDescription"
   s.version          = "0.1.0"
-  s.summary          = "A short description of JMActionSheetDescription."
+  s.summary          = "Make a description of your actionSheet"
   s.description      = <<-DESC
-                       
+                       JMActionSheetDescription is a descriptor component. Write your actionSheet description and let
+                       the framework generate your custom actionSheet.
+                       Customizable elements : button font, color, background.
+                       New elements :   Add an image to help understanding the context of action
+                                        Add an URL (in progress)
+                                        Add an text (in progress)
                        DESC
   s.homepage         = "https://github.com/leverdeterre/JMActionSheetDescription"
   s.screenshots      = "https://github.com/leverdeterre/JMActionSheetDescription/screenshots/demo.gif"
