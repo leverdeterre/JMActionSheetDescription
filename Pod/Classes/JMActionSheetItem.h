@@ -17,4 +17,9 @@ typedef void (^JMActionSheetItemAction)(void);
 @property (copy, nonatomic) JMActionSheetItemAction action;
 @property (strong, nonatomic) UIImage *icon;
 
+//Appearance
+@property (strong, nonatomic) UIColor *backgroundColor;
+@property (strong, nonatomic) UIColor *textColor;
+@property (strong, nonatomic) UIFont *textFont;
+
 @end

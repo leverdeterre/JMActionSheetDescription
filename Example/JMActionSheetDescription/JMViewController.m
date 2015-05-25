@@ -36,18 +36,34 @@
     
     NSMutableArray *items = [[NSMutableArray alloc] init];
     JMActionSheetItem *itemShare = [[JMActionSheetItem alloc] init];
-    itemShare.title = @"last action";
-    itemShare.icon = [IonIcons imageWithIcon:ion_share  iconColor:[UIColor redColor] iconSize:30.0f imageSize:CGSizeMake(30.0f, 30.0f)];;
+    itemShare.title = @"classic button";
     itemShare.action = ^(void){
-        NSLog(@"last action pressed");
+        NSLog(@"classic button pressed");
     };
     [items addObject:itemShare];
 
     JMActionSheetItem *otherItem = [[JMActionSheetItem alloc] init];
-    otherItem.title = @"otherItem";
+    otherItem.title = @"button with icon";
     otherItem.icon = [IonIcons imageWithIcon:ion_social_github  iconColor:[UIColor greenColor] iconSize:30.0f imageSize:CGSizeMake(30.0f, 30.0f)];;
     otherItem.action = ^(void){
-        NSLog(@"otherItem pressed");
+        NSLog(@"button with icon pressed");
+    };
+    [items addObject:otherItem];
+
+    otherItem = [[JMActionSheetItem alloc] init];
+    otherItem.title = @"button colored";
+    otherItem.backgroundColor = [UIColor redColor];
+    otherItem.textColor = [UIColor whiteColor];
+    otherItem.action = ^(void){
+        NSLog(@"button colored pressed");
+    };
+    [items addObject:otherItem];
+
+    otherItem = [[JMActionSheetItem alloc] init];
+    otherItem.title = @"button custom font";
+    otherItem.textFont = [UIFont italicSystemFontOfSize:18.0f];
+    otherItem.action = ^(void){
+        NSLog(@"button custom font pressed");
     };
     [items addObject:otherItem];
     
