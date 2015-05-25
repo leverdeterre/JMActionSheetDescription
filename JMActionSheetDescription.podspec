@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
                                         Add an text (in progress)
                        DESC
   s.homepage         = "https://github.com/leverdeterre/JMActionSheetDescription"
-  s.screenshots      = "https://github.com/leverdeterre/JMActionSheetDescription/screenshots/demo.gif"
+  s.screenshots      = "https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/demo.gif?raw=true"
   s.license          = 'MIT'
   s.author           = { "Jérôme Morissard" => "morissardj@gmail.com" }
   s.source           = { :git => "https://github.com/leverdeterre/JMActionSheetDescription.git", :tag => s.version.to_s }
