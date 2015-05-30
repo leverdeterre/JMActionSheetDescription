@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "JMActionSheetDescription.h"
+
 #import "JMActionSheetItem.h"
 #import "JMActionSheetImageItem.h"
-#import "JMActionSheetDescription.h"
+#import "JMActionSheetPickerItem.h"
 
 @interface JMActionSheet : NSObject
 

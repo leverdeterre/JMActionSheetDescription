@@ -8,7 +8,6 @@
 
 #import "JMViewController.h"
 #import "JMActionSheet.h"
-#import "JMActionSheet.h"
 
 #import "IonIcons.h"
 
@@ -76,6 +75,27 @@
 
     desc.items = items;
     [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+}
+
+- (IBAction)showAPicker:(id)sender
+{
+    JMActionSheetPickerItem *pickerItem = [[JMActionSheetPickerItem alloc] init];
+    pickerItem.elements = @[@"One", @"Two", @"three", @"Four"];
+    pickerItem.pickerAction = ^(NSString *selectedValue){
+        NSLog(@"selectedValue %@",selectedValue);
+    };
+    
+    JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
+    desc.actionSheetTintColor = [UIColor grayColor];
+    desc.actionSheetCancelButtonFont = [UIFont boldSystemFontOfSize:17.0f];
+    desc.actionSheetOtherButtonFont = [UIFont systemFontOfSize:16.0f];
+    
+    JMActionSheetItem *cancelItem = [[JMActionSheetItem alloc] init];
+    cancelItem.title = @"Cancel";
+    desc.cancelItem = cancelItem;
+    desc.items = @[pickerItem];
+    
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionLeft];
 }
 
 @end

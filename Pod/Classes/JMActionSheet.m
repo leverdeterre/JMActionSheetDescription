@@ -9,6 +9,7 @@
 #import "JMActionSheet.h"
 #import "JMActionSheetViewController.h"
 #import "JMActionSheetDescription.h"
+#import "JMActionSheetViewController+PickerViewItem.h"
 
 static JMActionSheet *actionSheet_;
 static JMActionSheetViewController *actionSheetViewController_;
@@ -76,23 +77,42 @@ static UIView *dimmingView_;
     }
 }
 
-- (void)dismissActionSheetViewController:(JMActionSheetViewController *)vc
-{
-    [UIView animateWithDuration:0.3 animations:^{
-        dimmingView_.alpha = 0.0f;
-        actionSheetViewController_.view.alpha = 0.0f;
-        
-    } completion:^(BOOL finished) {
-        [dimmingView_ removeFromSuperview];
-        [actionSheetViewController_ removeFromParentViewController];
-        [actionSheetViewController_.view removeFromSuperview];
-    }];
-}
-
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
     [dimmingView_ removeFromSuperview];
+    actionSheetViewPopover_ = nil;
 }
 
+#pragma mark - JMActionSheetViewControllerDelegate
+
+- (void)dismissActionSheetViewController:(JMActionSheetViewController *)vc
+{
+    if (actionSheetViewPopover_) {
+        [actionSheetViewPopover_ dismissPopoverAnimated:YES];
+        actionSheetViewPopover_ = nil;
+        [dimmingView_ removeFromSuperview];
+        
+    } else {
+        [UIView animateWithDuration:0.3 animations:^{
+            dimmingView_.alpha = 0.0f;
+            actionSheetViewController_.view.alpha = 0.0f;
+            
+        } completion:^(BOOL finished) {
+            [dimmingView_ removeFromSuperview];
+            [actionSheetViewController_ removeFromParentViewController];
+            [actionSheetViewController_.view removeFromSuperview];
+        }];
+    }
+}
+
+- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectPickerViewValue:(NSString *)selectedValue
+{
+    JMActionSheetPickerItemAction itemActionBlock = [vc jm_getPickerActionBlock];
+    if (itemActionBlock) {
+        itemActionBlock(selectedValue);
+    }
+    
+    [self dismissActionSheetViewController:vc];
+}
 
 @end

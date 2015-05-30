@@ -6,9 +6,9 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import "JMActionSheetItem.h"
 
-@interface JMActionSheetImageItem : NSObject
+@interface JMActionSheetImageItem : JMActionSheetItem
 
 @property (strong, nonatomic) UIImage *image;
 @property (assign, nonatomic) CGFloat imageHeight;

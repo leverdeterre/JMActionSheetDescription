@@ -1,6 +1,6 @@
 //
 //  JMActionSheetImageItem.m
-//  Pods
+//  Components
 //
 //  Created by jerome morissard on 24/05/2015.
 //

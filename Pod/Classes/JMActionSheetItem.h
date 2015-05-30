@@ -1,6 +1,6 @@
 //
 //  JMActionSheetItem.h
-//  Components
+//  Pods
 //
 //  Created by jerome morissard on 24/05/2015.
 //  Copyright (c) 2015 Jérôme Morissard. All rights reserved.
@@ -21,5 +21,7 @@ typedef void (^JMActionSheetItemAction)(void);
 @property (strong, nonatomic) UIColor *backgroundColor;
 @property (strong, nonatomic) UIColor *textColor;
 @property (strong, nonatomic) UIFont *textFont;
+
++ (NSString *)stringOfClass;
 
 @end
