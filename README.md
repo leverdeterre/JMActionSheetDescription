@@ -1,8 +1,8 @@
 # JMActionSheetDescription
 
-[![CI Status](http://img.shields.io/travis/Jerome Morissard/JMActionSheetDescription.svg?style=flat)](https://travis-ci.org/Jerome Morissard/JMActionSheetDescription)
-[![Version](https://img.shields.io/cocoapods/v/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
-[![License](https://img.shields.io/cocoapods/l/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
+[![Twitter](https://img.shields.io/badge/contact-@leverdeterre-green.svg)](http://twitter.com/leverdeterre)
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/leverdeterre/PermissiveResearch/blob/master/LICENCE)
+[![Cocoapods](http://img.shields.io/cocoapods/v/JMActionSheetDescription.svg)](https://github.com/leverdeterre/PermissiveResearch)
 [![Platform](https://img.shields.io/cocoapods/p/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
 
 ## Usage
