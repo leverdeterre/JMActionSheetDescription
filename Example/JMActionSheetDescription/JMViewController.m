@@ -29,7 +29,7 @@
     cancelItem.title = @"Cancel";
     desc.cancelItem = cancelItem;
     
-    if (tag >= 1) {
+    if (tag == 1) {
         desc.title = @"Available actions for component";
     }
     
@@ -66,14 +66,34 @@
     };
     [items addObject:otherItem];
     
-    if (tag == 2) {
-        JMActionSheetImageItem *imageItem = [[JMActionSheetImageItem alloc] init];
-        imageItem.image = [UIImage imageNamed:@"gif_experiments"];
-        imageItem.imageHeight = 200.0f;
-        [items addObject:imageItem];
-    }
-
     desc.items = items;
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+}
+
+- (IBAction)showActionImageView:(id)sender
+{
+    JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
+    desc.actionSheetTintColor = [UIColor grayColor];
+    desc.actionSheetCancelButtonFont = [UIFont boldSystemFontOfSize:17.0f];
+    desc.actionSheetOtherButtonFont = [UIFont systemFontOfSize:16.0f];
+    
+    JMActionSheetItem *cancelItem = [[JMActionSheetItem alloc] init];
+    cancelItem.title = @"Cancel";
+    desc.cancelItem = cancelItem;
+    desc.title = @"Available actions for component";
+    
+    JMActionSheetItem *otherItem = [[JMActionSheetItem alloc] init];
+    otherItem.title = @"Delete image ?";
+    otherItem.textColor = [UIColor redColor];
+    otherItem.action = ^(void){
+        NSLog(@"Delete image pressed");
+    };
+    
+    JMActionSheetImageItem *imageItem = [[JMActionSheetImageItem alloc] init];
+    imageItem.image = [UIImage imageNamed:@"gif_experiments"];
+    imageItem.imageHeight = 200.0f;
+    desc.items = @[otherItem,imageItem];
+    
     [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
 
@@ -95,7 +115,7 @@
     desc.cancelItem = cancelItem;
     desc.items = @[pickerItem];
     
-    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionLeft];
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
 
 @end
