@@ -19,4 +19,7 @@
 - (void)reloadWithActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription
                              andDelegate:(id <JMActionSheetViewControllerDelegate>)delegate;
 
+- (CGSize)estimatedContentSizeWithDescription:(JMActionSheetDescription *)actionSheetDescription;
+- (CGSize)contentSizeForViewInPopover;
+
 @end

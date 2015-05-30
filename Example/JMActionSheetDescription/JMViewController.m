@@ -75,7 +75,7 @@
     }
 
     desc.items = items;
-    [JMActionSheet showActionSheetDescription:desc inViewController:self];
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
 
 @end

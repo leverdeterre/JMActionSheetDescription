@@ -41,6 +41,7 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
 @interface JMActionSheetViewController ()
 @property (weak, nonatomic) id <JMActionSheetViewControllerDelegate> delegate;
 @property (strong, nonatomic) NSMutableArray *actions;
+@property (assign, nonatomic) CGSize preferredContentSize;
 
 //Appearance
 @property (strong, nonatomic) UIColor *actionSheetTintColor;
@@ -48,7 +49,9 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
 @property (strong, nonatomic) UIFont *actionSheetOtherButtonFont;
 @end
 
+
 @implementation JMActionSheetViewController
+@synthesize preferredContentSize = _preferredContentSize;
 
 - (void)reloadWithActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription
                              andDelegate:(id <JMActionSheetViewControllerDelegate>)delegate
@@ -266,5 +269,54 @@ static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
     return imageView;
 }
 
+#pragma makr - Size
+
+- (CGSize)contentSizeForViewInPopover
+{
+    return _preferredContentSize;
+}
+
+- (CGSize)preferredContentSize
+{
+    return _preferredContentSize;
+}
+
+- (CGSize)estimatedContentSizeWithDescription:(JMActionSheetDescription *)actionSheetDescription
+{
+    NSInteger estimatedHeight = 0;
+    if (actionSheetDescription.cancelItem) {
+        estimatedHeight = estimatedHeight +  JMActionSheetButtonHeight + JMActionSheetPadding;
+    }
+    
+    if (actionSheetDescription.items.count) {
+        for (id item in actionSheetDescription.items) {
+            if ([item isKindOfClass:[JMActionSheetItem class]]) {
+                estimatedHeight = estimatedHeight + JMActionSheetButtonHeight + JMActionSheetInterlineSpacing;
+                
+            } else if ([item isKindOfClass:[NSString class]]) {
+                estimatedHeight = estimatedHeight + JMActionSheetButtonHeight + JMActionSheetInterlineSpacing;
+                
+            } else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {
+                JMActionSheetImageItem *imageItem = (JMActionSheetImageItem *)item;
+                if (imageItem.imageHeight > 0.0f) {
+                    estimatedHeight = estimatedHeight + imageItem.imageHeight+ JMActionSheetInterlineSpacing;
+                } else {
+                    estimatedHeight = estimatedHeight + JMActionSheetImageViewHeight + JMActionSheetInterlineSpacing;
+
+                }
+            }
+        }
+    }
+    
+    if (actionSheetDescription.title) {
+        estimatedHeight = estimatedHeight + JMActionSheetButtonHeight;
+    }
+    
+    estimatedHeight = estimatedHeight + 2 * JMActionSheetPadding;
+    
+    NSLog(@"estimatedContentSizeWithDescription %@", NSStringFromCGSize(CGSizeMake(320.0f, estimatedHeight)));
+    self.preferredContentSize = CGSizeMake(320.0f, estimatedHeight);
+    return CGSizeMake(320.0f, estimatedHeight);
+}
 
 @end
