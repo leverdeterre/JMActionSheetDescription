@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
                                         Add an text (in progress).
                        DESC
   s.homepage         = "https://github.com/leverdeterre/JMActionSheetDescription"
-  s.screenshots      = "https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/demo.gif?raw=true","https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/ipads.png?raw=true","https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/iphone1.png?raw=true","https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/iphone2.png?raw=true", ,"https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/iphone3.png?raw=true", ,"https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/iphone4.png?raw=true"
+  s.screenshots      = "https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/demo.gif?raw=true", 						"https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/ipads.png?raw=true"
   s.license          = 'MIT'
   s.author           = { "Jérôme Morissard" => "morissardj@gmail.com" }
   s.source           = { :git => "https://github.com/leverdeterre/JMActionSheetDescription.git", :tag => s.version.to_s }
