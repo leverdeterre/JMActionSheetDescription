@@ -20,7 +20,12 @@ it, simply add the following line to your Podfile:
 pod "JMActionSheetDescription"
 ```
 
+![Image](./screenshots/ipads.png)
 ![Image](./screenshots/demo.gif)
+![Image](./screenshots/iphone1.png)
+![Image](./screenshots/iphone2.png)
+![Image](./screenshots/iphone3.png)
+![Image](./screenshots/iphone4.png)
 
 
 ```objective-c
@@ -51,14 +56,14 @@ itemShare.action = ^(void){
     NSLog(@"last action pressed");
 };
 
-//item + block
-JMActionSheetItem *otherItem = [[JMActionSheetItem alloc] init];
-otherItem.title = @"otherItem";
-otherItem.action = ^(void){
-    NSLog(@"otherItem pressed");
-};
+//Pickeritem + block
+JMActionSheetPickerItem *pickerItem = [[JMActionSheetPickerItem alloc] init];
+    pickerItem.elements = @[@"One", @"Two", @"three", @"Four"];
+    pickerItem.pickerAction = ^(NSString *selectedValue){
+        NSLog(@"selectedValue %@",selectedValue);
+    };
 
-desc.items = @[itemShare,otherItem];
+desc.items = @[itemShare,pickerItem];
 [JMActionSheet showActionSheetDescription:desc inViewController:self];
 ```
 
