@@ -109,7 +109,7 @@
     desc.actionSheetTintColor = [UIColor grayColor];
     desc.actionSheetCancelButtonFont = [UIFont boldSystemFontOfSize:17.0f];
     desc.actionSheetOtherButtonFont = [UIFont systemFontOfSize:16.0f];
-    
+    desc.title = @"Select a value";
     JMActionSheetItem *cancelItem = [[JMActionSheetItem alloc] init];
     cancelItem.title = @"Cancel";
     desc.cancelItem = cancelItem;

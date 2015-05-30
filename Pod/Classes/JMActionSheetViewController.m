@@ -173,6 +173,7 @@ static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
     if ([item isKindOfClass:[JMActionSheetPickerItem class]]) {
         JMActionSheetPickerItem *pickerItem = (JMActionSheetPickerItem *)item;
         UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.elements];
+        pickerView.backgroundColor = [UIColor whiteColor];
         pickerView.frame = frame;
         [self.view addSubview:pickerView];
         *yOffset = CGRectGetMinY(pickerView.frame);
