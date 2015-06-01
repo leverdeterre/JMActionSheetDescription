@@ -116,10 +116,6 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     [self.delegate dismissActionSheetViewController:self];
 }
 
-- (void)disablePressed:(id)button
-{
-}
-
 - (void)buttonPressed:(id)button
 {
     NSInteger tag = [button tag];
@@ -144,143 +140,187 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     return img;
 }
 
+#pragma mark -
 #pragma mark - Constructors
 
 - (UIView *)addViewForItem:(JMActionSheetItem *)item forTag:(NSInteger)tag corners:(UIRectCorner)corners offset:(CGFloat *)yOffset
 {
+    UIView *view;
     if ([item isKindOfClass:[JMActionSheetCollectionItem class]]) {
-        JMActionSheetCollectionItem *collectionItem = (JMActionSheetCollectionItem *)item;
-        
-        //Compute frame
-        CGFloat collectionHeight = JMActionSheetCollectionViewHeight;
-        CGFloat y = *yOffset - collectionHeight;
-        CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-        CGRect containerFrame = CGRectMake(JMActionSheetPadding, y, width, collectionHeight);
-        CGRect collectionFrame = CGRectMake(0.0f, 0.0f, width, collectionHeight);
-
-        //Configure collectionView
-        UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-        flow.itemSize = CGSizeMake(JMActionSheetCollectionViewWidth, JMActionSheetCollectionViewHeight);
-        flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:flow];
-        collectionView.backgroundColor = [UIColor whiteColor];
-        collectionView.frame = collectionFrame;
-        collectionView.contentInset = UIEdgeInsetsMake(0.0f, JMActionSheetPadding, 0.0f, JMActionSheetPadding);
-        collectionView.showsHorizontalScrollIndicator = NO;
-        collectionView.userInteractionEnabled = YES;
-        
-        UIView *containerView;
-        containerView = [[UIView alloc] initWithFrame:containerFrame];
-        containerView.backgroundColor = [UIColor whiteColor];
-        collectionView.frame = collectionView.bounds;
-        [containerView addSubview:collectionView];
-        [containerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-        [self.view addSubview:containerView];
-        
-        //Load collectionView
-        [self registerCellForcollectionView:collectionView];
-        [self setJm_CollectionViewElements:collectionItem.elements];
-        [self setJm_collectionActionBlock:collectionItem.collectionActionBlock];
-        collectionView.dataSource = self;
-        collectionView.delegate = self;
-        [collectionView reloadData];
-        
-        *yOffset = CGRectGetMinY(containerView.frame) - JMActionSheetInterlineSpacing;
-        return collectionView;
+        view = [self addCollectionViewForItem:(JMActionSheetCollectionItem *)item forTag:tag corners:corners offset:yOffset];
         
     } else if ([item isKindOfClass:[JMActionSheetPickerItem class]]) {
-        JMActionSheetPickerItem *pickerItem = (JMActionSheetPickerItem *)item;
-        
-        //Compute frame
-        CGFloat pickerHeight = JMActionSheetPickerViewHeight;
-        CGFloat y = *yOffset - pickerHeight;
-        CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-        CGRect frame = CGRectMake(JMActionSheetPadding, y, width, pickerHeight);
-        
-        //Configure PickerView
-        UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.elements];
-        pickerView.backgroundColor = [UIColor whiteColor];
-        pickerView.frame = frame;
-        [pickerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-        [self.view addSubview:pickerView];
-        
-        //Load PickerView
-        [self setJm_pickerActionBlock:pickerItem.pickerActionBlock];
-        *yOffset = CGRectGetMinY(pickerView.frame) - JMActionSheetInterlineSpacing;
-        
-        return pickerView;
+        view = [self addPickerViewForItem:(JMActionSheetPickerItem *)item forTag:tag corners:corners offset:yOffset];
         
     } else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {
-        JMActionSheetImageItem *imageItem = (JMActionSheetImageItem *)item;
-        
-        //Compute frame
-        CGFloat imageHeight = JMActionSheetImageViewHeight;
-        if (imageItem.imageHeight > 0.0f) { imageHeight = imageItem.imageHeight; }
-        CGFloat y = *yOffset - imageHeight;
-        CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-        CGRect frame = CGRectMake(JMActionSheetPadding, y, width, imageHeight);
-        
-        //Configure imageView
-        UIImageView *imageView = [self imageViewWithImage:imageItem.image];
-        imageView.frame = frame;
-        [imageView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-        [self.view addSubview:imageView];
-        [self.actions addObject:[NSNull null]];
-        
-        *yOffset = CGRectGetMinY(imageView.frame) - JMActionSheetInterlineSpacing;
-        return imageView;
+        view = [self addImageViewForItem:(JMActionSheetImageItem *)item forTag:tag corners:corners offset:yOffset];
         
     } else if ([item isKindOfClass:[JMActionSheetItem class]]) {
-        
-        //Compute frame
-        CGFloat y = *yOffset - JMActionSheetButtonHeight;
-        CGRect frame = CGRectMake(JMActionSheetPadding,
-                                  y,
-                                  CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding,
-                                  JMActionSheetButtonHeight);
-        
-        //Configure button
-        JMActionSheetItemControl *button = [self buttonWithActionSheetItem:item];
-        button.titleLabel.textAlignment = NSTextAlignmentCenter;
-        button.frame = frame;
-        button.tag = tag;
-        [button applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-        JMActionSheetItemAction action = ^(void){
-            if (item.action) {
-                item.action();
-            }
-        };
-        [self.view addSubview:button];
-        [self.actions addObject:action];
-        
-        *yOffset = CGRectGetMinY(button.frame) - JMActionSheetInterlineSpacing;
-        return button;
+        view = [self addButtonViewForItem:item forTag:tag corners:corners offset:yOffset];
         
     } else if ([item isKindOfClass:[NSString class]]) {
-        CGFloat y = *yOffset - JMActionSheetButtonHeight;
-        CGRect frame = CGRectMake(JMActionSheetPadding,
-                                  y,
-                                  CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding,
-                                  JMActionSheetButtonHeight);
-        
-        UILabel *label = [self labelWithText:(NSString *)item];
-        label.frame = frame;
-        [label applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-        [self.view addSubview:label];
-        [self.actions addObject:[NSNull null]];
-        *yOffset = CGRectGetMinY(label.frame) - JMActionSheetInterlineSpacing;
-        return label;
+        view = [self addLabelViewForItem:item forTag:tag corners:corners offset:yOffset];
     }
     
-    return nil;
+    return view;
 }
 
+#pragma mark - Collection constructor
+
+- (UIView *)addCollectionViewForItem:(JMActionSheetCollectionItem *)collectionItem
+                              forTag:(NSInteger)tag
+                             corners:(UIRectCorner)corners
+                              offset:(CGFloat *)yOffset
+{
+    //Compute frame
+    CGFloat collectionHeight = JMActionSheetCollectionViewHeight;
+    CGFloat y = *yOffset - collectionHeight;
+    CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
+    CGRect containerFrame = CGRectMake(JMActionSheetPadding, y, width, collectionHeight);
+    CGRect collectionFrame = CGRectMake(0.0f, 0.0f, width, collectionHeight);
+    
+    //Configure collectionView
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    flow.itemSize = CGSizeMake(JMActionSheetCollectionViewWidth, JMActionSheetCollectionViewHeight);
+    flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:flow];
+    collectionView.backgroundColor = [UIColor whiteColor];
+    collectionView.frame = collectionFrame;
+    collectionView.contentInset = UIEdgeInsetsMake(0.0f, JMActionSheetPadding, 0.0f, JMActionSheetPadding);
+    collectionView.showsHorizontalScrollIndicator = NO;
+    collectionView.userInteractionEnabled = YES;
+    
+    UIView *containerView;
+    containerView = [[UIView alloc] initWithFrame:containerFrame];
+    containerView.backgroundColor = [UIColor whiteColor];
+    collectionView.frame = collectionView.bounds;
+    [containerView addSubview:collectionView];
+    [containerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+    [self.view addSubview:containerView];
+    
+    //Load collectionView
+    [self registerCellForcollectionView:collectionView];
+    [self setJm_CollectionViewElements:collectionItem.elements];
+    [self setJm_collectionActionBlock:collectionItem.collectionActionBlock];
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
+    [collectionView reloadData];
+    
+    *yOffset = CGRectGetMinY(containerView.frame) - JMActionSheetInterlineSpacing;
+    return collectionView;
+}
+
+#pragma mark - PickerView constructor
+
+- (UIView *)addPickerViewForItem:(JMActionSheetPickerItem *)pickerItem
+                          forTag:(NSInteger)tag
+                         corners:(UIRectCorner)corners
+                          offset:(CGFloat *)yOffset
+{
+    //Compute frame
+    CGFloat pickerHeight = JMActionSheetPickerViewHeight;
+    CGFloat y = *yOffset - pickerHeight;
+    CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
+    CGRect frame = CGRectMake(JMActionSheetPadding, y, width, pickerHeight);
+    
+    //Configure PickerView
+    UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.elements];
+    pickerView.backgroundColor = [UIColor whiteColor];
+    pickerView.frame = frame;
+    [pickerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+    [self.view addSubview:pickerView];
+    
+    //Load PickerView
+    [self setJm_pickerActionBlock:pickerItem.pickerActionBlock];
+    *yOffset = CGRectGetMinY(pickerView.frame) - JMActionSheetInterlineSpacing;
+    
+    return pickerView;
+}
+
+- (UIPickerView *)pickerViewWithElements:(NSArray *)elements
+{
+    [self setJm_pickerElements:elements];
+    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                              0.0f,
+                                                                              CGRectGetWidth(self.view.frame),
+                                                                              JMActionSheetPickerViewHeight)];
+    pickerView.dataSource = self;
+    pickerView.delegate = self;
+    [pickerView reloadAllComponents];
+    return pickerView;
+}
+
+#pragma mark - ImageView constructor
+
+- (UIView *)addImageViewForItem:(JMActionSheetImageItem *)imageItem
+                          forTag:(NSInteger)tag
+                         corners:(UIRectCorner)corners
+                          offset:(CGFloat *)yOffset
+{
+    
+    //Compute frame
+    CGFloat imageHeight = JMActionSheetImageViewHeight;
+    if (imageItem.imageHeight > 0.0f) { imageHeight = imageItem.imageHeight; }
+    CGFloat y = *yOffset - imageHeight;
+    CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
+    CGRect frame = CGRectMake(JMActionSheetPadding, y, width, imageHeight);
+    
+    //Configure imageView
+    UIImageView *imageView = [self imageViewWithImage:imageItem.image];
+    imageView.frame = frame;
+    [imageView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+    [self.view addSubview:imageView];
+    [self.actions addObject:[NSNull null]];
+    
+    *yOffset = CGRectGetMinY(imageView.frame) - JMActionSheetInterlineSpacing;
+    return imageView;
+}
+
+- (UIImageView *)imageViewWithImage:(UIImage *)image
+{
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
+    return imageView;
+}
+
+#pragma mark - Button constructor
+
+- (UIView *)addButtonViewForItem:(JMActionSheetItem *)item
+                         forTag:(NSInteger)tag
+                        corners:(UIRectCorner)corners
+                         offset:(CGFloat *)yOffset
+{
+    //Compute frame
+    CGFloat y = *yOffset - JMActionSheetButtonHeight;
+    CGRect frame = CGRectMake(JMActionSheetPadding,
+                              y,
+                              CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding,
+                              JMActionSheetButtonHeight);
+    
+    //Configure button
+    JMActionSheetItemControl *button = [self buttonWithActionSheetItem:item];
+    button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    button.frame = frame;
+    button.tag = tag;
+    [button applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+    JMActionSheetItemAction action = ^(void){
+        if (item.action) {
+            item.action();
+        }
+    };
+    [self.view addSubview:button];
+    [self.actions addObject:action];
+    
+    *yOffset = CGRectGetMinY(button.frame) - JMActionSheetInterlineSpacing;
+    return button;
+}
 
 - (JMActionSheetItemControl *)buttonWithActionSheetItem:(JMActionSheetItem *)item
 {
     UIColor *bckColor = [UIColor whiteColor];
     UIColor *textColor = [UIColor blackColor];
-
+    
     if (item.backgroundColor) {
         bckColor = item.backgroundColor;
     }
@@ -299,10 +339,10 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     if (item.textFont) {
         font = item.textFont;
     }
-        
+    
     UIImage *backgroundImageSelected = [self oneByOneImageWithColor:[UIColor colorWithRed:216.0f/254.0f green:216.0f/254.0f blue:216.0f/254.0f alpha:1.0f]];
     UIImage *backgroundImageNormal = [self oneByOneImageWithColor:bckColor];
-
+    
     JMActionSheetItemControl *otherButton = [[JMActionSheetItemControl alloc] init];
     [otherButton setTitle:item.title forState:UIControlStateNormal];
     [otherButton setTitleColor:textColor forState:UIControlStateNormal];
@@ -321,6 +361,31 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     return otherButton;
 }
 
+#pragma mark - Label constructor
+
+- (UIView *)addLabelViewForItem:(JMActionSheetItem *)item
+                          forTag:(NSInteger)tag
+                         corners:(UIRectCorner)corners
+                          offset:(CGFloat *)yOffset
+{
+    //Compute frame
+    CGFloat y = *yOffset - JMActionSheetButtonHeight;
+    CGRect frame = CGRectMake(JMActionSheetPadding,
+                              y,
+                              CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding,
+                              JMActionSheetButtonHeight);
+    
+    //Configure button
+    UILabel *label = [self labelWithText:(NSString *)item];
+    label.frame = frame;
+    [label applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+    [self.view addSubview:label];
+    [self.actions addObject:[NSNull null]];
+    
+    *yOffset = CGRectGetMinY(label.frame) - JMActionSheetInterlineSpacing;
+    return label;
+}
+
 - (UILabel *)labelWithText:(NSString *)text
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -336,28 +401,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     return label;
 }
 
-- (UIImageView *)imageViewWithImage:(UIImage *)image
-{
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
-    imageView.clipsToBounds = YES;
-    return imageView;
-}
-
-- (UIPickerView *)pickerViewWithElements:(NSArray *)elements
-{
-    [self setJm_pickerElements:elements];
-    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0.0f,
-                                                                              0.0f,
-                                                                              CGRectGetWidth(self.view.frame),
-                                                                              JMActionSheetPickerViewHeight)];
-    pickerView.dataSource = self;
-    pickerView.delegate = self;
-    [pickerView reloadAllComponents];
-    return pickerView;
-}
-
-#pragma mark - contentSize computation
+#pragma mark - ContentSize computation
 
 - (CGSize)contentSizeForViewInPopover
 {
