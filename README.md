@@ -20,8 +20,8 @@ it, simply add the following line to your Podfile:
 pod "JMActionSheetDescription"
 ```
 
-![Image](./screenshots/ipads.png)
 ![Image](./screenshots/iphones.png)
+![Image](./screenshots/ipads.png)
 ![Image](./screenshots/demo.gif)
 
 
