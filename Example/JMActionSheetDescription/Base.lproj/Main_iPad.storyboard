@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,12 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw1-BR-s90">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw1-BR-s90">
                                 <rect key="frame" x="20" y="20" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="iRB-kj-TDf"/>
-                                    <constraint firstAttribute="height" constant="30" id="thd-it-wYH"/>
-                                </constraints>
                                 <state key="normal" title="Present actions">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -31,12 +26,8 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sxr-i5-a7J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heW-Hd-q8b">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heW-Hd-q8b">
                                 <rect key="frame" x="20" y="974" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="Q26-YY-Q8m"/>
-                                    <constraint firstAttribute="height" constant="30" id="oDQ-Zo-ue8"/>
-                                </constraints>
                                 <state key="normal" title="Present Image action">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -44,12 +35,8 @@
                                     <action selector="showActionImageView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Maq-2B-byy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAx-01-2eG">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAx-01-2eG">
                                 <rect key="frame" x="460" y="20" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OuJ-7Z-n2r"/>
-                                    <constraint firstAttribute="width" constant="288" id="ZOs-ge-Lzn"/>
-                                </constraints>
                                 <state key="normal" title="Present actions with title">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -57,12 +44,8 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8CB-pB-Adq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-hv-3QQ">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-hv-3QQ">
                                 <rect key="frame" x="456" y="974" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="Rw3-VU-wSg"/>
-                                    <constraint firstAttribute="height" constant="30" id="wFI-DU-Whw"/>
-                                </constraints>
                                 <state key="normal" title="present a Picker">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -70,17 +53,24 @@
                                     <action selector="showAPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TaL-1b-83o"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pis-Tv-pgO">
+                                <rect key="frame" x="240" y="427" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="8XR-LY-WUn"/>
+                                    <constraint firstAttribute="height" constant="30" id="YJX-5k-5cf"/>
+                                </constraints>
+                                <state key="normal" title="present Collection">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fU8-bZ-VUe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fcc-hv-3QQ" secondAttribute="bottom" constant="20" id="1a5-NU-mnW"/>
-                            <constraint firstItem="mw1-BR-s90" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8UW-1r-7jf"/>
-                            <constraint firstItem="heW-Hd-q8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9Au-2a-PFI"/>
-                            <constraint firstItem="AAx-01-2eG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ohy-K3-wrF"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="heW-Hd-q8b" secondAttribute="bottom" constant="20" id="U8i-y1-NZC"/>
-                            <constraint firstItem="mw1-BR-s90" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cF6-FQ-Hw6"/>
-                            <constraint firstItem="AAx-01-2eG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kHt-uY-cfP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fcc-hv-3QQ" secondAttribute="trailing" constant="4" id="sNl-14-q0N"/>
+                            <constraint firstAttribute="centerX" secondItem="pis-Tv-pgO" secondAttribute="centerX" id="Rf7-rc-pXz"/>
+                            <constraint firstAttribute="centerY" secondItem="pis-Tv-pgO" secondAttribute="centerY" constant="70" id="WDj-ik-KbV"/>
                         </constraints>
                     </view>
                 </viewController>

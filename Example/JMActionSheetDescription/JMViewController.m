@@ -8,6 +8,7 @@
 
 #import "JMViewController.h"
 #import "JMActionSheet.h"
+#import "JMCollectionItem.h"
 
 #import "IonIcons.h"
 
@@ -101,7 +102,7 @@
 {
     JMActionSheetPickerItem *pickerItem = [[JMActionSheetPickerItem alloc] init];
     pickerItem.elements = @[@"One", @"Two", @"three", @"Four"];
-    pickerItem.pickerAction = ^(NSString *selectedValue){
+    pickerItem.pickerActionBlock = ^(NSString *selectedValue){
         NSLog(@"selectedValue %@",selectedValue);
     };
     
@@ -118,4 +119,55 @@
     [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
 
+- (IBAction)showCollection:(id)sender
+{
+    JMActionSheetCollectionItem *collectionItem = [[JMActionSheetCollectionItem alloc] init];
+    NSMutableArray *collectionItems = [NSMutableArray new];
+    JMCollectionItem *item = [[JMCollectionItem alloc] init];
+    item.actionName = @"facebook";
+    item.actionImageName = @"fb-icon3-150x150.png";
+    [collectionItems addObject:item];
+    
+    item = [[JMCollectionItem alloc] init];
+    item.actionName = @"AppStore";
+    item.actionImageName = @"apple_store_app_icon.jpg";
+    [collectionItems addObject:item];
+
+    item = [[JMCollectionItem alloc] init];
+    item.actionName = @"Password";
+    item.actionImageName = @"1Pi-icon-1024-150x150.png";
+    [collectionItems addObject:item];
+    
+    item = [[JMCollectionItem alloc] init];
+    item.actionName = @"Flipboard";
+    item.actionImageName = @"Flipboard-App-Icon-150x150.jpg";
+    [collectionItems addObject:item];
+    
+    item = [[JMCollectionItem alloc] init];
+    item.actionName = @"Gmail";
+    item.actionImageName = @"gmail-ios-icon-app-150x150.png";
+    [collectionItems addObject:item];
+    
+    item = [[JMCollectionItem alloc] init];
+    item.actionName = @"Mail";
+    item.actionImageName = @"mail-iphone-150x150.jpg";
+    [collectionItems addObject:item];
+    
+    collectionItem.elements = collectionItems;
+    collectionItem.collectionActionBlock = ^(id selectedValue){
+        NSLog(@"selectedValue %@",selectedValue);
+    };
+    
+    JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
+    desc.actionSheetTintColor = [UIColor grayColor];
+    desc.actionSheetCancelButtonFont = [UIFont boldSystemFontOfSize:17.0f];
+    desc.actionSheetOtherButtonFont = [UIFont systemFontOfSize:16.0f];
+    desc.title = @"Select a value";
+    JMActionSheetItem *cancelItem = [[JMActionSheetItem alloc] init];
+    cancelItem.title = @"Cancel";
+    desc.cancelItem = cancelItem;
+    desc.items = @[collectionItem];
+    
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+}
 @end

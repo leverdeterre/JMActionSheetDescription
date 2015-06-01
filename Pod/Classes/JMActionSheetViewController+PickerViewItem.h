@@ -11,10 +11,7 @@
 
 @interface JMActionSheetViewController (PickerViewItem) <UIPickerViewDataSource, UIPickerViewDelegate>
 
-- (void)jm_setPickerViewElements:(NSArray *)elements;
-- (NSArray *)jm_getPickerViewElements;
-
-- (void)jm_setPickerActionBlock:(JMActionSheetPickerItemAction)actionBlock;
-- (JMActionSheetPickerItemAction)jm_getPickerActionBlock;
+@property (strong, nonatomic) NSArray *jm_pickerElements;
+@property (copy, nonatomic) JMActionSheetSelectedItemBlock jm_pickerActionBlock;
 
 @end

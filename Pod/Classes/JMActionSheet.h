@@ -14,6 +14,7 @@
 #import "JMActionSheetItem.h"
 #import "JMActionSheetImageItem.h"
 #import "JMActionSheetPickerItem.h"
+#import "JMActionSheetCollectionItem.h"
 
 @interface JMActionSheet : NSObject
 

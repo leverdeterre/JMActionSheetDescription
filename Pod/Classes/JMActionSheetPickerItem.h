@@ -8,15 +8,13 @@
 
 #import "JMActionSheetItem.h"
 
-typedef void (^JMActionSheetPickerItemAction)(NSString *selectedValue);
-
 @protocol JMActionSheetPickerItem <NSObject>
-- (NSString *)displayableValueForActionSheetPicker;
+@property (readonly) NSString *displayableValueForActionSheetPicker;
 @end
 
 @interface JMActionSheetPickerItem : JMActionSheetItem
 
 @property (strong, nonatomic) NSArray *elements; //Array of id <JMActionSheetPickerItem>
-@property (copy, nonatomic) JMActionSheetPickerItemAction pickerAction;
+@property (copy, nonatomic) JMActionSheetSelectedItemBlock pickerActionBlock;
 
 @end

@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^JMActionSheetItemAction)(void);
+typedef void (^JMActionSheetSelectedItemBlock)(id selectedValue);
 
 @interface JMActionSheetItem : NSObject
 
