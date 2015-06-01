@@ -21,11 +21,8 @@ pod "JMActionSheetDescription"
 ```
 
 ![Image](./screenshots/ipads.png)
+![Image](./screenshots/iphones.png)
 ![Image](./screenshots/demo.gif)
-![Image](./screenshots/iphone1.png)
-![Image](./screenshots/iphone2.png)
-![Image](./screenshots/iphone3.png)
-![Image](./screenshots/iphone4.png)
 
 
 ```objective-c
