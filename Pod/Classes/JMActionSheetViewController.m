@@ -73,13 +73,15 @@ static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
     CGFloat yOffset = CGRectGetMaxY(self.view.bounds) - JMActionSheetButtonHeight - JMActionSheetPadding;
     CGFloat width = CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding;
     CGRect frame = CGRectMake(JMActionSheetPadding, yOffset, width, JMActionSheetButtonHeight);
-    UIButton *button = (UIButton *)[self addViewForItem:actionSheetDescription.cancelItem forTag:tag frame:frame corners:UIRectCornerAllCorners offset:&yOffset];
+    UIButton *button = (UIButton *)[self addViewForItem:actionSheetDescription.cancelItem forTag:tag corners:UIRectCornerAllCorners offset:&yOffset];
+    button.frame = frame;
     if (self.actionSheetCancelButtonFont) {
         button.titleLabel.font = self.actionSheetCancelButtonFont;
     }
     
     //Other buttons
-    yOffset = yOffset - JMActionSheetPadding;
+    yOffset = CGRectGetMinY(button.frame) - JMActionSheetPadding;
+    [self logRect:button.frame forElemenetName:@"Cancel button"];
     
     NSMutableArray *items = [NSMutableArray arrayWithArray:actionSheetDescription.items];
     if (actionSheetDescription.title) {
@@ -96,38 +98,8 @@ static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
             corners = UIRectCornerBottomLeft | UIRectCornerBottomRight;
         }
 
-        if ([item isKindOfClass:[JMActionSheetPickerItem class]]) {
-            JMActionSheetPickerItem *pickerItem = (JMActionSheetPickerItem *)item;
-            CGFloat pickerHeight = JMActionSheetPickerViewHeight;
-            CGFloat y = yOffset - pickerHeight;
-            CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-            CGRect frame = CGRectMake(JMActionSheetPadding, y, width, pickerHeight);
-            [self addViewForItem:pickerItem forTag:tag frame:frame corners:corners offset:&yOffset];
-            
-        } else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {
-            JMActionSheetImageItem *imageItem = (JMActionSheetImageItem *)item;
-            CGFloat imageHeight = JMActionSheetImageViewHeight;
-            if (imageItem.imageHeight > 0.0f) { imageHeight = imageItem.imageHeight; }
-            
-            CGFloat y = yOffset - imageHeight;
-            CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-            CGRect frame = CGRectMake(JMActionSheetPadding, y, width, imageHeight);
-            [self addViewForItem:item forTag:tag frame:frame corners:corners offset:&yOffset];
-            yOffset = yOffset - JMActionSheetInterlineSpacing;
-            
-        } else if ([item isKindOfClass:[JMActionSheetItem class]]) {
-            JMActionSheetItem *asItem = item;
-            CGFloat y = yOffset - JMActionSheetButtonHeight;
-            frame = CGRectMake(JMActionSheetPadding, y, width, JMActionSheetButtonHeight);
-            [self addViewForItem:asItem forTag:tag frame:frame corners:corners offset:&yOffset];
-            yOffset = yOffset - JMActionSheetInterlineSpacing;
-
-        } else if ([item isKindOfClass:[NSString class]]) {
-            CGFloat y = yOffset - JMActionSheetButtonHeight;
-            frame = CGRectMake(JMActionSheetPadding, y, width, JMActionSheetButtonHeight);
-            [self addViewForItem:item forTag:tag frame:frame corners:corners offset:&yOffset];
-            yOffset = yOffset - JMActionSheetInterlineSpacing;
-        }
+        UIView *view = [self addViewForItem:item forTag:tag corners:corners offset:&yOffset];
+        [self logRect:view.frame forElemenetName:NSStringFromClass([item class])];
     }
 }
 
@@ -168,29 +140,49 @@ static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
 
 #pragma mark - Constructors
 
-- (UIView *)addViewForItem:(JMActionSheetItem *)item forTag:(NSInteger)tag frame:(CGRect)frame corners:(UIRectCorner)corners offset:(CGFloat *)yOffset
+- (UIView *)addViewForItem:(JMActionSheetItem *)item forTag:(NSInteger)tag corners:(UIRectCorner)corners offset:(CGFloat *)yOffset
 {
     if ([item isKindOfClass:[JMActionSheetPickerItem class]]) {
         JMActionSheetPickerItem *pickerItem = (JMActionSheetPickerItem *)item;
+        
+        //compute frame
+        CGFloat pickerHeight = JMActionSheetPickerViewHeight;
+        CGFloat y = *yOffset - pickerHeight;
+        CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
+        CGRect frame = CGRectMake(JMActionSheetPadding, y, width, pickerHeight);
+        
         UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.elements];
         pickerView.backgroundColor = [UIColor whiteColor];
         pickerView.frame = frame;
         [self.view addSubview:pickerView];
-        *yOffset = CGRectGetMinY(pickerView.frame);
+        *yOffset = CGRectGetMinY(pickerView.frame) - JMActionSheetInterlineSpacing;
         [self jm_setPickerActionBlock:pickerItem.pickerAction];
         return pickerView;
         
     } else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {
-        JMActionSheetImageItem *imageitem = (JMActionSheetImageItem *)item;
-        UIImageView *imageView = [self imageViewWithImage:imageitem.image];
+        JMActionSheetImageItem *imageItem = (JMActionSheetImageItem *)item;
+        CGFloat imageHeight = JMActionSheetImageViewHeight;
+        if (imageItem.imageHeight > 0.0f) { imageHeight = imageItem.imageHeight; }
+        
+        CGFloat y = *yOffset - imageHeight;
+        CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
+        CGRect frame = CGRectMake(JMActionSheetPadding, y, width, imageHeight);
+        
+        UIImageView *imageView = [self imageViewWithImage:imageItem.image];
         imageView.frame = frame;
         [imageView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
         [self.view addSubview:imageView];
         [self.actions addObject:[NSNull null]];
-        *yOffset = CGRectGetMinY(imageView.frame);
+        *yOffset = CGRectGetMinY(imageView.frame) - JMActionSheetInterlineSpacing;
         return imageView;
         
     } else if ([item isKindOfClass:[JMActionSheetItem class]]) {
+        CGFloat y = *yOffset - JMActionSheetButtonHeight;
+        CGRect frame = CGRectMake(JMActionSheetPadding,
+                                  y,
+                                  CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding,
+                                  JMActionSheetButtonHeight);
+        
         JMActionSheetItemControl *button = [self buttonWithActionSheetItem:item];
         button.titleLabel.textAlignment = NSTextAlignmentCenter;
         button.frame = frame;
@@ -203,16 +195,22 @@ static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
         };
         [self.view addSubview:button];
         [self.actions addObject:action];
-        *yOffset = CGRectGetMinY(button.frame);
+        *yOffset = CGRectGetMinY(button.frame) - JMActionSheetInterlineSpacing;
         return button;
         
     } else if ([item isKindOfClass:[NSString class]]) {
+        CGFloat y = *yOffset - JMActionSheetButtonHeight;
+        CGRect frame = CGRectMake(JMActionSheetPadding,
+                                  y,
+                                  CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding,
+                                  JMActionSheetButtonHeight);
+        
         UILabel *label = [self labelWithText:(NSString *)item];
         label.frame = frame;
         [label applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
         [self.view addSubview:label];
         [self.actions addObject:[NSNull null]];
-        *yOffset = CGRectGetMinY(label.frame);
+        *yOffset = CGRectGetMinY(label.frame) - JMActionSheetInterlineSpacing;
         return label;
     }
     
@@ -293,7 +291,8 @@ static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
     [self jm_setPickerViewElements:elements];
     UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0.0f,
                                                                               0.0f,
-                                                                              CGRectGetWidth(self.view.frame), JMActionSheetPickerViewHeight)];
+                                                                              CGRectGetWidth(self.view.frame),
+                                                                              JMActionSheetPickerViewHeight)];
     pickerView.dataSource = self;
     pickerView.delegate = self;
     [pickerView reloadAllComponents];
@@ -352,6 +351,11 @@ static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
     //NSLog(@"estimatedContentSizeWithDescription %@", NSStringFromCGSize(CGSizeMake(320.0f, estimatedHeight)));
     self.preferredContentSize = CGSizeMake(320.0f, estimatedHeight);
     return CGSizeMake(320.0f, estimatedHeight);
+}
+
+- (void)logRect:(CGRect)frame forElemenetName:(NSString *)name
+{
+    NSLog(@"%@ %@", name, NSStringFromCGRect(frame));
 }
 
 @end
