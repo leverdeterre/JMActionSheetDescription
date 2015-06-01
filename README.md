@@ -9,8 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-```
-
 ## Screenshots
 
 ![Image](./screenshots/iphones.png)
@@ -24,6 +22,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "JMActionSheetDescription"
+```
 
 
 ```objective-c
