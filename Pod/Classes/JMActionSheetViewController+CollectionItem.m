@@ -31,7 +31,7 @@ const char * const JMActionSheetCollectionViewBlockActionKey = "JMActionSheetCol
     objc_setAssociatedObject(self, JMActionSheetCollectionViewBlockActionKey, jm_collectionActionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (JMActionSheetSelectedItemBlock)jm_getPickerActionBlock
+- (JMActionSheetSelectedItemBlock)jm_collectionActionBlock
 {
     JMActionSheetSelectedItemBlock actionBlock = objc_getAssociatedObject(self, JMActionSheetCollectionViewBlockActionKey);
     return actionBlock;
@@ -54,7 +54,7 @@ const char * const JMActionSheetCollectionViewBlockActionKey = "JMActionSheetCol
 {
     JMActionSheetCollectionItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JMActionSheetCollectionItemCell" forIndexPath:indexPath];
     id obj = [[self jm_CollectionViewElements] objectAtIndex:indexPath.row];
-    [cell updateWithObject:obj];
+    [cell updateWithObject:obj forIndexPath:indexPath andDelegate:self];
     return cell;
 }
 
@@ -62,6 +62,8 @@ const char * const JMActionSheetCollectionViewBlockActionKey = "JMActionSheetCol
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    id obj = [[self jm_CollectionViewElements] objectAtIndex:indexPath.row];
+    [self.delegate actionSheetViewController:self didSelectCollectionViewElement:obj];
 }
 
 @end

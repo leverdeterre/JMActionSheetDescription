@@ -154,8 +154,8 @@
     [collectionItems addObject:item];
     
     collectionItem.elements = collectionItems;
-    collectionItem.collectionActionBlock = ^(id selectedValue){
-        NSLog(@"selectedValue %@",selectedValue);
+    collectionItem.collectionActionBlock = ^(JMCollectionItem *selectedValue){
+        NSLog(@"selectedValue %@",selectedValue.actionName);
     };
     
     JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];

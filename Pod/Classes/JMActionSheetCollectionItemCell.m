@@ -17,6 +17,10 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
 
 @property (weak, nonatomic) UIImageView *actionImageView;
 @property (weak, nonatomic) UILabel *actionLabel;
+@property (weak, nonatomic) id <UICollectionViewDelegate> collectionViewDelegate;
+
+@property (strong, nonatomic) NSIndexPath *indexPath;
+@property (strong, nonatomic) UITapGestureRecognizer *gesture;
 
 @end
 
@@ -27,7 +31,7 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
     return NSStringFromClass(self.class);
 }
 
-- (void)updateWithObject:(id)obj
+- (void)updateWithObject:(id)obj forIndexPath:(NSIndexPath *)indexPath andDelegate:(id <UICollectionViewDelegate>) delegate
 {
     id <JMActionSheetCollectionItem> conformedObject;
     if ([obj conformsToProtocol:@protocol(JMActionSheetCollectionItem)]){
@@ -65,12 +69,24 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
         [self.contentView addSubview:self.actionLabel];
     }
     
+    if (nil == self.gesture) {
+        self.gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cellTaped:)];
+        [self addGestureRecognizer:self.gesture];
+    }
+    
     if (conformedObject) {
         self.actionImageView.image = [UIImage imageNamed:[conformedObject imageNamedForActionSheetCollectionItem]];
         self.actionLabel.text = [conformedObject actionNameForActionSheetCollectionItem];
     }
     
+    self.indexPath = indexPath;
+    self.collectionViewDelegate = delegate;
     self.backgroundColor = [UIColor clearColor];
+}
+
+- (void)cellTaped:(id)sender
+{
+    [self.collectionViewDelegate collectionView:nil didSelectItemAtIndexPath:self.indexPath];
 }
 
 @end

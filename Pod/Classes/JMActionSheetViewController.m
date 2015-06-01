@@ -155,26 +155,37 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
         CGFloat collectionHeight = JMActionSheetCollectionViewHeight;
         CGFloat y = *yOffset - collectionHeight;
         CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
-        CGRect frame = CGRectMake(JMActionSheetPadding, y, width, collectionHeight);
-        
+        CGRect containerFrame = CGRectMake(JMActionSheetPadding, y, width, collectionHeight);
+        CGRect collectionFrame = CGRectMake(0.0f, 0.0f, width, collectionHeight);
+
         //Configure collectionView
         UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
         flow.itemSize = CGSizeMake(JMActionSheetCollectionViewWidth, JMActionSheetCollectionViewHeight);
         flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:flow];
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:flow];
         collectionView.backgroundColor = [UIColor whiteColor];
-        collectionView.frame = frame;
+        collectionView.frame = collectionFrame;
         collectionView.contentInset = UIEdgeInsetsMake(0.0f, JMActionSheetPadding, 0.0f, JMActionSheetPadding);
         collectionView.showsHorizontalScrollIndicator = NO;
-        [self.view addSubview:collectionView];
+        collectionView.userInteractionEnabled = YES;
+        
+        UIView *containerView;
+        containerView = [[UIView alloc] initWithFrame:containerFrame];
+        containerView.backgroundColor = [UIColor whiteColor];
+        collectionView.frame = collectionView.bounds;
+        [containerView addSubview:collectionView];
+        [containerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+        [self.view addSubview:containerView];
         
         //Load collectionView
         [self registerCellForcollectionView:collectionView];
         [self setJm_CollectionViewElements:collectionItem.elements];
+        [self setJm_collectionActionBlock:collectionItem.collectionActionBlock];
         collectionView.dataSource = self;
+        collectionView.delegate = self;
         [collectionView reloadData];
         
-        *yOffset = CGRectGetMinY(collectionView.frame) - JMActionSheetInterlineSpacing;
+        *yOffset = CGRectGetMinY(containerView.frame) - JMActionSheetInterlineSpacing;
         return collectionView;
         
     } else if ([item isKindOfClass:[JMActionSheetPickerItem class]]) {
@@ -190,11 +201,13 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
         UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.elements];
         pickerView.backgroundColor = [UIColor whiteColor];
         pickerView.frame = frame;
+        [pickerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
         [self.view addSubview:pickerView];
         
         //Load PickerView
         [self setJm_pickerActionBlock:pickerItem.pickerActionBlock];
         *yOffset = CGRectGetMinY(pickerView.frame) - JMActionSheetInterlineSpacing;
+        
         return pickerView;
         
     } else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {

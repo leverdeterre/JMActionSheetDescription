@@ -9,7 +9,9 @@
 #import "JMActionSheet.h"
 #import "JMActionSheetViewController.h"
 #import "JMActionSheetDescription.h"
+
 #import "JMActionSheetViewController+PickerViewItem.h"
+#import "JMActionSheetViewController+CollectionItem.h"
 
 static JMActionSheet *actionSheet_;
 static JMActionSheetViewController *actionSheetViewController_;
@@ -105,11 +107,21 @@ static UIView *dimmingView_;
     }
 }
 
-- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectPickerViewValue:(NSString *)selectedValue
+- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectPickerViewElement:(id)element
 {
-    JMActionSheetPickerItemAction itemActionBlock = [vc jm_getPickerActionBlock];
+    JMActionSheetSelectedItemBlock itemActionBlock = [vc jm_pickerActionBlock];
     if (itemActionBlock) {
-        itemActionBlock(selectedValue);
+        itemActionBlock(element);
+    }
+    
+    [self dismissActionSheetViewController:vc];
+}
+
+- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectCollectionViewElement:(id)element
+{
+    JMActionSheetSelectedItemBlock itemActionBlock = [vc jm_collectionActionBlock];
+    if (itemActionBlock) {
+        itemActionBlock(element);
     }
     
     [self dismissActionSheetViewController:vc];

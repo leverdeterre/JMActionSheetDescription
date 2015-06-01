@@ -66,9 +66,22 @@
                                     <action selector="showActionImageView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gol-ie-Joy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z21-Nk-CAC">
+                                <rect key="frame" x="16" y="285" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xTu-Ev-CDC"/>
+                                </constraints>
+                                <state key="normal" title="present a collection">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCollection:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eHH-ap-oHy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="z21-Nk-CAC" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="1ar-wk-ke0"/>
                             <constraint firstItem="KCz-8x-gel" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="1cV-Pp-imS"/>
                             <constraint firstItem="KCz-8x-gel" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="2bu-eh-ouq"/>
                             <constraint firstItem="heG-YN-gQH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="5bQ-6P-iWL"/>
@@ -76,9 +89,11 @@
                             <constraint firstItem="2pC-6U-WRu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7XH-ry-93Q"/>
                             <constraint firstItem="2pC-6U-WRu" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="D0R-Ow-FY7"/>
                             <constraint firstItem="dcl-55-yLD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="FAR-gY-QKy"/>
+                            <constraint firstItem="z21-Nk-CAC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eer-zY-3GZ"/>
                             <constraint firstItem="dcl-55-yLD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="h83-DT-hgp"/>
                             <constraint firstItem="KCz-8x-gel" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="pxk-ej-dDh"/>
                             <constraint firstItem="heG-YN-gQH" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="rqC-y2-Wuw"/>
+                            <constraint firstItem="z21-Nk-CAC" firstAttribute="top" secondItem="dcl-55-yLD" secondAttribute="bottom" constant="25" id="rsB-yU-Yhl"/>
                             <constraint firstItem="heG-YN-gQH" firstAttribute="top" secondItem="KCz-8x-gel" secondAttribute="bottom" constant="30" id="vne-eV-GYw"/>
                             <constraint firstItem="2pC-6U-WRu" firstAttribute="top" secondItem="heG-YN-gQH" secondAttribute="bottom" constant="30" id="yWw-P1-GUd"/>
                         </constraints>

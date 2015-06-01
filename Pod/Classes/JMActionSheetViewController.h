@@ -11,8 +11,11 @@
 @class JMActionSheetViewController;
 
 @protocol JMActionSheetViewControllerDelegate <NSObject>
+
 - (void)dismissActionSheetViewController:(JMActionSheetViewController *)vc;
-- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectPickerViewValue:(NSString *)selectedValue;
+- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectPickerViewElement:(id)element;
+- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectCollectionViewElement:(id)element;
+
 @end
 
 @class JMActionSheetDescription;
