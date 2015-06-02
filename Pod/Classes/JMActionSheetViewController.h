@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JMActionSheetItem.h"
 
 @class JMActionSheetViewController;
-
 @protocol JMActionSheetViewControllerDelegate <NSObject>
 
-- (void)dismissActionSheetViewController:(JMActionSheetViewController *)vc;
-- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectPickerViewElement:(id)element;
-- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectCollectionViewElement:(id)element;
+- (void)dismissActionSheet;
+- (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block;
+- (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block;
 
 @end
 

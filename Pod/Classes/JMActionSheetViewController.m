@@ -13,7 +13,8 @@
 #import "JMActionSheet.h"
 
 #import "JMActionSheetViewController+PickerViewItem.h"
-#import "JMActionSheetViewController+CollectionItem.h"
+//#import "JMActionSheetViewController+CollectionItem.h"
+#import "UICollectionView+AutoDelegation.h"
 
 static const CGFloat JMActionSheetPadding               = 10.0f;
 static const CGFloat JMActionSheetInterlineSpacing      = 1.0f;
@@ -78,7 +79,12 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     CGFloat yOffset = CGRectGetMaxY(self.view.bounds) - JMActionSheetButtonHeight - JMActionSheetPadding;
     CGFloat width = CGRectGetWidth(self.view.bounds) - 2 * JMActionSheetPadding;
     CGRect frame = CGRectMake(JMActionSheetPadding, yOffset, width, JMActionSheetButtonHeight);
-    UIButton *button = (UIButton *)[self addViewForItem:actionSheetDescription.cancelItem forTag:tag corners:UIRectCornerAllCorners offset:&yOffset];
+    JMActionSheetItem *cancelItem = actionSheetDescription.cancelItem;
+    if (nil == cancelItem) {
+        cancelItem = [[JMActionSheetItem alloc] init];
+        cancelItem.title = @"Cancel";
+    }
+    UIButton *button = (UIButton *)[self addViewForItem:cancelItem forTag:tag corners:UIRectCornerAllCorners offset:&yOffset];
     button.frame = frame;
     if (self.actionSheetCancelButtonFont) {
         button.titleLabel.font = self.actionSheetCancelButtonFont;
@@ -113,7 +119,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
 
 - (void)dimmingViewPressed:(id)sender
 {
-    [self.delegate dismissActionSheetViewController:self];
+    [self.delegate dismissActionSheet];
 }
 
 - (void)buttonPressed:(id)button
@@ -121,7 +127,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     NSInteger tag = [button tag];
     JMActionSheetItemAction action = self.actions[tag];
     action();
-    [self.delegate dismissActionSheetViewController:self];
+    [self.delegate dismissActionSheet];
 }
 
 #pragma mark - Private
@@ -186,7 +192,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:flow];
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.frame = collectionFrame;
-    collectionView.contentInset = UIEdgeInsetsMake(0.0f, JMActionSheetPadding, 0.0f, JMActionSheetPadding);
+    //collectionView.contentInset = UIEdgeInsetsMake(0.0f, JMActionSheetPadding, 0.0f, JMActionSheetPadding);
     collectionView.showsHorizontalScrollIndicator = NO;
     collectionView.userInteractionEnabled = YES;
     
@@ -199,11 +205,12 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     [self.view addSubview:containerView];
     
     //Load collectionView
-    [self registerCellForcollectionView:collectionView];
-    [self setJm_CollectionViewElements:collectionItem.elements];
-    [self setJm_collectionActionBlock:collectionItem.collectionActionBlock];
-    collectionView.dataSource = self;
-    collectionView.delegate = self;
+    [collectionView jm_registerCells];
+    [collectionView setJm_CollectionViewElements:collectionItem.elements];
+    [collectionView setJm_collectionActionBlock:collectionItem.collectionActionBlock];
+    [collectionView setJm_actionSheetDelegate:self.delegate];
+    collectionView.dataSource = collectionView;
+    collectionView.delegate = collectionView;
     [collectionView reloadData];
     
     *yOffset = CGRectGetMinY(containerView.frame) - JMActionSheetInterlineSpacing;

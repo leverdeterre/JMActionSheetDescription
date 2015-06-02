@@ -1,19 +1,24 @@
 //
-//  JMActionSheetViewController+CollectionItem.m
+//  UICollectionView+AutoDelegation.m
 //  Pods
 //
-//  Created by jerome morissard on 01/06/2015.
+//  Created by jerome morissard on 02/06/2015.
 //
 //
 
-#import "JMActionSheetViewController+CollectionItem.h"
+#import "UICollectionView+AutoDelegation.h"
 #import "JMActionSheetCollectionItemCell.h"
+#import "JMActionSheetItem.h"
 #import <objc/runtime.h>
 
 const char * const JMActionSheetCollectionDatasourceKey = "JMActionSheetCollectionDatasourceKey";
 const char * const JMActionSheetCollectionViewBlockActionKey = "JMActionSheetCollectionViewBlockActionKey";
+const char * const JMActionSheetCollectionDelegateKey = "JMActionSheetCollectionDelegateKey";
+const char * const JMActionSheetActionDelegateKey = "JMActionSheetActionDelegateKey";
 
-@implementation JMActionSheetViewController (CollectionItem)
+@implementation UICollectionView (AutoDelegation)
+
+#pragma mark - Runtine Accessors
 
 - (void)setJm_CollectionViewElements:(NSArray *)jm_elements
 {
@@ -37,11 +42,22 @@ const char * const JMActionSheetCollectionViewBlockActionKey = "JMActionSheetCol
     return actionBlock;
 }
 
+- (void)setJm_actionSheetDelegate:(id<JMActionSheetViewControllerDelegate>)jm_actionSheetDelegate
+{
+    objc_setAssociatedObject(self, JMActionSheetActionDelegateKey, jm_actionSheetDelegate, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (id<JMActionSheetViewControllerDelegate>)jm_actionSheetDelegate
+{
+    id<JMActionSheetViewControllerDelegate>jm_actionSheetDelegate  = objc_getAssociatedObject(self, JMActionSheetActionDelegateKey);
+    return jm_actionSheetDelegate;
+}
+
 #pragma mark - UICollectionViewDataSource
 
-- (void)registerCellForcollectionView:(UICollectionView *)collectionView
+- (void)jm_registerCells
 {
-    [collectionView registerClass:[JMActionSheetCollectionItemCell class] forCellWithReuseIdentifier:@"JMActionSheetCollectionItemCell"];
+    [self registerClass:[JMActionSheetCollectionItemCell class] forCellWithReuseIdentifier:@"JMActionSheetCollectionItemCell"];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -54,7 +70,7 @@ const char * const JMActionSheetCollectionViewBlockActionKey = "JMActionSheetCol
 {
     JMActionSheetCollectionItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JMActionSheetCollectionItemCell" forIndexPath:indexPath];
     id obj = [[self jm_CollectionViewElements] objectAtIndex:indexPath.row];
-    [cell updateWithObject:obj forIndexPath:indexPath andDelegate:self];
+    [cell updateWithObject:obj forIndexPath:indexPath andDelegate:self.delegate];
     return cell;
 }
 
@@ -63,7 +79,7 @@ const char * const JMActionSheetCollectionViewBlockActionKey = "JMActionSheetCol
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     id obj = [[self jm_CollectionViewElements] objectAtIndex:indexPath.row];
-    [self.delegate actionSheetViewController:self didSelectCollectionViewElement:obj];
+    [[self jm_actionSheetDelegate] actionSheetDidSelectCollectionView:collectionView element:obj block:[self jm_collectionActionBlock]];
 }
 
 @end

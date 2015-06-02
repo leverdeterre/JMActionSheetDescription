@@ -11,7 +11,6 @@
 #import "JMActionSheetDescription.h"
 
 #import "JMActionSheetViewController+PickerViewItem.h"
-#import "JMActionSheetViewController+CollectionItem.h"
 
 static JMActionSheet *actionSheet_;
 static JMActionSheetViewController *actionSheetViewController_;
@@ -34,7 +33,7 @@ static UIView *dimmingView_;
     [self showActionSheetDescription:actionSheetDescription inViewController:viewController fromView:view permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
 
-+ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController fromView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
++ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController fromView:(UIView *)fromView permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
 {
     actionSheet_ = [[JMActionSheet alloc] init];
     actionSheetViewController_ = [[JMActionSheetViewController alloc] init];
@@ -45,7 +44,6 @@ static UIView *dimmingView_;
     [viewController.view addSubview:dimmingView_];
     
     //Configure actionSheetViewController
-    
     CGRect originalFrame = viewController.view.frame;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         originalFrame = CGRectMake(0.0f, 0.0f, 320.0f, 50.0f);
@@ -62,7 +60,7 @@ static UIView *dimmingView_;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         actionSheetViewPopover_ = [[UIPopoverController alloc] initWithContentViewController:actionSheetViewController_];
         actionSheetViewPopover_.delegate = actionSheet_;
-        [actionSheetViewPopover_ presentPopoverFromRect:view.frame inView:viewController.view permittedArrowDirections:arrowDirections animated:YES];
+        [actionSheetViewPopover_ presentPopoverFromRect:fromView.frame inView:viewController.view permittedArrowDirections:arrowDirections animated:YES];
         
     } else {
         //Childs
@@ -87,7 +85,7 @@ static UIView *dimmingView_;
 
 #pragma mark - JMActionSheetViewControllerDelegate
 
-- (void)dismissActionSheetViewController:(JMActionSheetViewController *)vc
+- (void)dismissActionSheet
 {
     if (actionSheetViewPopover_) {
         [actionSheetViewPopover_ dismissPopoverAnimated:YES];
@@ -107,24 +105,22 @@ static UIView *dimmingView_;
     }
 }
 
-- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectPickerViewElement:(id)element
+- (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block
 {
-    JMActionSheetSelectedItemBlock itemActionBlock = [vc jm_pickerActionBlock];
-    if (itemActionBlock) {
-        itemActionBlock(element);
+    if (block) {
+        block(element);
     }
     
-    [self dismissActionSheetViewController:vc];
+    [self dismissActionSheet];
 }
 
-- (void)actionSheetViewController:(JMActionSheetViewController *)vc didSelectCollectionViewElement:(id)element
+- (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block
 {
-    JMActionSheetSelectedItemBlock itemActionBlock = [vc jm_collectionActionBlock];
-    if (itemActionBlock) {
-        itemActionBlock(element);
+    if (block) {
+        block(element);
     }
     
-    [self dismissActionSheetViewController:vc];
+    [self dismissActionSheet];
 }
 
 @end

@@ -59,7 +59,7 @@ const char * const JMActionSheetPickerBlockActionKey = "JMActionSheetPickerBlock
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     id obj = [[self jm_pickerElements] objectAtIndex:row];
-    [self.delegate actionSheetViewController:self didSelectPickerViewElement:obj];
+    [self.delegate actionSheetDidSelectPickerView:pickerView element:obj block:[self jm_pickerActionBlock]];
 }
 
 @end
