@@ -1,13 +1,14 @@
 Pod::Spec.new do |s|
   s.name             = "JMActionSheetDescription"
-  s.version          = "0.3.0"
+  s.version          = "0.4.0"
   s.summary          = "Make a description of your actionSheet 2.0."
   s.description      = <<-DESC
                        JMActionSheetDescription is a descriptor component. Write your actionSheet description and let
                        the framework generate your custom actionSheet.
                        Customizable elements : button font, color, background.
                        Cool added elements are : an PickerView,
-                                                 an Horizontal carousel (CollectionView of course),
+                                                 an Horizontal carousel of iconified actions,
+                                                 an Horizontal carousel of images,
                                                  an image to help understanding the context of action,
                                                  an URL (in progress),
                                                  an text (in progress).
