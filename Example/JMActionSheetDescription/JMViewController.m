@@ -90,13 +90,40 @@
     otherItem.title = @"Delete image ?";
     otherItem.textColor = [UIColor redColor];
     otherItem.action = ^(void){
-        NSLog(@"Delete image pressed");
+        NSLog(@"Delete images pressed");
     };
     
     JMActionSheetImageItem *imageItem = [[JMActionSheetImageItem alloc] init];
     imageItem.image = [UIImage imageNamed:@"gif_experiments"];
     imageItem.imageHeight = 200.0f;
-    desc.items = @[otherItem,imageItem];
+    desc.items = @[otherItem, imageItem];
+
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+}
+
+- (IBAction)showActionImagesView:(id)sender
+{
+    JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
+    desc.actionSheetTintColor = [UIColor grayColor];
+    desc.actionSheetCancelButtonFont = [UIFont boldSystemFontOfSize:17.0f];
+    desc.actionSheetOtherButtonFont = [UIFont systemFontOfSize:16.0f];
+    
+    JMActionSheetItem *cancelItem = [[JMActionSheetItem alloc] init];
+    cancelItem.title = @"Cancel";
+    desc.cancelItem = cancelItem;
+    desc.title = @"Available actions for component";
+    
+    JMActionSheetItem *otherItem = [[JMActionSheetItem alloc] init];
+    otherItem.title = @"Delete images ?";
+    otherItem.textColor = [UIColor redColor];
+    otherItem.action = ^(void){
+        NSLog(@"Delete image pressed");
+    };
+    
+    JMActionSheetImagesItem *imagesItem = [[JMActionSheetImagesItem alloc] init];
+    imagesItem.images = @[[UIImage imageNamed:@"gif_experiments"], [UIImage imageNamed:@"gif_experiments"], [UIImage imageNamed:@"gif_experiments"]];
+    imagesItem.imageSize = CGSizeMake(250.0f, 170.0f);
+    desc.items = @[otherItem, imagesItem];
     
     [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
@@ -168,7 +195,7 @@
     
     collectionItem.elements = collectionItems;
     collectionItem.collectionActionBlock = ^(JMCollectionItem *selectedValue){
-        NSLog(@"selectedValue %@",selectedValue.actionName);
+        NSLog(@"collectionItem selectedValue %@",selectedValue.actionName);
     };
     
     JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
@@ -179,7 +206,29 @@
     JMActionSheetItem *cancelItem = [[JMActionSheetItem alloc] init];
     cancelItem.title = @"Cancel";
     desc.cancelItem = cancelItem;
-    desc.items = @[collectionItem,collectionItem];
+    
+    JMActionSheetCollectionItem *collectionItem2 = [[JMActionSheetCollectionItem alloc] init];
+    NSMutableArray *collectionItems2 = [NSMutableArray new];
+    item = [[JMCollectionItem alloc] init];
+    item.actionName = @"AppStore";
+    item.actionImageName = @"apple_store_app_icon.jpg";
+    [collectionItems2 addObject:item];
+    
+    item = [[JMCollectionItem alloc] init];
+    item.actionName = @"AppStore";
+    item.actionImageName = @"apple_store_app_icon.jpg";
+    [collectionItems2 addObject:item];
+    
+    item = [[JMCollectionItem alloc] init];
+    item.actionName = @"AppStore";
+    item.actionImageName = @"apple_store_app_icon.jpg";
+    [collectionItems2 addObject:item];
+    collectionItem2.elements = collectionItems2;
+    collectionItem2.collectionActionBlock = ^(JMCollectionItem *selectedValue){
+        NSLog(@"collectionItem2 selectedValue %@",selectedValue.actionName);
+    };
+    
+    desc.items = @[collectionItem, collectionItem2];
     [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
 

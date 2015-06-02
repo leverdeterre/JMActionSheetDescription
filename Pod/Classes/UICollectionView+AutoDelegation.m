@@ -15,6 +15,7 @@ const char * const JMActionSheetCollectionDatasourceKey = "JMActionSheetCollecti
 const char * const JMActionSheetCollectionViewBlockActionKey = "JMActionSheetCollectionViewBlockActionKey";
 const char * const JMActionSheetCollectionDelegateKey = "JMActionSheetCollectionDelegateKey";
 const char * const JMActionSheetActionDelegateKey = "JMActionSheetActionDelegateKey";
+const char * const JMActionSheetCollectionCellClassKey = "JMActionSheetCollectionCellClassKey";
 
 @implementation UICollectionView (AutoDelegation)
 
@@ -53,11 +54,29 @@ const char * const JMActionSheetActionDelegateKey = "JMActionSheetActionDelegate
     return jm_actionSheetDelegate;
 }
 
+- (void)setJm_collectionViewCellClass:(Class)kClass
+{
+    objc_setAssociatedObject(self, JMActionSheetCollectionCellClassKey, NSStringFromClass(kClass), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (Class)jm_collectionViewCellClass
+{
+    NSString *str  = objc_getAssociatedObject(self, JMActionSheetCollectionCellClassKey);
+    return NSClassFromString(str);
+}
+
+- (NSString *)jm_collectionViewCellReuseIdentifier
+{
+    NSString *str  = objc_getAssociatedObject(self, JMActionSheetCollectionCellClassKey);
+    return str;
+}
+
 #pragma mark - UICollectionViewDataSource
 
-- (void)jm_registerCells
+- (void)jm_registerCollectionViewCellClass:(Class)kclass
 {
-    [self registerClass:[JMActionSheetCollectionItemCell class] forCellWithReuseIdentifier:@"JMActionSheetCollectionItemCell"];
+    [self registerClass:kclass forCellWithReuseIdentifier:NSStringFromClass(kclass)];
+    [self setJm_collectionViewCellClass:kclass];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -68,7 +87,7 @@ const char * const JMActionSheetActionDelegateKey = "JMActionSheetActionDelegate
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    JMActionSheetCollectionItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JMActionSheetCollectionItemCell" forIndexPath:indexPath];
+    JMActionSheetCollectionItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[self jm_collectionViewCellReuseIdentifier] forIndexPath:indexPath];
     id obj = [[self jm_CollectionViewElements] objectAtIndex:indexPath.row];
     [cell updateWithObject:obj forIndexPath:indexPath andDelegate:self.delegate];
     return cell;

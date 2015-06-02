@@ -17,6 +17,6 @@
 @property (copy, nonatomic) JMActionSheetSelectedItemBlock jm_collectionActionBlock;
 @property (weak, nonatomic) id <JMActionSheetViewControllerDelegate> jm_actionSheetDelegate;
 
-- (void)jm_registerCells;
+- (void)jm_registerCollectionViewCellClass:(Class)kclass;
 
 @end

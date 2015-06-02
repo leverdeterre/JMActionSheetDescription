@@ -13,15 +13,16 @@
 #import "JMActionSheet.h"
 
 #import "JMActionSheetViewController+PickerViewItem.h"
-//#import "JMActionSheetViewController+CollectionItem.h"
 #import "UICollectionView+AutoDelegation.h"
+#import "JMActionSheetCollectionItemCell.h"
+#import "JMActionSheetCollectionImageCell.h"
 
 static const CGFloat JMActionSheetPadding               = 10.0f;
 static const CGFloat JMActionSheetInterlineSpacing      = 1.0f;
 static const CGFloat JMActionSheetRoundedCornerRadius   = 6.0f;
 
 static const CGFloat JMActionSheetButtonHeight          = 40.0f;
-static const CGFloat JMActionSheetImageViewHeight       = 80.0f;
+static const CGFloat JMActionSheetImageViewHeight       = 150.0f;
 static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
 
 static const CGFloat JMActionSheetCollectionViewHeight  = 80.0f;
@@ -158,6 +159,9 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     } else if ([item isKindOfClass:[JMActionSheetPickerItem class]]) {
         view = [self addPickerViewForItem:(JMActionSheetPickerItem *)item forTag:tag corners:corners offset:yOffset];
         
+    } else if ([item isKindOfClass:[JMActionSheetImagesItem class]]) {
+        view = [self addCollectionViewForItem:(JMActionSheetCollectionItem *)item forTag:tag corners:corners offset:yOffset];
+        
     } else if ([item isKindOfClass:[JMActionSheetImageItem class]]) {
         view = [self addImageViewForItem:(JMActionSheetImageItem *)item forTag:tag corners:corners offset:yOffset];
         
@@ -178,8 +182,30 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
                              corners:(UIRectCorner)corners
                               offset:(CGFloat *)yOffset
 {
-    //Compute frame
+    
     CGFloat collectionHeight = JMActionSheetCollectionViewHeight;
+    CGSize itemSize = CGSizeMake(JMActionSheetCollectionViewWidth, JMActionSheetCollectionViewHeight);
+    Class kClass = [JMActionSheetCollectionItemCell class];
+    NSArray *elements;
+    JMActionSheetSelectedItemBlock collectionActionBlock = NULL;
+    
+    if ([collectionItem isKindOfClass:[JMActionSheetImagesItem class]]) {
+        JMActionSheetImagesItem *imagesItem = (JMActionSheetImagesItem *)collectionItem;
+        collectionHeight = JMActionSheetImageViewHeight;
+        if (imagesItem.imageSize.height > 0.0f) {
+            collectionHeight = imagesItem.imageSize.height;
+        }
+        
+        itemSize = imagesItem.imageSize;
+        kClass = [JMActionSheetCollectionImageCell class];
+        elements = imagesItem.images;
+
+    } else {
+        elements = collectionItem.elements;
+        collectionActionBlock = collectionItem.collectionActionBlock;
+    }
+    
+    //Compute frame
     CGFloat y = *yOffset - collectionHeight;
     CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
     CGRect containerFrame = CGRectMake(JMActionSheetPadding, y, width, collectionHeight);
@@ -187,7 +213,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     
     //Configure collectionView
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    flow.itemSize = CGSizeMake(JMActionSheetCollectionViewWidth, JMActionSheetCollectionViewHeight);
+    flow.itemSize = itemSize;
     flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:flow];
     collectionView.backgroundColor = [UIColor whiteColor];
@@ -195,6 +221,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     //collectionView.contentInset = UIEdgeInsetsMake(0.0f, JMActionSheetPadding, 0.0f, JMActionSheetPadding);
     collectionView.showsHorizontalScrollIndicator = NO;
     collectionView.userInteractionEnabled = YES;
+    collectionView.alwaysBounceHorizontal = YES;
     
     UIView *containerView;
     containerView = [[UIView alloc] initWithFrame:containerFrame];
@@ -205,9 +232,9 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     [self.view addSubview:containerView];
     
     //Load collectionView
-    [collectionView jm_registerCells];
-    [collectionView setJm_CollectionViewElements:collectionItem.elements];
-    [collectionView setJm_collectionActionBlock:collectionItem.collectionActionBlock];
+    [collectionView jm_registerCollectionViewCellClass:kClass];
+    [collectionView setJm_CollectionViewElements:elements];
+    [collectionView setJm_collectionActionBlock:collectionActionBlock];
     [collectionView setJm_actionSheetDelegate:self.delegate];
     collectionView.dataSource = collectionView;
     collectionView.delegate = collectionView;

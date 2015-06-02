@@ -13,6 +13,7 @@
 
 #import "JMActionSheetItem.h"
 #import "JMActionSheetImageItem.h"
+#import "JMActionSheetImagesItem.h"
 #import "JMActionSheetPickerItem.h"
 #import "JMActionSheetCollectionItem.h"
 
