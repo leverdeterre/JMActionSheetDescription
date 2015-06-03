@@ -13,6 +13,7 @@
 @interface JMCollectionItem : NSObject <JMActionSheetCollectionItem>
 
 @property (strong, nonatomic) NSString *actionName;
-@property (strong, nonatomic) NSString *actionImageName;
+@property (strong, nonatomic) UIImage *actionImage;
+@property (assign, nonatomic) UIViewContentMode actionImageContentMode;
 
 @end

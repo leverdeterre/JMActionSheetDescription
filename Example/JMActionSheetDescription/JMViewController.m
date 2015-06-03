@@ -165,32 +165,37 @@
     NSMutableArray *collectionItems = [NSMutableArray new];
     JMCollectionItem *item = [[JMCollectionItem alloc] init];
     item.actionName = @"facebook";
-    item.actionImageName = @"fb-icon3-150x150.png";
+    item.actionImage = [UIImage imageNamed:@"fb-icon3-150x150.png"];
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"AppStore";
-    item.actionImageName = @"apple_store_app_icon.jpg";
+    item.actionImage = [UIImage imageNamed:@"apple_store_app_icon.jpg"];
+
     [collectionItems addObject:item];
 
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Password";
-    item.actionImageName = @"1Pi-icon-1024-150x150.png";
+    item.actionImage = [UIImage imageNamed:@"1Pi-icon-1024-150x150.png"];
+
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Flipboard";
-    item.actionImageName = @"Flipboard-App-Icon-150x150.jpg";
+    item.actionImage = [UIImage imageNamed:@"Flipboard-App-Icon-150x150.jpg"];
+
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Gmail";
-    item.actionImageName = @"gmail-ios-icon-app-150x150.png";
+    item.actionImage = [UIImage imageNamed:@"gmail-ios-icon-app-150x150.png"];
+
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Mail";
-    item.actionImageName = @"mail-iphone-150x150.jpg";
+    item.actionImage = [UIImage imageNamed:@"mail-iphone-150x150.jpg"];
+
     [collectionItems addObject:item];
     
     collectionItem.elements = collectionItems;
@@ -210,19 +215,26 @@
     JMActionSheetCollectionItem *collectionItem2 = [[JMActionSheetCollectionItem alloc] init];
     NSMutableArray *collectionItems2 = [NSMutableArray new];
     item = [[JMCollectionItem alloc] init];
-    item.actionName = @"AppStore";
-    item.actionImageName = @"apple_store_app_icon.jpg";
+    item.actionName = @"Open Plan";
+    item.actionImageContentMode = UIViewContentModeCenter;
+    UIImage *img = [IonIcons imageWithIcon:ion_map size:40.0f color:[UIColor grayColor]];
+    item.actionImage = img;    
     [collectionItems2 addObject:item];
     
     item = [[JMCollectionItem alloc] init];
-    item.actionName = @"AppStore";
-    item.actionImageName = @"apple_store_app_icon.jpg";
+    item.actionName = @"Take a beer";
+    img = [IonIcons imageWithIcon:ion_beer size:40.0f color:[UIColor grayColor]];
+    item.actionImage = img;
+    item.actionImageContentMode = UIViewContentModeCenter;
     [collectionItems2 addObject:item];
     
     item = [[JMCollectionItem alloc] init];
-    item.actionName = @"AppStore";
-    item.actionImageName = @"apple_store_app_icon.jpg";
+    item.actionName = @"ApplePay";
+    img = [IonIcons imageWithIcon:ion_card size:40.0f color:[UIColor grayColor]];
+    item.actionImage = img;
+    item.actionImageContentMode = UIViewContentModeCenter;
     [collectionItems2 addObject:item];
+    
     collectionItem2.elements = collectionItems2;
     collectionItem2.collectionActionBlock = ^(JMCollectionItem *selectedValue){
         NSLog(@"collectionItem2 selectedValue %@",selectedValue.actionName);
@@ -238,32 +250,37 @@
     NSMutableArray *collectionItems = [NSMutableArray new];
     JMCollectionItem *item = [[JMCollectionItem alloc] init];
     item.actionName = @"facebook";
-    item.actionImageName = @"fb-icon3-150x150.png";
+    item.actionImage = [UIImage imageNamed:@"fb-icon3-150x150.png"];
+
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"AppStore";
-    item.actionImageName = @"apple_store_app_icon.jpg";
+    item.actionImage = [UIImage imageNamed:@"apple_store_app_icon.jpg"];
+
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Password";
-    item.actionImageName = @"1Pi-icon-1024-150x150.png";
+    item.actionImage = [UIImage imageNamed: @"1Pi-icon-1024-150x150.png"];
+
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Flipboard";
-    item.actionImageName = @"Flipboard-App-Icon-150x150.jpg";
+    item.actionImage = [UIImage imageNamed:@"Flipboard-App-Icon-150x150.jpg"];
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Gmail";
-    item.actionImageName = @"gmail-ios-icon-app-150x150.png";
+    item.actionImage = [UIImage imageNamed:@"gmail-ios-icon-app-150x150.png"];
+
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Mail";
-    item.actionImageName = @"mail-iphone-150x150.jpg";
+    item.actionImage = [UIImage imageNamed:@"mail-iphone-150x150.jpg"];
+
     [collectionItems addObject:item];
     
     collectionItem.elements = collectionItems;

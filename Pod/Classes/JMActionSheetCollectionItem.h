@@ -9,12 +9,12 @@
 #import "JMActionSheetItem.h"
 
 @protocol JMActionSheetCollectionItem <NSObject>
-@property (readonly) NSString *actionNameForActionSheetCollectionItem;
+
+@property (strong, nonatomic) UIImage *actionImage;
+@property (strong, nonatomic) NSString *actionName;
 
 @optional
-@property (readonly) UIImage *imageForActionSheetCollectionItem;
-@property (readonly) NSString *imageNamedForActionSheetCollectionItem;
-
+@property (assign, nonatomic) UIViewContentMode actionImageContentMode;
 @end
 
 @interface JMActionSheetCollectionItem : JMActionSheetItem

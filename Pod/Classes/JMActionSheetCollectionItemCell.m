@@ -40,7 +40,7 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
     
     if (nil == self.actionImageView) {
         UIImageView *imageView = [[UIImageView alloc] init];
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.contentMode = UIViewContentModeCenter;
         CGRect frame = self.frame;
         frame.origin.y = 1.0f;
         frame.origin.x = JMActionSheetCollectionPadding;
@@ -75,8 +75,12 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
     }
     
     if (conformedObject) {
-        self.actionImageView.image = [UIImage imageNamed:[conformedObject imageNamedForActionSheetCollectionItem]];
-        self.actionLabel.text = [conformedObject actionNameForActionSheetCollectionItem];
+        self.actionImageView.image = [conformedObject actionImage];
+        self.actionLabel.text = [conformedObject actionName];
+    }
+    
+    if ([conformedObject respondsToSelector:@selector(actionImageContentMode)]) {
+        self.actionImageView.contentMode = [conformedObject actionImageContentMode];
     }
     
     self.indexPath = indexPath;

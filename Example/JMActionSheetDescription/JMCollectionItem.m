@@ -10,17 +10,4 @@
 
 @implementation JMCollectionItem
 
-
-#pragma mark - JMActionSheetCollectionItem
-
-- (NSString *)actionNameForActionSheetCollectionItem
-{
-    return self.actionName;
-}
-
-- (NSString *)imageNamedForActionSheetCollectionItem
-{
-    return self.actionImageName;
-}
-
 @end
