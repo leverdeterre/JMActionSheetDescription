@@ -305,36 +305,19 @@
 			children = (
 				42E82458AC25CDDC4DD9617F /* JMActionSheet.h */,
 				F49055E95AFE91F33F3B3156 /* JMActionSheet.m */,
-				98A6B7E8FA579706D88F9FFA /* JMActionSheetCollectionImageCell.h */,
-				2DEF6357CC37BAAAC6F85B77 /* JMActionSheetCollectionImageCell.m */,
-				507292F7CD9008377AAAD192 /* JMActionSheetCollectionItem.h */,
-				406C04D590E3874D0043FCEE /* JMActionSheetCollectionItem.m */,
-				D4D3C827063D9D54C8FF6A15 /* JMActionSheetCollectionItemCell.h */,
-				D5C954D0E0F86B274233D8D3 /* JMActionSheetCollectionItemCell.m */,
-				DD7775716B1798659628156F /* JMActionSheetCollectionViewController.h */,
-				A63A6B99EF9A9567229617FC /* JMActionSheetCollectionViewController.m */,
-				FD65C6F5311001251B8483FB /* JMActionSheetDescription.h */,
-				9C710FBA2259F155E48FAFE9 /* JMActionSheetDescription.m */,
-				5001BA4278346FB826997FA3 /* JMActionSheetImageItem.h */,
-				BAD5FB25024BD2AF3A84372B /* JMActionSheetImageItem.m */,
-				002AA4976452B3CDC350AC1E /* JMActionSheetImagesItem.h */,
-				ADC1FE012D9A5EAA2E084CE3 /* JMActionSheetImagesItem.m */,
-				F74E7050E58E0122F87849BE /* JMActionSheetItem.h */,
-				D57B230CE46EAD9128FA8C33 /* JMActionSheetItem.m */,
-				44BFE88A97428E13DF1091C7 /* JMActionSheetItemControl.h */,
-				4943FCBCC00EC5D2E86A1794 /* JMActionSheetItemControl.m */,
-				B047AF9B7A4016E2E2EDB10A /* JMActionSheetPickerItem.h */,
-				C5464ED5BF4EFE6D1207D983 /* JMActionSheetPickerItem.m */,
-				D3A1DFA554A2602D4C901213 /* JMActionSheetViewController.h */,
-				23CE3809E308C4F6AB133FA0 /* JMActionSheetViewController.m */,
-				8649AEF941B6C9B1489B7793 /* JMActionSheetViewController+CollectionView.h */,
-				466BFC9B688AAABA07811465 /* JMActionSheetViewController+CollectionView.m */,
-				20C7BB22DD2BBCD6BEC59942 /* JMActionSheetViewController+PickerViewItem.h */,
-				7C94F0A7CAD2A02F498D8358 /* JMActionSheetViewController+PickerViewItem.m */,
-				38007F3CD434C7F6514D3487 /* JMImagesActionSheet.h */,
-				6FEE7747D7C763B6F5522E0C /* JMImagesActionSheet.m */,
 				463BB1B6BD6F8B87E8F0444D /* JMPickerActionSheet.h */,
 				06D6FA7E333412CBE90F20BF /* JMPickerActionSheet.m */,
+				38007F3CD434C7F6514D3487 /* JMImagesActionSheet.h */,
+				6FEE7747D7C763B6F5522E0C /* JMImagesActionSheet.m */,
+				FD65C6F5311001251B8483FB /* JMActionSheetDescription.h */,
+				9C710FBA2259F155E48FAFE9 /* JMActionSheetDescription.m */,
+				C2677EEB1B20D21300A4D248 /* CollectionSupport */,
+				C2677EEC1B20D23E00A4D248 /* ActionSheetItems */,
+				C2677EED1B20D27600A4D248 /* PickerViewSupport */,
+				44BFE88A97428E13DF1091C7 /* JMActionSheetItemControl.h */,
+				4943FCBCC00EC5D2E86A1794 /* JMActionSheetItemControl.m */,
+				D3A1DFA554A2602D4C901213 /* JMActionSheetViewController.h */,
+				23CE3809E308C4F6AB133FA0 /* JMActionSheetViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -345,6 +328,47 @@
 				E8FDD5ACA4AEC7D5F668883B /* ionicons */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C2677EEB1B20D21300A4D248 /* CollectionSupport */ = {
+			isa = PBXGroup;
+			children = (
+				8649AEF941B6C9B1489B7793 /* JMActionSheetViewController+CollectionView.h */,
+				466BFC9B688AAABA07811465 /* JMActionSheetViewController+CollectionView.m */,
+				98A6B7E8FA579706D88F9FFA /* JMActionSheetCollectionImageCell.h */,
+				2DEF6357CC37BAAAC6F85B77 /* JMActionSheetCollectionImageCell.m */,
+				D4D3C827063D9D54C8FF6A15 /* JMActionSheetCollectionItemCell.h */,
+				D5C954D0E0F86B274233D8D3 /* JMActionSheetCollectionItemCell.m */,
+				DD7775716B1798659628156F /* JMActionSheetCollectionViewController.h */,
+				A63A6B99EF9A9567229617FC /* JMActionSheetCollectionViewController.m */,
+			);
+			name = CollectionSupport;
+			sourceTree = "<group>";
+		};
+		C2677EEC1B20D23E00A4D248 /* ActionSheetItems */ = {
+			isa = PBXGroup;
+			children = (
+				F74E7050E58E0122F87849BE /* JMActionSheetItem.h */,
+				D57B230CE46EAD9128FA8C33 /* JMActionSheetItem.m */,
+				B047AF9B7A4016E2E2EDB10A /* JMActionSheetPickerItem.h */,
+				C5464ED5BF4EFE6D1207D983 /* JMActionSheetPickerItem.m */,
+				5001BA4278346FB826997FA3 /* JMActionSheetImageItem.h */,
+				BAD5FB25024BD2AF3A84372B /* JMActionSheetImageItem.m */,
+				002AA4976452B3CDC350AC1E /* JMActionSheetImagesItem.h */,
+				ADC1FE012D9A5EAA2E084CE3 /* JMActionSheetImagesItem.m */,
+				507292F7CD9008377AAAD192 /* JMActionSheetCollectionItem.h */,
+				406C04D590E3874D0043FCEE /* JMActionSheetCollectionItem.m */,
+			);
+			name = ActionSheetItems;
+			sourceTree = "<group>";
+		};
+		C2677EED1B20D27600A4D248 /* PickerViewSupport */ = {
+			isa = PBXGroup;
+			children = (
+				20C7BB22DD2BBCD6BEC59942 /* JMActionSheetViewController+PickerViewItem.h */,
+				7C94F0A7CAD2A02F498D8358 /* JMActionSheetViewController+PickerViewItem.m */,
+			);
+			name = PickerViewSupport;
 			sourceTree = "<group>";
 		};
 		C56FC51CF45CA711B178DAC0 /* Targets Support Files */ = {
