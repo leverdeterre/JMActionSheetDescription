@@ -10,11 +10,15 @@
 #import "JMActionSheetCollectionItem.h"
 
 static const CGFloat JMActionSheetCollectionPadding = 0.0f;
+static const CGFloat JMActionSheetCollectionSelectSize = 25.0f;
 
 @interface JMActionSheetCollectionImageCell ()
 
-@property (weak, nonatomic) UIImageView *actionImageView;
+@property (strong, nonatomic) UIImageView *actionImageView;
+@property (strong, nonatomic) UIImageView *selectionImageView;
+
 @property (weak, nonatomic) id <UICollectionViewDelegate> collectionViewDelegate;
+@property (weak, nonatomic) UICollectionView *collectionView;
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
 @property (strong, nonatomic) UITapGestureRecognizer *gesture;
@@ -24,12 +28,16 @@ static const CGFloat JMActionSheetCollectionPadding = 0.0f;
 
 @implementation JMActionSheetCollectionImageCell
 
+
 - (NSString *)reuseIdentifier
 {
     return NSStringFromClass(self.class);
 }
 
-- (void)updateWithObject:(id)obj forIndexPath:(NSIndexPath *)indexPath andDelegate:(id <UICollectionViewDelegate>) delegate
+- (void)updateCollectionViewCellWithObject:(id)obj
+                               atIndexPath:(NSIndexPath *)indexPath
+                                  delegate:(id <UICollectionViewDelegate>)delegate
+                            collectionView:(UICollectionView *)collectionView
 {
     if (nil == self.actionImageView) {
         UIImageView *imageView = [[UIImageView alloc] init];
@@ -45,6 +53,18 @@ static const CGFloat JMActionSheetCollectionPadding = 0.0f;
         [self.contentView addSubview:self.actionImageView];
     }
     
+    if (nil == self.selectionImageView) {
+        UIImage *image;
+        self.selectionImageView = [[UIImageView alloc] initWithImage:image];
+        CGRect frame = self.frame;
+        frame.size.height = JMActionSheetCollectionSelectSize;
+        frame.size.width = JMActionSheetCollectionSelectSize;
+        frame.origin.y = CGRectGetHeight(self.frame) - frame.size.height;
+        frame.origin.x = CGRectGetWidth(self.frame) - frame.size.width;
+        self.selectionImageView.frame = frame;
+        [self.contentView addSubview:self.self.selectionImageView];
+    }
+    
     if (nil == self.gesture) {
         self.gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cellTaped:)];
         [self addGestureRecognizer:self.gesture];
@@ -56,12 +76,35 @@ static const CGFloat JMActionSheetCollectionPadding = 0.0f;
     
     self.indexPath = indexPath;
     self.collectionViewDelegate = delegate;
+    self.collectionView = collectionView;
     self.backgroundColor = [UIColor clearColor];
+    
+    if (self.selected) {
+        self.selectionImageView.image = [UIImage imageNamed:@"JMActionSheetDescription.bundle/JMPickerChecked.png"];
+    } else {
+        self.selectionImageView.image = nil;
+    }
 }
 
 - (void)cellTaped:(id)sender
 {
-    [self.collectionViewDelegate collectionView:nil didSelectItemAtIndexPath:self.indexPath];
+    if (self.selected) {
+        [self.collectionView deselectItemAtIndexPath:self.indexPath animated:NO];
+
+    } else {
+        [self.collectionView selectItemAtIndexPath:self.indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+    }
+}
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    if (selected) {
+        self.selectionImageView.image = [UIImage imageNamed:@"JMActionSheetDescription.bundle/JMPickerChecked.png"];
+    
+    } else {
+        self.selectionImageView.image = nil;
+    }
 }
 
 @end

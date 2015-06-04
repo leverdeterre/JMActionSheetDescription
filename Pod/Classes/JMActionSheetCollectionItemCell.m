@@ -19,6 +19,7 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
 @property (weak, nonatomic) UIImageView *actionImageView;
 @property (weak, nonatomic) UILabel *actionLabel;
 @property (weak, nonatomic) id <UICollectionViewDelegate> collectionViewDelegate;
+@property (weak, nonatomic) UICollectionView *collectionView;
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
 @property (strong, nonatomic) UITapGestureRecognizer *gesture;
@@ -32,7 +33,10 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
     return NSStringFromClass(self.class);
 }
 
-- (void)updateWithObject:(id)obj forIndexPath:(NSIndexPath *)indexPath andDelegate:(id <UICollectionViewDelegate>) delegate
+- (void)updateCollectionViewCellWithObject:(id)obj
+                               atIndexPath:(NSIndexPath *)indexPath
+                                  delegate:(id <UICollectionViewDelegate>)delegate
+                            collectionView:(UICollectionView *)collectionView
 {
     id <JMActionSheetCollectionItem> conformedObject;
     if ([obj conformsToProtocol:@protocol(JMActionSheetCollectionItem)]){
@@ -91,7 +95,8 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
 
 - (void)cellTaped:(id)sender
 {
-    [self.collectionViewDelegate collectionView:nil didSelectItemAtIndexPath:self.indexPath];
+    [self.collectionView selectItemAtIndexPath:self.indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+    [self.collectionViewDelegate collectionView:self.collectionView didSelectItemAtIndexPath:self.indexPath];
 }
 
 @end

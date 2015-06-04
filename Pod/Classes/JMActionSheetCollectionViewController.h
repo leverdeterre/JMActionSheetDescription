@@ -16,6 +16,10 @@
 @property (copy, nonatomic) JMActionSheetSelectedItemBlock collectionActionBlock;
 @property (weak, nonatomic) id <JMActionSheetViewControllerDelegate> actionSheetDelegate;
 
-- (instancetype)initWithElements:(NSArray *)elements collectionActionBlock:(JMActionSheetSelectedItemBlock)block actionDelegate:(id <JMActionSheetViewControllerDelegate>)actionDelegate cellClass:(Class)cellClass layout:(UICollectionViewLayout *)layout;
+- (instancetype)initWithElements:(NSArray *)elements
+           collectionActionBlock:(JMActionSheetSelectedItemBlock)block
+                  actionDelegate:(id <JMActionSheetViewControllerDelegate>)actionDelegate
+                       cellClass:(Class)cellClass
+                          layout:(UICollectionViewLayout *)layout;
 
 @end

@@ -16,7 +16,11 @@
 
 @implementation JMActionSheetCollectionViewController
 
-- (instancetype)initWithElements:(NSArray *)elements collectionActionBlock:(JMActionSheetSelectedItemBlock)block actionDelegate:(id <JMActionSheetViewControllerDelegate>)actionDelegate cellClass:(Class)cellClass layout:(UICollectionViewLayout *)layout
+- (instancetype)initWithElements:(NSArray *)elements
+           collectionActionBlock:(JMActionSheetSelectedItemBlock)block
+                  actionDelegate:(id <JMActionSheetViewControllerDelegate>)actionDelegate
+                       cellClass:(Class)cellClass
+                          layout:(UICollectionViewLayout *)layout
 {
     JMActionSheetCollectionViewController *vc = [[JMActionSheetCollectionViewController alloc] initWithCollectionViewLayout:layout];
     vc.reuseIdentifier = NSStringFromClass(cellClass);
@@ -55,8 +59,8 @@
     JMActionSheetCollectionItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.reuseIdentifier forIndexPath:indexPath];
     
     id obj = [self.collectionViewElements objectAtIndex:indexPath.row];
-    [cell updateWithObject:obj forIndexPath:indexPath andDelegate:self];
-    
+    [cell updateCollectionViewCellWithObject:obj atIndexPath:indexPath delegate:self collectionView:self.collectionView];
+
     return cell;
 }
 
@@ -64,8 +68,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    id obj = [self.collectionViewElements objectAtIndex:indexPath.row];
-    [self.actionSheetDelegate actionSheetDidSelectCollectionView:collectionView element:obj block:self.collectionActionBlock];
+    if (NO == self.collectionView.allowsMultipleSelection) {
+        id obj = [self.collectionViewElements objectAtIndex:indexPath.row];
+        [self.actionSheetDelegate actionSheetDidSelectCollectionView:collectionView element:obj block:self.collectionActionBlock];
+        
+    } else {
+        [self.collectionView reloadData];
+    }
 }
 
 @end

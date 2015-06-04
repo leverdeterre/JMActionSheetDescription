@@ -227,6 +227,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     collectionView.showsHorizontalScrollIndicator = NO;
     collectionView.userInteractionEnabled = YES;
     collectionView.alwaysBounceHorizontal = YES;
+    collectionView.allowsMultipleSelection = YES;
     
     UIView *containerView;
     containerView = [[UIView alloc] initWithFrame:containerFrame];

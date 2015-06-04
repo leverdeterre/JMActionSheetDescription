@@ -1,6 +1,0 @@
-framework module ionicons {
-  umbrella header "Pods-JMActionSheetDescription_Example-ionicons-umbrella.h"
-
-  export *
-  module * { export * }
-}

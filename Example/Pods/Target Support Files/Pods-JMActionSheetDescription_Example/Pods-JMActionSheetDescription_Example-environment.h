@@ -9,8 +9,8 @@
 // JMActionSheetDescription
 #define COCOAPODS_POD_AVAILABLE_JMActionSheetDescription
 #define COCOAPODS_VERSION_MAJOR_JMActionSheetDescription 0
-#define COCOAPODS_VERSION_MINOR_JMActionSheetDescription 1
-#define COCOAPODS_VERSION_PATCH_JMActionSheetDescription 0
+#define COCOAPODS_VERSION_MINOR_JMActionSheetDescription 4
+#define COCOAPODS_VERSION_PATCH_JMActionSheetDescription 1
 
 // ionicons
 #define COCOAPODS_POD_AVAILABLE_ionicons

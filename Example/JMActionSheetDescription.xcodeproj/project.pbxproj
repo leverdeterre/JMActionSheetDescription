@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4563CA90D49899E59E0EA9F6 /* Pods_JMActionSheetDescription_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1BD35E62250C75ED3CB31F /* Pods_JMActionSheetDescription_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		293F090B9949CD6EAD58AD8F /* libPods-JMActionSheetDescription_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BE9B5140564077B7F43CE3 /* libPods-JMActionSheetDescription_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -83,7 +83,7 @@
 		C94A66FDF3C41B789ECDF8D9 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3734AA4CB0BB4D800A084E8 /* Pods-JMActionSheetDescription_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMActionSheetDescription_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JMActionSheetDescription_Example/Pods-JMActionSheetDescription_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E629FBB1D48E386083D0EE50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		EB1BD35E62250C75ED3CB31F /* Pods_JMActionSheetDescription_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMActionSheetDescription_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8BE9B5140564077B7F43CE3 /* libPods-JMActionSheetDescription_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JMActionSheetDescription_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				4563CA90D49899E59E0EA9F6 /* Pods_JMActionSheetDescription_Example.framework in Frameworks */,
+				293F090B9949CD6EAD58AD8F /* libPods-JMActionSheetDescription_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +140,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				EB1BD35E62250C75ED3CB31F /* Pods_JMActionSheetDescription_Example.framework */,
 				A747F8FA7F9D4854358C000B /* Pods_Tests.framework */,
+				E8BE9B5140564077B7F43CE3 /* libPods-JMActionSheetDescription_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,7 +241,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				A7FC8BA77D383D40C33913C3 /* Embed Pods Frameworks */,
 				447EC0B1CBBCB235953559D0 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -411,21 +410,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A7FC8BA77D383D40C33913C3 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JMActionSheetDescription_Example/Pods-JMActionSheetDescription_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2F5329570FDF742BFE0A8E9"
-               BuildableName = "Pods_JMActionSheetDescription_Example.framework"
+               BlueprintIdentifier = "94333C2CD18EA9F4A2D13329"
+               BuildableName = "libPods-JMActionSheetDescription_Example.a"
                BlueprintName = "Pods-JMActionSheetDescription_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
