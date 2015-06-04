@@ -14,6 +14,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ![Image](./screenshots/iphones.png)
 ![Image](./screenshots/ipads.png)
 ![Image](./screenshots/demo.gif)
+![Image](./screenshots/iphone-multiple-actions.png)
+![Image](./screenshots/iphone-multiple-images-selection.png)
+![Image](./screenshots/iphone4.png)
+
 
 ## Installation
 
@@ -64,9 +68,31 @@ desc.items = @[itemShare,pickerItem];
 [JMActionSheet showActionSheetDescription:desc inViewController:self];
 ```
 
-## Author
+## Shortcuts :)
+### To present a picker (JMPickerActionSheet) 
 
-Jérôme Morissard, morissardj@gmail.com
+```objective-c
+[JMPickerActionSheet showPickerActionSheetElements:@[@"One", @"Two", @"three", @"Four"]
+                                    didSelectBlock:^(NSString *selectedValue){
+                                                    NSLog(@"selectedValue %@",selectedValue);}
+                                            title:@"JMPickerActionSheet methods"
+                                inViewController:self];
+```
+
+### Present a mutliple images choice (JMImagesActionSheet)
+
+```objective-c
+[JMImagesActionSheet showImagesActionSheetImages:@[
+                        [UIImage imageNamed:@"gif_experiments"],
+                        [UIImage imageNamed:@"gif_experiments"],
+                        [UIImage imageNamed:@"gif_experiments"]]
+                                didSelectBlock:^(id selectedValue) {
+                                                NSLog(@"didSelectBlock %@",selectedValue); }
+                                        title:@"The title"
+                            inViewController:self];
+```
+
+
 
 ## License
 

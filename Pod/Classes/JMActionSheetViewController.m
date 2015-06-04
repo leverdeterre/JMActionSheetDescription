@@ -343,7 +343,6 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     button.frame = frame;
     button.tag = tag;
     [button applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
-    __weak JMActionSheetViewController *weakSelf = self;
     JMActionSheetItemAction action = ^(void){
         if (item.action) {
             item.action();
