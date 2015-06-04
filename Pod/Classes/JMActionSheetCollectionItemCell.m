@@ -10,6 +10,7 @@
 #import "JMActionSheetCollectionItem.h"
 
 static const CGFloat JMActionSheetCollectionPadding = 0.0f;
+static const CGFloat JMActionSheetCollectionTopSpacing = 10.0f;
 static const CGFloat JMActionSheetCollectionImageHeight = 60.0f;
 static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
 
@@ -42,7 +43,7 @@ static const CGFloat JMActionSheetCollectionLabelHeight = 21.0f;
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.contentMode = UIViewContentModeCenter;
         CGRect frame = self.frame;
-        frame.origin.y = 1.0f;
+        frame.origin.y = JMActionSheetCollectionTopSpacing;
         frame.origin.x = JMActionSheetCollectionPadding;
         frame.size.height = JMActionSheetCollectionImageHeight;
         frame.size.width = CGRectGetWidth(self.frame) - 2 * JMActionSheetCollectionPadding;

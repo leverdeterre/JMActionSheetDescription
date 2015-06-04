@@ -13,7 +13,8 @@
 #import "JMActionSheet.h"
 
 #import "JMActionSheetViewController+PickerViewItem.h"
-#import "UICollectionView+AutoDelegation.h"
+#import "JMActionSheetViewController+CollectionView.h"
+//#import "UICollectionView+AutoDelegation.h"
 #import "JMActionSheetCollectionItemCell.h"
 #import "JMActionSheetCollectionImageCell.h"
 
@@ -25,7 +26,7 @@ static const CGFloat JMActionSheetButtonHeight          = 40.0f;
 static const CGFloat JMActionSheetImageViewHeight       = 150.0f;
 static const CGFloat JMActionSheetPickerViewHeight      = 216.0f;
 
-static const CGFloat JMActionSheetCollectionViewHeight  = 80.0f;
+static const CGFloat JMActionSheetCollectionViewHeight  = 90.0f;
 static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
 
 #pragma mark - UIView+RoundCorners
@@ -215,7 +216,11 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     flow.itemSize = itemSize;
     flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:flow];
+    
+    JMActionSheetCollectionViewController *vc = [[JMActionSheetCollectionViewController alloc] initWithElements:elements collectionActionBlock:collectionActionBlock actionDelegate:self.delegate cellClass:kClass layout:flow];
+
+    UICollectionView *collectionView = vc.collectionView;
+     collectionView.frame = collectionFrame;
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.frame = collectionFrame;
     //collectionView.contentInset = UIEdgeInsetsMake(0.0f, JMActionSheetPadding, 0.0f, JMActionSheetPadding);
@@ -230,14 +235,10 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     [containerView addSubview:collectionView];
     [containerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
     [self.view addSubview:containerView];
+    [self addChildViewController:vc];
+    [vc didMoveToParentViewController:self];
     
     //Load collectionView
-    [collectionView jm_registerCollectionViewCellClass:kClass];
-    [collectionView setJm_CollectionViewElements:elements];
-    [collectionView setJm_collectionActionBlock:collectionActionBlock];
-    [collectionView setJm_actionSheetDelegate:self.delegate];
-    collectionView.dataSource = collectionView;
-    collectionView.delegate = collectionView;
     [collectionView reloadData];
     
     *yOffset = CGRectGetMinY(containerView.frame) - JMActionSheetInterlineSpacing;

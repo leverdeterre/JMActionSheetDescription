@@ -24,12 +24,14 @@
 		A1C94727D4CA184A2CC46A4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6665B8E8310B60E57D282B9 /* Foundation.framework */; };
 		BBF985E0B624F9EFAAA97D16 /* JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = F3268BCB1EB95A243EBFDB32 /* JMActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C05AC35F562485D016F3CB16 /* Pods-JMActionSheetDescription_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC97C981EB1716622F38ABB2 /* Pods-JMActionSheetDescription_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C22303AD1B1E441500503E5D /* UICollectionView+AutoDelegation.h in Headers */ = {isa = PBXBuildFile; fileRef = C22303AB1B1E441500503E5D /* UICollectionView+AutoDelegation.h */; };
-		C22303AE1B1E441500503E5D /* UICollectionView+AutoDelegation.m in Sources */ = {isa = PBXBuildFile; fileRef = C22303AC1B1E441500503E5D /* UICollectionView+AutoDelegation.m */; };
 		C22303B11B1E4BD100503E5D /* JMActionSheetImagesItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C22303AF1B1E4BD100503E5D /* JMActionSheetImagesItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C22303B21B1E4BD100503E5D /* JMActionSheetImagesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C22303B01B1E4BD100503E5D /* JMActionSheetImagesItem.m */; };
 		C22303B51B1E51F800503E5D /* JMActionSheetCollectionImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C22303B31B1E51F800503E5D /* JMActionSheetCollectionImageCell.h */; };
 		C22303B61B1E51F800503E5D /* JMActionSheetCollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22303B41B1E51F800503E5D /* JMActionSheetCollectionImageCell.m */; };
+		C2A3C4A41B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A3C4A21B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.h */; };
+		C2A3C4A51B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A3C4A31B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.m */; };
+		C2A3C4A81B207CB700E33B72 /* JMActionSheetCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A3C4A61B207CB700E33B72 /* JMActionSheetCollectionViewController.h */; };
+		C2A3C4A91B207CB700E33B72 /* JMActionSheetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A3C4A71B207CB700E33B72 /* JMActionSheetCollectionViewController.m */; };
 		C2D12E5F1B1A1C5000C60F4E /* JMActionSheetPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D12E5C1B1A1C4400C60F4E /* JMActionSheetPickerItem.m */; };
 		C2D12E601B1A1D6700C60F4E /* JMActionSheetPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D12E5B1B1A1C4400C60F4E /* JMActionSheetPickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2D12E631B1A215300C60F4E /* JMActionSheetViewController+PickerViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D12E611B1A215300C60F4E /* JMActionSheetViewController+PickerViewItem.h */; };
@@ -109,12 +111,14 @@
 		B487719935A12E121D8ED835 /* JMActionSheetImageItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetImageItem.m; sourceTree = "<group>"; };
 		B86AEF4154025FF1680551C1 /* Pods-JMActionSheetDescription_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JMActionSheetDescription_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BDE280087FE632576C00EB21 /* IonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IonIcons.m; path = ionicons/IonIcons.m; sourceTree = "<group>"; };
-		C22303AB1B1E441500503E5D /* UICollectionView+AutoDelegation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+AutoDelegation.h"; sourceTree = "<group>"; };
-		C22303AC1B1E441500503E5D /* UICollectionView+AutoDelegation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+AutoDelegation.m"; sourceTree = "<group>"; };
 		C22303AF1B1E4BD100503E5D /* JMActionSheetImagesItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheetImagesItem.h; sourceTree = "<group>"; };
 		C22303B01B1E4BD100503E5D /* JMActionSheetImagesItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetImagesItem.m; sourceTree = "<group>"; };
 		C22303B31B1E51F800503E5D /* JMActionSheetCollectionImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionImageCell.h; sourceTree = "<group>"; };
 		C22303B41B1E51F800503E5D /* JMActionSheetCollectionImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionImageCell.m; sourceTree = "<group>"; };
+		C2A3C4A21B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMActionSheetViewController+CollectionView.h"; sourceTree = "<group>"; };
+		C2A3C4A31B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JMActionSheetViewController+CollectionView.m"; sourceTree = "<group>"; };
+		C2A3C4A61B207CB700E33B72 /* JMActionSheetCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionViewController.h; sourceTree = "<group>"; };
+		C2A3C4A71B207CB700E33B72 /* JMActionSheetCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionViewController.m; sourceTree = "<group>"; };
 		C2D12E5B1B1A1C4400C60F4E /* JMActionSheetPickerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheetPickerItem.h; sourceTree = "<group>"; };
 		C2D12E5C1B1A1C4400C60F4E /* JMActionSheetPickerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetPickerItem.m; sourceTree = "<group>"; };
 		C2D12E611B1A215300C60F4E /* JMActionSheetViewController+PickerViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JMActionSheetViewController+PickerViewItem.h"; sourceTree = "<group>"; };
@@ -256,8 +260,10 @@
 				05423272C09506266DF8FA1F /* JMActionSheetViewController.m */,
 				C2D12E611B1A215300C60F4E /* JMActionSheetViewController+PickerViewItem.h */,
 				C2D12E621B1A215300C60F4E /* JMActionSheetViewController+PickerViewItem.m */,
-				C22303AB1B1E441500503E5D /* UICollectionView+AutoDelegation.h */,
-				C22303AC1B1E441500503E5D /* UICollectionView+AutoDelegation.m */,
+				C2A3C4A21B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.h */,
+				C2A3C4A31B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.m */,
+				C2A3C4A61B207CB700E33B72 /* JMActionSheetCollectionViewController.h */,
+				C2A3C4A71B207CB700E33B72 /* JMActionSheetCollectionViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -369,10 +375,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF985E0B624F9EFAAA97D16 /* JMActionSheet.h in Headers */,
+				C2A3C4A41B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.h in Headers */,
 				C2D12E631B1A215300C60F4E /* JMActionSheetViewController+PickerViewItem.h in Headers */,
 				C2EFA8E41B1D776E00544D7E /* JMPickerActionSheet.h in Headers */,
 				DF99777E1678455D82DB9ED6 /* JMActionSheetDescription.h in Headers */,
-				C22303AD1B1E441500503E5D /* UICollectionView+AutoDelegation.h in Headers */,
 				C2EFA8C01B1CA2E600544D7E /* JMActionSheetCollectionItemCell.h in Headers */,
 				C2D12E601B1A1D6700C60F4E /* JMActionSheetPickerItem.h in Headers */,
 				C2EFA8BC1B1C986A00544D7E /* JMActionSheetCollectionItem.h in Headers */,
@@ -380,6 +386,7 @@
 				CFE8BAE0395812CF3F14B018 /* JMActionSheetItem.h in Headers */,
 				C22303B11B1E4BD100503E5D /* JMActionSheetImagesItem.h in Headers */,
 				CC9D57AC18AE9E850CDE4C6F /* JMActionSheetItemControl.h in Headers */,
+				C2A3C4A81B207CB700E33B72 /* JMActionSheetCollectionViewController.h in Headers */,
 				CA6E09A3AB6C6AF4330CE68B /* JMActionSheetViewController.h in Headers */,
 				C22303B51B1E51F800503E5D /* JMActionSheetCollectionImageCell.h in Headers */,
 				FFB606D288EAE3FCEFAA0916 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-umbrella.h in Headers */,
@@ -560,12 +567,13 @@
 				C2D12E641B1A215300C60F4E /* JMActionSheetViewController+PickerViewItem.m in Sources */,
 				2F6479F73CE13EDA802ABF83 /* JMActionSheetImageItem.m in Sources */,
 				03F786D68824EF72B61BD1BD /* JMActionSheetItem.m in Sources */,
-				C22303AE1B1E441500503E5D /* UICollectionView+AutoDelegation.m in Sources */,
+				C2A3C4A51B207C1D00E33B72 /* JMActionSheetViewController+CollectionView.m in Sources */,
 				731E33F5DFB2CB6CDA712254 /* JMActionSheetItemControl.m in Sources */,
 				C2EFA8E51B1D776E00544D7E /* JMPickerActionSheet.m in Sources */,
 				C22303B61B1E51F800503E5D /* JMActionSheetCollectionImageCell.m in Sources */,
 				33A3562592E9416166E03BDA /* JMActionSheetViewController.m in Sources */,
 				C2EFA8C11B1CA2E600544D7E /* JMActionSheetCollectionItemCell.m in Sources */,
+				C2A3C4A91B207CB700E33B72 /* JMActionSheetCollectionViewController.m in Sources */,
 				19DF4AB41CE8F3C8D647B28A /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-dummy.m in Sources */,
 				C22303B21B1E4BD100503E5D /* JMActionSheetImagesItem.m in Sources */,
 				C2D12E5F1B1A1C5000C60F4E /* JMActionSheetPickerItem.m in Sources */,
