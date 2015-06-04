@@ -5,10 +5,6 @@
 [![Cocoapods](http://img.shields.io/cocoapods/v/JMActionSheetDescription.svg)](https://github.com/leverdeterre/PermissiveResearch)
 [![Platform](https://img.shields.io/cocoapods/p/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Screenshots
 
 ![Image](./screenshots/iphones.png)
@@ -19,7 +15,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ![Image](./screenshots/iphone4.png)
 
 
-## Installation
+## Installation & Usage
 
 JMActionSheetDescription is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -28,6 +24,7 @@ it, simply add the following line to your Podfile:
 pod "JMActionSheetDescription"
 ```
 
+### Manual creation 
 
 ```objective-c
 //init your description
@@ -68,8 +65,10 @@ desc.items = @[itemShare,pickerItem];
 [JMActionSheet showActionSheetDescription:desc inViewController:self];
 ```
 
-## Shortcuts :)
-### To present a picker (JMPickerActionSheet) 
+
+### Shortcuts for creation 
+
+#### To present a picker (JMPickerActionSheet) 
 
 ```objective-c
 [JMPickerActionSheet showPickerActionSheetElements:@[@"One", @"Two", @"three", @"Four"]
@@ -79,7 +78,7 @@ desc.items = @[itemShare,pickerItem];
                                 inViewController:self];
 ```
 
-### Present a mutliple images choice (JMImagesActionSheet)
+#### Present a mutliple images choice (JMImagesActionSheet)
 
 ```objective-c
 [JMImagesActionSheet showImagesActionSheetImages:@[
