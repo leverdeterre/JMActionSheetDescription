@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "JMActionSheetDescription"
-  s.version          = "0.4.1"
+  s.version          = "0.4.2"
   s.summary          = "Make a description of your actionSheet 2.0."
   s.description      = <<-DESC
                        JMActionSheetDescription is a descriptor component. Write your actionSheet description and let
