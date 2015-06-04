@@ -10,6 +10,7 @@
 
 #import "JMActionSheet.h"
 #import "JMPickerActionSheet.h"
+#import "JMImagesActionSheet.h"
 
 #import "JMCollectionItem.h"
 
@@ -123,6 +124,7 @@
     JMActionSheetImagesItem *imagesItem = [[JMActionSheetImagesItem alloc] init];
     imagesItem.images = @[[UIImage imageNamed:@"gif_experiments"], [UIImage imageNamed:@"gif_experiments"], [UIImage imageNamed:@"gif_experiments"]];
     imagesItem.imageSize = CGSizeMake(250.0f, 170.0f);
+    //imagesItem.allowsMultipleSelection = YES;
     desc.items = @[otherItem, imagesItem];
     
     [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
@@ -311,5 +313,20 @@
     desc.items = @[otherItem,imageItem,collectionItem];
     [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
+
+- (IBAction)showFastActionImagesView:(id)sender
+{
+    [JMImagesActionSheet showImagesActionSheetImages:@[
+                                                       [UIImage imageNamed:@"gif_experiments"],
+                                                       [UIImage imageNamed:@"gif_experiments"],
+                                                       [UIImage imageNamed:@"gif_experiments"]]
+     
+                                      didSelectBlock:^(id selectedValue) {
+                                          NSLog(@"didSelectBlock %@",selectedValue);
+    }
+                                               title:@"The title"
+                                    inViewController:self];
+}
+
 
 @end

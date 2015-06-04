@@ -39,6 +39,10 @@ static const CGFloat JMActionSheetCollectionSelectSize = 25.0f;
                                   delegate:(id <UICollectionViewDelegate>)delegate
                             collectionView:(UICollectionView *)collectionView
 {
+    self.indexPath = indexPath;
+    self.collectionViewDelegate = delegate;
+    self.collectionView = collectionView;
+    
     if (nil == self.actionImageView) {
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -54,15 +58,17 @@ static const CGFloat JMActionSheetCollectionSelectSize = 25.0f;
     }
     
     if (nil == self.selectionImageView) {
-        UIImage *image;
-        self.selectionImageView = [[UIImageView alloc] initWithImage:image];
-        CGRect frame = self.frame;
-        frame.size.height = JMActionSheetCollectionSelectSize;
-        frame.size.width = JMActionSheetCollectionSelectSize;
-        frame.origin.y = CGRectGetHeight(self.frame) - frame.size.height;
-        frame.origin.x = CGRectGetWidth(self.frame) - frame.size.width;
-        self.selectionImageView.frame = frame;
-        [self.contentView addSubview:self.self.selectionImageView];
+        if (self.collectionView.allowsMultipleSelection) {
+            UIImage *image;
+            self.selectionImageView = [[UIImageView alloc] initWithImage:image];
+            CGRect frame = self.frame;
+            frame.size.height = JMActionSheetCollectionSelectSize;
+            frame.size.width = JMActionSheetCollectionSelectSize;
+            frame.origin.y = CGRectGetHeight(self.frame) - frame.size.height;
+            frame.origin.x = CGRectGetWidth(self.frame) - frame.size.width;
+            self.selectionImageView.frame = frame;
+            [self.contentView addSubview:self.self.selectionImageView];
+        }
     }
     
     if (nil == self.gesture) {
@@ -73,16 +79,12 @@ static const CGFloat JMActionSheetCollectionSelectSize = 25.0f;
     if ([obj isKindOfClass:[UIImage class]]) {
         self.actionImageView.image = obj;
     }
-    
-    self.indexPath = indexPath;
-    self.collectionViewDelegate = delegate;
-    self.collectionView = collectionView;
+
     self.backgroundColor = [UIColor clearColor];
-    
     if (self.selected) {
-        self.selectionImageView.image = [UIImage imageNamed:@"JMActionSheetDescription.bundle/JMPickerChecked.png"];
+        self.selectionImageView.image = [UIImage imageNamed:@"JMActionSheetDescription.bundle/JMPickerChecked"];
     } else {
-        self.selectionImageView.image = nil;
+        self.selectionImageView.image = [UIImage imageNamed:@"JMActionSheetDescription.bundle/JMPickerNotChecked"];
     }
 }
 
@@ -90,20 +92,21 @@ static const CGFloat JMActionSheetCollectionSelectSize = 25.0f;
 {
     if (self.selected) {
         [self.collectionView deselectItemAtIndexPath:self.indexPath animated:NO];
+        [self.collectionView.delegate collectionView:self.collectionView didDeselectItemAtIndexPath:self.indexPath];
 
     } else {
         [self.collectionView selectItemAtIndexPath:self.indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+        [self.collectionView.delegate collectionView:self.collectionView didSelectItemAtIndexPath:self.indexPath];
     }
 }
 
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
-    if (selected) {
-        self.selectionImageView.image = [UIImage imageNamed:@"JMActionSheetDescription.bundle/JMPickerChecked.png"];
-    
+    if (self.selected) {
+        self.selectionImageView.image = [UIImage imageNamed:@"JMActionSheetDescription.bundle/JMPickerChecked"];
     } else {
-        self.selectionImageView.image = nil;
+        self.selectionImageView.image = [UIImage imageNamed:@"JMActionSheetDescription.bundle/JMPickerNotChecked"];
     }
 }
 

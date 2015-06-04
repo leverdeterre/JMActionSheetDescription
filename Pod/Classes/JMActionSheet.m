@@ -123,4 +123,15 @@ static UIView *dimmingView_;
     [self dismissActionSheet];
 }
 
+- (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block dismissEnable:(BOOL)dismissEnable
+{
+    if (block) {
+        block(element);
+    }
+    
+    if (dismissEnable) {
+        [self dismissActionSheet];
+    }
+}
+
 @end

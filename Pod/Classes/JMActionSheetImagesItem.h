@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) NSArray *images;
 @property (assign, nonatomic) CGSize imageSize;
+@property (assign, nonatomic) BOOL allowsMultipleSelection;
+@property (copy, nonatomic) JMActionSheetSelectedItemBlock imagesActionBlock;
 
 @end

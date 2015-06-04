@@ -189,6 +189,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     Class kClass = [JMActionSheetCollectionItemCell class];
     NSArray *elements;
     JMActionSheetSelectedItemBlock collectionActionBlock = NULL;
+    BOOL multipleSelection = NO;
     
     if ([collectionItem isKindOfClass:[JMActionSheetImagesItem class]]) {
         JMActionSheetImagesItem *imagesItem = (JMActionSheetImagesItem *)collectionItem;
@@ -200,6 +201,8 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
         itemSize = imagesItem.imageSize;
         kClass = [JMActionSheetCollectionImageCell class];
         elements = imagesItem.images;
+        multipleSelection = imagesItem.allowsMultipleSelection;
+        collectionActionBlock = imagesItem.imagesActionBlock;
 
     } else {
         elements = collectionItem.elements;
@@ -227,7 +230,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     collectionView.showsHorizontalScrollIndicator = NO;
     collectionView.userInteractionEnabled = YES;
     collectionView.alwaysBounceHorizontal = YES;
-    collectionView.allowsMultipleSelection = YES;
+    collectionView.allowsMultipleSelection = multipleSelection;
     
     UIView *containerView;
     containerView = [[UIView alloc] initWithFrame:containerFrame];
@@ -340,6 +343,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     button.frame = frame;
     button.tag = tag;
     [button applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+    __weak JMActionSheetViewController *weakSelf = self;
     JMActionSheetItemAction action = ^(void){
         if (item.action) {
             item.action();

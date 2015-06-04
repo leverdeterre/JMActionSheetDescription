@@ -11,6 +11,7 @@
 
 @interface JMActionSheetCollectionViewController ()
 @property (strong, nonatomic) NSString *reuseIdentifier;
+@property (strong, nonatomic) NSMutableArray *selectedItems;
 @property (strong, nonatomic) UICollectionViewLayout *jmCollectionLayout;
 @end
 
@@ -36,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.selectedItems = [[NSMutableArray alloc] initWithCapacity:self.collectionViewElements.count];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -68,12 +70,24 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    id obj = [self.collectionViewElements objectAtIndex:indexPath.row];
+
     if (NO == self.collectionView.allowsMultipleSelection) {
-        id obj = [self.collectionViewElements objectAtIndex:indexPath.row];
-        [self.actionSheetDelegate actionSheetDidSelectCollectionView:collectionView element:obj block:self.collectionActionBlock];
+        [self.actionSheetDelegate actionSheetDidSelectCollectionView:collectionView element:self.selectedItems block:self.collectionActionBlock];
         
     } else {
-        [self.collectionView reloadData];
+        [self.selectedItems addObject:obj];
+        [self.actionSheetDelegate actionSheetDidSelectCollectionView:collectionView element:self.selectedItems block:self.collectionActionBlock dismissEnable:NO];
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    id obj = [self.collectionViewElements objectAtIndex:indexPath.row];
+    
+    if (YES == self.collectionView.allowsMultipleSelection) {
+        [self.selectedItems removeObject:obj];
+        [self.actionSheetDelegate actionSheetDidSelectCollectionView:collectionView element:self.selectedItems block:self.collectionActionBlock dismissEnable:NO];
     }
 }
 
