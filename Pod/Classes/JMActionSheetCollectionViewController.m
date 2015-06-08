@@ -73,7 +73,7 @@
     id obj = [self.collectionViewElements objectAtIndex:indexPath.row];
 
     if (NO == self.collectionView.allowsMultipleSelection) {
-        [self.actionSheetDelegate actionSheetDidSelectCollectionView:collectionView element:self.selectedItems block:self.collectionActionBlock];
+        [self.actionSheetDelegate actionSheetDidSelectCollectionView:collectionView element:obj block:self.collectionActionBlock];
         
     } else {
         [self.selectedItems addObject:obj];
