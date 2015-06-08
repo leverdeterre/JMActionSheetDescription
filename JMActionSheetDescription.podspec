@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = "JMActionSheetDescription"
-  s.version          = "0.4.3"
-  s.summary          = "Make a description of your actionSheet 2.0."
+  s.version          = "0.4.4"
+  s.summary          = "JMActionSheetDescription replace UIActionSheet and UIActivityViewController."
   s.description      = <<-DESC
-                       JMActionSheetDescription is a descriptor component. Write your actionSheet description and let
-                       the framework generate your custom actionSheet.
+                       JMActionSheetDescription is a descriptor component. It replace your ActionSheet and UIActivityViewController usage. Write your actionSheet description and let the framework generate your custom action representation.
+
                        Customizable elements : button font, color, background.
                        Cool added elements are : an PickerView,
                                                  an Horizontal carousel of iconified actions,
