@@ -5,6 +5,23 @@
 [![Cocoapods](http://img.shields.io/cocoapods/v/JMActionSheetDescription.svg)](https://github.com/leverdeterre/PermissiveResearch)
 [![Platform](https://img.shields.io/cocoapods/p/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
 
+## Changelog
+
+0.4.5 :
+
+ * Add support for iOS9,
+ * Add support of UITraitCollection,
+ * Add support of UIPopoverPresentationController.
+
+0.4.2 :
+
+  * Add multiple pictures selecion support.
+
+0.4.0 :
+
+  * Add UICollectionView support.
+
+
 ## Screenshots
 
 ![Image](./screenshots/iphones.png)
