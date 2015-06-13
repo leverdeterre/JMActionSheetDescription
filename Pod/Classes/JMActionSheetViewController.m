@@ -452,7 +452,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     return _preferredContentSize;
 }
 
-- (CGSize)estimatedContentSizeWithDescription:(JMActionSheetDescription *)actionSheetDescription
+- (CGSize)estimatedContentSizeWithDescription:(JMActionSheetDescription *)actionSheetDescription width:(CGFloat)width
 {
     NSInteger estimatedHeight = 0.0f;
     if (actionSheetDescription.cancelItem) {
@@ -493,8 +493,8 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     estimatedHeight = estimatedHeight + 2 * JMActionSheetPadding;
     
     //NSLog(@"estimatedContentSizeWithDescription %@", NSStringFromCGSize(CGSizeMake(320.0f, estimatedHeight)));
-    self.preferredContentSize = CGSizeMake(320.0f, estimatedHeight);
-    return CGSizeMake(320.0f, estimatedHeight);
+    self.preferredContentSize = CGSizeMake(width, estimatedHeight);
+    return CGSizeMake(width, estimatedHeight);
 }
 
 - (void)logRect:(CGRect)frame forElemenetName:(NSString *)name

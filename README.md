@@ -9,6 +9,8 @@
 
 ![Image](./screenshots/iphones.png)
 ![Image](./screenshots/ipads.png)
+![Image](./screenshots/ipad-splitview-1.png)
+![Image](./screenshots/ipad-splitview-2.png)
 ![Image](./screenshots/demo.gif)
 ![Image](./screenshots/iphone-multiple-actions.png)
 ![Image](./screenshots/iphone-multiple-images-selection.png)

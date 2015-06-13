@@ -23,6 +23,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		C2413E021B2C305500E5CBBA /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2413E011B2C305500E5CBBA /* Launch Screen.xib */; };
 		C2CA9A191B128AE800CAEA92 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CA9A181B128AE800CAEA92 /* ionicons.ttf */; };
 		C2EFA8D51B1CCA8B00544D7E /* JMCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EFA8D41B1CCA8B00544D7E /* JMCollectionItem.m */; };
 		C2EFA8DC1B1CCEF600544D7E /* 1Pi-icon-1024-150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EFA8D61B1CCEF600544D7E /* 1Pi-icon-1024-150x150.png */; };
@@ -71,6 +72,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B07E1318FA8FA59F343F0E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A747F8FA7F9D4854358C000B /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2413E011B2C305500E5CBBA /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		C2CA9A181B128AE800CAEA92 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		C2EFA8D31B1CCA8B00544D7E /* JMCollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCollectionItem.h; sourceTree = "<group>"; };
 		C2EFA8D41B1CCA8B00544D7E /* JMCollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCollectionItem.m; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
 				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
 				6003F5A5195388D20070C39A /* JMViewController.h */,
+				C2413E011B2C305500E5CBBA /* Launch Screen.xib */,
 				6003F5A6195388D20070C39A /* JMViewController.m */,
 				C2EFA8D31B1CCA8B00544D7E /* JMCollectionItem.h */,
 				C2EFA8D41B1CCA8B00544D7E /* JMCollectionItem.m */,
@@ -317,6 +320,7 @@
 				C2EFA8DE1B1CCEF600544D7E /* fb-icon3-150x150.png in Resources */,
 				C2EFA8DC1B1CCEF600544D7E /* 1Pi-icon-1024-150x150.png in Resources */,
 				C2CA9A191B128AE800CAEA92 /* ionicons.ttf in Resources */,
+				C2413E021B2C305500E5CBBA /* Launch Screen.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				C2EFA8DF1B1CCEF600544D7E /* Flipboard-App-Icon-150x150.jpg in Resources */,
 				C2EFA8E11B1CCEF600544D7E /* mail-iphone-150x150.jpg in Resources */,
@@ -561,7 +565,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JMActionSheetDescription/JMActionSheetDescription-Prefix.pch";
 				INFOPLIST_FILE = "JMActionSheetDescription/JMActionSheetDescription-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -578,7 +582,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JMActionSheetDescription/JMActionSheetDescription-Prefix.pch";
 				INFOPLIST_FILE = "JMActionSheetDescription/JMActionSheetDescription-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

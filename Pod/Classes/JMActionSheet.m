@@ -15,10 +15,13 @@
 static JMActionSheet *actionSheet_;
 static JMActionSheetViewController *actionSheetViewController_;
 static UIPopoverController *actionSheetViewPopover_;
-
+static UIPopoverPresentationController *presentationController_;
 static UIView *dimmingView_;
 
-@interface JMActionSheet () <JMActionSheetViewControllerDelegate, UIPopoverControllerDelegate>
+static const CGFloat JMActionSheetDefaultWidth = 320.0f;
+static const CGFloat JMActionSheetDefaultHeight = 50.0f;
+
+@interface JMActionSheet () <JMActionSheetViewControllerDelegate, UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate>
 @end
 
 @implementation JMActionSheet
@@ -44,40 +47,100 @@ static UIView *dimmingView_;
     [viewController.view addSubview:dimmingView_];
     
     //Configure actionSheetViewController
-    CGRect originalFrame = viewController.view.frame;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        originalFrame = CGRectMake(0.0f, 0.0f, 320.0f, 50.0f);
-        originalFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription];
-        
-    } else {
-        CGFloat original = CGRectGetMaxY(viewController.view.frame);
-        originalFrame.origin.y = original;
+    [actionSheet_ configureFramePresentationFromViewController:viewController description:actionSheetDescription];
+    
+    //present actionSheet
+    [actionSheet_ presentActionSheetFromViewController:viewController fromView:fromView permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections];
+}
+
+#pragma mark - Presentation / dismiss  
+
+- (void)configureFramePresentationFromViewController:(UIViewController *)viewController description:(JMActionSheetDescription *)actionSheetDescription
+{
+    CGRect actionSheetFrame;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        actionSheetFrame = viewController.view.frame;
+        actionSheetFrame.origin.y = CGRectGetMaxY(viewController.view.frame);
+
+    } else if ([viewController respondsToSelector:@selector(traitCollection)]) {
+            UITraitCollection *traitCollection = viewController.traitCollection;
+            if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
+                actionSheetFrame = viewController.view.frame;
+                actionSheetFrame = CGRectMake(0.0f, 0.0f, JMActionSheetDefaultWidth, JMActionSheetDefaultHeight);
+                actionSheetFrame.origin.y = CGRectGetMaxY(viewController.view.frame);
+                actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:JMActionSheetDefaultWidth];
+                
+            } else {
+                actionSheetFrame = viewController.view.frame;
+                actionSheetFrame = CGRectMake(0.0f, 0.0f, CGRectGetWidth(viewController.view.frame), JMActionSheetDefaultHeight);
+                actionSheetFrame.origin.y = CGRectGetMaxY(viewController.view.frame);
+                actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:CGRectGetWidth(viewController.view.frame)];
+                CGSize size = actionSheetFrame.size;
+                size.height = CGRectGetHeight(viewController.view.frame);
+                actionSheetFrame.size = size;
+            }
+    }
+    else {
+        actionSheetFrame = CGRectMake(0.0f, 0.0f, JMActionSheetDefaultWidth, JMActionSheetDefaultHeight);
+        actionSheetFrame.origin.y = CGRectGetMaxY(viewController.view.frame);
+        actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:JMActionSheetDefaultWidth];
     }
     
-    actionSheetViewController_.view.frame = originalFrame;
+    actionSheetViewController_.view.frame = actionSheetFrame;
     [actionSheetViewController_ reloadWithActionSheetDescription:actionSheetDescription andDelegate:actionSheet_];
+}
+
+- (void)presentActionSheetFromViewController:(UIViewController *)viewController fromView:(UIView *)fromView permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
+{
+    BOOL presentHasIPhone = NO;
+    if ([viewController respondsToSelector:@selector(traitCollection)]) {
+        UITraitCollection *traitCollection = viewController.traitCollection;
+        if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+            presentHasIPhone = YES;
+        }
+    }
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        actionSheetViewPopover_ = [[UIPopoverController alloc] initWithContentViewController:actionSheetViewController_];
-        actionSheetViewPopover_.delegate = actionSheet_;
-        [actionSheetViewPopover_ presentPopoverFromRect:fromView.frame inView:viewController.view permittedArrowDirections:arrowDirections animated:YES];
-        
-    } else {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone || presentHasIPhone) {
         //Childs
         [viewController addChildViewController:actionSheetViewController_];
         [viewController.view addSubview:actionSheetViewController_.view];
         [actionSheetViewController_ didMoveToParentViewController:viewController];
         
         [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            CGRect finalFrame = originalFrame;
+            CGRect finalFrame = actionSheetViewController_.view.frame;
             finalFrame.origin.y = 0.0f;
             actionSheetViewController_.view.frame = finalFrame;
-        } completion:^(BOOL finished) {
-        }];
+        } completion:NULL];
+        
+    } else if ([UIPopoverPresentationController class]) {
+        actionSheetViewController_.modalPresentationStyle = UIModalPresentationPopover;
+        UIPopoverPresentationController *popoverCtr = actionSheetViewController_.popoverPresentationController;
+        popoverCtr.permittedArrowDirections = UIPopoverArrowDirectionAny;
+        popoverCtr.sourceView = viewController.view;
+        popoverCtr.sourceRect = fromView.frame;
+        popoverCtr.delegate = actionSheet_;
+        [viewController presentViewController:actionSheetViewController_
+                                     animated:YES
+                                   completion:NULL];
+        
+    } else {
+        actionSheetViewPopover_ = [[UIPopoverController alloc] initWithContentViewController:actionSheetViewController_];
+        actionSheetViewPopover_.delegate = actionSheet_;
+        [actionSheetViewPopover_ presentPopoverFromRect:fromView.frame inView:viewController.view permittedArrowDirections:arrowDirections animated:YES];
     }
 }
 
+#pragma mark - UIPopoverControllerDelegate
+
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    [dimmingView_ removeFromSuperview];
+    actionSheetViewPopover_ = nil;
+}
+
+#pragma mark - UIPopoverPresentationControllerDelegate
+
+- (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController
 {
     [dimmingView_ removeFromSuperview];
     actionSheetViewPopover_ = nil;
