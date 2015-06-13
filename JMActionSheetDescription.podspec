@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name             = "JMActionSheetDescription"
-  s.version          = "0.4.4"
+  s.version          = "0.4.5"
   s.summary          = "JMActionSheetDescription replace UIActionSheet and UIActivityViewController."
   s.description      = <<-DESC
-                       JMActionSheetDescription is a descriptor component. It replace your ActionSheet and UIActivityViewController usage. Write your actionSheet description and let the framework generate your custom action representation.
+                       JMActionSheetDescription is a descriptor component. It replace your ActionSheet and UIActivityViewController usage. Write your actionSheet description and let the framework generate your custom action representation. (Support iOS9 SplitView !)
 
                        Customizable elements : button font, color, background.
                        Cool added elements are : an PickerView,
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
                                                  an text (in progress).
                        DESC
   s.homepage         = "https://github.com/leverdeterre/JMActionSheetDescription"
-  s.screenshots      = "https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/demo.gif?raw=true", 						"https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/ipads.png?raw=true", "https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/iphones.png?raw=true"
+  s.screenshots      = "https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/ipads.png?raw=true", "https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/iphones.png?raw=true","https://github.com/leverdeterre/JMActionSheetDescription/blob/master/screenshots/ipad-splitview-2.png?raw=true"
   s.license          = 'MIT'
   s.author           = { "Jérôme Morissard" => "morissardj@gmail.com" }
   s.source           = { :git => "https://github.com/leverdeterre/JMActionSheetDescription.git", :tag => s.version.to_s }
