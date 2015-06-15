@@ -66,7 +66,8 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
                              andDelegate:(id <JMActionSheetViewControllerDelegate>)delegate
 {
     _delegate = delegate;
-    self.actions = [[NSMutableArray alloc] init];
+    self.actions = [[NSMutableArray alloc] initWithCapacity:actionSheetDescription.items.count];
+    
     self.view.backgroundColor = [UIColor clearColor];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dimmingViewPressed:)];
     [self.view addGestureRecognizer:tapGesture];
@@ -183,6 +184,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
                              corners:(UIRectCorner)corners
                               offset:(CGFloat *)yOffset
 {
+    self.actions[tag] = [NSNull null];
     
     CGFloat collectionHeight = JMActionSheetCollectionViewHeight;
     CGSize itemSize = CGSizeMake(JMActionSheetCollectionViewWidth, JMActionSheetCollectionViewHeight);
@@ -256,6 +258,8 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
                          corners:(UIRectCorner)corners
                           offset:(CGFloat *)yOffset
 {
+    self.actions[tag] = [NSNull null];
+
     //Compute frame
     CGFloat pickerHeight = JMActionSheetPickerViewHeight;
     CGFloat y = *yOffset - pickerHeight;
@@ -296,7 +300,8 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
                          corners:(UIRectCorner)corners
                           offset:(CGFloat *)yOffset
 {
-    
+    self.actions[tag] = [NSNull null];
+
     //Compute frame
     CGFloat imageHeight = JMActionSheetImageViewHeight;
     if (imageItem.imageHeight > 0.0f) { imageHeight = imageItem.imageHeight; }
@@ -309,7 +314,6 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     imageView.frame = frame;
     [imageView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
     [self.view addSubview:imageView];
-    [self.actions addObject:[NSNull null]];
     
     *yOffset = CGRectGetMinY(imageView.frame) - JMActionSheetInterlineSpacing;
     return imageView;
@@ -330,6 +334,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
                         corners:(UIRectCorner)corners
                          offset:(CGFloat *)yOffset
 {
+
     //Compute frame
     CGFloat y = *yOffset - JMActionSheetButtonHeight;
     CGRect frame = CGRectMake(JMActionSheetPadding,
@@ -348,9 +353,9 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
             item.action();
         }
     };
-    [self.view addSubview:button];
-    [self.actions addObject:action];
     
+    self.actions[tag] = action;
+    [self.view addSubview:button];
     *yOffset = CGRectGetMinY(button.frame) - JMActionSheetInterlineSpacing;
     return button;
 }
@@ -407,6 +412,8 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
                          corners:(UIRectCorner)corners
                           offset:(CGFloat *)yOffset
 {
+    self.actions[tag] = [NSNull null];
+    
     //Compute frame
     CGFloat y = *yOffset - JMActionSheetButtonHeight;
     CGRect frame = CGRectMake(JMActionSheetPadding,
@@ -419,7 +426,6 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     label.frame = frame;
     [label applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
     [self.view addSubview:label];
-    [self.actions addObject:[NSNull null]];
     
     *yOffset = CGRectGetMinY(label.frame) - JMActionSheetInterlineSpacing;
     return label;
