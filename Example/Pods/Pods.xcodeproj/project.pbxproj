@@ -45,6 +45,8 @@
 		BD18613EFD39B13F9D9C0950 /* ionicons-codes.h in Headers */ = {isa = PBXBuildFile; fileRef = 087CA164F9384CAF8B6DA530 /* ionicons-codes.h */; };
 		C17095277E463E2C7243BA44 /* JMActionSheetDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C710FBA2259F155E48FAFE9 /* JMActionSheetDescription.m */; };
 		C1C133446BDC03A72BA2F861 /* JMActionSheetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A6B99EF9A9567229617FC /* JMActionSheetCollectionViewController.m */; };
+		C2FB2EA21B3BCD8B0013DAFC /* UIView+JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C2FB2EA01B3BCD8B0013DAFC /* UIView+JMActionSheet.h */; };
+		C2FB2EA31B3BCD8B0013DAFC /* UIView+JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FB2EA11B3BCD8B0013DAFC /* UIView+JMActionSheet.m */; };
 		C45943B23053B253B9ED9DD8 /* JMActionSheetCollectionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 507292F7CD9008377AAAD192 /* JMActionSheetCollectionItem.h */; };
 		CF071473329A8AC4F006FA85 /* JMActionSheetPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B047AF9B7A4016E2E2EDB10A /* JMActionSheetPickerItem.h */; };
 		CFDF25291159B4A217C10AF8 /* JMActionSheetCollectionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C954D0E0F86B274233D8D3 /* JMActionSheetCollectionItemCell.m */; };
@@ -127,6 +129,8 @@
 		B047AF9B7A4016E2E2EDB10A /* JMActionSheetPickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetPickerItem.h; sourceTree = "<group>"; };
 		B6A0C3732304E10EBE57F6DD /* Pods-JMActionSheetDescription_Example-ionicons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example-ionicons.xcconfig"; sourceTree = "<group>"; };
 		BAD5FB25024BD2AF3A84372B /* JMActionSheetImageItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetImageItem.m; sourceTree = "<group>"; };
+		C2FB2EA01B3BCD8B0013DAFC /* UIView+JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMActionSheet.h"; sourceTree = "<group>"; };
+		C2FB2EA11B3BCD8B0013DAFC /* UIView+JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMActionSheet.m"; sourceTree = "<group>"; };
 		C5464ED5BF4EFE6D1207D983 /* JMActionSheetPickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetPickerItem.m; sourceTree = "<group>"; };
 		C5FEDA65D2DEB2DA089B9F5B /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription.xcconfig"; sourceTree = "<group>"; };
 		D3A1DFA554A2602D4C901213 /* JMActionSheetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetViewController.h; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 				4943FCBCC00EC5D2E86A1794 /* JMActionSheetItemControl.m */,
 				D3A1DFA554A2602D4C901213 /* JMActionSheetViewController.h */,
 				23CE3809E308C4F6AB133FA0 /* JMActionSheetViewController.m */,
+				C2FB2EA01B3BCD8B0013DAFC /* UIView+JMActionSheet.h */,
+				C2FB2EA11B3BCD8B0013DAFC /* UIView+JMActionSheet.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				CF071473329A8AC4F006FA85 /* JMActionSheetPickerItem.h in Headers */,
 				AD11232557EF5817EE32D6DC /* JMActionSheetViewController+CollectionView.h in Headers */,
 				321CDBBEED8377119E3CA671 /* JMActionSheetViewController+PickerViewItem.h in Headers */,
+				C2FB2EA21B3BCD8B0013DAFC /* UIView+JMActionSheet.h in Headers */,
 				16942E10BB77CA62A5AA7E7B /* JMActionSheetViewController.h in Headers */,
 				92FDA53DD65048E3215B1A67 /* JMImagesActionSheet.h in Headers */,
 				EB9FF08439BDD08D3A24C0D3 /* JMPickerActionSheet.h in Headers */,
@@ -584,6 +591,7 @@
 				7609E61308CE22E8B2954F54 /* JMActionSheetPickerItem.m in Sources */,
 				20F8601216A9A406B5145D66 /* JMActionSheetViewController+CollectionView.m in Sources */,
 				26DDAFA3234ABFE9F0E234D0 /* JMActionSheetViewController+PickerViewItem.m in Sources */,
+				C2FB2EA31B3BCD8B0013DAFC /* UIView+JMActionSheet.m in Sources */,
 				627D3006F09F4F6BA3631A47 /* JMActionSheetViewController.m in Sources */,
 				6C8D1EF970FD61B6ECE1A94F /* JMImagesActionSheet.m in Sources */,
 				FA945638FB50DA5B17CD3199 /* JMPickerActionSheet.m in Sources */,

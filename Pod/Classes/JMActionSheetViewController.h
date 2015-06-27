@@ -13,6 +13,7 @@
 @protocol JMActionSheetViewControllerDelegate <NSObject>
 
 - (void)dismissActionSheet;
+- (void)actionSheetWillRotate;
 - (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block;
 - (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block;
 - (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block dismissEnable:(BOOL)dismissEnable;

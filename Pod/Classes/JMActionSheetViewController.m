@@ -62,6 +62,12 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
 @implementation JMActionSheetViewController
 @synthesize preferredContentSize = _preferredContentSize;
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(orientationChanged:)    name:UIDeviceOrientationDidChangeNotification  object:nil];
+}
+
 - (void)reloadWithActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription
                              andDelegate:(id <JMActionSheetViewControllerDelegate>)delegate
 {
@@ -503,9 +509,30 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     return CGSizeMake(width, estimatedHeight);
 }
 
+#pragma mark - Logs
+
+/*
 - (void)logRect:(CGRect)frame forElemenetName:(NSString *)name
 {
     NSLog(@"%@ %@", name, NSStringFromCGRect(frame));
+}*/
+
+
+#pragma mark - Rotation
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    NSLog(@"");
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    NSLog(@"");
+}
+
+- (void)orientationChanged:(NSNotification *)notification
+{
+    [self.delegate actionSheetWillRotate];
 }
 
 @end
