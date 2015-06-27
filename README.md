@@ -7,6 +7,12 @@
 
 ## Changelog
 
+0.4.6 :
+
+* FIX autorotate,
+* FIX iOS7 crash,
+* Starting autolayout implementation and rotation support
+
 0.4.5 :
 
  * Add support for iOS9,
