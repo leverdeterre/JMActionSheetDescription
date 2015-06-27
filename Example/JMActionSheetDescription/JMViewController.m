@@ -158,7 +158,8 @@
                                             NSLog(@"selectedValue %@",selectedValue);
                                         }
                                                  title:@"JMPickerActionSheet methods"
-                                      inViewController:self];
+                                      inViewController:self
+     fromView:sender];
 }
 
 - (IBAction)showCollection:(id)sender
