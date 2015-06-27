@@ -8,7 +8,9 @@
 
 #import "JMActionSheet.h"
 #import "JMActionSheetViewController.h"
+#import "JMActionSheetCollectionViewController.h"
 #import "JMActionSheetDescription.h"
+#import "UIView+JMActionSheet.h"
 
 #import "JMActionSheetViewController+PickerViewItem.h"
 
@@ -20,6 +22,14 @@ static UIView *dimmingView_;
 
 static const CGFloat JMActionSheetDefaultWidth = 320.0f;
 static const CGFloat JMActionSheetDefaultHeight = 50.0f;
+
+typedef NS_ENUM(NSUInteger, JMActionSheetOSStragey) {
+    JMActionSheetManualPresentation,
+    JMActionSheetModalPopover,
+    JMActionSheetPopoverController
+};
+
+static JMActionSheetOSStragey actionSheetStrategy_;
 
 @interface JMActionSheet () <JMActionSheetViewControllerDelegate, UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate>
 @end
@@ -42,9 +52,13 @@ static const CGFloat JMActionSheetDefaultHeight = 50.0f;
     actionSheetViewController_ = [[JMActionSheetViewController alloc] init];
     
     //Configure dimmingView
-    dimmingView_ = [[UIView alloc] initWithFrame:viewController.view.frame];
+    dimmingView_ = [[UIView alloc] initWithFrame:viewController.view.bounds];
     dimmingView_.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.20];
-    [viewController.view addSubview:dimmingView_];
+    [dimmingView_ setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [viewController.view jm_addSubview:dimmingView_ withEdgeInsets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
+    
+    //compute stragey
+    [self computeStrategyFromViewController:viewController];
     
     //Configure actionSheetViewController
     [actionSheet_ configureFramePresentationFromViewController:viewController description:actionSheetDescription];
@@ -92,15 +106,7 @@ static const CGFloat JMActionSheetDefaultHeight = 50.0f;
 
 - (void)presentActionSheetFromViewController:(UIViewController *)viewController fromView:(UIView *)fromView permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
 {
-    BOOL presentHasIPhone = NO;
-    if ([viewController respondsToSelector:@selector(traitCollection)]) {
-        UITraitCollection *traitCollection = viewController.traitCollection;
-        if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
-            presentHasIPhone = YES;
-        }
-    }
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone || presentHasIPhone) {
+    if (actionSheetStrategy_ == JMActionSheetManualPresentation) {
         //Childs
         [viewController addChildViewController:actionSheetViewController_];
         [viewController.view addSubview:actionSheetViewController_.view];
@@ -112,7 +118,7 @@ static const CGFloat JMActionSheetDefaultHeight = 50.0f;
             actionSheetViewController_.view.frame = finalFrame;
         } completion:NULL];
         
-    } else if ([UIPopoverPresentationController class]) {
+    } else if (actionSheetStrategy_ == JMActionSheetModalPopover) {
         actionSheetViewController_.modalPresentationStyle = UIModalPresentationPopover;
         UIPopoverPresentationController *popoverCtr = actionSheetViewController_.popoverPresentationController;
         popoverCtr.permittedArrowDirections = UIPopoverArrowDirectionAny;
@@ -121,7 +127,9 @@ static const CGFloat JMActionSheetDefaultHeight = 50.0f;
         popoverCtr.delegate = actionSheet_;
         [viewController presentViewController:actionSheetViewController_
                                      animated:YES
-                                   completion:NULL];
+                                    completion:^{
+                                        NSLog(@"");
+                                    }];
         
     } else {
         actionSheetViewPopover_ = [[UIPopoverController alloc] initWithContentViewController:actionSheetViewController_];
@@ -134,36 +142,44 @@ static const CGFloat JMActionSheetDefaultHeight = 50.0f;
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
-    [dimmingView_ removeFromSuperview];
-    actionSheetViewPopover_ = nil;
+    [self dismissActionSheet];
 }
 
 #pragma mark - UIPopoverPresentationControllerDelegate
 
 - (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController
 {
-    [dimmingView_ removeFromSuperview];
-    actionSheetViewPopover_ = nil;
+    [self dismissActionSheet];
 }
 
 #pragma mark - JMActionSheetViewControllerDelegate
 
+- (void)actionSheetWillRotate
+{
+    NSLog(@"");
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         [dimmingView_.superview layoutIfNeeded];
+                     }];
+}
+
 - (void)dismissActionSheet
 {
-    if (actionSheetViewPopover_) {
-        [actionSheetViewPopover_ dismissPopoverAnimated:YES];
-        actionSheetViewPopover_ = nil;
-        [dimmingView_ removeFromSuperview];
+    if (actionSheetStrategy_ == JMActionSheetPopoverController) {
+        [actionSheetViewPopover_ dismissPopoverAnimated:NO];
+        [self removingHierarchies];
         
+    } else if (actionSheetStrategy_ == JMActionSheetModalPopover) {
+        [actionSheetViewController_ dismissViewControllerAnimated:NO completion:NULL];
+        [self removingHierarchies];
+
     } else {
         [UIView animateWithDuration:0.3 animations:^{
             dimmingView_.alpha = 0.0f;
             actionSheetViewController_.view.alpha = 0.0f;
             
         } completion:^(BOOL finished) {
-            [dimmingView_ removeFromSuperview];
-            [actionSheetViewController_ removeFromParentViewController];
-            [actionSheetViewController_.view removeFromSuperview];
+            [self removingHierarchies];
         }];
     }
 }
@@ -194,6 +210,43 @@ static const CGFloat JMActionSheetDefaultHeight = 50.0f;
     
     if (dismissEnable) {
         [self dismissActionSheet];
+    }
+}
+
+
+#pragma mark - Private
+
+- (void)removingHierarchies
+{
+    [dimmingView_ removeFromSuperview];
+    
+    //Fix collectionView bad call of delegate by system
+    [actionSheetViewController_.childViewControllers enumerateObjectsUsingBlock:
+     ^(UIViewController *vc, NSUInteger idx, BOOL *stop) {
+         [vc removeFromParentViewController];
+     }];
+    [actionSheetViewController_ removeFromParentViewController];
+    [actionSheetViewController_.view removeFromSuperview];
+}
+
++ (void)computeStrategyFromViewController:(UIViewController *)viewController
+{
+    BOOL presentHasIPhone = NO;
+    if ([viewController respondsToSelector:@selector(traitCollection)]) {
+        UITraitCollection *traitCollection = viewController.traitCollection;
+        if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+            presentHasIPhone = YES;
+        }
+    }
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone || presentHasIPhone) {
+        actionSheetStrategy_ = JMActionSheetManualPresentation;
+        
+    } else if ([UIPopoverPresentationController class]) {
+        actionSheetStrategy_ = JMActionSheetModalPopover;
+
+    } else {
+        actionSheetStrategy_ = JMActionSheetPopoverController;
     }
 }
 
