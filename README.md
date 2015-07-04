@@ -5,6 +5,10 @@
 [![Cocoapods](http://img.shields.io/cocoapods/v/JMActionSheetDescription.svg)](https://github.com/leverdeterre/PermissiveResearch)
 [![Platform](https://img.shields.io/cocoapods/p/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
 
+## My other librairies
+
+[Have a look to my other librairies] (http://leverdeterre.github.io)
+
 ## Changelog
 
 0.4.6 :
