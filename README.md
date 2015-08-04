@@ -1,3 +1,7 @@
+## My other works
+
+[http://leverdeterre.github.io] (http://leverdeterre.github.io)
+
 # JMActionSheetDescription
 ActionSheet and UIActivityViewController replacement, using a descriptor component. 
 
@@ -5,10 +9,6 @@ ActionSheet and UIActivityViewController replacement, using a descriptor compone
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/leverdeterre/PermissiveResearch/blob/master/LICENCE)
 [![Cocoapods](http://img.shields.io/cocoapods/v/JMActionSheetDescription.svg)](https://github.com/leverdeterre/PermissiveResearch)
 [![Platform](https://img.shields.io/cocoapods/p/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
-
-## My other librairies
-
-[Have a look to my other librairies] (http://leverdeterre.github.io)
 
 ## Changelog
 
