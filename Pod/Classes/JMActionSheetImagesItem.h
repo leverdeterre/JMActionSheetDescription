@@ -8,13 +8,21 @@
 
 #import "JMActionSheetItem.h"
 
-typedef void (^JMActionSheetSelectedImageBlock)(UIImage *selectedImage);
+@protocol JMActionSheetImagesItemDisplayable <NSObject>
+
+- (UIImage *)displayableImage;
+
+@end
 
 @interface JMActionSheetImagesItem : JMActionSheetItem
 
-@property (strong, nonatomic) NSArray *images;
+@property (strong, nonatomic) NSArray <JMActionSheetImagesItemDisplayable> *images;
 @property (assign, nonatomic) CGSize imageSize;
 @property (assign, nonatomic) BOOL allowsMultipleSelection;
-@property (copy, nonatomic) JMActionSheetSelectedImageBlock imagesActionBlock;
+@property (copy, nonatomic) JMActionSheetSelectedItemBlock imagesActionBlock;
+
+@end
+
+@interface UIImage (JMActionSheetImagesItem) <JMActionSheetImagesItemDisplayable>
 
 @end

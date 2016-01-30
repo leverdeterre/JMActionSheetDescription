@@ -11,6 +11,7 @@
 
 @class JMActionSheetItem;
 typedef void (^JMActionSheetItemAction)(void);
+typedef void (^JMActionSheetSelectedItemBlock)(id selectedItem);
 
 @interface JMActionSheetItem : NSObject
 

@@ -14,10 +14,8 @@
 {
     //check data
     for (id <JMActionSheetCollectionItem> item in elements) {
-        if (![item isKindOfClass:[NSString class]]) {
-            NSAssert([item conformsToProtocol:@protocol(JMActionSheetCollectionItem)],
+        NSAssert([item conformsToProtocol:@protocol(JMActionSheetCollectionItem)],
                      @"ActionSheetCollectionItem must be conform to protocol");
-        }
     }
     
     _elements = elements;

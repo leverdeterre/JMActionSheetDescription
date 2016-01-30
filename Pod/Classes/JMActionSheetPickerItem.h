@@ -9,10 +9,10 @@
 #import "JMActionSheetItem.h"
 
 @protocol JMActionSheetPickerItemDisplayable <NSObject>
-@property (readonly) NSString *displayableValueForActionSheetPicker;
-@end
 
-typedef void (^JMActionSheetSelectedItemBlock)(id selectedItem);
+- (NSString *)displayableValueForActionSheetPicker;
+
+@end
 
 @interface JMActionSheetPickerItem : JMActionSheetItem
 

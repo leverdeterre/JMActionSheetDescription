@@ -10,7 +10,7 @@
 
 @implementation JMPickerActionSheet
 
-+ (void)showPickerActionSheetElements:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController
++ (void)showPickerActionSheetElements:(NSArray<JMActionSheetPickerItemDisplayable> *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController
 {
     JMActionSheetDescription *desc = [self pickerDescriptionWithElements:elements
                                                           didSelectBlock:didSelectBlock
@@ -18,7 +18,7 @@
     [JMPickerActionSheet showActionSheetDescription:desc inViewController:viewController];
 }
 
-+ (void)showPickerActionSheetElements:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view
++ (void)showPickerActionSheetElements:(NSArray<JMActionSheetPickerItemDisplayable> *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view
 {
     JMActionSheetDescription *desc = [self pickerDescriptionWithElements:elements
                                                           didSelectBlock:didSelectBlock
@@ -26,7 +26,7 @@
     [JMPickerActionSheet showActionSheetDescription:desc inViewController:viewController fromView:view];
 }
 
-+ (void)showPickerActionSheetElements:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
++ (void)showPickerActionSheetElements:(NSArray<JMActionSheetPickerItemDisplayable> *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
 {
     JMActionSheetDescription *desc = [self pickerDescriptionWithElements:elements
                                                           didSelectBlock:didSelectBlock
@@ -34,7 +34,7 @@
     [JMPickerActionSheet showActionSheetDescription:desc inViewController:viewController fromView:view permittedArrowDirections:arrowDirections];
 }
 
-+ (JMActionSheetDescription *)pickerDescriptionWithElements:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title
++ (JMActionSheetDescription *)pickerDescriptionWithElements:(NSArray<JMActionSheetPickerItemDisplayable> *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title
 {
     JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
     desc.title = title;
