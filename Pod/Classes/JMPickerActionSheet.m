@@ -40,7 +40,7 @@
     desc.title = title;
     
     JMActionSheetPickerItem *pickerItem = [[JMActionSheetPickerItem alloc] init];
-    pickerItem.elements = elements;
+    pickerItem.pickerElements = elements;
     pickerItem.pickerActionBlock = didSelectBlock;
     desc.items = @[pickerItem];
     return desc;

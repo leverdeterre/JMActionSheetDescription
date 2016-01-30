@@ -133,7 +133,7 @@
 - (IBAction)showAPicker:(id)sender
 {
     JMActionSheetPickerItem *pickerItem = [[JMActionSheetPickerItem alloc] init];
-    pickerItem.elements = @[@"One", @"Two", @"three", @"Four"];
+    pickerItem.pickerElements = @[@"One", @"Two", @"three", @"Four"];
     pickerItem.pickerActionBlock = ^(NSString *selectedValue){
         NSLog(@"selectedValue %@",selectedValue);
     };

@@ -10,7 +10,7 @@
 
 @implementation JMActionSheetCollectionItem
 
-- (void)setElements:(NSArray *)elements
+- (void)setElements:(NSArray <JMActionSheetCollectionItem> *)elements
 {
     //check data
     for (id <JMActionSheetCollectionItem> item in elements) {

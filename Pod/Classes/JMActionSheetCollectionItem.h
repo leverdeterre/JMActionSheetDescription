@@ -17,9 +17,11 @@
 @property (assign, nonatomic) UIViewContentMode actionImageContentMode;
 @end
 
+typedef void (^JMActionSheetSelectedCollectionItemBlock)(id selectedItem);
+
 @interface JMActionSheetCollectionItem : JMActionSheetItem
 
-@property (strong, nonatomic) NSArray *elements; //Array of id <JMActionSheetCollectionItem>
-@property (copy, nonatomic) JMActionSheetSelectedItemBlock collectionActionBlock;
+@property (strong, nonatomic) NSArray <JMActionSheetCollectionItem> *elements;
+@property (copy, nonatomic) JMActionSheetSelectedCollectionItemBlock collectionActionBlock;
 
 @end

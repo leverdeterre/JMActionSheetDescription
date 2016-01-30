@@ -10,16 +10,24 @@
 
 @implementation JMActionSheetPickerItem
 
-- (void)setElements:(NSArray *)elements
+- (void)setPickerElements :(NSArray<JMActionSheetPickerItemDisplayable> *)pickerElements
 {
     //check data
-    for (id <JMActionSheetPickerItem> item in elements) {
-        if (![item isKindOfClass:[NSString class]]) {
-            NSAssert([item conformsToProtocol:@protocol(JMActionSheetPickerItem)], @"ActionSheetPickerItem must be conform to protocol");
-        }
+    for (JMActionSheetPickerItem *item in pickerElements) {
+        NSAssert([item conformsToProtocol:@protocol(JMActionSheetPickerItemDisplayable)], @"PickerItem must be conform to protocol JMActionSheetPickerItemDisplayable");
     }
-    
-    _elements = elements;
+
+    _pickerElements = pickerElements;
+}
+
+@end
+
+
+@implementation NSString (JMActionSheetPickerItem)
+
+- (NSString *)displayableValueForActionSheetPicker
+{
+    return self;
 }
 
 @end

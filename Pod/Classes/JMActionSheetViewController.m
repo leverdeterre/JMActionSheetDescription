@@ -273,7 +273,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     CGRect frame = CGRectMake(JMActionSheetPadding, y, width, pickerHeight);
     
     //Configure PickerView
-    UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.elements];
+    UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.pickerElements];
     pickerView.backgroundColor = [UIColor whiteColor];
     pickerView.frame = frame;
     [pickerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
