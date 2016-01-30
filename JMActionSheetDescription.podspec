@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "JMActionSheetDescription"
-  s.version          = "0.4.7"
+  s.version          = "0.4.8"
   s.summary          = "JMActionSheetDescription replace UIActionSheet and UIActivityViewController."
   s.description      = <<-DESC
                        JMActionSheetDescription is a descriptor component. It replace your ActionSheet and UIActivityViewController usage. Write your actionSheet description and let the framework generate your custom action representation. (Support iOS9 SplitView !)
