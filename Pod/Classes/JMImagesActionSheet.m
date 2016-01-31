@@ -1,6 +1,6 @@
 //
 //  JMImagesActionSheet.m
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 04/06/2015.
 //

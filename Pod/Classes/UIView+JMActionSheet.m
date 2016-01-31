@@ -1,6 +1,6 @@
 //
 //  UIView+JMActionSheet.m
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 25/06/2015.
 //

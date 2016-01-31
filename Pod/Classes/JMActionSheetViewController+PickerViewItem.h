@@ -1,6 +1,6 @@
 //
 //  JMActionSheetViewController+PickerViewItem.h
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 30/05/2015.
 //
