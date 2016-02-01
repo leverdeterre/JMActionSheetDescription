@@ -12,6 +12,12 @@ ActionSheet and UIActivityViewController replacement, using a descriptor compone
 
 ## Changelog
 
+0.4.7 / 0.4.8 :
+
+* Improve protocol usage
+* Increase Swift compatibility
+* Fix autolayout (in demo)
+
 0.4.6 :
 
 * FIX autorotate,
