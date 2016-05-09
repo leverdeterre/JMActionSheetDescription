@@ -10,7 +10,19 @@ ActionSheet and UIActivityViewController replacement, using a descriptor compone
 [![CocoaPods](http://img.shields.io/cocoapods/v/JMActionSheetDescription.svg)](https://github.com/leverdeterre/PermissiveResearch)
 [![Platform](https://img.shields.io/cocoapods/p/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
 
+## Capability
+* present labels
+* present actions (UIButton)
+* present image(s)
+* present picker
+* present datepicker
+* present icons collections
+
 ## Changelog
+
+0.4.9 :
+
+* add DatePicker support
 
 0.4.7 / 0.4.8 :
 
@@ -103,6 +115,20 @@ desc.items = @[itemShare,pickerItem];
 
 
 ### Shortcuts for creation 
+
+#### To present a picker (JMDatePickerActionSheet) 
+
+```objective-c
+NSDate *minDate = [NSDate date];
+NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:999999];
+NSDate *selectedDate = [[NSDate date] dateByAddingTimeInterval:64000];
+
+[JMDatePickerActionSheet showDatePickerActionSheetMinDate:minDate maxDate:maxDate selectedDate:selectedDate didSelectBlock:^(id selectedItem) {
+      NSLog(@"Plop");
+} 
+title:@"MyTitle" 
+inViewController:self];
+```
 
 #### To present a picker (JMPickerActionSheet) 
 
