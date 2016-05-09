@@ -7,668 +7,676 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		008E9F78B74181F3F49CC03C /* JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 42E82458AC25CDDC4DD9617F /* JMActionSheet.h */; };
-		01B02DD1429F5D54DE3AD6E4 /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F49055E95AFE91F33F3B3156 /* JMActionSheet.m */; };
-		0A6C0D9D35868739FF263F46 /* JMActionSheetCollectionItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D3C827063D9D54C8FF6A15 /* JMActionSheetCollectionItemCell.h */; };
-		0EC8CE5F7AE116F7AEF7DB6C /* JMActionSheetImagesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1FE012D9A5EAA2E084CE3 /* JMActionSheetImagesItem.m */; };
-		108E2A8921679FBAE8C3C063 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D7D23EDF06078F461D5DE0 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-dummy.m */; };
-		149B7A97A21242D51B633CC5 /* JMPickerChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EDACAAE49D246D36B171C67 /* JMPickerChecked.png */; };
-		16942E10BB77CA62A5AA7E7B /* JMActionSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D3A1DFA554A2602D4C901213 /* JMActionSheetViewController.h */; };
-		1C7A442973B785F3420B763E /* JMPickerChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B3C07C8B217EBBB3B5A3FE /* JMPickerChecked@3x.png */; };
-		20F8601216A9A406B5145D66 /* JMActionSheetViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 466BFC9B688AAABA07811465 /* JMActionSheetViewController+CollectionView.m */; };
-		22D2445ED3A5A916E590F47B /* JMPickerNotChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 50892B6DCF968779979414F4 /* JMPickerNotChecked.png */; };
-		26DDAFA3234ABFE9F0E234D0 /* JMActionSheetViewController+PickerViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C94F0A7CAD2A02F498D8358 /* JMActionSheetViewController+PickerViewItem.m */; };
-		2DA9F923B9758847D58E2BED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C9EC48605DE88A41107F23 /* Foundation.framework */; };
-		2ED65C23D7899A8A11DA6240 /* JMActionSheetItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F74E7050E58E0122F87849BE /* JMActionSheetItem.h */; };
-		321CDBBEED8377119E3CA671 /* JMActionSheetViewController+PickerViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 20C7BB22DD2BBCD6BEC59942 /* JMActionSheetViewController+PickerViewItem.h */; };
-		324ADD31E3DAD8EBABD7F5D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C9EC48605DE88A41107F23 /* Foundation.framework */; };
-		4F378F979A6BB026004A8717 /* JMActionSheetImageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 5001BA4278346FB826997FA3 /* JMActionSheetImageItem.h */; };
-		570479D8EC49B46DEF5DE75E /* JMActionSheetCollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF6357CC37BAAAC6F85B77 /* JMActionSheetCollectionImageCell.m */; };
-		5996B920750EBADBD744BEB2 /* JMActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D57B230CE46EAD9128FA8C33 /* JMActionSheetItem.m */; };
-		5BEBD824A4B448C8A01B2C0C /* JMActionSheetItemControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 44BFE88A97428E13DF1091C7 /* JMActionSheetItemControl.h */; };
-		627D3006F09F4F6BA3631A47 /* JMActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CE3809E308C4F6AB133FA0 /* JMActionSheetViewController.m */; };
-		67B186F10D33950F84A91067 /* JMActionSheetCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7775716B1798659628156F /* JMActionSheetCollectionViewController.h */; };
-		688734CC3D0BF600C32E1030 /* JMActionSheetCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 406C04D590E3874D0043FCEE /* JMActionSheetCollectionItem.m */; };
-		6C8D1EF970FD61B6ECE1A94F /* JMImagesActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE7747D7C763B6F5522E0C /* JMImagesActionSheet.m */; };
-		7609E61308CE22E8B2954F54 /* JMActionSheetPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5464ED5BF4EFE6D1207D983 /* JMActionSheetPickerItem.m */; };
-		9087FE7ACE5B3738C08015E8 /* JMActionSheetCollectionImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A6B7E8FA579706D88F9FFA /* JMActionSheetCollectionImageCell.h */; };
-		92FDA53DD65048E3215B1A67 /* JMImagesActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38007F3CD434C7F6514D3487 /* JMImagesActionSheet.h */; };
-		9FAE384AE8B409F7CD7DA699 /* Pods-JMActionSheetDescription_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C450DC0F013B456FBB49F84 /* Pods-JMActionSheetDescription_Example-dummy.m */; };
-		A03778CFB77F51036B0EFB92 /* JMActionSheetImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD5FB25024BD2AF3A84372B /* JMActionSheetImageItem.m */; };
-		A7ABBC80332A07D4DCF3385D /* JMActionSheetImagesItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 002AA4976452B3CDC350AC1E /* JMActionSheetImagesItem.h */; };
-		A8BE113251E87826CC6C3F8A /* JMPickerChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28310981E517DA70EF2AC3CD /* JMPickerChecked@2x.png */; };
-		AA55B760DD7E9B878F3EC05C /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FEF603350B7F2570FF389A /* IonIcons.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AD11232557EF5817EE32D6DC /* JMActionSheetViewController+CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8649AEF941B6C9B1489B7793 /* JMActionSheetViewController+CollectionView.h */; };
-		AEDFD1BB11826A2CB3B89DD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C9EC48605DE88A41107F23 /* Foundation.framework */; };
-		B5DF7A84D7D653038E3C8D64 /* JMPickerNotChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6631D20F6C3EAB4721EEF8 /* JMPickerNotChecked@3x.png */; };
-		B6AA4AAB244654BFB25B8187 /* JMActionSheetItemControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943FCBCC00EC5D2E86A1794 /* JMActionSheetItemControl.m */; };
-		BD18613EFD39B13F9D9C0950 /* ionicons-codes.h in Headers */ = {isa = PBXBuildFile; fileRef = 087CA164F9384CAF8B6DA530 /* ionicons-codes.h */; };
-		C17095277E463E2C7243BA44 /* JMActionSheetDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C710FBA2259F155E48FAFE9 /* JMActionSheetDescription.m */; };
-		C1C133446BDC03A72BA2F861 /* JMActionSheetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A6B99EF9A9567229617FC /* JMActionSheetCollectionViewController.m */; };
-		C2FB2EA21B3BCD8B0013DAFC /* UIView+JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C2FB2EA01B3BCD8B0013DAFC /* UIView+JMActionSheet.h */; };
-		C2FB2EA31B3BCD8B0013DAFC /* UIView+JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FB2EA11B3BCD8B0013DAFC /* UIView+JMActionSheet.m */; };
-		C45943B23053B253B9ED9DD8 /* JMActionSheetCollectionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 507292F7CD9008377AAAD192 /* JMActionSheetCollectionItem.h */; };
-		CF071473329A8AC4F006FA85 /* JMActionSheetPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B047AF9B7A4016E2E2EDB10A /* JMActionSheetPickerItem.h */; };
-		CFDF25291159B4A217C10AF8 /* JMActionSheetCollectionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C954D0E0F86B274233D8D3 /* JMActionSheetCollectionItemCell.m */; };
-		CFF04A187D8AC59A850CF50B /* JMPickerNotChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7FE2E97D1543A4CC6DDF3A /* JMPickerNotChecked@2x.png */; };
-		E0CCEDF0708EB03CD34E4ABE /* JMActionSheetDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = FD65C6F5311001251B8483FB /* JMActionSheetDescription.h */; };
-		E4CEED92A5529C426B9A828C /* Pods-JMActionSheetDescription_Example-ionicons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0AE7D6258B50E2282933AD0 /* Pods-JMActionSheetDescription_Example-ionicons-dummy.m */; };
-		EB9FF08439BDD08D3A24C0D3 /* JMPickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 463BB1B6BD6F8B87E8F0444D /* JMPickerActionSheet.h */; };
-		EF1F8BCE12D12E8C97C1AF2B /* IonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AEFD9750559CC9775E88640 /* IonIcons.h */; };
-		FA945638FB50DA5B17CD3199 /* JMPickerActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D6FA7E333412CBE90F20BF /* JMPickerActionSheet.m */; };
+		03CF4D55E084DA2D93F5F0C6619F0C5F /* JMPickerChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C90B829AE68B12057CC37A8B96C8347 /* JMPickerChecked.png */; };
+		05B47EDDD1797712F0421836E64F8624 /* JMActionSheetDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEF1655CA0DBE4BD602DEF5BA4D4CBF /* JMActionSheetDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		093DAEC48299385562BF33ABDDA6A6C7 /* Pods-JMActionSheetDescription_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D660D65051763646C3021DF6D67F8D /* Pods-JMActionSheetDescription_Example-dummy.m */; };
+		0A25DB4E0D5EB7E4C456AABF5A790664 /* JMActionSheetPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 95679355D95DD6AE753EA4AC6B22633A /* JMActionSheetPickerItem.m */; };
+		0B11104350872E77947A9ACEEFC41D15 /* JMPickerNotChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = FB6838C3A8EA883404ED51A2CFECCA80 /* JMPickerNotChecked.png */; };
+		184598D3CBE97276CC2E5DF01F2A34AA /* JMActionSheetImagesItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C74C995E6B6B3148E1CEA2DEA6976B /* JMActionSheetImagesItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1886DEAB10715E64CDC738CB3AF89083 /* JMActionSheetCollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCF298C8481EC0C33FB944600CEDBC6 /* JMActionSheetCollectionImageCell.m */; };
+		1C5111E491E1E53C894AFABBC57A87A7 /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E670D365AAA9FE09BFCB1E7344CD70F8 /* JMActionSheet.m */; };
+		1CB73D4B2259D383A76A73F0D34E9FBF /* JMActionSheetCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A2CACD86E1727781BBD04D7B4F25C /* JMActionSheetCollectionItem.m */; };
+		1EC357B6DD6597827F44C45AA69785C1 /* JMPickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = BF22A2206211C57D56635AFA13E5A819 /* JMPickerActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		245ACF4064CE2C1314C32742384F9581 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A42B1E4FAD7A56AC96060374E318E /* IonIcons.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		29E69ED1181ECA979E265FC92FF15528 /* JMActionSheetCollectionImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D64315A1D7C6C81A05636CA1A8AEA8 /* JMActionSheetCollectionImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A7ACA309D9D7331905ED3A68AB4378B /* JMActionSheetImagesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7238A2170B4323AFC18507D7B58AC08F /* JMActionSheetImagesItem.m */; };
+		34893A56505304BAB8E09EAFAF2771FA /* UIView+JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B30C3D97A453CA6235411C88A69CD7 /* UIView+JMActionSheet.m */; };
+		3B2A5EC45A275958923735079219CF64 /* JMDatePickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C99FAF2E702EBAC4296FB5A3141C05C /* JMDatePickerActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E3173256C44AEF6BE4695DFC66B6195 /* JMActionSheetItemControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 45487746EB5A56CC1E96B85594C7DB31 /* JMActionSheetItemControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45A42035C5982C0853B2524B41A1AA58 /* JMActionSheetItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 994428A0A89ADE0BF96F588E62E0B2EE /* JMActionSheetItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B07C86D1513D90090F600235414D0A5 /* JMActionSheetPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B05E8A3BC4AB059F722E64E4A46385 /* JMActionSheetPickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50CB6ECC5D35837142DDC7554D21A8E0 /* JMActionSheetCollectionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F623A3D09ACA22514A93CD786B0E40 /* JMActionSheetCollectionItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5876F6965E05226366F5426C6B331F62 /* JMActionSheetViewController+PickerViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F29F7BE58CBA8C59DB57A08759EE030F /* JMActionSheetViewController+PickerViewItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59A563E1074AA2E75860445E1843A666 /* JMPickerChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F981B35E745EDFE47254D1B6F9C3D62 /* JMPickerChecked@3x.png */; };
+		5A2F77B22A160AEDDC724E7FB3B5C1E6 /* UIView+JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DE1208F6631E2EF4096CF180D2460A /* UIView+JMActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B06F525498268FBD35C45D9F1BAC616 /* IonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CFF84246CD7B3ABF0ADF4CB0A5157C3 /* IonIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B6A9D4BCE6A7A2CEEACF8071C6416C8 /* ionicons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F40CC7ED97319003C8C30F1B6F617978 /* ionicons-dummy.m */; };
+		5D7E558BAC384F4161719D42B2146C1A /* JMActionSheetViewController+PickerViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542F141032242E7DEAE5F11E7AB6AA /* JMActionSheetViewController+PickerViewItem.m */; };
+		63BCADC0F4EB69940251ABBBB95AE6C0 /* JMActionSheetDatePickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F246A89B8728F61B08983237EBD2CDC /* JMActionSheetDatePickerItem.m */; };
+		6538D8CD2EDCA9090D90499F57E05BCE /* JMActionSheetViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F559B4C7D6677962C3A7DC8CD0477E1C /* JMActionSheetViewController+CollectionView.m */; };
+		72F658CCF3F3D6F971FFDB474E94EE97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		7310E2277C94F229A4138C1D7DE9403F /* JMPickerActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AFF0709F85271FCFB6B0334B1D92F2 /* JMPickerActionSheet.m */; };
+		74DEA0D13591129BAA513A84B692E628 /* JMActionSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C566A9B044367E99E5AFAD15BF399BD8 /* JMActionSheetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E0A32D0C4D43786FD6D5A8E78F43E4C /* JMActionSheetItemControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A18903CBB11E3933FFAE44A3F11B64D8 /* JMActionSheetItemControl.m */; };
+		85ACFB91972EBE8D6EA319CB7EBF25A4 /* JMImagesActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AD209D5155F581C5BF6A51AB9D1FDE /* JMImagesActionSheet.m */; };
+		88512DDD2F14F5FDFDD5FC60595C74CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		8FC65798D716062D0C38395F988B28C9 /* ionicons-codes.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ACB87A6E98599D7F84CD018AA772D8 /* ionicons-codes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		972C8521FC5BC581C119D008CCA4DBD8 /* JMPickerNotChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01498944CA141DB9B030BC81C4EE299A /* JMPickerNotChecked@3x.png */; };
+		9CC81412037A3CCE6CF889180DD13C5D /* JMActionSheetDatePickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 67D0FB95F65C26141B39CD82E03EB4E9 /* JMActionSheetDatePickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A29EEC9AA665588981C8CB9622A257BF /* JMActionSheetDescription-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F500ACB71FD787FC29D78D5B4A73E6 /* JMActionSheetDescription-dummy.m */; };
+		A2FCC7715E9C3B3E55B5CDB934E1E729 /* JMActionSheetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE9993824CF32E10A80C1A73EF7730B /* JMActionSheetCollectionViewController.m */; };
+		A33E820385CEC47EEDD2D95C8811638A /* JMActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4131E0BACC16E655352613043A5A8 /* JMActionSheetViewController.m */; };
+		AA3E234368F2B01E72D5B6934F6407B0 /* JMActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D41AC770DD399416FEDD2ABA6072A596 /* JMActionSheetItem.m */; };
+		B25F02D0FE778A939AC602A6964CD9CE /* JMActionSheetCollectionItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD471D76304822FAC0A9CA50846CC1 /* JMActionSheetCollectionItemCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B767A5DA7152786EC0E3F143B3DD68B1 /* JMActionSheetViewController+CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E1D09B0CFD489743C64396CB7A1DF6 /* JMActionSheetViewController+CollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A38E8EA6E7F284383965435F4E4061 /* JMActionSheetDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F6C394B140576C486DA398548AD51 /* JMActionSheetDescription.m */; };
+		C3BDD41A833E336B8C0D8F6C420A5620 /* JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE64A2E13F887056B7A106FB061AFF7 /* JMActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA078E7CDAE2A6B20C586BBCC5EE73CF /* JMPickerChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BA7CA8436F32B3AB81B0A1D3CE67325 /* JMPickerChecked@2x.png */; };
+		CF611D27ACEE5A9711CA174DC16D660A /* JMDatePickerActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F9D63C7E1C9CABB2A876F9603A7A3 /* JMDatePickerActionSheet.m */; };
+		D1DC45D0D60AF1F9BB8E721F661B7B55 /* JMActionSheetImageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CEDD01E98DD60E8D5E86FFD89E5C36 /* JMActionSheetImageItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D997B3A63A33E22E8573B8FEEEBD3411 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		DEC5543BDD9AD77BE355D355C0C69302 /* JMPickerNotChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 251878F6912A12A4EE2C48DBB9288C7F /* JMPickerNotChecked@2x.png */; };
+		E4CFDE3B34D7ABFADC89542BD8753CAD /* JMActionSheetCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A159732153052803A8FE0CADBE2B22BD /* JMActionSheetCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E846D6B8AD135993216E8FE2E578744C /* JMActionSheetImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A9C605964CC1BDB3004D58637CFAF /* JMActionSheetImageItem.m */; };
+		EFD88A7D3C386706D0791B7815BD93CE /* JMActionSheetCollectionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D056600FC670A7E1BD803F5149BC7418 /* JMActionSheetCollectionItemCell.m */; };
+		FA1E138336CA05C190F3581AF5089185 /* JMImagesActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 56DAFB0241AFF71102F522E27FD2C147 /* JMImagesActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B0F1556198B1554AE941E8D /* PBXContainerItemProxy */ = {
+		4481F8C43B9898A4C8E7B61ED0224E12 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 608D4081FC05A310B1D20003 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CFD3717A7246E29523B921BC;
-			remoteInfo = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription";
+			remoteGlobalIDString = 5C098A3F156F9A1DADCB060742FF03CE;
+			remoteInfo = JMActionSheetDescription;
 		};
-		85A5EEF82EF2E155BFD44E7B /* PBXContainerItemProxy */ = {
+		81042ECA035EF5EC166D4CFFC7E75669 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 608D4081FC05A310B1D20003 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C7DBA936AAAE77AD3999B0F6;
-			remoteInfo = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription";
+			remoteGlobalIDString = E5F122D27535B1EE128B09DB5A8D274A;
+			remoteInfo = "JMActionSheetDescription-JMActionSheetDescription";
 		};
-		8DEC7BF8D06FEAC5F24629B3 /* PBXContainerItemProxy */ = {
+		9806B9F8E3B24D827F2940A501C9381C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 608D4081FC05A310B1D20003 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ADD42D6867C698E4A61F8E15;
-			remoteInfo = "Pods-JMActionSheetDescription_Example-ionicons";
+			remoteGlobalIDString = 0DBB3D30F280CEDFE03B7474B23873A4;
+			remoteInfo = ionicons;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		002AA4976452B3CDC350AC1E /* JMActionSheetImagesItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetImagesItem.h; sourceTree = "<group>"; };
-		040A1541AADD6E11609FAEF5 /* libPods-JMActionSheetDescription_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JMActionSheetDescription_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		06D6FA7E333412CBE90F20BF /* JMPickerActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMPickerActionSheet.m; sourceTree = "<group>"; };
-		087CA164F9384CAF8B6DA530 /* ionicons-codes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ionicons-codes.h"; path = "ionicons/ionicons-codes.h"; sourceTree = "<group>"; };
-		0C6631D20F6C3EAB4721EEF8 /* JMPickerNotChecked@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "JMPickerNotChecked@3x.png"; sourceTree = "<group>"; };
-		13C9EC48605DE88A41107F23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		1C450DC0F013B456FBB49F84 /* Pods-JMActionSheetDescription_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JMActionSheetDescription_Example-dummy.m"; sourceTree = "<group>"; };
-		1EDACAAE49D246D36B171C67 /* JMPickerChecked.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = JMPickerChecked.png; sourceTree = "<group>"; };
-		1F16DBB077789C7957110255 /* JMActionSheetDescription.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMActionSheetDescription.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		20C7BB22DD2BBCD6BEC59942 /* JMActionSheetViewController+PickerViewItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMActionSheetViewController+PickerViewItem.h"; sourceTree = "<group>"; };
-		23CE3809E308C4F6AB133FA0 /* JMActionSheetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetViewController.m; sourceTree = "<group>"; };
-		28310981E517DA70EF2AC3CD /* JMPickerChecked@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "JMPickerChecked@2x.png"; sourceTree = "<group>"; };
-		2918ACC149C5F72FE3046E85 /* ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = ionicons.ttf; path = ionicons/ionicons.ttf; sourceTree = "<group>"; };
-		2AEFD9750559CC9775E88640 /* IonIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IonIcons.h; path = ionicons/IonIcons.h; sourceTree = "<group>"; };
-		2DEF6357CC37BAAAC6F85B77 /* JMActionSheetCollectionImageCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionImageCell.m; sourceTree = "<group>"; };
-		316BA41BF791B15DE2D453B2 /* Pods-JMActionSheetDescription_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		38007F3CD434C7F6514D3487 /* JMImagesActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMImagesActionSheet.h; sourceTree = "<group>"; };
-		406C04D590E3874D0043FCEE /* JMActionSheetCollectionItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionItem.m; sourceTree = "<group>"; };
-		42E82458AC25CDDC4DD9617F /* JMActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
-		44BFE88A97428E13DF1091C7 /* JMActionSheetItemControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetItemControl.h; sourceTree = "<group>"; };
-		463BB1B6BD6F8B87E8F0444D /* JMPickerActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMPickerActionSheet.h; sourceTree = "<group>"; };
-		466BFC9B688AAABA07811465 /* JMActionSheetViewController+CollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMActionSheetViewController+CollectionView.m"; sourceTree = "<group>"; };
-		46D7D23EDF06078F461D5DE0 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-dummy.m"; sourceTree = "<group>"; };
-		48AC504053C485AB3DDD8956 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		4943FCBCC00EC5D2E86A1794 /* JMActionSheetItemControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetItemControl.m; sourceTree = "<group>"; };
-		4A3F9A682558A1E48A3F40F0 /* Pods-JMActionSheetDescription_Example-ionicons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JMActionSheetDescription_Example-ionicons-prefix.pch"; sourceTree = "<group>"; };
-		5001BA4278346FB826997FA3 /* JMActionSheetImageItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetImageItem.h; sourceTree = "<group>"; };
-		507292F7CD9008377AAAD192 /* JMActionSheetCollectionItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionItem.h; sourceTree = "<group>"; };
-		50892B6DCF968779979414F4 /* JMPickerNotChecked.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = JMPickerNotChecked.png; sourceTree = "<group>"; };
-		52E7115CB13CC64BEDF2BB85 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-prefix.pch"; sourceTree = "<group>"; };
-		686F9101250AB7EB1E6D28DF /* Pods-JMActionSheetDescription_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JMActionSheetDescription_Example-resources.sh"; sourceTree = "<group>"; };
-		6FEE7747D7C763B6F5522E0C /* JMImagesActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMImagesActionSheet.m; sourceTree = "<group>"; };
-		7397D6D5305A0FDC1AC3D277 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-Private.xcconfig"; sourceTree = "<group>"; };
-		7C94F0A7CAD2A02F498D8358 /* JMActionSheetViewController+PickerViewItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMActionSheetViewController+PickerViewItem.m"; sourceTree = "<group>"; };
-		862DBE49AFCEFD9E8CE6B850 /* Pods-JMActionSheetDescription_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example.release.xcconfig"; sourceTree = "<group>"; };
-		8649AEF941B6C9B1489B7793 /* JMActionSheetViewController+CollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMActionSheetViewController+CollectionView.h"; sourceTree = "<group>"; };
-		8C40CB2699249B90733DE420 /* Pods-JMActionSheetDescription_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JMActionSheetDescription_Example-environment.h"; sourceTree = "<group>"; };
-		95CB0CD875E644872B7E0CC7 /* Pods-JMActionSheetDescription_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JMActionSheetDescription_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		98A6B7E8FA579706D88F9FFA /* JMActionSheetCollectionImageCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionImageCell.h; sourceTree = "<group>"; };
-		9A2591EE9884E3015547F7F0 /* Pods-JMActionSheetDescription_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JMActionSheetDescription_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9C710FBA2259F155E48FAFE9 /* JMActionSheetDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetDescription.m; sourceTree = "<group>"; };
-		A63A6B99EF9A9567229617FC /* JMActionSheetCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionViewController.m; sourceTree = "<group>"; };
-		ADC1FE012D9A5EAA2E084CE3 /* JMActionSheetImagesItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetImagesItem.m; sourceTree = "<group>"; };
-		B047AF9B7A4016E2E2EDB10A /* JMActionSheetPickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetPickerItem.h; sourceTree = "<group>"; };
-		B6A0C3732304E10EBE57F6DD /* Pods-JMActionSheetDescription_Example-ionicons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example-ionicons.xcconfig"; sourceTree = "<group>"; };
-		BAD5FB25024BD2AF3A84372B /* JMActionSheetImageItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetImageItem.m; sourceTree = "<group>"; };
-		C2FB2EA01B3BCD8B0013DAFC /* UIView+JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMActionSheet.h"; sourceTree = "<group>"; };
-		C2FB2EA11B3BCD8B0013DAFC /* UIView+JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMActionSheet.m"; sourceTree = "<group>"; };
-		C5464ED5BF4EFE6D1207D983 /* JMActionSheetPickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetPickerItem.m; sourceTree = "<group>"; };
-		C5FEDA65D2DEB2DA089B9F5B /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription.xcconfig"; sourceTree = "<group>"; };
-		D3A1DFA554A2602D4C901213 /* JMActionSheetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetViewController.h; sourceTree = "<group>"; };
-		D4B3C07C8B217EBBB3B5A3FE /* JMPickerChecked@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "JMPickerChecked@3x.png"; sourceTree = "<group>"; };
-		D4D3C827063D9D54C8FF6A15 /* JMActionSheetCollectionItemCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionItemCell.h; sourceTree = "<group>"; };
-		D57B230CE46EAD9128FA8C33 /* JMActionSheetItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetItem.m; sourceTree = "<group>"; };
-		D5C954D0E0F86B274233D8D3 /* JMActionSheetCollectionItemCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionItemCell.m; sourceTree = "<group>"; };
-		D726A7E67D7BECAFC7BF3FED /* libPods-JMActionSheetDescription_Example-JMActionSheetDescription.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JMActionSheetDescription_Example-JMActionSheetDescription.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD7775716B1798659628156F /* JMActionSheetCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionViewController.h; sourceTree = "<group>"; };
-		E0AE7D6258B50E2282933AD0 /* Pods-JMActionSheetDescription_Example-ionicons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JMActionSheetDescription_Example-ionicons-dummy.m"; sourceTree = "<group>"; };
-		E9FEF603350B7F2570FF389A /* IonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IonIcons.m; path = ionicons/IonIcons.m; sourceTree = "<group>"; };
-		EA63997F1479D9D79739DF89 /* Pods-JMActionSheetDescription_Example-ionicons-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example-ionicons-Private.xcconfig"; sourceTree = "<group>"; };
-		EB7FE2E97D1543A4CC6DDF3A /* JMPickerNotChecked@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "JMPickerNotChecked@2x.png"; sourceTree = "<group>"; };
-		F49055E95AFE91F33F3B3156 /* JMActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
-		F74E7050E58E0122F87849BE /* JMActionSheetItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetItem.h; sourceTree = "<group>"; };
-		F7D7F58A07852AEA9D5165B0 /* libPods-JMActionSheetDescription_Example-ionicons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JMActionSheetDescription_Example-ionicons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD65C6F5311001251B8483FB /* JMActionSheetDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetDescription.h; sourceTree = "<group>"; };
+		01498944CA141DB9B030BC81C4EE299A /* JMPickerNotChecked@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "JMPickerNotChecked@3x.png"; sourceTree = "<group>"; };
+		02542F141032242E7DEAE5F11E7AB6AA /* JMActionSheetViewController+PickerViewItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMActionSheetViewController+PickerViewItem.m"; sourceTree = "<group>"; };
+		04CEDD01E98DD60E8D5E86FFD89E5C36 /* JMActionSheetImageItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetImageItem.h; sourceTree = "<group>"; };
+		07C74C995E6B6B3148E1CEA2DEA6976B /* JMActionSheetImagesItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetImagesItem.h; sourceTree = "<group>"; };
+		1C9A42B1E4FAD7A56AC96060374E318E /* IonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IonIcons.m; path = ionicons/IonIcons.m; sourceTree = "<group>"; };
+		1CFF84246CD7B3ABF0ADF4CB0A5157C3 /* IonIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IonIcons.h; path = ionicons/IonIcons.h; sourceTree = "<group>"; };
+		24B05E8A3BC4AB059F722E64E4A46385 /* JMActionSheetPickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetPickerItem.h; sourceTree = "<group>"; };
+		24EBD0D09E931EAB0576715FE9FBB36B /* Pods-JMActionSheetDescription_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JMActionSheetDescription_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		251878F6912A12A4EE2C48DBB9288C7F /* JMPickerNotChecked@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "JMPickerNotChecked@2x.png"; sourceTree = "<group>"; };
+		2AE9993824CF32E10A80C1A73EF7730B /* JMActionSheetCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionViewController.m; sourceTree = "<group>"; };
+		2C99FAF2E702EBAC4296FB5A3141C05C /* JMDatePickerActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMDatePickerActionSheet.h; sourceTree = "<group>"; };
+		2F246A89B8728F61B08983237EBD2CDC /* JMActionSheetDatePickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetDatePickerItem.m; sourceTree = "<group>"; };
+		31D4131E0BACC16E655352613043A5A8 /* JMActionSheetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetViewController.m; sourceTree = "<group>"; };
+		335EBABFD2699049C8501D34091C61C5 /* JMActionSheetDescription.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JMActionSheetDescription.xcconfig; sourceTree = "<group>"; };
+		38ACB87A6E98599D7F84CD018AA772D8 /* ionicons-codes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ionicons-codes.h"; path = "ionicons/ionicons-codes.h"; sourceTree = "<group>"; };
+		3AEF1655CA0DBE4BD602DEF5BA4D4CBF /* JMActionSheetDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetDescription.h; sourceTree = "<group>"; };
+		3B8F6C394B140576C486DA398548AD51 /* JMActionSheetDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetDescription.m; sourceTree = "<group>"; };
+		3C8F9D63C7E1C9CABB2A876F9603A7A3 /* JMDatePickerActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMDatePickerActionSheet.m; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		43549CD534932BC6FBB364D4074108B2 /* libJMActionSheetDescription.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJMActionSheetDescription.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B30C3D97A453CA6235411C88A69CD7 /* UIView+JMActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMActionSheet.m"; sourceTree = "<group>"; };
+		45487746EB5A56CC1E96B85594C7DB31 /* JMActionSheetItemControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetItemControl.h; sourceTree = "<group>"; };
+		456A9C605964CC1BDB3004D58637CFAF /* JMActionSheetImageItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetImageItem.m; sourceTree = "<group>"; };
+		56DAFB0241AFF71102F522E27FD2C147 /* JMImagesActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMImagesActionSheet.h; sourceTree = "<group>"; };
+		64D660D65051763646C3021DF6D67F8D /* Pods-JMActionSheetDescription_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JMActionSheetDescription_Example-dummy.m"; sourceTree = "<group>"; };
+		67D0FB95F65C26141B39CD82E03EB4E9 /* JMActionSheetDatePickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetDatePickerItem.h; sourceTree = "<group>"; };
+		6AE64A2E13F887056B7A106FB061AFF7 /* JMActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
+		6F981B35E745EDFE47254D1B6F9C3D62 /* JMPickerChecked@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "JMPickerChecked@3x.png"; sourceTree = "<group>"; };
+		7238A2170B4323AFC18507D7B58AC08F /* JMActionSheetImagesItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetImagesItem.m; sourceTree = "<group>"; };
+		79F500ACB71FD787FC29D78D5B4A73E6 /* JMActionSheetDescription-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMActionSheetDescription-dummy.m"; sourceTree = "<group>"; };
+		83F623A3D09ACA22514A93CD786B0E40 /* JMActionSheetCollectionItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionItem.h; sourceTree = "<group>"; };
+		86DCAC2501345FF8DFE745DC8E1B2176 /* ionicons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ionicons-prefix.pch"; sourceTree = "<group>"; };
+		95679355D95DD6AE753EA4AC6B22633A /* JMActionSheetPickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetPickerItem.m; sourceTree = "<group>"; };
+		994428A0A89ADE0BF96F588E62E0B2EE /* JMActionSheetItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetItem.h; sourceTree = "<group>"; };
+		99D64315A1D7C6C81A05636CA1A8AEA8 /* JMActionSheetCollectionImageCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionImageCell.h; sourceTree = "<group>"; };
+		9BA7CA8436F32B3AB81B0A1D3CE67325 /* JMPickerChecked@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "JMPickerChecked@2x.png"; sourceTree = "<group>"; };
+		9C90B829AE68B12057CC37A8B96C8347 /* JMPickerChecked.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = JMPickerChecked.png; sourceTree = "<group>"; };
+		A159732153052803A8FE0CADBE2B22BD /* JMActionSheetCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionViewController.h; sourceTree = "<group>"; };
+		A18903CBB11E3933FFAE44A3F11B64D8 /* JMActionSheetItemControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetItemControl.m; sourceTree = "<group>"; };
+		A7AD209D5155F581C5BF6A51AB9D1FDE /* JMImagesActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMImagesActionSheet.m; sourceTree = "<group>"; };
+		A8AFF0709F85271FCFB6B0334B1D92F2 /* JMPickerActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMPickerActionSheet.m; sourceTree = "<group>"; };
+		AE5C7F518B5FEEE4EA9B89B8E31FBDD4 /* Pods-JMActionSheetDescription_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JMActionSheetDescription_Example-resources.sh"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB63183B6E11E125CB1BD9F103F346A1 /* JMActionSheetDescription-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMActionSheetDescription-prefix.pch"; sourceTree = "<group>"; };
+		BBC7931FDACB89F806C61533F69807E4 /* JMActionSheetDescription.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMActionSheetDescription.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9B24AF7DDD12D58715975CD48BD9E9 /* Pods-JMActionSheetDescription_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JMActionSheetDescription_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BF22A2206211C57D56635AFA13E5A819 /* JMPickerActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMPickerActionSheet.h; sourceTree = "<group>"; };
+		C566A9B044367E99E5AFAD15BF399BD8 /* JMActionSheetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetViewController.h; sourceTree = "<group>"; };
+		CB312B9523B69C74E538E7F6A3112EB4 /* libPods-JMActionSheetDescription_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JMActionSheetDescription_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6A2CACD86E1727781BBD04D7B4F25C /* JMActionSheetCollectionItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionItem.m; sourceTree = "<group>"; };
+		CFCF298C8481EC0C33FB944600CEDBC6 /* JMActionSheetCollectionImageCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionImageCell.m; sourceTree = "<group>"; };
+		D056600FC670A7E1BD803F5149BC7418 /* JMActionSheetCollectionItemCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetCollectionItemCell.m; sourceTree = "<group>"; };
+		D41AC770DD399416FEDD2ABA6072A596 /* JMActionSheetItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetItem.m; sourceTree = "<group>"; };
+		D6E1D09B0CFD489743C64396CB7A1DF6 /* JMActionSheetViewController+CollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMActionSheetViewController+CollectionView.h"; sourceTree = "<group>"; };
+		DBE780CAE4160C46C3806D619658646D /* Pods-JMActionSheetDescription_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JMActionSheetDescription_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DBEE1213B825BAF3F63031F0DAE2A3E5 /* ionicons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ionicons.xcconfig; sourceTree = "<group>"; };
+		E670D365AAA9FE09BFCB1E7344CD70F8 /* JMActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
+		E76251143A575A89BC5252E3E86D181E /* Pods-JMActionSheetDescription_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EFDD471D76304822FAC0A9CA50846CC1 /* JMActionSheetCollectionItemCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JMActionSheetCollectionItemCell.h; sourceTree = "<group>"; };
+		F29F7BE58CBA8C59DB57A08759EE030F /* JMActionSheetViewController+PickerViewItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMActionSheetViewController+PickerViewItem.h"; sourceTree = "<group>"; };
+		F40CC7ED97319003C8C30F1B6F617978 /* ionicons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ionicons-dummy.m"; sourceTree = "<group>"; };
+		F559B4C7D6677962C3A7DC8CD0477E1C /* JMActionSheetViewController+CollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMActionSheetViewController+CollectionView.m"; sourceTree = "<group>"; };
+		F5DE1208F6631E2EF4096CF180D2460A /* UIView+JMActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+JMActionSheet.h"; sourceTree = "<group>"; };
+		FB6838C3A8EA883404ED51A2CFECCA80 /* JMPickerNotChecked.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = JMPickerNotChecked.png; sourceTree = "<group>"; };
+		FB7939692818F70250CDB695CD8AEBF4 /* libionicons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libionicons.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC283036EE1037537663B8466A79785D /* ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = ionicons.ttf; path = ionicons/ionicons.ttf; sourceTree = "<group>"; };
+		FDE2D0FD91BE1221ECFBC6E8CC67B893 /* Pods-JMActionSheetDescription_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JMActionSheetDescription_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		832B177B37F177866D817A36 /* Frameworks */ = {
+		0E2741E1AF265C9E8117D329C3396923 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DA9F923B9758847D58E2BED /* Foundation.framework in Frameworks */,
+				D997B3A63A33E22E8573B8FEEEBD3411 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9E2722886DA1FCFA81172FB /* Frameworks */ = {
+		2FA915FD2F0F21DD425347BEAC96E7A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72F658CCF3F3D6F971FFDB474E94EE97 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42B0C64D6F9E5C549F48F9295F821B45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F09FB51B863D55E1329DF1F1 /* Frameworks */ = {
+		8A95DD06D3319EE59C374DEF00ABE9D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEDFD1BB11826A2CB3B89DD1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD61B982F97DECBAAA1662B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				324ADD31E3DAD8EBABD7F5D8 /* Foundation.framework in Frameworks */,
+				88512DDD2F14F5FDFDD5FC60595C74CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17441A13163E53C081FDDC50 /* Pod */ = {
+		07B959F3E23CB36232F663365B573FEF /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AEED478D0709357E7548F277 /* Assets */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		2E149F677F203E1A3786E0FC /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AD4F1AC73FE201469FB08386 /* JMActionSheetDescription */,
+				1CE3030CB00D8F697ECF03DEA9578560 /* JMActionSheetDescription */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		5C98AA6F7EF0C7B8081BFE0B = {
+		0ACCF786EBB523210C9B9006856FDD74 /* Pods-JMActionSheetDescription_Example */ = {
 			isa = PBXGroup;
 			children = (
-				48AC504053C485AB3DDD8956 /* Podfile */,
-				2E149F677F203E1A3786E0FC /* Development Pods */,
-				B20FB0D256D486F5600F6A81 /* Frameworks */,
-				BDB5480620152137AA0007FA /* Pods */,
-				66DE4840166BD30F0F3BDAC1 /* Products */,
-				C56FC51CF45CA711B178DAC0 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		66DE4840166BD30F0F3BDAC1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1F16DBB077789C7957110255 /* JMActionSheetDescription.bundle */,
-				040A1541AADD6E11609FAEF5 /* libPods-JMActionSheetDescription_Example.a */,
-				D726A7E67D7BECAFC7BF3FED /* libPods-JMActionSheetDescription_Example-JMActionSheetDescription.a */,
-				F7D7F58A07852AEA9D5165B0 /* libPods-JMActionSheetDescription_Example-ionicons.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7D933E01A981662080CC5C3F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B6A0C3732304E10EBE57F6DD /* Pods-JMActionSheetDescription_Example-ionicons.xcconfig */,
-				EA63997F1479D9D79739DF89 /* Pods-JMActionSheetDescription_Example-ionicons-Private.xcconfig */,
-				E0AE7D6258B50E2282933AD0 /* Pods-JMActionSheetDescription_Example-ionicons-dummy.m */,
-				4A3F9A682558A1E48A3F40F0 /* Pods-JMActionSheetDescription_Example-ionicons-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-JMActionSheetDescription_Example-ionicons";
-			sourceTree = "<group>";
-		};
-		81B78B15230E7820A052F035 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				17441A13163E53C081FDDC50 /* Pod */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		8A9099C90239DC0D953F84C6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2918ACC149C5F72FE3046E85 /* ionicons.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		931B461CA2A3C91C949CBBF6 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				13C9EC48605DE88A41107F23 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		AD4F1AC73FE201469FB08386 /* JMActionSheetDescription */ = {
-			isa = PBXGroup;
-			children = (
-				CCCBA90DF967365E7ED4843C /* Pod */,
-				81B78B15230E7820A052F035 /* Resources */,
-				B177DA9A5379DCDDD19D43FA /* Support Files */,
-			);
-			name = JMActionSheetDescription;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		AEED478D0709357E7548F277 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				1EDACAAE49D246D36B171C67 /* JMPickerChecked.png */,
-				28310981E517DA70EF2AC3CD /* JMPickerChecked@2x.png */,
-				D4B3C07C8B217EBBB3B5A3FE /* JMPickerChecked@3x.png */,
-				50892B6DCF968779979414F4 /* JMPickerNotChecked.png */,
-				EB7FE2E97D1543A4CC6DDF3A /* JMPickerNotChecked@2x.png */,
-				0C6631D20F6C3EAB4721EEF8 /* JMPickerNotChecked@3x.png */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		B177DA9A5379DCDDD19D43FA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C5FEDA65D2DEB2DA089B9F5B /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription.xcconfig */,
-				7397D6D5305A0FDC1AC3D277 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-Private.xcconfig */,
-				46D7D23EDF06078F461D5DE0 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-dummy.m */,
-				52E7115CB13CC64BEDF2BB85 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Pods-JMActionSheetDescription_Example-JMActionSheetDescription";
-			sourceTree = "<group>";
-		};
-		B20FB0D256D486F5600F6A81 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				931B461CA2A3C91C949CBBF6 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B7BA544805B935560ACB453D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				42E82458AC25CDDC4DD9617F /* JMActionSheet.h */,
-				F49055E95AFE91F33F3B3156 /* JMActionSheet.m */,
-				463BB1B6BD6F8B87E8F0444D /* JMPickerActionSheet.h */,
-				06D6FA7E333412CBE90F20BF /* JMPickerActionSheet.m */,
-				38007F3CD434C7F6514D3487 /* JMImagesActionSheet.h */,
-				6FEE7747D7C763B6F5522E0C /* JMImagesActionSheet.m */,
-				FD65C6F5311001251B8483FB /* JMActionSheetDescription.h */,
-				9C710FBA2259F155E48FAFE9 /* JMActionSheetDescription.m */,
-				C2677EEB1B20D21300A4D248 /* CollectionSupport */,
-				C2677EEC1B20D23E00A4D248 /* ActionSheetItems */,
-				C2677EED1B20D27600A4D248 /* PickerViewSupport */,
-				44BFE88A97428E13DF1091C7 /* JMActionSheetItemControl.h */,
-				4943FCBCC00EC5D2E86A1794 /* JMActionSheetItemControl.m */,
-				D3A1DFA554A2602D4C901213 /* JMActionSheetViewController.h */,
-				23CE3809E308C4F6AB133FA0 /* JMActionSheetViewController.m */,
-				C2FB2EA01B3BCD8B0013DAFC /* UIView+JMActionSheet.h */,
-				C2FB2EA11B3BCD8B0013DAFC /* UIView+JMActionSheet.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		BDB5480620152137AA0007FA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E8FDD5ACA4AEC7D5F668883B /* ionicons */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C2677EEB1B20D21300A4D248 /* CollectionSupport */ = {
-			isa = PBXGroup;
-			children = (
-				8649AEF941B6C9B1489B7793 /* JMActionSheetViewController+CollectionView.h */,
-				466BFC9B688AAABA07811465 /* JMActionSheetViewController+CollectionView.m */,
-				98A6B7E8FA579706D88F9FFA /* JMActionSheetCollectionImageCell.h */,
-				2DEF6357CC37BAAAC6F85B77 /* JMActionSheetCollectionImageCell.m */,
-				D4D3C827063D9D54C8FF6A15 /* JMActionSheetCollectionItemCell.h */,
-				D5C954D0E0F86B274233D8D3 /* JMActionSheetCollectionItemCell.m */,
-				DD7775716B1798659628156F /* JMActionSheetCollectionViewController.h */,
-				A63A6B99EF9A9567229617FC /* JMActionSheetCollectionViewController.m */,
-			);
-			name = CollectionSupport;
-			sourceTree = "<group>";
-		};
-		C2677EEC1B20D23E00A4D248 /* ActionSheetItems */ = {
-			isa = PBXGroup;
-			children = (
-				F74E7050E58E0122F87849BE /* JMActionSheetItem.h */,
-				D57B230CE46EAD9128FA8C33 /* JMActionSheetItem.m */,
-				B047AF9B7A4016E2E2EDB10A /* JMActionSheetPickerItem.h */,
-				C5464ED5BF4EFE6D1207D983 /* JMActionSheetPickerItem.m */,
-				5001BA4278346FB826997FA3 /* JMActionSheetImageItem.h */,
-				BAD5FB25024BD2AF3A84372B /* JMActionSheetImageItem.m */,
-				002AA4976452B3CDC350AC1E /* JMActionSheetImagesItem.h */,
-				ADC1FE012D9A5EAA2E084CE3 /* JMActionSheetImagesItem.m */,
-				507292F7CD9008377AAAD192 /* JMActionSheetCollectionItem.h */,
-				406C04D590E3874D0043FCEE /* JMActionSheetCollectionItem.m */,
-			);
-			name = ActionSheetItems;
-			sourceTree = "<group>";
-		};
-		C2677EED1B20D27600A4D248 /* PickerViewSupport */ = {
-			isa = PBXGroup;
-			children = (
-				20C7BB22DD2BBCD6BEC59942 /* JMActionSheetViewController+PickerViewItem.h */,
-				7C94F0A7CAD2A02F498D8358 /* JMActionSheetViewController+PickerViewItem.m */,
-			);
-			name = PickerViewSupport;
-			sourceTree = "<group>";
-		};
-		C56FC51CF45CA711B178DAC0 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FD155A3DF1465C8A9B5ABB8A /* Pods-JMActionSheetDescription_Example */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		CCCBA90DF967365E7ED4843C /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				B7BA544805B935560ACB453D /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		E8FDD5ACA4AEC7D5F668883B /* ionicons */ = {
-			isa = PBXGroup;
-			children = (
-				2AEFD9750559CC9775E88640 /* IonIcons.h */,
-				E9FEF603350B7F2570FF389A /* IonIcons.m */,
-				087CA164F9384CAF8B6DA530 /* ionicons-codes.h */,
-				8A9099C90239DC0D953F84C6 /* Resources */,
-				7D933E01A981662080CC5C3F /* Support Files */,
-			);
-			path = ionicons;
-			sourceTree = "<group>";
-		};
-		FD155A3DF1465C8A9B5ABB8A /* Pods-JMActionSheetDescription_Example */ = {
-			isa = PBXGroup;
-			children = (
-				9A2591EE9884E3015547F7F0 /* Pods-JMActionSheetDescription_Example-acknowledgements.markdown */,
-				95CB0CD875E644872B7E0CC7 /* Pods-JMActionSheetDescription_Example-acknowledgements.plist */,
-				1C450DC0F013B456FBB49F84 /* Pods-JMActionSheetDescription_Example-dummy.m */,
-				8C40CB2699249B90733DE420 /* Pods-JMActionSheetDescription_Example-environment.h */,
-				686F9101250AB7EB1E6D28DF /* Pods-JMActionSheetDescription_Example-resources.sh */,
-				316BA41BF791B15DE2D453B2 /* Pods-JMActionSheetDescription_Example.debug.xcconfig */,
-				862DBE49AFCEFD9E8CE6B850 /* Pods-JMActionSheetDescription_Example.release.xcconfig */,
+				DBE780CAE4160C46C3806D619658646D /* Pods-JMActionSheetDescription_Example-acknowledgements.markdown */,
+				24EBD0D09E931EAB0576715FE9FBB36B /* Pods-JMActionSheetDescription_Example-acknowledgements.plist */,
+				64D660D65051763646C3021DF6D67F8D /* Pods-JMActionSheetDescription_Example-dummy.m */,
+				BD9B24AF7DDD12D58715975CD48BD9E9 /* Pods-JMActionSheetDescription_Example-frameworks.sh */,
+				AE5C7F518B5FEEE4EA9B89B8E31FBDD4 /* Pods-JMActionSheetDescription_Example-resources.sh */,
+				FDE2D0FD91BE1221ECFBC6E8CC67B893 /* Pods-JMActionSheetDescription_Example.debug.xcconfig */,
+				E76251143A575A89BC5252E3E86D181E /* Pods-JMActionSheetDescription_Example.release.xcconfig */,
 			);
 			name = "Pods-JMActionSheetDescription_Example";
 			path = "Target Support Files/Pods-JMActionSheetDescription_Example";
 			sourceTree = "<group>";
 		};
+		1CE3030CB00D8F697ECF03DEA9578560 /* JMActionSheetDescription */ = {
+			isa = PBXGroup;
+			children = (
+				489628D2FDCBF69B3359094568BC018B /* Pod */,
+				9A0390A69590FCFE8B227BCB11741BFB /* Resources */,
+				722A9F2CB24956D66A23C8F1E03E31E7 /* Support Files */,
+			);
+			name = JMActionSheetDescription;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		323828105ABBB1895A2AAFE6E14991FF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ACCF786EBB523210C9B9006856FDD74 /* Pods-JMActionSheetDescription_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3D15AB7DB41DB4E6B2D187AA9C16586D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9C90B829AE68B12057CC37A8B96C8347 /* JMPickerChecked.png */,
+				9BA7CA8436F32B3AB81B0A1D3CE67325 /* JMPickerChecked@2x.png */,
+				6F981B35E745EDFE47254D1B6F9C3D62 /* JMPickerChecked@3x.png */,
+				FB6838C3A8EA883404ED51A2CFECCA80 /* JMPickerNotChecked.png */,
+				251878F6912A12A4EE2C48DBB9288C7F /* JMPickerNotChecked@2x.png */,
+				01498944CA141DB9B030BC81C4EE299A /* JMPickerNotChecked@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		489628D2FDCBF69B3359094568BC018B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				59DABE5EB9BD31C3644A742788DDD174 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		52A802D8F83994D21B5C6425108E35E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				878158359C666F0922D5698FA662FFC4 /* ionicons */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		59DABE5EB9BD31C3644A742788DDD174 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6AE64A2E13F887056B7A106FB061AFF7 /* JMActionSheet.h */,
+				E670D365AAA9FE09BFCB1E7344CD70F8 /* JMActionSheet.m */,
+				99D64315A1D7C6C81A05636CA1A8AEA8 /* JMActionSheetCollectionImageCell.h */,
+				CFCF298C8481EC0C33FB944600CEDBC6 /* JMActionSheetCollectionImageCell.m */,
+				83F623A3D09ACA22514A93CD786B0E40 /* JMActionSheetCollectionItem.h */,
+				CD6A2CACD86E1727781BBD04D7B4F25C /* JMActionSheetCollectionItem.m */,
+				EFDD471D76304822FAC0A9CA50846CC1 /* JMActionSheetCollectionItemCell.h */,
+				D056600FC670A7E1BD803F5149BC7418 /* JMActionSheetCollectionItemCell.m */,
+				A159732153052803A8FE0CADBE2B22BD /* JMActionSheetCollectionViewController.h */,
+				2AE9993824CF32E10A80C1A73EF7730B /* JMActionSheetCollectionViewController.m */,
+				67D0FB95F65C26141B39CD82E03EB4E9 /* JMActionSheetDatePickerItem.h */,
+				2F246A89B8728F61B08983237EBD2CDC /* JMActionSheetDatePickerItem.m */,
+				3AEF1655CA0DBE4BD602DEF5BA4D4CBF /* JMActionSheetDescription.h */,
+				3B8F6C394B140576C486DA398548AD51 /* JMActionSheetDescription.m */,
+				04CEDD01E98DD60E8D5E86FFD89E5C36 /* JMActionSheetImageItem.h */,
+				456A9C605964CC1BDB3004D58637CFAF /* JMActionSheetImageItem.m */,
+				07C74C995E6B6B3148E1CEA2DEA6976B /* JMActionSheetImagesItem.h */,
+				7238A2170B4323AFC18507D7B58AC08F /* JMActionSheetImagesItem.m */,
+				994428A0A89ADE0BF96F588E62E0B2EE /* JMActionSheetItem.h */,
+				D41AC770DD399416FEDD2ABA6072A596 /* JMActionSheetItem.m */,
+				45487746EB5A56CC1E96B85594C7DB31 /* JMActionSheetItemControl.h */,
+				A18903CBB11E3933FFAE44A3F11B64D8 /* JMActionSheetItemControl.m */,
+				24B05E8A3BC4AB059F722E64E4A46385 /* JMActionSheetPickerItem.h */,
+				95679355D95DD6AE753EA4AC6B22633A /* JMActionSheetPickerItem.m */,
+				C566A9B044367E99E5AFAD15BF399BD8 /* JMActionSheetViewController.h */,
+				31D4131E0BACC16E655352613043A5A8 /* JMActionSheetViewController.m */,
+				D6E1D09B0CFD489743C64396CB7A1DF6 /* JMActionSheetViewController+CollectionView.h */,
+				F559B4C7D6677962C3A7DC8CD0477E1C /* JMActionSheetViewController+CollectionView.m */,
+				F29F7BE58CBA8C59DB57A08759EE030F /* JMActionSheetViewController+PickerViewItem.h */,
+				02542F141032242E7DEAE5F11E7AB6AA /* JMActionSheetViewController+PickerViewItem.m */,
+				2C99FAF2E702EBAC4296FB5A3141C05C /* JMDatePickerActionSheet.h */,
+				3C8F9D63C7E1C9CABB2A876F9603A7A3 /* JMDatePickerActionSheet.m */,
+				56DAFB0241AFF71102F522E27FD2C147 /* JMImagesActionSheet.h */,
+				A7AD209D5155F581C5BF6A51AB9D1FDE /* JMImagesActionSheet.m */,
+				BF22A2206211C57D56635AFA13E5A819 /* JMPickerActionSheet.h */,
+				A8AFF0709F85271FCFB6B0334B1D92F2 /* JMPickerActionSheet.m */,
+				F5DE1208F6631E2EF4096CF180D2460A /* UIView+JMActionSheet.h */,
+				44B30C3D97A453CA6235411C88A69CD7 /* UIView+JMActionSheet.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5F656D716EC5C0C839961DE787A34A0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBC7931FDACB89F806C61533F69807E4 /* JMActionSheetDescription.bundle */,
+				FB7939692818F70250CDB695CD8AEBF4 /* libionicons.a */,
+				43549CD534932BC6FBB364D4074108B2 /* libJMActionSheetDescription.a */,
+				CB312B9523B69C74E538E7F6A3112EB4 /* libPods-JMActionSheetDescription_Example.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		722A9F2CB24956D66A23C8F1E03E31E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				335EBABFD2699049C8501D34091C61C5 /* JMActionSheetDescription.xcconfig */,
+				79F500ACB71FD787FC29D78D5B4A73E6 /* JMActionSheetDescription-dummy.m */,
+				BB63183B6E11E125CB1BD9F103F346A1 /* JMActionSheetDescription-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JMActionSheetDescription";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				07B959F3E23CB36232F663365B573FEF /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				52A802D8F83994D21B5C6425108E35E9 /* Pods */,
+				5F656D716EC5C0C839961DE787A34A0A /* Products */,
+				323828105ABBB1895A2AAFE6E14991FF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		878158359C666F0922D5698FA662FFC4 /* ionicons */ = {
+			isa = PBXGroup;
+			children = (
+				1CFF84246CD7B3ABF0ADF4CB0A5157C3 /* IonIcons.h */,
+				1C9A42B1E4FAD7A56AC96060374E318E /* IonIcons.m */,
+				38ACB87A6E98599D7F84CD018AA772D8 /* ionicons-codes.h */,
+				DC5CB4B273790EAF736A0D326274919A /* Resources */,
+				B493398E3BDE7DDA3D580BE6F7EA566E /* Support Files */,
+			);
+			path = ionicons;
+			sourceTree = "<group>";
+		};
+		9A0390A69590FCFE8B227BCB11741BFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B9A7515F7C409E984E83A5ADFE5075CF /* Pod */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B493398E3BDE7DDA3D580BE6F7EA566E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBEE1213B825BAF3F63031F0DAE2A3E5 /* ionicons.xcconfig */,
+				F40CC7ED97319003C8C30F1B6F617978 /* ionicons-dummy.m */,
+				86DCAC2501345FF8DFE745DC8E1B2176 /* ionicons-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ionicons";
+			sourceTree = "<group>";
+		};
+		B9A7515F7C409E984E83A5ADFE5075CF /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3D15AB7DB41DB4E6B2D187AA9C16586D /* Assets */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DC5CB4B273790EAF736A0D326274919A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC283036EE1037537663B8466A79785D /* ionicons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3F41D92B9FC524E95D6DA3AB /* Headers */ = {
+		260DCFBA3A3DD7C62843D44650929EF1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				008E9F78B74181F3F49CC03C /* JMActionSheet.h in Headers */,
-				9087FE7ACE5B3738C08015E8 /* JMActionSheetCollectionImageCell.h in Headers */,
-				C45943B23053B253B9ED9DD8 /* JMActionSheetCollectionItem.h in Headers */,
-				0A6C0D9D35868739FF263F46 /* JMActionSheetCollectionItemCell.h in Headers */,
-				67B186F10D33950F84A91067 /* JMActionSheetCollectionViewController.h in Headers */,
-				E0CCEDF0708EB03CD34E4ABE /* JMActionSheetDescription.h in Headers */,
-				4F378F979A6BB026004A8717 /* JMActionSheetImageItem.h in Headers */,
-				A7ABBC80332A07D4DCF3385D /* JMActionSheetImagesItem.h in Headers */,
-				2ED65C23D7899A8A11DA6240 /* JMActionSheetItem.h in Headers */,
-				5BEBD824A4B448C8A01B2C0C /* JMActionSheetItemControl.h in Headers */,
-				CF071473329A8AC4F006FA85 /* JMActionSheetPickerItem.h in Headers */,
-				AD11232557EF5817EE32D6DC /* JMActionSheetViewController+CollectionView.h in Headers */,
-				321CDBBEED8377119E3CA671 /* JMActionSheetViewController+PickerViewItem.h in Headers */,
-				C2FB2EA21B3BCD8B0013DAFC /* UIView+JMActionSheet.h in Headers */,
-				16942E10BB77CA62A5AA7E7B /* JMActionSheetViewController.h in Headers */,
-				92FDA53DD65048E3215B1A67 /* JMImagesActionSheet.h in Headers */,
-				EB9FF08439BDD08D3A24C0D3 /* JMPickerActionSheet.h in Headers */,
+				C3BDD41A833E336B8C0D8F6C420A5620 /* JMActionSheet.h in Headers */,
+				29E69ED1181ECA979E265FC92FF15528 /* JMActionSheetCollectionImageCell.h in Headers */,
+				50CB6ECC5D35837142DDC7554D21A8E0 /* JMActionSheetCollectionItem.h in Headers */,
+				B25F02D0FE778A939AC602A6964CD9CE /* JMActionSheetCollectionItemCell.h in Headers */,
+				E4CFDE3B34D7ABFADC89542BD8753CAD /* JMActionSheetCollectionViewController.h in Headers */,
+				9CC81412037A3CCE6CF889180DD13C5D /* JMActionSheetDatePickerItem.h in Headers */,
+				05B47EDDD1797712F0421836E64F8624 /* JMActionSheetDescription.h in Headers */,
+				D1DC45D0D60AF1F9BB8E721F661B7B55 /* JMActionSheetImageItem.h in Headers */,
+				184598D3CBE97276CC2E5DF01F2A34AA /* JMActionSheetImagesItem.h in Headers */,
+				45A42035C5982C0853B2524B41A1AA58 /* JMActionSheetItem.h in Headers */,
+				3E3173256C44AEF6BE4695DFC66B6195 /* JMActionSheetItemControl.h in Headers */,
+				4B07C86D1513D90090F600235414D0A5 /* JMActionSheetPickerItem.h in Headers */,
+				B767A5DA7152786EC0E3F143B3DD68B1 /* JMActionSheetViewController+CollectionView.h in Headers */,
+				5876F6965E05226366F5426C6B331F62 /* JMActionSheetViewController+PickerViewItem.h in Headers */,
+				74DEA0D13591129BAA513A84B692E628 /* JMActionSheetViewController.h in Headers */,
+				3B2A5EC45A275958923735079219CF64 /* JMDatePickerActionSheet.h in Headers */,
+				FA1E138336CA05C190F3581AF5089185 /* JMImagesActionSheet.h in Headers */,
+				1EC357B6DD6597827F44C45AA69785C1 /* JMPickerActionSheet.h in Headers */,
+				5A2F77B22A160AEDDC724E7FB3B5C1E6 /* UIView+JMActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AE0BB56AB5E150024E6064B /* Headers */ = {
+		CC06E23023A38A75D5360D2FD4A0434C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1F8BCE12D12E8C97C1AF2B /* IonIcons.h in Headers */,
-				BD18613EFD39B13F9D9C0950 /* ionicons-codes.h in Headers */,
+				8FC65798D716062D0C38395F988B28C9 /* ionicons-codes.h in Headers */,
+				5B06F525498268FBD35C45D9F1BAC616 /* IonIcons.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4737457E1B881693AAD5CFC6 /* Pods-JMActionSheetDescription_Example */ = {
+		0DBB3D30F280CEDFE03B7474B23873A4 /* ionicons */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4D50E6CF972BE44EDB37047 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example" */;
+			buildConfigurationList = A1BD4AD86449C4E242001634CEA42A12 /* Build configuration list for PBXNativeTarget "ionicons" */;
 			buildPhases = (
-				D27CCE36E6203DF65D576921 /* Sources */,
-				832B177B37F177866D817A36 /* Frameworks */,
+				5A0D960B1027A14A7B39BB296F5EB02E /* Sources */,
+				0E2741E1AF265C9E8117D329C3396923 /* Frameworks */,
+				CC06E23023A38A75D5360D2FD4A0434C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F2767E36094257304DBD04FD /* PBXTargetDependency */,
-				AD18BE3B6FBC5565A18A6C07 /* PBXTargetDependency */,
+			);
+			name = ionicons;
+			productName = ionicons;
+			productReference = FB7939692818F70250CDB695CD8AEBF4 /* libionicons.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5C098A3F156F9A1DADCB060742FF03CE /* JMActionSheetDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FD0F74FF003B1C24E6BC36EC4210BDD /* Build configuration list for PBXNativeTarget "JMActionSheetDescription" */;
+			buildPhases = (
+				1B52E7A61A728F74AD9FA0CC03C12B13 /* Sources */,
+				2FA915FD2F0F21DD425347BEAC96E7A4 /* Frameworks */,
+				260DCFBA3A3DD7C62843D44650929EF1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				195F72E25EFC9022830D8C50C5F7DCE8 /* PBXTargetDependency */,
+			);
+			name = JMActionSheetDescription;
+			productName = JMActionSheetDescription;
+			productReference = 43549CD534932BC6FBB364D4074108B2 /* libJMActionSheetDescription.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E5F122D27535B1EE128B09DB5A8D274A /* JMActionSheetDescription-JMActionSheetDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC83E769BA264D3B5B23B7D9CD1A7FD7 /* Build configuration list for PBXNativeTarget "JMActionSheetDescription-JMActionSheetDescription" */;
+			buildPhases = (
+				3D1F7FDC22F65F58E06037E9A221D6E2 /* Sources */,
+				42B0C64D6F9E5C549F48F9295F821B45 /* Frameworks */,
+				3A7DD81262A423A4D565D95ECAEDE54D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JMActionSheetDescription-JMActionSheetDescription";
+			productName = "JMActionSheetDescription-JMActionSheetDescription";
+			productReference = BBC7931FDACB89F806C61533F69807E4 /* JMActionSheetDescription.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		FFD73D034EC89178B32784D284C58C6A /* Pods-JMActionSheetDescription_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4816E20A42166A76EB0816B234780EF0 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example" */;
+			buildPhases = (
+				3FA6EE7DF4A92B53900C3DE4F6FE669B /* Sources */,
+				8A95DD06D3319EE59C374DEF00ABE9D9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16BEAB2AAED6FE6A09AA8ECD8251CC8F /* PBXTargetDependency */,
+				9474BC0CBA9F18BB2AB0AC4FD8FFA026 /* PBXTargetDependency */,
 			);
 			name = "Pods-JMActionSheetDescription_Example";
 			productName = "Pods-JMActionSheetDescription_Example";
-			productReference = 040A1541AADD6E11609FAEF5 /* libPods-JMActionSheetDescription_Example.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		ADD42D6867C698E4A61F8E15 /* Pods-JMActionSheetDescription_Example-ionicons */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5E19407E12D4B24746394D63 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example-ionicons" */;
-			buildPhases = (
-				C3A98920E5626E72F762A073 /* Sources */,
-				FD61B982F97DECBAAA1662B7 /* Frameworks */,
-				8AE0BB56AB5E150024E6064B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-JMActionSheetDescription_Example-ionicons";
-			productName = "Pods-JMActionSheetDescription_Example-ionicons";
-			productReference = F7D7F58A07852AEA9D5165B0 /* libPods-JMActionSheetDescription_Example-ionicons.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C7DBA936AAAE77AD3999B0F6 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 34469B4A2052EB5D91C12835 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription" */;
-			buildPhases = (
-				FA2DC28FF2A82EB0326C06F7 /* Sources */,
-				C9E2722886DA1FCFA81172FB /* Frameworks */,
-				5CE25D46D5633272810E1C41 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription";
-			productName = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription";
-			productReference = 1F16DBB077789C7957110255 /* JMActionSheetDescription.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		CFD3717A7246E29523B921BC /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 11CD7060D693A53BD5FB9C80 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example-JMActionSheetDescription" */;
-			buildPhases = (
-				BA7181EBA5B5142118260188 /* Sources */,
-				F09FB51B863D55E1329DF1F1 /* Frameworks */,
-				3F41D92B9FC524E95D6DA3AB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4152036C72F22E4E3F383341 /* PBXTargetDependency */,
-			);
-			name = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription";
-			productName = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription";
-			productReference = D726A7E67D7BECAFC7BF3FED /* libPods-JMActionSheetDescription_Example-JMActionSheetDescription.a */;
+			productReference = CB312B9523B69C74E538E7F6A3112EB4 /* libPods-JMActionSheetDescription_Example.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		608D4081FC05A310B1D20003 /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = 2473C906C2C36D7031A11CAF /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5C98AA6F7EF0C7B8081BFE0B;
-			productRefGroup = 66DE4840166BD30F0F3BDAC1 /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5F656D716EC5C0C839961DE787A34A0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4737457E1B881693AAD5CFC6 /* Pods-JMActionSheetDescription_Example */,
-				CFD3717A7246E29523B921BC /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription */,
-				C7DBA936AAAE77AD3999B0F6 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription */,
-				ADD42D6867C698E4A61F8E15 /* Pods-JMActionSheetDescription_Example-ionicons */,
+				0DBB3D30F280CEDFE03B7474B23873A4 /* ionicons */,
+				5C098A3F156F9A1DADCB060742FF03CE /* JMActionSheetDescription */,
+				E5F122D27535B1EE128B09DB5A8D274A /* JMActionSheetDescription-JMActionSheetDescription */,
+				FFD73D034EC89178B32784D284C58C6A /* Pods-JMActionSheetDescription_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5CE25D46D5633272810E1C41 /* Resources */ = {
+		3A7DD81262A423A4D565D95ECAEDE54D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				149B7A97A21242D51B633CC5 /* JMPickerChecked.png in Resources */,
-				A8BE113251E87826CC6C3F8A /* JMPickerChecked@2x.png in Resources */,
-				1C7A442973B785F3420B763E /* JMPickerChecked@3x.png in Resources */,
-				22D2445ED3A5A916E590F47B /* JMPickerNotChecked.png in Resources */,
-				CFF04A187D8AC59A850CF50B /* JMPickerNotChecked@2x.png in Resources */,
-				B5DF7A84D7D653038E3C8D64 /* JMPickerNotChecked@3x.png in Resources */,
+				03CF4D55E084DA2D93F5F0C6619F0C5F /* JMPickerChecked.png in Resources */,
+				CA078E7CDAE2A6B20C586BBCC5EE73CF /* JMPickerChecked@2x.png in Resources */,
+				59A563E1074AA2E75860445E1843A666 /* JMPickerChecked@3x.png in Resources */,
+				0B11104350872E77947A9ACEEFC41D15 /* JMPickerNotChecked.png in Resources */,
+				DEC5543BDD9AD77BE355D355C0C69302 /* JMPickerNotChecked@2x.png in Resources */,
+				972C8521FC5BC581C119D008CCA4DBD8 /* JMPickerNotChecked@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BA7181EBA5B5142118260188 /* Sources */ = {
+		1B52E7A61A728F74AD9FA0CC03C12B13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B02DD1429F5D54DE3AD6E4 /* JMActionSheet.m in Sources */,
-				570479D8EC49B46DEF5DE75E /* JMActionSheetCollectionImageCell.m in Sources */,
-				688734CC3D0BF600C32E1030 /* JMActionSheetCollectionItem.m in Sources */,
-				CFDF25291159B4A217C10AF8 /* JMActionSheetCollectionItemCell.m in Sources */,
-				C1C133446BDC03A72BA2F861 /* JMActionSheetCollectionViewController.m in Sources */,
-				C17095277E463E2C7243BA44 /* JMActionSheetDescription.m in Sources */,
-				A03778CFB77F51036B0EFB92 /* JMActionSheetImageItem.m in Sources */,
-				0EC8CE5F7AE116F7AEF7DB6C /* JMActionSheetImagesItem.m in Sources */,
-				5996B920750EBADBD744BEB2 /* JMActionSheetItem.m in Sources */,
-				B6AA4AAB244654BFB25B8187 /* JMActionSheetItemControl.m in Sources */,
-				7609E61308CE22E8B2954F54 /* JMActionSheetPickerItem.m in Sources */,
-				20F8601216A9A406B5145D66 /* JMActionSheetViewController+CollectionView.m in Sources */,
-				26DDAFA3234ABFE9F0E234D0 /* JMActionSheetViewController+PickerViewItem.m in Sources */,
-				C2FB2EA31B3BCD8B0013DAFC /* UIView+JMActionSheet.m in Sources */,
-				627D3006F09F4F6BA3631A47 /* JMActionSheetViewController.m in Sources */,
-				6C8D1EF970FD61B6ECE1A94F /* JMImagesActionSheet.m in Sources */,
-				FA945638FB50DA5B17CD3199 /* JMPickerActionSheet.m in Sources */,
-				108E2A8921679FBAE8C3C063 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-dummy.m in Sources */,
+				1C5111E491E1E53C894AFABBC57A87A7 /* JMActionSheet.m in Sources */,
+				1886DEAB10715E64CDC738CB3AF89083 /* JMActionSheetCollectionImageCell.m in Sources */,
+				1CB73D4B2259D383A76A73F0D34E9FBF /* JMActionSheetCollectionItem.m in Sources */,
+				EFD88A7D3C386706D0791B7815BD93CE /* JMActionSheetCollectionItemCell.m in Sources */,
+				A2FCC7715E9C3B3E55B5CDB934E1E729 /* JMActionSheetCollectionViewController.m in Sources */,
+				63BCADC0F4EB69940251ABBBB95AE6C0 /* JMActionSheetDatePickerItem.m in Sources */,
+				A29EEC9AA665588981C8CB9622A257BF /* JMActionSheetDescription-dummy.m in Sources */,
+				C2A38E8EA6E7F284383965435F4E4061 /* JMActionSheetDescription.m in Sources */,
+				E846D6B8AD135993216E8FE2E578744C /* JMActionSheetImageItem.m in Sources */,
+				2A7ACA309D9D7331905ED3A68AB4378B /* JMActionSheetImagesItem.m in Sources */,
+				AA3E234368F2B01E72D5B6934F6407B0 /* JMActionSheetItem.m in Sources */,
+				7E0A32D0C4D43786FD6D5A8E78F43E4C /* JMActionSheetItemControl.m in Sources */,
+				0A25DB4E0D5EB7E4C456AABF5A790664 /* JMActionSheetPickerItem.m in Sources */,
+				6538D8CD2EDCA9090D90499F57E05BCE /* JMActionSheetViewController+CollectionView.m in Sources */,
+				5D7E558BAC384F4161719D42B2146C1A /* JMActionSheetViewController+PickerViewItem.m in Sources */,
+				A33E820385CEC47EEDD2D95C8811638A /* JMActionSheetViewController.m in Sources */,
+				CF611D27ACEE5A9711CA174DC16D660A /* JMDatePickerActionSheet.m in Sources */,
+				85ACFB91972EBE8D6EA319CB7EBF25A4 /* JMImagesActionSheet.m in Sources */,
+				7310E2277C94F229A4138C1D7DE9403F /* JMPickerActionSheet.m in Sources */,
+				34893A56505304BAB8E09EAFAF2771FA /* UIView+JMActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3A98920E5626E72F762A073 /* Sources */ = {
+		3D1F7FDC22F65F58E06037E9A221D6E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA55B760DD7E9B878F3EC05C /* IonIcons.m in Sources */,
-				E4CEED92A5529C426B9A828C /* Pods-JMActionSheetDescription_Example-ionicons-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D27CCE36E6203DF65D576921 /* Sources */ = {
+		3FA6EE7DF4A92B53900C3DE4F6FE669B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FAE384AE8B409F7CD7DA699 /* Pods-JMActionSheetDescription_Example-dummy.m in Sources */,
+				093DAEC48299385562BF33ABDDA6A6C7 /* Pods-JMActionSheetDescription_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA2DC28FF2A82EB0326C06F7 /* Sources */ = {
+		5A0D960B1027A14A7B39BB296F5EB02E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6A9D4BCE6A7A2CEEACF8071C6416C8 /* ionicons-dummy.m in Sources */,
+				245ACF4064CE2C1314C32742384F9581 /* IonIcons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4152036C72F22E4E3F383341 /* PBXTargetDependency */ = {
+		16BEAB2AAED6FE6A09AA8ECD8251CC8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription";
-			target = C7DBA936AAAE77AD3999B0F6 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription */;
-			targetProxy = 85A5EEF82EF2E155BFD44E7B /* PBXContainerItemProxy */;
+			name = JMActionSheetDescription;
+			target = 5C098A3F156F9A1DADCB060742FF03CE /* JMActionSheetDescription */;
+			targetProxy = 4481F8C43B9898A4C8E7B61ED0224E12 /* PBXContainerItemProxy */;
 		};
-		AD18BE3B6FBC5565A18A6C07 /* PBXTargetDependency */ = {
+		195F72E25EFC9022830D8C50C5F7DCE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-JMActionSheetDescription_Example-ionicons";
-			target = ADD42D6867C698E4A61F8E15 /* Pods-JMActionSheetDescription_Example-ionicons */;
-			targetProxy = 8DEC7BF8D06FEAC5F24629B3 /* PBXContainerItemProxy */;
+			name = "JMActionSheetDescription-JMActionSheetDescription";
+			target = E5F122D27535B1EE128B09DB5A8D274A /* JMActionSheetDescription-JMActionSheetDescription */;
+			targetProxy = 81042ECA035EF5EC166D4CFFC7E75669 /* PBXContainerItemProxy */;
 		};
-		F2767E36094257304DBD04FD /* PBXTargetDependency */ = {
+		9474BC0CBA9F18BB2AB0AC4FD8FFA026 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-JMActionSheetDescription_Example-JMActionSheetDescription";
-			target = CFD3717A7246E29523B921BC /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription */;
-			targetProxy = 3B0F1556198B1554AE941E8D /* PBXContainerItemProxy */;
+			name = ionicons;
+			target = 0DBB3D30F280CEDFE03B7474B23873A4 /* ionicons */;
+			targetProxy = 9806B9F8E3B24D827F2940A501C9381C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06C54726442CB93EFDE7A3D2 /* Release */ = {
+		052A17875CB827423D627183396CEB60 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7397D6D5305A0FDC1AC3D277 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-Private.xcconfig */;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JMActionSheetDescription_Example-JMActionSheetDescription/Pods-JMActionSheetDescription_Example-JMActionSheetDescription-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		0E7FA397D5451689CAC6DE7C /* Release */ = {
+		37C8B0A2952E246F2F2FAC9F217AB137 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 862DBE49AFCEFD9E8CE6B850 /* Pods-JMActionSheetDescription_Example.release.xcconfig */;
+			baseConfigurationReference = E76251143A575A89BC5252E3E86D181E /* Pods-JMActionSheetDescription_Example.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -679,23 +687,85 @@
 			};
 			name = Release;
 		};
-		2505AEA011C2186015BC683A /* Debug */ = {
+		3A44160A5E73080B24CF6A26F5A2DC30 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 316BA41BF791B15DE2D453B2 /* Pods-JMActionSheetDescription_Example.debug.xcconfig */;
+			baseConfigurationReference = 335EBABFD2699049C8501D34091C61C5 /* JMActionSheetDescription.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				GCC_PREFIX_HEADER = "Target Support Files/JMActionSheetDescription/JMActionSheetDescription-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		27C9D6A22F05617D62C1A195 /* Debug */ = {
+		443AFC5AC5EF5FCCC81D319D89FBF76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBEE1213B825BAF3F63031F0DAE2A3E5 /* ionicons.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ionicons/ionicons-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6CA95716236A08E6039B60609DFDC0E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335EBABFD2699049C8501D34091C61C5 /* JMActionSheetDescription.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = JMActionSheetDescription;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		A0D3763FAD4C2A6BDECBA9684065B4D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335EBABFD2699049C8501D34091C61C5 /* JMActionSheetDescription.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = JMActionSheetDescription;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		A6E5FB12DABAAE4B7FF6A94CD219C1D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBEE1213B825BAF3F63031F0DAE2A3E5 /* ionicons.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ionicons/ionicons-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -727,168 +797,97 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		50D0BF79242108884613830B /* Release */ = {
+		BED624E3E3C90C626203C9C1E408EC3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7397D6D5305A0FDC1AC3D277 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-Private.xcconfig */;
+			baseConfigurationReference = 335EBABFD2699049C8501D34091C61C5 /* JMActionSheetDescription.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = JMActionSheetDescription;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		75395C3992899798A46B82D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA63997F1479D9D79739DF89 /* Pods-JMActionSheetDescription_Example-ionicons-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JMActionSheetDescription_Example-ionicons/Pods-JMActionSheetDescription_Example-ionicons-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		88B4FA9BCBAC12FB424B5E7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7397D6D5305A0FDC1AC3D277 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = JMActionSheetDescription;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		BC536513D1616CAD07E94444 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7397D6D5305A0FDC1AC3D277 /* Pods-JMActionSheetDescription_Example-JMActionSheetDescription-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JMActionSheetDescription_Example-JMActionSheetDescription/Pods-JMActionSheetDescription_Example-JMActionSheetDescription-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		E0D2DE2FC4E50D2611122926 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FEFABDDD61179B8AF2ADC43F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA63997F1479D9D79739DF89 /* Pods-JMActionSheetDescription_Example-ionicons-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JMActionSheetDescription_Example-ionicons/Pods-JMActionSheetDescription_Example-ionicons-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				GCC_PREFIX_HEADER = "Target Support Files/JMActionSheetDescription/JMActionSheetDescription-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		DCAAE08B2266EAC22512D342EA0E2A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE2D0FD91BE1221ECFBC6E8CC67B893 /* Pods-JMActionSheetDescription_Example.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11CD7060D693A53BD5FB9C80 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example-JMActionSheetDescription" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC536513D1616CAD07E94444 /* Debug */,
-				06C54726442CB93EFDE7A3D2 /* Release */,
+				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
+				052A17875CB827423D627183396CEB60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2473C906C2C36D7031A11CAF /* Build configuration list for PBXProject "Pods" */ = {
+		2FD0F74FF003B1C24E6BC36EC4210BDD /* Build configuration list for PBXNativeTarget "JMActionSheetDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				27C9D6A22F05617D62C1A195 /* Debug */,
-				E0D2DE2FC4E50D2611122926 /* Release */,
+				3A44160A5E73080B24CF6A26F5A2DC30 /* Debug */,
+				BED624E3E3C90C626203C9C1E408EC3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34469B4A2052EB5D91C12835 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription" */ = {
+		4816E20A42166A76EB0816B234780EF0 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				88B4FA9BCBAC12FB424B5E7C /* Debug */,
-				50D0BF79242108884613830B /* Release */,
+				DCAAE08B2266EAC22512D342EA0E2A9B /* Debug */,
+				37C8B0A2952E246F2F2FAC9F217AB137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E19407E12D4B24746394D63 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example-ionicons" */ = {
+		A1BD4AD86449C4E242001634CEA42A12 /* Build configuration list for PBXNativeTarget "ionicons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75395C3992899798A46B82D8 /* Debug */,
-				FEFABDDD61179B8AF2ADC43F /* Release */,
+				443AFC5AC5EF5FCCC81D319D89FBF76E /* Debug */,
+				A6E5FB12DABAAE4B7FF6A94CD219C1D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4D50E6CF972BE44EDB37047 /* Build configuration list for PBXNativeTarget "Pods-JMActionSheetDescription_Example" */ = {
+		EC83E769BA264D3B5B23B7D9CD1A7FD7 /* Build configuration list for PBXNativeTarget "JMActionSheetDescription-JMActionSheetDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2505AEA011C2186015BC683A /* Debug */,
-				0E7FA397D5451689CAC6DE7C /* Release */,
+				A0D3763FAD4C2A6BDECBA9684065B4D6 /* Debug */,
+				6CA95716236A08E6039B60609DFDC0E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 608D4081FC05A310B1D20003 /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }

@@ -14,4 +14,7 @@
 @property (strong, nonatomic) NSArray *jm_pickerElements;
 @property (copy, nonatomic) JMActionSheetSelectedItemBlock jm_pickerActionBlock;
 
+//DatePicker delegation
+- (void)datePickerValueDidChange:(UIDatePicker *)datePicker;
+
 @end

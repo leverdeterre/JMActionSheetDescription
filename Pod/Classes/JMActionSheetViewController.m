@@ -167,6 +167,9 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     } else if ([item isKindOfClass:[JMActionSheetPickerItem class]]) {
         view = [self addPickerViewForItem:(JMActionSheetPickerItem *)item forTag:tag corners:corners offset:yOffset];
         
+    } else if ([item isKindOfClass:[JMActionSheetDatePickerItem class]]) {
+        view = [self addDatePickerViewForItem:(JMActionSheetDatePickerItem *)item forTag:tag corners:corners offset:yOffset];
+        
     } else if ([item isKindOfClass:[JMActionSheetImagesItem class]]) {
         view = [self addCollectionViewForItem:(JMActionSheetCollectionItem *)item forTag:tag corners:corners offset:yOffset];
         
@@ -297,6 +300,40 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     pickerView.delegate = self;
     [pickerView reloadAllComponents];
     return pickerView;
+}
+
+#pragma makr - DatePicker
+
+- (UIView *)addDatePickerViewForItem:(JMActionSheetDatePickerItem *)pickerItem
+                              forTag:(NSInteger)tag
+                             corners:(UIRectCorner)corners
+                              offset:(CGFloat *)yOffset
+{
+    self.actions[tag] = [NSNull null];
+    
+    //Compute frame
+    CGFloat pickerHeight = JMActionSheetPickerViewHeight;
+    CGFloat y = *yOffset - pickerHeight;
+    CGFloat width = CGRectGetWidth(self.view.frame) - 2 * JMActionSheetPadding;
+    CGRect frame = CGRectMake(JMActionSheetPadding, y, width, pickerHeight);
+    
+    //Configure PickerView
+    UIDatePicker *datePickerView = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0f, 0.0f, width, 164.0f)];
+    datePickerView.backgroundColor = [UIColor whiteColor];
+    datePickerView.minimumDate = pickerItem.minDate;
+    datePickerView.maximumDate = pickerItem.maxDate;
+    datePickerView.date = pickerItem.selectedDate;
+    datePickerView.frame = frame;
+    datePickerView.datePickerMode = pickerItem.datePickerMode;
+    [datePickerView applyRoundedCorners:corners withRadius:JMActionSheetRoundedCornerRadius];
+    [self.view addSubview:datePickerView];
+    
+    //Load PickerView
+    [self setJm_pickerActionBlock:pickerItem.pickerActionBlock];
+    *yOffset = CGRectGetMinY(datePickerView.frame) - JMActionSheetInterlineSpacing;
+    
+    [datePickerView addTarget:self action:@selector(datePickerValueDidChange:) forControlEvents:UIControlEventValueChanged];
+    return datePickerView;
 }
 
 #pragma mark - ImageView constructor

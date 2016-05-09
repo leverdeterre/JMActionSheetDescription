@@ -1,6 +1,6 @@
 PODS:
   - ionicons (2.0.1)
-  - JMActionSheetDescription (0.4.1)
+  - JMActionSheetDescription (0.4.8)
 
 DEPENDENCIES:
   - ionicons
@@ -12,6 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ionicons: c7b0867373392e85c17f613d19ade04ccfbe5a7c
-  JMActionSheetDescription: 6789ecf1ea5d1a22b735484d8609d097ef378457
+  JMActionSheetDescription: 3cc02ba1a5b8248b03ea9e125e5c7472c584205c
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0

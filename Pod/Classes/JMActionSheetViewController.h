@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JMActionSheetItem.h"
 #import "JMActionSheetPickerItem.h"
+#import "JMActionSheetDatePickerItem.h"
 
 @class JMActionSheetViewController;
 @protocol JMActionSheetViewControllerDelegate <NSObject>

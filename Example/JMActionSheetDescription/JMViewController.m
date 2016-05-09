@@ -10,6 +10,7 @@
 
 #import "JMActionSheet.h"
 #import "JMPickerActionSheet.h"
+#import "JMDatePickerActionSheet.h"
 #import "JMImagesActionSheet.h"
 
 #import "JMCollectionItem.h"
@@ -319,5 +320,15 @@
                                     inViewController:self];
 }
 
+- (IBAction)showDatePicker:(id)sender
+{
+    NSDate *minDate = [NSDate date];
+    NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:999999];
+    NSDate *selectedDate = [[NSDate date] dateByAddingTimeInterval:64000];
+
+    [JMDatePickerActionSheet showDatePickerActionSheetMinDate:minDate maxDate:maxDate selectedDate:selectedDate didSelectBlock:^(id selectedItem) {
+        NSLog(@"Plop");
+    } title:@"MyTitle" inViewController:self];
+}
 
 @end

@@ -62,4 +62,12 @@ const char * const JMActionSheetPickerBlockActionKey = "JMActionSheetPickerBlock
     [self.delegate actionSheetDidSelectPickerView:pickerView element:obj block:[self jm_pickerActionBlock]];
 }
 
+#pragma mark - DatePicker Delegate
+
+- (void)datePickerValueDidChange:(UIDatePicker *)datePicker
+{
+    id obj = datePicker.date;
+    [self.delegate actionSheetDidSelectPickerView:(UIPickerView *)datePicker element:obj block:[self jm_pickerActionBlock]];
+}
+
 @end

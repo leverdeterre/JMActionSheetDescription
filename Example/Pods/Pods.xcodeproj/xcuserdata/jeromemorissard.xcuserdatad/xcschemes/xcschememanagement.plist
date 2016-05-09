@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-JMActionSheetDescription_Example-JMActionSheetDescription-JMActionSheetDescription.xcscheme</key>
+		<key>JMActionSheetDescription-JMActionSheetDescription.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-JMActionSheetDescription_Example-JMActionSheetDescription.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-JMActionSheetDescription_Example-ionicons.xcscheme</key>
+		<key>JMActionSheetDescription.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,65 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ionicons.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3DFB1692FC438FE1EDA9B8A7</key>
+		<key>0DBB3D30F280CEDFE03B7474B23873A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4737457E1B881693AAD5CFC6</key>
+		<key>5C098A3F156F9A1DADCB060742FF03CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5369BF3A487CC44EAE8412E3</key>
+		<key>E5F122D27535B1EE128B09DB5A8D274A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56B450F947BD3922AB3BFF4B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5D358D029A49E03A934D61C1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>69BBF860CF4EA2BE28101E11</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ADD42D6867C698E4A61F8E15</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C086ABE23F3BE026B2ED34BC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C7DBA936AAAE77AD3999B0F6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CFD3717A7246E29523B921BC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DAA2668090C90BF3A2CE2B1D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E2F5329570FDF742BFE0A8E9</key>
+		<key>FFD73D034EC89178B32784D284C58C6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
