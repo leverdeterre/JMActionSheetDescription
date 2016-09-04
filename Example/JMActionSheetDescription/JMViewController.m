@@ -322,13 +322,21 @@
 
 - (IBAction)showDatePicker:(id)sender
 {
-    NSDate *minDate = [NSDate date];
-    NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:999999];
-    NSDate *selectedDate = [[NSDate date] dateByAddingTimeInterval:64000];
+    NSDate *minDate = [[NSDate date] dateByAddingTimeInterval:-60*60*24*1];
+    NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:60*60*24*60];
+    NSDate *selectedDate = [NSDate date];
 
-    [JMDatePickerActionSheet showDatePickerActionSheetMinDate:minDate maxDate:maxDate selectedDate:selectedDate didSelectBlock:^(id selectedItem) {
-        NSLog(@"Plop");
-    } title:@"MyTitle" inViewController:self];
+    [JMDatePickerActionSheet showDatePickerActionSheetMinDate:minDate
+                                                      maxDate:maxDate
+                                                 selectedDate:selectedDate
+                                                  updateBlock:^(id selectedItem) {
+                                                      NSLog(@"updateBlock called %@",selectedItem);
+                                                  }
+                                                validateBlock:^(id selectedItem) {
+                                                    NSLog(@"validateBlock called %@",selectedItem);
+                                                }
+                                                        title:@"MyTitle"
+                                             inViewController:self];
 }
 
 @end

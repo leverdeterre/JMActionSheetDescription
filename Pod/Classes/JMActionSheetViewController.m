@@ -329,7 +329,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     [self.view addSubview:datePickerView];
     
     //Load PickerView
-    [self setJm_pickerActionBlock:pickerItem.pickerActionBlock];
+    [self setJm_pickerActionBlock:pickerItem.pickerUpdateActionBlock];
     *yOffset = CGRectGetMinY(datePickerView.frame) - JMActionSheetInterlineSpacing;
     
     [datePickerView addTarget:self action:@selector(datePickerValueDidChange:) forControlEvents:UIControlEventValueChanged];

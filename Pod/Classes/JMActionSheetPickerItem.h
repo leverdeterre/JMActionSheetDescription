@@ -16,8 +16,8 @@
 
 @interface JMActionSheetPickerItem : JMActionSheetItem
 
-@property (strong, nonatomic) NSArray <JMActionSheetPickerItemDisplayable> *pickerElements;
-@property (copy, nonatomic) JMActionSheetSelectedItemBlock pickerActionBlock;
+@property (nonnull, strong, nonatomic) NSArray <JMActionSheetPickerItemDisplayable> *pickerElements;
+@property (nonnull, copy, nonatomic) JMActionSheetSelectedItemBlock pickerActionBlock;
 
 @end
 

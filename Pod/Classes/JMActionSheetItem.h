@@ -15,9 +15,9 @@ typedef void (^JMActionSheetSelectedItemBlock)(id selectedItem);
 
 @interface JMActionSheetItem : NSObject
 
-@property (copy, nonatomic) NSString *title;
-@property (copy, nonatomic) JMActionSheetItemAction action;
-@property (strong, nonatomic) UIImage *icon;
+@property (nonnull, copy, nonatomic) NSString *title;
+@property (nonnull, copy, nonatomic) JMActionSheetItemAction action;
+@property (nonnull, strong, nonatomic) UIImage *icon;
 
 //Appearance
 @property (strong, nonatomic) UIColor *backgroundColor;

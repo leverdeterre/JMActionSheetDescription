@@ -10,7 +10,7 @@
 
 @interface JMActionSheetImageItem : JMActionSheetItem
 
-@property (strong, nonatomic) UIImage *image;
+@property (nonnull, strong, nonatomic) UIImage *image;
 @property (assign, nonatomic) CGFloat imageHeight;
 
 @end

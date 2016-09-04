@@ -120,8 +120,8 @@ desc.items = @[itemShare,pickerItem];
 
 ```objective-c
 NSDate *minDate = [NSDate date];
-NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:999999];
-NSDate *selectedDate = [[NSDate date] dateByAddingTimeInterval:64000];
+NSDate *minDate = [[NSDate date] dateByAddingTimeInterval:-60*60*24*1];
+NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:60*60*24*60];
 
 [JMDatePickerActionSheet showDatePickerActionSheetMinDate:minDate maxDate:maxDate selectedDate:selectedDate didSelectBlock:^(id selectedItem) {
       NSLog(@"Plop");
@@ -146,9 +146,11 @@ inViewController:self];
 [JMImagesActionSheet showImagesActionSheetImages:@[
                         [UIImage imageNamed:@"gif_experiments"],
                         [UIImage imageNamed:@"gif_experiments"],
-                        [UIImage imageNamed:@"gif_experiments"]]
-                                didSelectBlock:^(id selectedValue) {
-                                                NSLog(@"didSelectBlock %@",selectedValue); }
+                        [UIImage imageNamed:@"gif_experiments"]],
+                                updateBlock:^(id selectedValue) {
+                                                NSLog(@"did updateBlock %@",selectedValue); }
+                                validateBlock:^(id selectedValue) {
+                                                NSLog(@"did validateBlock %@",selectedValue); }
                                         title:@"The title"
                             inViewController:self];
 ```

@@ -10,10 +10,11 @@
 
 @interface JMActionSheetDatePickerItem : JMActionSheetItem
 
-@property (strong, nonatomic) NSDate *minDate;
-@property (strong, nonatomic) NSDate *maxDate;
-@property (strong, nonatomic) NSDate *selectedDate;
-@property (copy, nonatomic) JMActionSheetSelectedItemBlock pickerActionBlock;
+@property (nullable, strong, nonatomic) NSDate *minDate;
+@property (nullable, strong, nonatomic) NSDate *maxDate;
+@property (nullable, nonatomic) NSDate *selectedDate;
+@property (nullable, copy, nonatomic) JMActionSheetSelectedItemBlock pickerUpdateActionBlock;
+@property (nullable, copy, nonatomic) JMActionSheetSelectedItemBlock pickerValidateActionBlock;
 @property (assign, nonatomic) UIDatePickerMode datePickerMode;
 
 @end

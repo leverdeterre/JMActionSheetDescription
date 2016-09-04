@@ -10,6 +10,11 @@
 
 @interface JMDatePickerActionSheet : JMActionSheet
 
-+ (void)showDatePickerActionSheetMinDate:(NSDate *)minDate maxDate:(NSDate *)maxDate selectedDate:(NSDate *)date didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController;
-
++ (void)showDatePickerActionSheetMinDate:(nullable NSDate *)minDate
+                                 maxDate:(nullable NSDate *)maxDate
+                            selectedDate:(nullable NSDate *)date
+                             updateBlock:(nullable JMActionSheetSelectedItemBlock)didUpdateBlock
+                           validateBlock:(nullable JMActionSheetSelectedItemBlock)didValidateBlock
+                                   title:(nullable NSString *)title
+                        inViewController:(nonnull UIViewController *)viewController;
 @end

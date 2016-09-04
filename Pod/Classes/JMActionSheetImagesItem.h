@@ -16,13 +16,12 @@
 
 @interface JMActionSheetImagesItem : JMActionSheetItem
 
-@property (strong, nonatomic) NSArray <JMActionSheetImagesItemDisplayable> *images;
+@property (nonnull, strong, nonatomic) NSArray <JMActionSheetImagesItemDisplayable> *images;
 @property (assign, nonatomic) CGSize imageSize;
 @property (assign, nonatomic) BOOL allowsMultipleSelection;
-@property (copy, nonatomic) JMActionSheetSelectedItemBlock imagesActionBlock;
+@property (nonnull, copy, nonatomic) JMActionSheetSelectedItemBlock imagesActionBlock;
 
 @end
 
 @interface UIImage (JMActionSheetImagesItem) <JMActionSheetImagesItemDisplayable>
-
 @end

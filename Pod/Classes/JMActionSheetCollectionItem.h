@@ -10,8 +10,8 @@
 
 @protocol JMActionSheetCollectionItem <NSObject>
 
-@property (strong, nonatomic) UIImage *actionImage;
-@property (strong, nonatomic) NSString *actionName;
+@property (nonnull, strong, nonatomic) UIImage *actionImage;
+@property (nonnull,strong, nonatomic) NSString *actionName;
 
 @optional
 @property (assign, nonatomic) UIViewContentMode actionImageContentMode;
@@ -21,7 +21,7 @@ typedef void (^JMActionSheetSelectedCollectionItemBlock)(id selectedItem);
 
 @interface JMActionSheetCollectionItem : JMActionSheetItem
 
-@property (strong, nonatomic) NSArray <JMActionSheetCollectionItem> *elements;
-@property (copy, nonatomic) JMActionSheetSelectedCollectionItemBlock collectionActionBlock;
+@property (nonnull,strong, nonatomic) NSArray <JMActionSheetCollectionItem> *elements;
+@property (nonnull,copy, nonatomic) JMActionSheetSelectedCollectionItemBlock collectionActionBlock;
 
 @end

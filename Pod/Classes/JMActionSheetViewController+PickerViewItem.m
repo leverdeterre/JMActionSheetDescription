@@ -67,7 +67,7 @@ const char * const JMActionSheetPickerBlockActionKey = "JMActionSheetPickerBlock
 - (void)datePickerValueDidChange:(UIDatePicker *)datePicker
 {
     id obj = datePicker.date;
-    [self.delegate actionSheetDidSelectPickerView:(UIPickerView *)datePicker element:obj block:[self jm_pickerActionBlock]];
+    [self.delegate actionSheetDidSelectPickerView:(UIPickerView *)datePicker element:obj block:[self jm_pickerActionBlock] cancelAutoDismiss:YES];
 }
 
 @end

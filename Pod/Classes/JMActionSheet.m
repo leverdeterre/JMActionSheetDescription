@@ -32,6 +32,7 @@ typedef NS_ENUM(NSUInteger, JMActionSheetOSStragey) {
 static JMActionSheetOSStragey actionSheetStrategy_;
 
 @interface JMActionSheet () <JMActionSheetViewControllerDelegate, UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate>
+@property (strong, nonatomic) JMActionSheetDescription *presentedDescription;
 @end
 
 @implementation JMActionSheet
@@ -50,6 +51,7 @@ static JMActionSheetOSStragey actionSheetStrategy_;
 {
     actionSheet_ = [[JMActionSheet alloc] init];
     actionSheetViewController_ = [[JMActionSheetViewController alloc] init];
+    actionSheet_.presentedDescription = actionSheetDescription;
     
     //Configure dimmingView
     dimmingView_ = [[UIView alloc] initWithFrame:viewController.view.bounds];
@@ -186,11 +188,18 @@ static JMActionSheetOSStragey actionSheetStrategy_;
 
 - (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block
 {
+    [self actionSheetDidSelectPickerView:pickerView element:element block:block cancelAutoDismiss:NO];
+}
+
+- (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block cancelAutoDismiss:(BOOL)cancelAutoDismiss
+{
     if (block) {
         block(element);
     }
     
-    [self dismissActionSheet];
+    if (NO == cancelAutoDismiss) {
+        [self dismissActionSheet];
+    }
 }
 
 - (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block
