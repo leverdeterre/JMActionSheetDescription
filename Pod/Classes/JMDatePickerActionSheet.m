@@ -42,10 +42,12 @@
     pickerItem.minDate = minDate;
     pickerItem.maxDate = maxDate;
     pickerItem.selectedDate = date;
+    
+    __weak JMActionSheetDatePickerItem *weakPickerItem = pickerItem;
     pickerItem.pickerUpdateActionBlock = ^(id selectedDate) {
         if (didUpdateBlock) {
             didUpdateBlock(selectedDate);
-            pickerItem.selectedDate = selectedDate;
+            weakPickerItem.selectedDate = selectedDate;
         }
     };
     pickerItem.pickerValidateActionBlock = didValidateBlock;
@@ -55,7 +57,7 @@
     validateItem.action = ^(){
         //NSLog(@"Validate pressed");
         if (didValidateBlock) {
-            didValidateBlock(pickerItem.selectedDate);
+            didValidateBlock(weakPickerItem.selectedDate);
         }
     };
     

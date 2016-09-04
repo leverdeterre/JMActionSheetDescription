@@ -10,7 +10,7 @@
 
 @protocol JMActionSheetImagesItemDisplayable <NSObject>
 
-- (UIImage *)displayableImage;
+- (nonnull UIImage *)displayableImage;
 
 @end
 

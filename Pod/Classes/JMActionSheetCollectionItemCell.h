@@ -10,9 +10,9 @@
 
 @interface JMActionSheetCollectionItemCell : UICollectionViewCell
 
-- (void)updateCollectionViewCellWithObject:(id)obj
-                               atIndexPath:(NSIndexPath *)indexPath
-                                  delegate:(id <UICollectionViewDelegate>)delegate
-                            collectionView:(UICollectionView *)collectionView;
+- (void)updateCollectionViewCellWithObject:(nonnull id)obj
+                               atIndexPath:(nonnull NSIndexPath *)indexPath
+                                  delegate:(nullable id <UICollectionViewDelegate>)delegate
+                            collectionView:(nonnull UICollectionView *)collectionView;
 
 @end

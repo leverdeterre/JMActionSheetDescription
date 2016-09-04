@@ -11,7 +11,7 @@
 
 @class JMActionSheetItem;
 typedef void (^JMActionSheetItemAction)(void);
-typedef void (^JMActionSheetSelectedItemBlock)(id selectedItem);
+typedef void (^JMActionSheetSelectedItemBlock)(__nonnull id selectedItem);
 
 @interface JMActionSheetItem : NSObject
 
@@ -20,10 +20,10 @@ typedef void (^JMActionSheetSelectedItemBlock)(id selectedItem);
 @property (nonnull, strong, nonatomic) UIImage *icon;
 
 //Appearance
-@property (strong, nonatomic) UIColor *backgroundColor;
-@property (strong, nonatomic) UIColor *textColor;
-@property (strong, nonatomic) UIFont *textFont;
+@property (nullable, strong, nonatomic) UIColor *backgroundColor;
+@property (nullable, strong, nonatomic) UIColor *textColor;
+@property (nullable, strong, nonatomic) UIFont *textFont;
 
-+ (NSString *)stringOfClass;
++ (nonnull NSString *)stringOfClass;
 
 @end

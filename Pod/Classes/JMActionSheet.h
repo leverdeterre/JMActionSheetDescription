@@ -34,7 +34,7 @@
  *  @param viewController         the parent view controller
  *  @param view                   the parent view in hierarchy
  */
-+ (void)showActionSheetDescription:(nonnull JMActionSheetDescription *)actionSheetDescription inViewController:(nonnull UIViewController *)viewController fromView:(UIView *)view;
++ (void)showActionSheetDescription:(nonnull JMActionSheetDescription *)actionSheetDescription inViewController:(nonnull UIViewController *)viewController fromView:(nonnull UIView *)view;
 
 /**
  *  Present a actionSheet like controller, generated using your description and inside a particular view and with arrow directions constraint.
