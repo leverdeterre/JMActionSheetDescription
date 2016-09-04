@@ -39,7 +39,7 @@ static JMActionSheetOSStragey actionSheetStrategy_;
 
 + (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController
 {
-    [self showActionSheetDescription:actionSheetDescription inViewController:viewController fromView:nil];
+    [self showActionSheetDescription:actionSheetDescription inViewController:viewController fromView:viewController.view];
 }
 
 + (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController fromView:(UIView *)view

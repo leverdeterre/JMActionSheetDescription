@@ -10,7 +10,7 @@
 
 @protocol JMActionSheetPickerItemDisplayable <NSObject>
 
-- (NSString *)displayableValueForActionSheetPicker;
+- (nonnull NSString *)displayableValueForActionSheetPicker;
 
 @end
 

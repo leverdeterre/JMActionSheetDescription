@@ -17,7 +17,7 @@
 @property (assign, nonatomic) UIViewContentMode actionImageContentMode;
 @end
 
-typedef void (^JMActionSheetSelectedCollectionItemBlock)(id selectedItem);
+typedef void (^JMActionSheetSelectedCollectionItemBlock)(__nonnull id selectedItem);
 
 @interface JMActionSheetCollectionItem : JMActionSheetItem
 
