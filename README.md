@@ -19,6 +19,10 @@ ActionSheet and UIActivityViewController replacement, using a descriptor compone
 * present icons collections
 
 ## Changelog
+0.5.0 :
+
+* improve DatePicker (updateBlock, validateBlock)
+* improve Swift compatibility
 
 0.4.9 :
 
