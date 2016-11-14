@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_JMActionSheetDescription_Example_JMActionSheetDescription : NSObject
-@end
-@implementation PodsDummy_Pods_JMActionSheetDescription_Example_JMActionSheetDescription
-@end
