@@ -36,17 +36,33 @@ static JMActionSheetOSStragey actionSheetStrategy_;
 
 @implementation JMActionSheet
 
-+ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController
++ (void)showActionSheetDescription:(nonnull JMActionSheetDescription *)actionSheetDescription
+                  inViewController:(nonnull UIViewController *)viewController
+                             style:(JMActionSheetStyle)style
 {
-    [self showActionSheetDescription:actionSheetDescription inViewController:viewController fromView:nil];
+    [self showActionSheetDescription:actionSheetDescription
+                    inViewController:viewController
+                            fromView:viewController.view
+                               style:style];
 }
 
-+ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController fromView:(UIView *)view
++ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription
+                  inViewController:(UIViewController *)viewController
+                          fromView:(UIView *)view
+                             style:(JMActionSheetStyle)style
 {
-    [self showActionSheetDescription:actionSheetDescription inViewController:viewController fromView:view permittedArrowDirections:UIPopoverArrowDirectionAny];
+    [self showActionSheetDescription:actionSheetDescription
+                    inViewController:viewController
+                            fromView:view
+            permittedArrowDirections:UIPopoverArrowDirectionAny
+                               style:style];
 }
 
-+ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController fromView:(UIView *)fromView permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
++ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription
+                  inViewController:(UIViewController *)viewController
+                          fromView:(UIView *)fromView
+          permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
+                             style:(JMActionSheetStyle)style
 {
     actionSheet_ = [[JMActionSheet alloc] init];
     actionSheetViewController_ = [[JMActionSheetViewController alloc] init];
@@ -61,15 +77,21 @@ static JMActionSheetOSStragey actionSheetStrategy_;
     [self computeStrategyFromViewController:viewController];
     
     //Configure actionSheetViewController
-    [actionSheet_ configureFramePresentationFromViewController:viewController description:actionSheetDescription];
+    [actionSheet_ configureFramePresentationFromViewController:viewController
+                                                   description:actionSheetDescription
+                                                         style:style];
     
     //present actionSheet
-    [actionSheet_ presentActionSheetFromViewController:viewController fromView:fromView permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections];
+    [actionSheet_ presentActionSheetFromViewController:viewController
+                                              fromView:fromView
+                              permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections];
 }
 
 #pragma mark - Presentation / dismiss  
 
-- (void)configureFramePresentationFromViewController:(UIViewController *)viewController description:(JMActionSheetDescription *)actionSheetDescription
+- (void)configureFramePresentationFromViewController:(UIViewController *)viewController
+                                         description:(JMActionSheetDescription *)actionSheetDescription
+                                               style:(JMActionSheetStyle)style
 {
     CGRect actionSheetFrame;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
@@ -82,13 +104,13 @@ static JMActionSheetOSStragey actionSheetStrategy_;
                 actionSheetFrame = viewController.view.frame;
                 actionSheetFrame = CGRectMake(0.0f, 0.0f, JMActionSheetDefaultWidth, JMActionSheetDefaultHeight);
                 actionSheetFrame.origin.y = CGRectGetMaxY(viewController.view.frame);
-                actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:JMActionSheetDefaultWidth];
+                actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:JMActionSheetDefaultWidth style:style];
                 
             } else {
                 actionSheetFrame = viewController.view.frame;
                 actionSheetFrame = CGRectMake(0.0f, 0.0f, CGRectGetWidth(viewController.view.frame), JMActionSheetDefaultHeight);
                 actionSheetFrame.origin.y = CGRectGetMaxY(viewController.view.frame);
-                actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:CGRectGetWidth(viewController.view.frame)];
+                actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:CGRectGetWidth(viewController.view.frame) style:style];
                 CGSize size = actionSheetFrame.size;
                 size.height = CGRectGetHeight(viewController.view.frame);
                 actionSheetFrame.size = size;
@@ -97,14 +119,16 @@ static JMActionSheetOSStragey actionSheetStrategy_;
     else {
         actionSheetFrame = CGRectMake(0.0f, 0.0f, JMActionSheetDefaultWidth, JMActionSheetDefaultHeight);
         actionSheetFrame.origin.y = CGRectGetMaxY(viewController.view.frame);
-        actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:JMActionSheetDefaultWidth];
+        actionSheetFrame.size = [actionSheetViewController_ estimatedContentSizeWithDescription:actionSheetDescription width:JMActionSheetDefaultWidth style:style];
     }
     
     actionSheetViewController_.view.frame = actionSheetFrame;
-    [actionSheetViewController_ reloadWithActionSheetDescription:actionSheetDescription andDelegate:actionSheet_];
+    [actionSheetViewController_ reloadWithActionSheetDescription:actionSheetDescription
+                                                        delegate:actionSheet_
+                                                           style:style];
 }
 
-- (void)presentActionSheetFromViewController:(UIViewController *)viewController fromView:(UIView *)fromView permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
+- (void)presentActionSheetFromViewController:(UIViewController *)viewController fromView:(UIView *)fromView permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections 
 {
     if (actionSheetStrategy_ == JMActionSheetManualPresentation) {
         //Childs
@@ -186,11 +210,7 @@ static JMActionSheetOSStragey actionSheetStrategy_;
 
 - (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block
 {
-    if (block) {
-        block(element);
-    }
-    
-    [self dismissActionSheet];
+    [self actionSheetDidSelectPickerView:pickerView element:element block:block cancelAutoDismiss:YES];
 }
 
 - (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block

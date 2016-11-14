@@ -15,7 +15,9 @@
     JMActionSheetDescription *desc = [self pickerDescriptionWithElements:elements
                                                           didSelectBlock:didSelectBlock
                                                                    title:title];
-    [JMPickerActionSheet showActionSheetDescription:desc inViewController:viewController];
+    [JMPickerActionSheet showActionSheetDescription:desc
+                                   inViewController:viewController
+                                              style:JMActionSheetStyleEdgeToEdge];
 }
 
 + (void)showPickerActionSheetElements:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view
@@ -23,7 +25,10 @@
     JMActionSheetDescription *desc = [self pickerDescriptionWithElements:elements
                                                           didSelectBlock:didSelectBlock
                                                                    title:title];
-    [JMPickerActionSheet showActionSheetDescription:desc inViewController:viewController fromView:view];
+    [JMPickerActionSheet showActionSheetDescription:desc
+                                   inViewController:viewController
+                                           fromView:view
+                                              style:JMActionSheetStyleEdgeToEdge];
 }
 
 + (void)showPickerActionSheetElements:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
@@ -31,7 +36,11 @@
     JMActionSheetDescription *desc = [self pickerDescriptionWithElements:elements
                                                           didSelectBlock:didSelectBlock
                                                                    title:title];
-    [JMPickerActionSheet showActionSheetDescription:desc inViewController:viewController fromView:view permittedArrowDirections:arrowDirections];
+    [JMPickerActionSheet showActionSheetDescription:desc
+                                   inViewController:viewController
+                                           fromView:view
+                           permittedArrowDirections:arrowDirections
+                                              style:JMActionSheetStyleEdgeToEdge];
 }
 
 + (JMActionSheetDescription *)pickerDescriptionWithElements:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title

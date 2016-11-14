@@ -16,3 +16,13 @@
 }
 
 @end
+
+@implementation JMActionSheetToolbarItem
++ (instancetype)toolbarItemWithTitle:(NSString *)title
+{
+    JMActionSheetToolbarItem *item = [JMActionSheetToolbarItem new];
+    item.title = title;
+    return item;
+}
+
+@end

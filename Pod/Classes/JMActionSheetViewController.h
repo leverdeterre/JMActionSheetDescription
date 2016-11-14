@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "JMActionSheetItem.h"
+#import "JMActionSheetPickerItem.h"
+#import "JMActionSheetDatePickerItem.h"
+#import "JMActionSheet.h"
 
 @class JMActionSheetViewController;
 @protocol JMActionSheetViewControllerDelegate <NSObject>
@@ -26,9 +29,10 @@
 @property (weak, nonatomic, readonly) id <JMActionSheetViewControllerDelegate> delegate;
 
 - (void)reloadWithActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription
-                             andDelegate:(id <JMActionSheetViewControllerDelegate>)delegate;
+                             delegate:(id <JMActionSheetViewControllerDelegate>)delegate
+                                   style:(JMActionSheetStyle)style;
 
-- (CGSize)estimatedContentSizeWithDescription:(JMActionSheetDescription *)actionSheetDescription width:(CGFloat)width;
+- (CGSize)estimatedContentSizeWithDescription:(JMActionSheetDescription *)actionSheetDescription width:(CGFloat)width style:(JMActionSheetStyle)style;
 - (CGSize)contentSizeForViewInPopover;
 
 @end

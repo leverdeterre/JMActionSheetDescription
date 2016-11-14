@@ -26,3 +26,7 @@ typedef void (^JMActionSheetSelectedItemBlock)(id selectedValue);
 + (NSString *)stringOfClass;
 
 @end
+
+@interface JMActionSheetToolbarItem : JMActionSheetItem
++ (instancetype)toolbarItemWithTitle:(NSString *)title;
+@end

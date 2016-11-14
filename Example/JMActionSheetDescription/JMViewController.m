@@ -72,7 +72,7 @@
     [items addObject:otherItem];
     
     desc.items = items;
-    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny style:JMActionSheetStyleClassic];
 }
 
 - (IBAction)showActionImageView:(id)sender
@@ -99,7 +99,7 @@
     imageItem.imageHeight = 200.0f;
     desc.items = @[otherItem, imageItem];
 
-    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny style:JMActionSheetStyleClassic];
 }
 
 - (IBAction)showActionImagesView:(id)sender
@@ -127,7 +127,7 @@
     //imagesItem.allowsMultipleSelection = YES;
     desc.items = @[otherItem, imagesItem];
     
-    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny style:JMActionSheetStyleClassic];
 }
 
 - (IBAction)showAPicker:(id)sender
@@ -148,7 +148,7 @@
     desc.cancelItem = cancelItem;
     desc.items = @[pickerItem];
     
-    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny style:JMActionSheetStyleClassic];
 }
 
 - (IBAction)showAFastPicker:(id)sender
@@ -244,7 +244,7 @@
     };
     
     desc.items = @[collectionItem, collectionItem2];
-    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny style:JMActionSheetStyleClassic];
 }
 
 - (IBAction)showAll:(id)sender
@@ -312,7 +312,11 @@
     };
     
     desc.items = @[otherItem,imageItem,collectionItem];
-    [JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+    [JMActionSheet showActionSheetDescription:desc
+                             inViewController:self
+                                     fromView:sender
+                     permittedArrowDirections:UIPopoverArrowDirectionAny
+                                        style:JMActionSheetStyleClassic];
 }
 
 - (IBAction)showFastActionImagesView:(id)sender

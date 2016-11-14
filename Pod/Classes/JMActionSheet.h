@@ -17,6 +17,11 @@
 #import "JMActionSheetPickerItem.h"
 #import "JMActionSheetCollectionItem.h"
 
+typedef NS_ENUM(NSUInteger, JMActionSheetStyle) {
+    JMActionSheetStyleClassic,
+    JMActionSheetStyleEdgeToEdge
+};
+
 @interface JMActionSheet : NSObject
 
 /**
@@ -25,7 +30,9 @@
  *  @param actionSheetDescription a description
  *  @param viewController         the parent view controller
  */
-+ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController;
++ (void)showActionSheetDescription:(nonnull JMActionSheetDescription *)actionSheetDescription
+                  inViewController:(nonnull UIViewController *)viewController
+                             style:(JMActionSheetStyle)style;
 
 /**
  *  Present a actionSheet like controller, generated using your description and inside a particular view
@@ -34,7 +41,10 @@
  *  @param viewController         the parent view controller
  *  @param view                   the parent view in hierarchy
  */
-+ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController fromView:(UIView *)view;
++ (void)showActionSheetDescription:(nonnull JMActionSheetDescription *)actionSheetDescription
+                  inViewController:(nonnull UIViewController *)viewController
+                          fromView:(nonnull UIView *)view
+                             style:(JMActionSheetStyle)style;
 
 /**
  *  Present a actionSheet like controller, generated using your description and inside a particular view and with arrow directions constraint.
@@ -44,6 +54,10 @@
  *  @param view                   the parent view in hierarchy
  *  @param arrowDirections        arrows bitmasked values
  */
-+ (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription inViewController:(UIViewController *)viewController fromView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
++ (void)showActionSheetDescription:(nonnull JMActionSheetDescription *)actionSheetDescription
+                  inViewController:(nonnull UIViewController *)viewController
+                          fromView:(nonnull UIView *)view
+          permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
+                             style:(JMActionSheetStyle)style;
 
 @end

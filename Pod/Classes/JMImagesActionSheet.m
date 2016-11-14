@@ -16,7 +16,9 @@
     JMActionSheetDescription *desc = [self imagesDescriptionWithImages:elements
                                                         didSelectBlock:didSelectBlock
                                                                  title:title];
-    [JMImagesActionSheet showActionSheetDescription:desc inViewController:viewController];
+    [JMImagesActionSheet showActionSheetDescription:desc
+                                   inViewController:viewController
+                                              style:JMActionSheetStyleClassic];
 }
 
 + (void)showImagesActionSheetImages:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view
@@ -24,7 +26,9 @@
     JMActionSheetDescription *desc = [self imagesDescriptionWithImages:elements
                                                         didSelectBlock:didSelectBlock
                                                                  title:title];
-    [JMImagesActionSheet showActionSheetDescription:desc inViewController:viewController fromView:view];
+    [JMImagesActionSheet showActionSheetDescription:desc
+                                   inViewController:viewController
+                                           fromView:view style:JMActionSheetStyleClassic];
 }
 
 + (void)showImagesActionSheetImages:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
@@ -32,7 +36,10 @@
     JMActionSheetDescription *desc = [self imagesDescriptionWithImages:elements
                                                           didSelectBlock:didSelectBlock
                                                                    title:title];
-    [JMImagesActionSheet showActionSheetDescription:desc inViewController:viewController fromView:view permittedArrowDirections:arrowDirections];
+    [JMImagesActionSheet showActionSheetDescription:desc
+                                   inViewController:viewController
+                                           fromView:view permittedArrowDirections:arrowDirections
+                                              style:JMActionSheetStyleClassic];
 }
 
 + (JMActionSheetDescription *)imagesDescriptionWithImages:(NSArray *)images didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title
