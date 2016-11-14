@@ -1,6 +1,6 @@
 //
 //  JMActionSheetCollectionItemCell.m
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 01/06/2015.
 //

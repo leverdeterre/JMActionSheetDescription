@@ -1,6 +1,6 @@
 //
 //  JMImagesActionSheet.m
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 04/06/2015.
 //
@@ -11,7 +11,7 @@
 
 @implementation JMImagesActionSheet
 
-+ (void)showImagesActionSheetImages:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController
++ (void)showImagesActionSheetImages:(NSArray <JMActionSheetImagesItemDisplayable> *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController
 {
     JMActionSheetDescription *desc = [self imagesDescriptionWithImages:elements
                                                         didSelectBlock:didSelectBlock
@@ -21,7 +21,7 @@
                                               style:JMActionSheetStyleClassic];
 }
 
-+ (void)showImagesActionSheetImages:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view
++ (void)showImagesActionSheetImages:(NSArray <JMActionSheetImagesItemDisplayable> *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view
 {
     JMActionSheetDescription *desc = [self imagesDescriptionWithImages:elements
                                                         didSelectBlock:didSelectBlock
@@ -31,7 +31,7 @@
                                            fromView:view style:JMActionSheetStyleClassic];
 }
 
-+ (void)showImagesActionSheetImages:(NSArray *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
++ (void)showImagesActionSheetImages:(NSArray <JMActionSheetImagesItemDisplayable> *)elements didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title inViewController:(UIViewController *)viewController fromView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections
 {
     JMActionSheetDescription *desc = [self imagesDescriptionWithImages:elements
                                                           didSelectBlock:didSelectBlock
@@ -42,7 +42,7 @@
                                               style:JMActionSheetStyleClassic];
 }
 
-+ (JMActionSheetDescription *)imagesDescriptionWithImages:(NSArray *)images didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title
++ (JMActionSheetDescription *)imagesDescriptionWithImages:(NSArray <JMActionSheetImagesItemDisplayable> *)images didSelectBlock:(JMActionSheetSelectedItemBlock)didSelectBlock title:(NSString *)title
 {
     JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
     desc.title = title;

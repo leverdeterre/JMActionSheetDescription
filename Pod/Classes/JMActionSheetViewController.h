@@ -1,6 +1,6 @@
 //
 //  JMActionSheetViewController.h
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 24/05/2015.
 //  Copyright (c) 2015 Jérôme Morissard. All rights reserved.
@@ -18,6 +18,7 @@
 - (void)dismissActionSheet;
 - (void)actionSheetWillRotate;
 - (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block;
+- (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block cancelAutoDismiss:(BOOL)cancelAutoDismiss;
 - (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block;
 - (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block dismissEnable:(BOOL)dismissEnable;
 

@@ -1,6 +1,6 @@
 //
 //  JMActionSheetPickerItem.m
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 30/05/2015.
 //
@@ -9,17 +9,14 @@
 #import "JMActionSheetPickerItem.h"
 
 @implementation JMActionSheetPickerItem
+@end
 
-- (void)setElements:(NSArray *)elements
+
+@implementation NSString (JMActionSheetPickerItem)
+
+- (NSString *)displayableValueForActionSheetPicker
 {
-    //check data
-    for (id <JMActionSheetPickerItem> item in elements) {
-        if (![item isKindOfClass:[NSString class]]) {
-            NSAssert([item conformsToProtocol:@protocol(JMActionSheetPickerItem)], @"ActionSheetPickerItem must be conform to protocol");
-        }
-    }
-    
-    _elements = elements;
+    return self;
 }
 
 @end

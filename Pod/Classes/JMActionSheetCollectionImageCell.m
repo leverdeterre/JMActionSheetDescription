@@ -1,6 +1,6 @@
 //
 //  JMActionSheetCollectionImageCell.m
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 02/06/2015.
 //
@@ -8,6 +8,7 @@
 
 #import "JMActionSheetCollectionImageCell.h"
 #import "JMActionSheetCollectionItem.h"
+#import "JMActionSheetImagesItem.h"
 
 static const CGFloat JMActionSheetCollectionPadding = 0.0f;
 static const CGFloat JMActionSheetCollectionSelectSize = 25.0f;
@@ -78,6 +79,10 @@ static const CGFloat JMActionSheetCollectionSelectSize = 25.0f;
     
     if ([obj isKindOfClass:[UIImage class]]) {
         self.actionImageView.image = obj;
+        
+    } else if ([obj conformsToProtocol:@protocol(JMActionSheetImagesItemDisplayable)]){
+        id <JMActionSheetImagesItemDisplayable> itemDisplayable = (id <JMActionSheetImagesItemDisplayable>)obj;
+        self.actionImageView.image = [itemDisplayable displayableImage];
     }
 
     self.backgroundColor = [UIColor clearColor];

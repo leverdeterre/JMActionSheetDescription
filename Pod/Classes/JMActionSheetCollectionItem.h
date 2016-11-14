@@ -1,6 +1,6 @@
 //
 //  JMActionSheetCollectionItem.h
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 01/06/2015.
 //
@@ -10,16 +10,18 @@
 
 @protocol JMActionSheetCollectionItem <NSObject>
 
-@property (strong, nonatomic) UIImage *actionImage;
-@property (strong, nonatomic) NSString *actionName;
+@property (nonnull, strong, nonatomic) UIImage *actionImage;
+@property (nonnull,strong, nonatomic) NSString *actionName;
 
 @optional
 @property (assign, nonatomic) UIViewContentMode actionImageContentMode;
 @end
 
+typedef void (^JMActionSheetSelectedCollectionItemBlock)(__nonnull id selectedItem);
+
 @interface JMActionSheetCollectionItem : JMActionSheetItem
 
-@property (strong, nonatomic) NSArray *elements; //Array of id <JMActionSheetCollectionItem>
-@property (copy, nonatomic) JMActionSheetSelectedItemBlock collectionActionBlock;
+@property (nonnull,strong, nonatomic) NSArray <JMActionSheetCollectionItem> *elements;
+@property (nonnull,copy, nonatomic) JMActionSheetSelectedCollectionItemBlock collectionActionBlock;
 
 @end

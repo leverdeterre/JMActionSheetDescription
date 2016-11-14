@@ -1,6 +1,6 @@
 //
 //  JMActionSheetViewController.m
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 24/05/2015.
 //  Copyright (c) 2015 Jérôme Morissard. All rights reserved.
@@ -192,6 +192,9 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     } else if ([item isKindOfClass:[JMActionSheetDatePickerItem class]]) {
         view = [self addDatePickerViewForItem:(JMActionSheetDatePickerItem *)item forTag:tag corners:corners offset:yOffset style:style];
         
+    } else if ([item isKindOfClass:[JMActionSheetDatePickerItem class]]) {
+        view = [self addDatePickerViewForItem:(JMActionSheetDatePickerItem *)item forTag:tag corners:corners offset:yOffset style:style];
+        
     } else if ([item isKindOfClass:[JMActionSheetImagesItem class]]) {
         view = [self addCollectionViewForItem:(JMActionSheetCollectionItem *)item forTag:tag corners:corners offset:yOffset style:style];
         
@@ -321,7 +324,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     CGRect frame = CGRectMake(padding, y, width, pickerHeight);
     
     //Configure PickerView
-    UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.elements];
+    UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.pickerElements];
     pickerView.backgroundColor = [UIColor whiteColor];
     pickerView.frame = frame;
     [pickerView applyRoundedCorners:corners withRadius:radius];
@@ -363,7 +366,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
         spacing = JMActionSheetInterlineSpacing;
         radius = JMActionSheetRoundedCornerRadius;
     }
-    
+
     self.actions[tag] = [NSNull null];
     
     //Compute frame

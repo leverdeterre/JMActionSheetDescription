@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7BE905D5854216C79FBBBF6C9444C951'
+               BlueprintIdentifier = '4BBE054F353DF997A67EDC19DC322917'
                BlueprintName = 'JMActionSheetDescription'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libJMActionSheetDescription.a'>

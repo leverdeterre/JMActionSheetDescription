@@ -1,6 +1,6 @@
 //
 //  JMActionSheet.m
-//  Components
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 24/05/2015.
 //  Copyright (c) 2015 Jérôme Morissard. All rights reserved.
@@ -32,6 +32,7 @@ typedef NS_ENUM(NSUInteger, JMActionSheetOSStragey) {
 static JMActionSheetOSStragey actionSheetStrategy_;
 
 @interface JMActionSheet () <JMActionSheetViewControllerDelegate, UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate>
+@property (strong, nonatomic) JMActionSheetDescription *presentedDescription;
 @end
 
 @implementation JMActionSheet
@@ -44,6 +45,7 @@ static JMActionSheetOSStragey actionSheetStrategy_;
                     inViewController:viewController
                             fromView:viewController.view
                                style:style];
+
 }
 
 + (void)showActionSheetDescription:(JMActionSheetDescription *)actionSheetDescription
@@ -66,6 +68,7 @@ static JMActionSheetOSStragey actionSheetStrategy_;
 {
     actionSheet_ = [[JMActionSheet alloc] init];
     actionSheetViewController_ = [[JMActionSheetViewController alloc] init];
+    actionSheet_.presentedDescription = actionSheetDescription;
     
     //Configure dimmingView
     dimmingView_ = [[UIView alloc] initWithFrame:viewController.view.bounds];
@@ -212,6 +215,19 @@ static JMActionSheetOSStragey actionSheetStrategy_;
 {
     [self actionSheetDidSelectPickerView:pickerView element:element block:block cancelAutoDismiss:YES];
 }
+
+/*
+- (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block cancelAutoDismiss:(BOOL)cancelAutoDismiss
+{
+    if (block) {
+        block(element);
+    }
+    
+    if (NO == cancelAutoDismiss) {
+        [self dismissActionSheet];
+    }
+}
+*/
 
 - (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block
 {

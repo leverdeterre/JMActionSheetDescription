@@ -1,6 +1,6 @@
 //
 //  JMActionSheetViewController+PickerViewItem.m
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 30/05/2015.
 //
@@ -60,6 +60,14 @@ const char * const JMActionSheetPickerBlockActionKey = "JMActionSheetPickerBlock
 {
     id obj = [[self jm_pickerElements] objectAtIndex:row];
     [self.delegate actionSheetDidSelectPickerView:pickerView element:obj block:[self jm_pickerActionBlock]];
+}
+
+#pragma mark - DatePicker Delegate
+
+- (void)datePickerValueDidChange:(UIDatePicker *)datePicker
+{
+    id obj = datePicker.date;
+    [self.delegate actionSheetDidSelectPickerView:(UIPickerView *)datePicker element:obj block:[self jm_pickerActionBlock] cancelAutoDismiss:YES];
 }
 
 @end

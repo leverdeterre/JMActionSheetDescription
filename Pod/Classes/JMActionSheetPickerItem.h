@@ -1,6 +1,6 @@
 //
 //  JMActionSheetPickerItem.h
-//  Pods
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 30/05/2015.
 //
@@ -8,13 +8,20 @@
 
 #import "JMActionSheetItem.h"
 
-@protocol JMActionSheetPickerItem <NSObject>
-@property (readonly) NSString *displayableValueForActionSheetPicker;
+@protocol JMActionSheetPickerItemDisplayable <NSObject>
+
+- (nonnull NSString *)displayableValueForActionSheetPicker;
+
 @end
 
 @interface JMActionSheetPickerItem : JMActionSheetItem
 
-@property (strong, nonatomic) NSArray *elements; //Array of id <JMActionSheetPickerItem>
-@property (copy, nonatomic) JMActionSheetSelectedItemBlock pickerActionBlock;
+@property (nonnull, strong, nonatomic) NSArray <JMActionSheetPickerItemDisplayable> *pickerElements;
+@property (nonnull, copy, nonatomic) JMActionSheetSelectedItemBlock pickerActionBlock;
+
+@end
+
+
+@interface NSString (JMActionSheetPickerItem) <JMActionSheetPickerItemDisplayable>
 
 @end

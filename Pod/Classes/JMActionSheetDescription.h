@@ -1,6 +1,6 @@
 //
 //  JMActionSheetDescription.h
-//  Components
+//  JMActionSheet Pod
 //
 //  Created by jerome morissard on 24/05/2015.
 //  Copyright (c) 2015 Jérôme Morissard. All rights reserved.
@@ -8,18 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "JMActionSheetItem.h"
 
-@class JMActionSheetItem;
 @interface JMActionSheetDescription : NSObject
 
-@property (copy, nonatomic) NSString *title;
+@property (nullable, copy, nonatomic) NSString *title;
 
-@property (strong, nonatomic) JMActionSheetItem *cancelItem;
+@property (nullable, strong, nonatomic) JMActionSheetItem *cancelItem;
 
-@property (strong, nonatomic) NSArray *items;   //Array of JMActionSheetItem
+@property (nullable, strong, nonatomic) NSArray <JMActionSheetItem *> *items;
 
-@property (strong, nonatomic) UIColor *actionSheetTintColor;
-@property (strong, nonatomic) UIFont *actionSheetCancelButtonFont;
-@property (strong, nonatomic) UIFont *actionSheetOtherButtonFont;
+@property (nullable, strong, nonatomic) UIColor *actionSheetTintColor;
+@property (nullable, strong, nonatomic) UIFont *actionSheetCancelButtonFont;
+@property (nullable, strong, nonatomic) UIFont *actionSheetOtherButtonFont;
 
 @end

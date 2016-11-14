@@ -10,6 +10,7 @@
 
 #import "JMActionSheet.h"
 #import "JMPickerActionSheet.h"
+#import "JMDatePickerActionSheet.h"
 #import "JMImagesActionSheet.h"
 
 #import "JMCollectionItem.h"
@@ -122,7 +123,7 @@
     };
     
     JMActionSheetImagesItem *imagesItem = [[JMActionSheetImagesItem alloc] init];
-    imagesItem.images = @[[UIImage imageNamed:@"gif_experiments"], [UIImage imageNamed:@"gif_experiments"], [UIImage imageNamed:@"gif_experiments"]];
+    imagesItem.images = (NSArray <JMActionSheetImagesItemDisplayable> *)@[[UIImage imageNamed:@"gif_experiments"], [UIImage imageNamed:@"gif_experiments"], [UIImage imageNamed:@"gif_experiments"]];
     imagesItem.imageSize = CGSizeMake(250.0f, 170.0f);
     //imagesItem.allowsMultipleSelection = YES;
     desc.items = @[otherItem, imagesItem];
@@ -133,7 +134,7 @@
 - (IBAction)showAPicker:(id)sender
 {
     JMActionSheetPickerItem *pickerItem = [[JMActionSheetPickerItem alloc] init];
-    pickerItem.elements = @[@"One", @"Two", @"three", @"Four"];
+    pickerItem.pickerElements = (NSArray <JMActionSheetPickerItemDisplayable> *)@[@"One", @"Two", @"three", @"Four"];
     pickerItem.pickerActionBlock = ^(NSString *selectedValue){
         NSLog(@"selectedValue %@",selectedValue);
     };
@@ -143,6 +144,7 @@
     desc.actionSheetCancelButtonFont = [UIFont boldSystemFontOfSize:17.0f];
     desc.actionSheetOtherButtonFont = [UIFont systemFontOfSize:16.0f];
     desc.title = @"Select a value";
+    
     JMActionSheetItem *cancelItem = [[JMActionSheetItem alloc] init];
     cancelItem.title = @"Cancel";
     desc.cancelItem = cancelItem;
@@ -153,7 +155,7 @@
 
 - (IBAction)showAFastPicker:(id)sender
 {
-    [JMPickerActionSheet showPickerActionSheetElements:@[@"One", @"Two", @"three", @"Four"]
+    [JMPickerActionSheet showPickerActionSheetElements:(NSArray<JMActionSheetPickerItemDisplayable> *)@[@"One", @"Two", @"three", @"Four"]
                                         didSelectBlock:^(NSString *selectedValue){
                                             NSLog(@"selectedValue %@",selectedValue);
                                         }
@@ -174,34 +176,29 @@
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"AppStore";
     item.actionImage = [UIImage imageNamed:@"apple_store_app_icon.jpg"];
-
     [collectionItems addObject:item];
 
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Password";
     item.actionImage = [UIImage imageNamed:@"1Pi-icon-1024-150x150.png"];
-
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Flipboard";
     item.actionImage = [UIImage imageNamed:@"Flipboard-App-Icon-150x150.jpg"];
-
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Gmail";
     item.actionImage = [UIImage imageNamed:@"gmail-ios-icon-app-150x150.png"];
-
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Mail";
     item.actionImage = [UIImage imageNamed:@"mail-iphone-150x150.jpg"];
-
     [collectionItems addObject:item];
     
-    collectionItem.elements = collectionItems;
+    collectionItem.elements = (NSArray <JMActionSheetCollectionItem> *)collectionItems;
     collectionItem.collectionActionBlock = ^(JMCollectionItem *selectedValue){
         NSLog(@"collectionItem selectedValue %@",selectedValue.actionName);
     };
@@ -238,7 +235,7 @@
     item.actionImageContentMode = UIViewContentModeCenter;
     [collectionItems2 addObject:item];
     
-    collectionItem2.elements = collectionItems2;
+    collectionItem2.elements = (NSArray <JMActionSheetCollectionItem> *)collectionItems2;
     collectionItem2.collectionActionBlock = ^(JMCollectionItem *selectedValue){
         NSLog(@"collectionItem2 selectedValue %@",selectedValue.actionName);
     };
@@ -254,19 +251,16 @@
     JMCollectionItem *item = [[JMCollectionItem alloc] init];
     item.actionName = @"facebook";
     item.actionImage = [UIImage imageNamed:@"fb-icon3-150x150.png"];
-
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"AppStore";
     item.actionImage = [UIImage imageNamed:@"apple_store_app_icon.jpg"];
-
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Password";
     item.actionImage = [UIImage imageNamed: @"1Pi-icon-1024-150x150.png"];
-
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
@@ -277,16 +271,14 @@
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Gmail";
     item.actionImage = [UIImage imageNamed:@"gmail-ios-icon-app-150x150.png"];
-
     [collectionItems addObject:item];
     
     item = [[JMCollectionItem alloc] init];
     item.actionName = @"Mail";
     item.actionImage = [UIImage imageNamed:@"mail-iphone-150x150.jpg"];
-
     [collectionItems addObject:item];
     
-    collectionItem.elements = collectionItems;
+    collectionItem.elements = (NSArray <JMActionSheetCollectionItem> *)collectionItems;
     collectionItem.collectionActionBlock = ^(JMCollectionItem *selectedValue){
         NSLog(@"selectedValue %@",selectedValue.actionName);
     };
@@ -321,17 +313,34 @@
 
 - (IBAction)showFastActionImagesView:(id)sender
 {
-    [JMImagesActionSheet showImagesActionSheetImages:@[
+    [JMImagesActionSheet showImagesActionSheetImages:(NSArray<JMActionSheetImagesItemDisplayable> *)@[
                                                        [UIImage imageNamed:@"gif_experiments"],
                                                        [UIImage imageNamed:@"gif_experiments"],
                                                        [UIImage imageNamed:@"gif_experiments"]]
      
                                       didSelectBlock:^(id selectedValue) {
-                                          NSLog(@"didSelectBlock %@",selectedValue);
-    }
+                                          NSLog(@"didSelectBlock %@",selectedValue);}
                                                title:@"The title"
                                     inViewController:self];
 }
 
+- (IBAction)showDatePicker:(id)sender
+{
+    NSDate *minDate = [[NSDate date] dateByAddingTimeInterval:-60*60*24*1];
+    NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:60*60*24*60];
+    NSDate *selectedDate = [NSDate date];
+
+    [JMDatePickerActionSheet showDatePickerActionSheetMinDate:minDate
+                                                      maxDate:maxDate
+                                                 selectedDate:selectedDate
+                                                  updateBlock:^(id selectedItem) {
+                                                      NSLog(@"updateBlock called %@",selectedItem);
+                                                  }
+                                                validateBlock:^(id selectedItem) {
+                                                    NSLog(@"validateBlock called %@",selectedItem);
+                                                }
+                                                        title:@"MyTitle"
+                                             inViewController:self];
+}
 
 @end

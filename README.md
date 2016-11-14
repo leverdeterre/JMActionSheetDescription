@@ -1,11 +1,38 @@
+## My other works
+
+[http://leverdeterre.github.io] (http://leverdeterre.github.io)
+
 # JMActionSheetDescription
+ActionSheet and UIActivityViewController replacement, using a descriptor component. 
 
 [![Twitter](https://img.shields.io/badge/contact-@leverdeterre-green.svg)](http://twitter.com/leverdeterre)
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/leverdeterre/PermissiveResearch/blob/master/LICENCE)
-[![Cocoapods](http://img.shields.io/cocoapods/v/JMActionSheetDescription.svg)](https://github.com/leverdeterre/PermissiveResearch)
+[![CocoaPods](http://img.shields.io/cocoapods/v/JMActionSheetDescription.svg)](https://github.com/leverdeterre/PermissiveResearch)
 [![Platform](https://img.shields.io/cocoapods/p/JMActionSheetDescription.svg?style=flat)](http://cocoapods.org/pods/JMActionSheetDescription)
 
+## Capability
+* present labels
+* present actions (UIButton)
+* present image(s)
+* present picker
+* present datepicker
+* present icons collections
+
 ## Changelog
+0.5.0 :
+
+* improve DatePicker (updateBlock, validateBlock)
+* improve Swift compatibility
+
+0.4.9 :
+
+* add DatePicker support
+
+0.4.7 / 0.4.8 :
+
+* Improve protocol usage
+* Increase Swift compatibility
+* Fix autolayout (in demo)
 
 0.4.6 :
 
@@ -93,6 +120,20 @@ desc.items = @[itemShare,pickerItem];
 
 ### Shortcuts for creation 
 
+#### To present a picker (JMDatePickerActionSheet) 
+
+```objective-c
+NSDate *minDate = [NSDate date];
+NSDate *minDate = [[NSDate date] dateByAddingTimeInterval:-60*60*24*1];
+NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:60*60*24*60];
+
+[JMDatePickerActionSheet showDatePickerActionSheetMinDate:minDate maxDate:maxDate selectedDate:selectedDate didSelectBlock:^(id selectedItem) {
+      NSLog(@"Plop");
+} 
+title:@"MyTitle" 
+inViewController:self];
+```
+
 #### To present a picker (JMPickerActionSheet) 
 
 ```objective-c
@@ -109,9 +150,11 @@ desc.items = @[itemShare,pickerItem];
 [JMImagesActionSheet showImagesActionSheetImages:@[
                         [UIImage imageNamed:@"gif_experiments"],
                         [UIImage imageNamed:@"gif_experiments"],
-                        [UIImage imageNamed:@"gif_experiments"]]
-                                didSelectBlock:^(id selectedValue) {
-                                                NSLog(@"didSelectBlock %@",selectedValue); }
+                        [UIImage imageNamed:@"gif_experiments"]],
+                                updateBlock:^(id selectedValue) {
+                                                NSLog(@"did updateBlock %@",selectedValue); }
+                                validateBlock:^(id selectedValue) {
+                                                NSLog(@"did validateBlock %@",selectedValue); }
                                         title:@"The title"
                             inViewController:self];
 ```
