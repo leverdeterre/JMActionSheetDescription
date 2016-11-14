@@ -324,7 +324,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     CGRect frame = CGRectMake(padding, y, width, pickerHeight);
     
     //Configure PickerView
-    UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.pickerElements];
+    UIPickerView *pickerView = [self pickerViewWithElements:pickerItem.pickerElements selectedElement:pickerItem.selectedItem];
     pickerView.backgroundColor = [UIColor whiteColor];
     pickerView.frame = frame;
     [pickerView applyRoundedCorners:corners withRadius:radius];
@@ -337,7 +337,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     return pickerView;
 }
 
-- (UIPickerView *)pickerViewWithElements:(NSArray *)elements
+- (UIPickerView *)pickerViewWithElements:(NSArray *)elements selectedElement:(id)selectedElement
 {
     [self setJm_pickerElements:elements];
     UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0.0f,
@@ -347,6 +347,10 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
     pickerView.dataSource = self;
     pickerView.delegate = self;
     [pickerView reloadAllComponents];
+    
+    if (NSNotFound != [elements indexOfObject:selectedElement]) {
+        [pickerView selectRow:[elements indexOfObject:selectedElement] inComponent:0 animated:NO];
+    }
     return pickerView;
 }
 

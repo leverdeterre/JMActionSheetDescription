@@ -161,7 +161,7 @@
                                         }
                                                  title:@"JMPickerActionSheet methods"
                                       inViewController:self
-     fromView:sender];
+                                       selectedElement:@"three"];
 }
 
 - (IBAction)showCollection:(id)sender
