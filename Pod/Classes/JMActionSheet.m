@@ -216,7 +216,6 @@ static JMActionSheetOSStragey actionSheetStrategy_;
     [self actionSheetDidSelectPickerView:pickerView element:element block:block cancelAutoDismiss:YES];
 }
 
-/*
 - (void)actionSheetDidSelectPickerView:(UIPickerView *)pickerView element:(id)element block:(JMActionSheetSelectedItemBlock)block cancelAutoDismiss:(BOOL)cancelAutoDismiss
 {
     if (block) {
@@ -227,7 +226,6 @@ static JMActionSheetOSStragey actionSheetStrategy_;
         [self dismissActionSheet];
     }
 }
-*/
 
 - (void)actionSheetDidSelectCollectionView:(UICollectionView *)collectionView element:(id)element block:(JMActionSheetSelectedItemBlock)block
 {
