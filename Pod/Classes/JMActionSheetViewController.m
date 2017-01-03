@@ -202,7 +202,7 @@ static const CGFloat JMActionSheetCollectionViewWidth   = 60.0f;
         view = [self addImageViewForItem:(JMActionSheetImageItem *)item forTag:tag corners:corners offset:yOffset style:style];
         
     } else if ([item isKindOfClass:[JMActionSheetToolbarItem class]]) {
-        view = [self addToolBarForItem:item forTag:tag corners:corners offset:yOffset style:style];
+        view = [self addToolBarForItem:(JMActionSheetToolbarItem *)item forTag:tag corners:corners offset:yOffset style:style];
         
     } else if ([item isKindOfClass:[JMActionSheetItem class]]) {
         view = [self addButtonViewForItem:item forTag:tag corners:corners offset:yOffset style:style];
