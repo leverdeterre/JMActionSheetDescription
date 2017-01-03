@@ -13,29 +13,29 @@
 		C223B3E01E1BB23800F8371F /* JMPickerNotChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3DA1E1BB23800F8371F /* JMPickerNotChecked.png */; };
 		C223B3E11E1BB23800F8371F /* JMPickerNotChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3DB1E1BB23800F8371F /* JMPickerNotChecked@2x.png */; };
 		C223B3E21E1BB23800F8371F /* JMPickerNotChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3DC1E1BB23800F8371F /* JMPickerNotChecked@3x.png */; };
-		C223B4091E1BB25B00F8371F /* JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E31E1BB25B00F8371F /* JMActionSheet.h */; };
+		C223B4091E1BB25B00F8371F /* JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E31E1BB25B00F8371F /* JMActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B40A1E1BB25B00F8371F /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3E41E1BB25B00F8371F /* JMActionSheet.m */; };
 		C223B40B1E1BB25B00F8371F /* JMActionSheetCollectionImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E51E1BB25B00F8371F /* JMActionSheetCollectionImageCell.h */; };
 		C223B40C1E1BB25B00F8371F /* JMActionSheetCollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3E61E1BB25B00F8371F /* JMActionSheetCollectionImageCell.m */; };
-		C223B40D1E1BB25B00F8371F /* JMActionSheetCollectionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E71E1BB25B00F8371F /* JMActionSheetCollectionItem.h */; };
+		C223B40D1E1BB25B00F8371F /* JMActionSheetCollectionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E71E1BB25B00F8371F /* JMActionSheetCollectionItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B40E1E1BB25B00F8371F /* JMActionSheetCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3E81E1BB25B00F8371F /* JMActionSheetCollectionItem.m */; };
 		C223B40F1E1BB25B00F8371F /* JMActionSheetCollectionItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E91E1BB25B00F8371F /* JMActionSheetCollectionItemCell.h */; };
 		C223B4101E1BB25B00F8371F /* JMActionSheetCollectionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3EA1E1BB25B00F8371F /* JMActionSheetCollectionItemCell.m */; };
 		C223B4111E1BB25B00F8371F /* JMActionSheetCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3EB1E1BB25B00F8371F /* JMActionSheetCollectionViewController.h */; };
 		C223B4121E1BB25B00F8371F /* JMActionSheetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3EC1E1BB25B00F8371F /* JMActionSheetCollectionViewController.m */; };
-		C223B4131E1BB25B00F8371F /* JMActionSheetDatePickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3ED1E1BB25B00F8371F /* JMActionSheetDatePickerItem.h */; };
+		C223B4131E1BB25B00F8371F /* JMActionSheetDatePickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3ED1E1BB25B00F8371F /* JMActionSheetDatePickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B4141E1BB25B00F8371F /* JMActionSheetDatePickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3EE1E1BB25B00F8371F /* JMActionSheetDatePickerItem.m */; };
-		C223B4151E1BB25B00F8371F /* JMActionSheetDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3EF1E1BB25B00F8371F /* JMActionSheetDescription.h */; };
+		C223B4151E1BB25B00F8371F /* JMActionSheetDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3EF1E1BB25B00F8371F /* JMActionSheetDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B4161E1BB25B00F8371F /* JMActionSheetDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F01E1BB25B00F8371F /* JMActionSheetDescription.m */; };
-		C223B4171E1BB25B00F8371F /* JMActionSheetImageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F11E1BB25B00F8371F /* JMActionSheetImageItem.h */; };
+		C223B4171E1BB25B00F8371F /* JMActionSheetImageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F11E1BB25B00F8371F /* JMActionSheetImageItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B4181E1BB25B00F8371F /* JMActionSheetImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F21E1BB25B00F8371F /* JMActionSheetImageItem.m */; };
-		C223B4191E1BB25B00F8371F /* JMActionSheetImagesItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F31E1BB25B00F8371F /* JMActionSheetImagesItem.h */; };
+		C223B4191E1BB25B00F8371F /* JMActionSheetImagesItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F31E1BB25B00F8371F /* JMActionSheetImagesItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B41A1E1BB25B00F8371F /* JMActionSheetImagesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F41E1BB25B00F8371F /* JMActionSheetImagesItem.m */; };
-		C223B41B1E1BB25B00F8371F /* JMActionSheetItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F51E1BB25B00F8371F /* JMActionSheetItem.h */; };
+		C223B41B1E1BB25B00F8371F /* JMActionSheetItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F51E1BB25B00F8371F /* JMActionSheetItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B41C1E1BB25B00F8371F /* JMActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F61E1BB25B00F8371F /* JMActionSheetItem.m */; };
-		C223B41D1E1BB25B00F8371F /* JMActionSheetItemControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F71E1BB25B00F8371F /* JMActionSheetItemControl.h */; };
+		C223B41D1E1BB25B00F8371F /* JMActionSheetItemControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F71E1BB25B00F8371F /* JMActionSheetItemControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B41E1E1BB25B00F8371F /* JMActionSheetItemControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F81E1BB25B00F8371F /* JMActionSheetItemControl.m */; };
-		C223B41F1E1BB25B00F8371F /* JMActionSheetPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F91E1BB25B00F8371F /* JMActionSheetPickerItem.h */; };
+		C223B41F1E1BB25B00F8371F /* JMActionSheetPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F91E1BB25B00F8371F /* JMActionSheetPickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B4201E1BB25B00F8371F /* JMActionSheetPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3FA1E1BB25B00F8371F /* JMActionSheetPickerItem.m */; };
 		C223B4211E1BB25B00F8371F /* JMActionSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3FB1E1BB25B00F8371F /* JMActionSheetViewController.h */; };
 		C223B4221E1BB25B00F8371F /* JMActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3FC1E1BB25B00F8371F /* JMActionSheetViewController.m */; };
@@ -43,17 +43,16 @@
 		C223B4241E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3FE1E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.m */; };
 		C223B4251E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3FF1E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h */; };
 		C223B4261E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4001E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.m */; };
-		C223B4271E1BB25B00F8371F /* JMDatePickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4011E1BB25B00F8371F /* JMDatePickerActionSheet.h */; };
+		C223B4271E1BB25B00F8371F /* JMDatePickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4011E1BB25B00F8371F /* JMDatePickerActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B4281E1BB25B00F8371F /* JMDatePickerActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4021E1BB25B00F8371F /* JMDatePickerActionSheet.m */; };
-		C223B4291E1BB25B00F8371F /* JMImagesActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4031E1BB25B00F8371F /* JMImagesActionSheet.h */; };
+		C223B4291E1BB25B00F8371F /* JMImagesActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4031E1BB25B00F8371F /* JMImagesActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B42A1E1BB25B00F8371F /* JMImagesActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4041E1BB25B00F8371F /* JMImagesActionSheet.m */; };
-		C223B42B1E1BB25B00F8371F /* JMPickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4051E1BB25B00F8371F /* JMPickerActionSheet.h */; };
+		C223B42B1E1BB25B00F8371F /* JMPickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4051E1BB25B00F8371F /* JMPickerActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C223B42C1E1BB25B00F8371F /* JMPickerActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4061E1BB25B00F8371F /* JMPickerActionSheet.m */; };
 		C223B42D1E1BB25B00F8371F /* UIView+JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4071E1BB25B00F8371F /* UIView+JMActionSheet.h */; };
 		C223B42E1E1BB25B00F8371F /* UIView+JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4081E1BB25B00F8371F /* UIView+JMActionSheet.m */; };
 		C2A41FA81E1BB1B000FF8A24 /* JMActionSheetDescription.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A41F9E1E1BB1B000FF8A24 /* JMActionSheetDescription.framework */; };
 		C2A41FAD1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A41FAC1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.m */; };
-		C2A41FAF1E1BB1B000FF8A24 /* JMActionSheetDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A41FA11E1BB1B000FF8A24 /* JMActionSheetDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,24 +226,23 @@
 			files = (
 				C223B4131E1BB25B00F8371F /* JMActionSheetDatePickerItem.h in Headers */,
 				C223B4111E1BB25B00F8371F /* JMActionSheetCollectionViewController.h in Headers */,
-				C223B4251E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h in Headers */,
-				C223B4151E1BB25B00F8371F /* JMActionSheetDescription.h in Headers */,
-				C223B41B1E1BB25B00F8371F /* JMActionSheetItem.h in Headers */,
-				C223B4231E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.h in Headers */,
 				C223B4271E1BB25B00F8371F /* JMDatePickerActionSheet.h in Headers */,
-				C223B4211E1BB25B00F8371F /* JMActionSheetViewController.h in Headers */,
+				C223B4151E1BB25B00F8371F /* JMActionSheetDescription.h in Headers */,
+				C223B42B1E1BB25B00F8371F /* JMPickerActionSheet.h in Headers */,
+				C223B41B1E1BB25B00F8371F /* JMActionSheetItem.h in Headers */,
 				C223B41F1E1BB25B00F8371F /* JMActionSheetPickerItem.h in Headers */,
 				C223B40D1E1BB25B00F8371F /* JMActionSheetCollectionItem.h in Headers */,
-				C223B42D1E1BB25B00F8371F /* UIView+JMActionSheet.h in Headers */,
 				C223B4171E1BB25B00F8371F /* JMActionSheetImageItem.h in Headers */,
+				C223B4091E1BB25B00F8371F /* JMActionSheet.h in Headers */,
+				C223B4191E1BB25B00F8371F /* JMActionSheetImagesItem.h in Headers */,
 				C223B4291E1BB25B00F8371F /* JMImagesActionSheet.h in Headers */,
 				C223B41D1E1BB25B00F8371F /* JMActionSheetItemControl.h in Headers */,
-				C2A41FAF1E1BB1B000FF8A24 /* JMActionSheetDescription.h in Headers */,
-				C223B42B1E1BB25B00F8371F /* JMPickerActionSheet.h in Headers */,
+				C223B4251E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h in Headers */,
+				C223B4231E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.h in Headers */,
+				C223B4211E1BB25B00F8371F /* JMActionSheetViewController.h in Headers */,
+				C223B42D1E1BB25B00F8371F /* UIView+JMActionSheet.h in Headers */,
 				C223B40F1E1BB25B00F8371F /* JMActionSheetCollectionItemCell.h in Headers */,
 				C223B40B1E1BB25B00F8371F /* JMActionSheetCollectionImageCell.h in Headers */,
-				C223B4191E1BB25B00F8371F /* JMActionSheetImagesItem.h in Headers */,
-				C223B4091E1BB25B00F8371F /* JMActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
