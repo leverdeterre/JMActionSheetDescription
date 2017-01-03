@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C223B3DD1E1BB23800F8371F /* JMPickerChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3D71E1BB23800F8371F /* JMPickerChecked.png */; };
+		C223B3DE1E1BB23800F8371F /* JMPickerChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3D81E1BB23800F8371F /* JMPickerChecked@2x.png */; };
+		C223B3DF1E1BB23800F8371F /* JMPickerChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3D91E1BB23800F8371F /* JMPickerChecked@3x.png */; };
+		C223B3E01E1BB23800F8371F /* JMPickerNotChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3DA1E1BB23800F8371F /* JMPickerNotChecked.png */; };
+		C223B3E11E1BB23800F8371F /* JMPickerNotChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3DB1E1BB23800F8371F /* JMPickerNotChecked@2x.png */; };
+		C223B3E21E1BB23800F8371F /* JMPickerNotChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223B3DC1E1BB23800F8371F /* JMPickerNotChecked@3x.png */; };
+		C223B4091E1BB25B00F8371F /* JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E31E1BB25B00F8371F /* JMActionSheet.h */; };
+		C223B40A1E1BB25B00F8371F /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3E41E1BB25B00F8371F /* JMActionSheet.m */; };
+		C223B40B1E1BB25B00F8371F /* JMActionSheetCollectionImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E51E1BB25B00F8371F /* JMActionSheetCollectionImageCell.h */; };
+		C223B40C1E1BB25B00F8371F /* JMActionSheetCollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3E61E1BB25B00F8371F /* JMActionSheetCollectionImageCell.m */; };
+		C223B40D1E1BB25B00F8371F /* JMActionSheetCollectionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E71E1BB25B00F8371F /* JMActionSheetCollectionItem.h */; };
+		C223B40E1E1BB25B00F8371F /* JMActionSheetCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3E81E1BB25B00F8371F /* JMActionSheetCollectionItem.m */; };
+		C223B40F1E1BB25B00F8371F /* JMActionSheetCollectionItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3E91E1BB25B00F8371F /* JMActionSheetCollectionItemCell.h */; };
+		C223B4101E1BB25B00F8371F /* JMActionSheetCollectionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3EA1E1BB25B00F8371F /* JMActionSheetCollectionItemCell.m */; };
+		C223B4111E1BB25B00F8371F /* JMActionSheetCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3EB1E1BB25B00F8371F /* JMActionSheetCollectionViewController.h */; };
+		C223B4121E1BB25B00F8371F /* JMActionSheetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3EC1E1BB25B00F8371F /* JMActionSheetCollectionViewController.m */; };
+		C223B4131E1BB25B00F8371F /* JMActionSheetDatePickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3ED1E1BB25B00F8371F /* JMActionSheetDatePickerItem.h */; };
+		C223B4141E1BB25B00F8371F /* JMActionSheetDatePickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3EE1E1BB25B00F8371F /* JMActionSheetDatePickerItem.m */; };
+		C223B4151E1BB25B00F8371F /* JMActionSheetDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3EF1E1BB25B00F8371F /* JMActionSheetDescription.h */; };
+		C223B4161E1BB25B00F8371F /* JMActionSheetDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F01E1BB25B00F8371F /* JMActionSheetDescription.m */; };
+		C223B4171E1BB25B00F8371F /* JMActionSheetImageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F11E1BB25B00F8371F /* JMActionSheetImageItem.h */; };
+		C223B4181E1BB25B00F8371F /* JMActionSheetImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F21E1BB25B00F8371F /* JMActionSheetImageItem.m */; };
+		C223B4191E1BB25B00F8371F /* JMActionSheetImagesItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F31E1BB25B00F8371F /* JMActionSheetImagesItem.h */; };
+		C223B41A1E1BB25B00F8371F /* JMActionSheetImagesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F41E1BB25B00F8371F /* JMActionSheetImagesItem.m */; };
+		C223B41B1E1BB25B00F8371F /* JMActionSheetItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F51E1BB25B00F8371F /* JMActionSheetItem.h */; };
+		C223B41C1E1BB25B00F8371F /* JMActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F61E1BB25B00F8371F /* JMActionSheetItem.m */; };
+		C223B41D1E1BB25B00F8371F /* JMActionSheetItemControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F71E1BB25B00F8371F /* JMActionSheetItemControl.h */; };
+		C223B41E1E1BB25B00F8371F /* JMActionSheetItemControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3F81E1BB25B00F8371F /* JMActionSheetItemControl.m */; };
+		C223B41F1E1BB25B00F8371F /* JMActionSheetPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3F91E1BB25B00F8371F /* JMActionSheetPickerItem.h */; };
+		C223B4201E1BB25B00F8371F /* JMActionSheetPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3FA1E1BB25B00F8371F /* JMActionSheetPickerItem.m */; };
+		C223B4211E1BB25B00F8371F /* JMActionSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3FB1E1BB25B00F8371F /* JMActionSheetViewController.h */; };
+		C223B4221E1BB25B00F8371F /* JMActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3FC1E1BB25B00F8371F /* JMActionSheetViewController.m */; };
+		C223B4231E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3FD1E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.h */; };
+		C223B4241E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B3FE1E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.m */; };
+		C223B4251E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B3FF1E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h */; };
+		C223B4261E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4001E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.m */; };
+		C223B4271E1BB25B00F8371F /* JMDatePickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4011E1BB25B00F8371F /* JMDatePickerActionSheet.h */; };
+		C223B4281E1BB25B00F8371F /* JMDatePickerActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4021E1BB25B00F8371F /* JMDatePickerActionSheet.m */; };
+		C223B4291E1BB25B00F8371F /* JMImagesActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4031E1BB25B00F8371F /* JMImagesActionSheet.h */; };
+		C223B42A1E1BB25B00F8371F /* JMImagesActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4041E1BB25B00F8371F /* JMImagesActionSheet.m */; };
+		C223B42B1E1BB25B00F8371F /* JMPickerActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4051E1BB25B00F8371F /* JMPickerActionSheet.h */; };
+		C223B42C1E1BB25B00F8371F /* JMPickerActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4061E1BB25B00F8371F /* JMPickerActionSheet.m */; };
+		C223B42D1E1BB25B00F8371F /* UIView+JMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C223B4071E1BB25B00F8371F /* UIView+JMActionSheet.h */; };
+		C223B42E1E1BB25B00F8371F /* UIView+JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C223B4081E1BB25B00F8371F /* UIView+JMActionSheet.m */; };
+		C2A41FA81E1BB1B000FF8A24 /* JMActionSheetDescription.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A41F9E1E1BB1B000FF8A24 /* JMActionSheetDescription.framework */; };
+		C2A41FAD1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A41FAC1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.m */; };
+		C2A41FAF1E1BB1B000FF8A24 /* JMActionSheetDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A41FA11E1BB1B000FF8A24 /* JMActionSheetDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2A41FA91E1BB1B000FF8A24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2A41F951E1BB1B000FF8A24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2A41F9D1E1BB1B000FF8A24;
+			remoteInfo = JMActionSheetDescription;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C223B3D71E1BB23800F8371F /* JMPickerChecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JMPickerChecked.png; path = ../../Pod/Assets/JMPickerChecked.png; sourceTree = "<group>"; };
+		C223B3D81E1BB23800F8371F /* JMPickerChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "JMPickerChecked@2x.png"; path = "../../Pod/Assets/JMPickerChecked@2x.png"; sourceTree = "<group>"; };
+		C223B3D91E1BB23800F8371F /* JMPickerChecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "JMPickerChecked@3x.png"; path = "../../Pod/Assets/JMPickerChecked@3x.png"; sourceTree = "<group>"; };
+		C223B3DA1E1BB23800F8371F /* JMPickerNotChecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JMPickerNotChecked.png; path = ../../Pod/Assets/JMPickerNotChecked.png; sourceTree = "<group>"; };
+		C223B3DB1E1BB23800F8371F /* JMPickerNotChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "JMPickerNotChecked@2x.png"; path = "../../Pod/Assets/JMPickerNotChecked@2x.png"; sourceTree = "<group>"; };
+		C223B3DC1E1BB23800F8371F /* JMPickerNotChecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "JMPickerNotChecked@3x.png"; path = "../../Pod/Assets/JMPickerNotChecked@3x.png"; sourceTree = "<group>"; };
+		C223B3E31E1BB25B00F8371F /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheet.h; path = ../../Pod/Classes/JMActionSheet.h; sourceTree = "<group>"; };
+		C223B3E41E1BB25B00F8371F /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheet.m; path = ../../Pod/Classes/JMActionSheet.m; sourceTree = "<group>"; };
+		C223B3E51E1BB25B00F8371F /* JMActionSheetCollectionImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetCollectionImageCell.h; path = ../../Pod/Classes/JMActionSheetCollectionImageCell.h; sourceTree = "<group>"; };
+		C223B3E61E1BB25B00F8371F /* JMActionSheetCollectionImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetCollectionImageCell.m; path = ../../Pod/Classes/JMActionSheetCollectionImageCell.m; sourceTree = "<group>"; };
+		C223B3E71E1BB25B00F8371F /* JMActionSheetCollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetCollectionItem.h; path = ../../Pod/Classes/JMActionSheetCollectionItem.h; sourceTree = "<group>"; };
+		C223B3E81E1BB25B00F8371F /* JMActionSheetCollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetCollectionItem.m; path = ../../Pod/Classes/JMActionSheetCollectionItem.m; sourceTree = "<group>"; };
+		C223B3E91E1BB25B00F8371F /* JMActionSheetCollectionItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetCollectionItemCell.h; path = ../../Pod/Classes/JMActionSheetCollectionItemCell.h; sourceTree = "<group>"; };
+		C223B3EA1E1BB25B00F8371F /* JMActionSheetCollectionItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetCollectionItemCell.m; path = ../../Pod/Classes/JMActionSheetCollectionItemCell.m; sourceTree = "<group>"; };
+		C223B3EB1E1BB25B00F8371F /* JMActionSheetCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetCollectionViewController.h; path = ../../Pod/Classes/JMActionSheetCollectionViewController.h; sourceTree = "<group>"; };
+		C223B3EC1E1BB25B00F8371F /* JMActionSheetCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetCollectionViewController.m; path = ../../Pod/Classes/JMActionSheetCollectionViewController.m; sourceTree = "<group>"; };
+		C223B3ED1E1BB25B00F8371F /* JMActionSheetDatePickerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetDatePickerItem.h; path = ../../Pod/Classes/JMActionSheetDatePickerItem.h; sourceTree = "<group>"; };
+		C223B3EE1E1BB25B00F8371F /* JMActionSheetDatePickerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetDatePickerItem.m; path = ../../Pod/Classes/JMActionSheetDatePickerItem.m; sourceTree = "<group>"; };
+		C223B3EF1E1BB25B00F8371F /* JMActionSheetDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetDescription.h; path = ../../Pod/Classes/JMActionSheetDescription.h; sourceTree = "<group>"; };
+		C223B3F01E1BB25B00F8371F /* JMActionSheetDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetDescription.m; path = ../../Pod/Classes/JMActionSheetDescription.m; sourceTree = "<group>"; };
+		C223B3F11E1BB25B00F8371F /* JMActionSheetImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetImageItem.h; path = ../../Pod/Classes/JMActionSheetImageItem.h; sourceTree = "<group>"; };
+		C223B3F21E1BB25B00F8371F /* JMActionSheetImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetImageItem.m; path = ../../Pod/Classes/JMActionSheetImageItem.m; sourceTree = "<group>"; };
+		C223B3F31E1BB25B00F8371F /* JMActionSheetImagesItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetImagesItem.h; path = ../../Pod/Classes/JMActionSheetImagesItem.h; sourceTree = "<group>"; };
+		C223B3F41E1BB25B00F8371F /* JMActionSheetImagesItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetImagesItem.m; path = ../../Pod/Classes/JMActionSheetImagesItem.m; sourceTree = "<group>"; };
+		C223B3F51E1BB25B00F8371F /* JMActionSheetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetItem.h; path = ../../Pod/Classes/JMActionSheetItem.h; sourceTree = "<group>"; };
+		C223B3F61E1BB25B00F8371F /* JMActionSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetItem.m; path = ../../Pod/Classes/JMActionSheetItem.m; sourceTree = "<group>"; };
+		C223B3F71E1BB25B00F8371F /* JMActionSheetItemControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetItemControl.h; path = ../../Pod/Classes/JMActionSheetItemControl.h; sourceTree = "<group>"; };
+		C223B3F81E1BB25B00F8371F /* JMActionSheetItemControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetItemControl.m; path = ../../Pod/Classes/JMActionSheetItemControl.m; sourceTree = "<group>"; };
+		C223B3F91E1BB25B00F8371F /* JMActionSheetPickerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetPickerItem.h; path = ../../Pod/Classes/JMActionSheetPickerItem.h; sourceTree = "<group>"; };
+		C223B3FA1E1BB25B00F8371F /* JMActionSheetPickerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetPickerItem.m; path = ../../Pod/Classes/JMActionSheetPickerItem.m; sourceTree = "<group>"; };
+		C223B3FB1E1BB25B00F8371F /* JMActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMActionSheetViewController.h; path = ../../Pod/Classes/JMActionSheetViewController.h; sourceTree = "<group>"; };
+		C223B3FC1E1BB25B00F8371F /* JMActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMActionSheetViewController.m; path = ../../Pod/Classes/JMActionSheetViewController.m; sourceTree = "<group>"; };
+		C223B3FD1E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JMActionSheetViewController+CollectionView.h"; path = "../../Pod/Classes/JMActionSheetViewController+CollectionView.h"; sourceTree = "<group>"; };
+		C223B3FE1E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JMActionSheetViewController+CollectionView.m"; path = "../../Pod/Classes/JMActionSheetViewController+CollectionView.m"; sourceTree = "<group>"; };
+		C223B3FF1E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JMActionSheetViewController+PickerViewItem.h"; path = "../../Pod/Classes/JMActionSheetViewController+PickerViewItem.h"; sourceTree = "<group>"; };
+		C223B4001E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JMActionSheetViewController+PickerViewItem.m"; path = "../../Pod/Classes/JMActionSheetViewController+PickerViewItem.m"; sourceTree = "<group>"; };
+		C223B4011E1BB25B00F8371F /* JMDatePickerActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMDatePickerActionSheet.h; path = ../../Pod/Classes/JMDatePickerActionSheet.h; sourceTree = "<group>"; };
+		C223B4021E1BB25B00F8371F /* JMDatePickerActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMDatePickerActionSheet.m; path = ../../Pod/Classes/JMDatePickerActionSheet.m; sourceTree = "<group>"; };
+		C223B4031E1BB25B00F8371F /* JMImagesActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMImagesActionSheet.h; path = ../../Pod/Classes/JMImagesActionSheet.h; sourceTree = "<group>"; };
+		C223B4041E1BB25B00F8371F /* JMImagesActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMImagesActionSheet.m; path = ../../Pod/Classes/JMImagesActionSheet.m; sourceTree = "<group>"; };
+		C223B4051E1BB25B00F8371F /* JMPickerActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMPickerActionSheet.h; path = ../../Pod/Classes/JMPickerActionSheet.h; sourceTree = "<group>"; };
+		C223B4061E1BB25B00F8371F /* JMPickerActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMPickerActionSheet.m; path = ../../Pod/Classes/JMPickerActionSheet.m; sourceTree = "<group>"; };
+		C223B4071E1BB25B00F8371F /* UIView+JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JMActionSheet.h"; path = "../../Pod/Classes/UIView+JMActionSheet.h"; sourceTree = "<group>"; };
+		C223B4081E1BB25B00F8371F /* UIView+JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+JMActionSheet.m"; path = "../../Pod/Classes/UIView+JMActionSheet.m"; sourceTree = "<group>"; };
+		C2A41F9E1E1BB1B000FF8A24 /* JMActionSheetDescription.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMActionSheetDescription.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2A41FA11E1BB1B000FF8A24 /* JMActionSheetDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMActionSheetDescription.h; sourceTree = "<group>"; };
+		C2A41FA21E1BB1B000FF8A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A41FA71E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMActionSheetDescriptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2A41FAC1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMActionSheetDescriptionTests.m; sourceTree = "<group>"; };
+		C2A41FAE1E1BB1B000FF8A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2A41F9A1E1BB1B000FF8A24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A41FA41E1BB1B000FF8A24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A41FA81E1BB1B000FF8A24 /* JMActionSheetDescription.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2A41F941E1BB1B000FF8A24 = {
+			isa = PBXGroup;
+			children = (
+				C2A41FA01E1BB1B000FF8A24 /* JMActionSheetDescription */,
+				C2A41FAB1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests */,
+				C2A41F9F1E1BB1B000FF8A24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2A41F9F1E1BB1B000FF8A24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2A41F9E1E1BB1B000FF8A24 /* JMActionSheetDescription.framework */,
+				C2A41FA71E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2A41FA01E1BB1B000FF8A24 /* JMActionSheetDescription */ = {
+			isa = PBXGroup;
+			children = (
+				C2A41FA11E1BB1B000FF8A24 /* JMActionSheetDescription.h */,
+				C2A41FA21E1BB1B000FF8A24 /* Info.plist */,
+				C223B3D71E1BB23800F8371F /* JMPickerChecked.png */,
+				C223B3D81E1BB23800F8371F /* JMPickerChecked@2x.png */,
+				C223B3D91E1BB23800F8371F /* JMPickerChecked@3x.png */,
+				C223B3DA1E1BB23800F8371F /* JMPickerNotChecked.png */,
+				C223B3DB1E1BB23800F8371F /* JMPickerNotChecked@2x.png */,
+				C223B3DC1E1BB23800F8371F /* JMPickerNotChecked@3x.png */,
+				C223B3E31E1BB25B00F8371F /* JMActionSheet.h */,
+				C223B3E41E1BB25B00F8371F /* JMActionSheet.m */,
+				C223B3E51E1BB25B00F8371F /* JMActionSheetCollectionImageCell.h */,
+				C223B3E61E1BB25B00F8371F /* JMActionSheetCollectionImageCell.m */,
+				C223B3E71E1BB25B00F8371F /* JMActionSheetCollectionItem.h */,
+				C223B3E81E1BB25B00F8371F /* JMActionSheetCollectionItem.m */,
+				C223B3E91E1BB25B00F8371F /* JMActionSheetCollectionItemCell.h */,
+				C223B3EA1E1BB25B00F8371F /* JMActionSheetCollectionItemCell.m */,
+				C223B3EB1E1BB25B00F8371F /* JMActionSheetCollectionViewController.h */,
+				C223B3EC1E1BB25B00F8371F /* JMActionSheetCollectionViewController.m */,
+				C223B3ED1E1BB25B00F8371F /* JMActionSheetDatePickerItem.h */,
+				C223B3EE1E1BB25B00F8371F /* JMActionSheetDatePickerItem.m */,
+				C223B3EF1E1BB25B00F8371F /* JMActionSheetDescription.h */,
+				C223B3F01E1BB25B00F8371F /* JMActionSheetDescription.m */,
+				C223B3F11E1BB25B00F8371F /* JMActionSheetImageItem.h */,
+				C223B3F21E1BB25B00F8371F /* JMActionSheetImageItem.m */,
+				C223B3F31E1BB25B00F8371F /* JMActionSheetImagesItem.h */,
+				C223B3F41E1BB25B00F8371F /* JMActionSheetImagesItem.m */,
+				C223B3F51E1BB25B00F8371F /* JMActionSheetItem.h */,
+				C223B3F61E1BB25B00F8371F /* JMActionSheetItem.m */,
+				C223B3F71E1BB25B00F8371F /* JMActionSheetItemControl.h */,
+				C223B3F81E1BB25B00F8371F /* JMActionSheetItemControl.m */,
+				C223B3F91E1BB25B00F8371F /* JMActionSheetPickerItem.h */,
+				C223B3FA1E1BB25B00F8371F /* JMActionSheetPickerItem.m */,
+				C223B3FB1E1BB25B00F8371F /* JMActionSheetViewController.h */,
+				C223B3FC1E1BB25B00F8371F /* JMActionSheetViewController.m */,
+				C223B3FD1E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.h */,
+				C223B3FE1E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.m */,
+				C223B3FF1E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h */,
+				C223B4001E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.m */,
+				C223B4011E1BB25B00F8371F /* JMDatePickerActionSheet.h */,
+				C223B4021E1BB25B00F8371F /* JMDatePickerActionSheet.m */,
+				C223B4031E1BB25B00F8371F /* JMImagesActionSheet.h */,
+				C223B4041E1BB25B00F8371F /* JMImagesActionSheet.m */,
+				C223B4051E1BB25B00F8371F /* JMPickerActionSheet.h */,
+				C223B4061E1BB25B00F8371F /* JMPickerActionSheet.m */,
+				C223B4071E1BB25B00F8371F /* UIView+JMActionSheet.h */,
+				C223B4081E1BB25B00F8371F /* UIView+JMActionSheet.m */,
+			);
+			path = JMActionSheetDescription;
+			sourceTree = "<group>";
+		};
+		C2A41FAB1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2A41FAC1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.m */,
+				C2A41FAE1E1BB1B000FF8A24 /* Info.plist */,
+			);
+			path = JMActionSheetDescriptionTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C2A41F9B1E1BB1B000FF8A24 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C223B4131E1BB25B00F8371F /* JMActionSheetDatePickerItem.h in Headers */,
+				C223B4111E1BB25B00F8371F /* JMActionSheetCollectionViewController.h in Headers */,
+				C223B4251E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.h in Headers */,
+				C223B4151E1BB25B00F8371F /* JMActionSheetDescription.h in Headers */,
+				C223B41B1E1BB25B00F8371F /* JMActionSheetItem.h in Headers */,
+				C223B4231E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.h in Headers */,
+				C223B4271E1BB25B00F8371F /* JMDatePickerActionSheet.h in Headers */,
+				C223B4211E1BB25B00F8371F /* JMActionSheetViewController.h in Headers */,
+				C223B41F1E1BB25B00F8371F /* JMActionSheetPickerItem.h in Headers */,
+				C223B40D1E1BB25B00F8371F /* JMActionSheetCollectionItem.h in Headers */,
+				C223B42D1E1BB25B00F8371F /* UIView+JMActionSheet.h in Headers */,
+				C223B4171E1BB25B00F8371F /* JMActionSheetImageItem.h in Headers */,
+				C223B4291E1BB25B00F8371F /* JMImagesActionSheet.h in Headers */,
+				C223B41D1E1BB25B00F8371F /* JMActionSheetItemControl.h in Headers */,
+				C2A41FAF1E1BB1B000FF8A24 /* JMActionSheetDescription.h in Headers */,
+				C223B42B1E1BB25B00F8371F /* JMPickerActionSheet.h in Headers */,
+				C223B40F1E1BB25B00F8371F /* JMActionSheetCollectionItemCell.h in Headers */,
+				C223B40B1E1BB25B00F8371F /* JMActionSheetCollectionImageCell.h in Headers */,
+				C223B4191E1BB25B00F8371F /* JMActionSheetImagesItem.h in Headers */,
+				C223B4091E1BB25B00F8371F /* JMActionSheet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C2A41F9D1E1BB1B000FF8A24 /* JMActionSheetDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2A41FB21E1BB1B000FF8A24 /* Build configuration list for PBXNativeTarget "JMActionSheetDescription" */;
+			buildPhases = (
+				C2A41F991E1BB1B000FF8A24 /* Sources */,
+				C2A41F9A1E1BB1B000FF8A24 /* Frameworks */,
+				C2A41F9B1E1BB1B000FF8A24 /* Headers */,
+				C2A41F9C1E1BB1B000FF8A24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JMActionSheetDescription;
+			productName = JMActionSheetDescription;
+			productReference = C2A41F9E1E1BB1B000FF8A24 /* JMActionSheetDescription.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C2A41FA61E1BB1B000FF8A24 /* JMActionSheetDescriptionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2A41FB51E1BB1B000FF8A24 /* Build configuration list for PBXNativeTarget "JMActionSheetDescriptionTests" */;
+			buildPhases = (
+				C2A41FA31E1BB1B000FF8A24 /* Sources */,
+				C2A41FA41E1BB1B000FF8A24 /* Frameworks */,
+				C2A41FA51E1BB1B000FF8A24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2A41FAA1E1BB1B000FF8A24 /* PBXTargetDependency */,
+			);
+			name = JMActionSheetDescriptionTests;
+			productName = JMActionSheetDescriptionTests;
+			productReference = C2A41FA71E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2A41F951E1BB1B000FF8A24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "jerome morissard";
+				TargetAttributes = {
+					C2A41F9D1E1BB1B000FF8A24 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = G8WDYDSFS7;
+						ProvisioningStyle = Automatic;
+					};
+					C2A41FA61E1BB1B000FF8A24 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = G8WDYDSFS7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C2A41F981E1BB1B000FF8A24 /* Build configuration list for PBXProject "JMActionSheetDescription" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C2A41F941E1BB1B000FF8A24;
+			productRefGroup = C2A41F9F1E1BB1B000FF8A24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2A41F9D1E1BB1B000FF8A24 /* JMActionSheetDescription */,
+				C2A41FA61E1BB1B000FF8A24 /* JMActionSheetDescriptionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2A41F9C1E1BB1B000FF8A24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C223B3DF1E1BB23800F8371F /* JMPickerChecked@3x.png in Resources */,
+				C223B3DD1E1BB23800F8371F /* JMPickerChecked.png in Resources */,
+				C223B3DE1E1BB23800F8371F /* JMPickerChecked@2x.png in Resources */,
+				C223B3E21E1BB23800F8371F /* JMPickerNotChecked@3x.png in Resources */,
+				C223B3E01E1BB23800F8371F /* JMPickerNotChecked.png in Resources */,
+				C223B3E11E1BB23800F8371F /* JMPickerNotChecked@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A41FA51E1BB1B000FF8A24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2A41F991E1BB1B000FF8A24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C223B42C1E1BB25B00F8371F /* JMPickerActionSheet.m in Sources */,
+				C223B41E1E1BB25B00F8371F /* JMActionSheetItemControl.m in Sources */,
+				C223B42E1E1BB25B00F8371F /* UIView+JMActionSheet.m in Sources */,
+				C223B41A1E1BB25B00F8371F /* JMActionSheetImagesItem.m in Sources */,
+				C223B4221E1BB25B00F8371F /* JMActionSheetViewController.m in Sources */,
+				C223B40C1E1BB25B00F8371F /* JMActionSheetCollectionImageCell.m in Sources */,
+				C223B40E1E1BB25B00F8371F /* JMActionSheetCollectionItem.m in Sources */,
+				C223B40A1E1BB25B00F8371F /* JMActionSheet.m in Sources */,
+				C223B4181E1BB25B00F8371F /* JMActionSheetImageItem.m in Sources */,
+				C223B4141E1BB25B00F8371F /* JMActionSheetDatePickerItem.m in Sources */,
+				C223B4261E1BB25B00F8371F /* JMActionSheetViewController+PickerViewItem.m in Sources */,
+				C223B4101E1BB25B00F8371F /* JMActionSheetCollectionItemCell.m in Sources */,
+				C223B4121E1BB25B00F8371F /* JMActionSheetCollectionViewController.m in Sources */,
+				C223B4161E1BB25B00F8371F /* JMActionSheetDescription.m in Sources */,
+				C223B41C1E1BB25B00F8371F /* JMActionSheetItem.m in Sources */,
+				C223B42A1E1BB25B00F8371F /* JMImagesActionSheet.m in Sources */,
+				C223B4241E1BB25B00F8371F /* JMActionSheetViewController+CollectionView.m in Sources */,
+				C223B4281E1BB25B00F8371F /* JMDatePickerActionSheet.m in Sources */,
+				C223B4201E1BB25B00F8371F /* JMActionSheetPickerItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A41FA31E1BB1B000FF8A24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A41FAD1E1BB1B000FF8A24 /* JMActionSheetDescriptionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2A41FAA1E1BB1B000FF8A24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2A41F9D1E1BB1B000FF8A24 /* JMActionSheetDescription */;
+			targetProxy = C2A41FA91E1BB1B000FF8A24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C2A41FB01E1BB1B000FF8A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C2A41FB11E1BB1B000FF8A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C2A41FB31E1BB1B000FF8A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G8WDYDSFS7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JMActionSheetDescription/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmo.JMActionSheetDescription;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C2A41FB41E1BB1B000FF8A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G8WDYDSFS7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JMActionSheetDescription/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmo.JMActionSheetDescription;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C2A41FB61E1BB1B000FF8A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = G8WDYDSFS7;
+				INFOPLIST_FILE = JMActionSheetDescriptionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmo.JMActionSheetDescriptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C2A41FB71E1BB1B000FF8A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = G8WDYDSFS7;
+				INFOPLIST_FILE = JMActionSheetDescriptionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmo.JMActionSheetDescriptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2A41F981E1BB1B000FF8A24 /* Build configuration list for PBXProject "JMActionSheetDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A41FB01E1BB1B000FF8A24 /* Debug */,
+				C2A41FB11E1BB1B000FF8A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2A41FB21E1BB1B000FF8A24 /* Build configuration list for PBXNativeTarget "JMActionSheetDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A41FB31E1BB1B000FF8A24 /* Debug */,
+				C2A41FB41E1BB1B000FF8A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2A41FB51E1BB1B000FF8A24 /* Build configuration list for PBXNativeTarget "JMActionSheetDescriptionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A41FB61E1BB1B000FF8A24 /* Debug */,
+				C2A41FB71E1BB1B000FF8A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2A41F951E1BB1B000FF8A24 /* Project object */;
+}
