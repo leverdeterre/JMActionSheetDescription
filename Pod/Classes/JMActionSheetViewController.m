@@ -9,8 +9,9 @@
 #import "JMActionSheetViewController.h"
 #import "JMActionSheetDescription.h"
 
-#import "JMActionSheetItemControl.h"
 #import "JMActionSheet.h"
+#import "JMActionSheetCollectionItem.h"
+#import "JMActionSheetItemControl.h"
 
 #import "JMActionSheetViewController+PickerViewItem.h"
 #import "JMActionSheetViewController+CollectionView.h"

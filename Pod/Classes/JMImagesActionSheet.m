@@ -8,6 +8,7 @@
 
 #import "JMImagesActionSheet.h"
 #import "JMActionSheetImagesItem.h"
+#import "JMActionSheetDescription.h"
 
 @implementation JMImagesActionSheet
 

@@ -7,6 +7,7 @@
 //
 
 #import "JMPickerActionSheet.h"
+#import "JMActionSheetDescription.h"
 
 @implementation JMPickerActionSheet
 

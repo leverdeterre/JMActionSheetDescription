@@ -7,15 +7,11 @@
 //
 
 #import "JMViewController.h"
-
-#import "JMActionSheet.h"
-#import "JMPickerActionSheet.h"
-#import "JMDatePickerActionSheet.h"
-#import "JMImagesActionSheet.h"
-
 #import "JMCollectionItem.h"
-
 #import "IonIcons.h"
+
+//Pods 
+#import "JMActionSheetDescription.h"
 
 @interface JMViewController ()
 @end

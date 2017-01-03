@@ -8,6 +8,7 @@
 
 #import "JMDatePickerActionSheet.h"
 #import "JMActionSheetDatePickerItem.h"
+#import "JMActionSheetDescription.h"
 
 @implementation JMDatePickerActionSheet
 

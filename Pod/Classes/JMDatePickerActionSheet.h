@@ -7,6 +7,7 @@
 //
 
 #import "JMActionSheet.h"
+#import "JMActionSheetItem.h"
 
 @interface JMDatePickerActionSheet : JMActionSheet
 

@@ -6,22 +6,14 @@
 //  Copyright (c) 2015 Jérôme Morissard. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-#import "JMActionSheetDescription.h"
-
-#import "JMActionSheetItem.h"
-#import "JMActionSheetImageItem.h"
-#import "JMActionSheetImagesItem.h"
-#import "JMActionSheetPickerItem.h"
-#import "JMActionSheetCollectionItem.h"
 
 typedef NS_ENUM(NSUInteger, JMActionSheetStyle) {
     JMActionSheetStyleClassic,
     JMActionSheetStyleEdgeToEdge
 };
 
+@class JMActionSheetDescription;
 @interface JMActionSheet : NSObject
 
 /**

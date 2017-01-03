@@ -6,9 +6,19 @@
 //  Copyright (c) 2015 Jérôme Morissard. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+//items
 #import "JMActionSheetItem.h"
+#import "JMActionSheetImageItem.h"
+#import "JMActionSheetImagesItem.h"
+#import "JMActionSheetPickerItem.h"
+#import "JMActionSheetDatePickerItem.h"
+
+//actionSheet shortcuts
+#import "JMDatePickerActionSheet.h"
+#import "JMImagesActionSheet.h"
+#import "JMPickerActionSheet.h"
 
 @interface JMActionSheetDescription : NSObject
 

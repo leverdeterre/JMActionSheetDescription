@@ -7,6 +7,7 @@
 //
 
 #import "JMActionSheet.h"
+#import "JMActionSheetImagesItem.h"
 
 @interface JMImagesActionSheet : JMActionSheet
 
