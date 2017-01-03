@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <JMActionSheetDescription/JMDatePickerActionSheet.h>
+@import JMActionSheetDescription;
 
 @interface ViewController ()
 @end
