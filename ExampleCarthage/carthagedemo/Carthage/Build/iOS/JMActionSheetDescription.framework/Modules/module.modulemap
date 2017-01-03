@@ -1,0 +1,6 @@
+framework module JMActionSheetDescription {
+  umbrella header "JMActionSheetDescription.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,353 @@
+BCSymbolMap Version: 2.0
++[JMPickerActionSheet showPickerActionSheetElements:didSelectBlock:title:inViewController:selectedElement:]
++[JMPickerActionSheet showPickerActionSheetElements:didSelectBlock:title:inViewController:fromView:selectedElement:]
++[JMPickerActionSheet showPickerActionSheetElements:didSelectBlock:title:inViewController:fromView:permittedArrowDirections:selectedElement:]
++[JMPickerActionSheet pickerDescriptionWithElements:didSelectBlock:title:selectedElement:]
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMPickerActionSheet.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/JMActionSheetDescription
+-[JMActionSheetItemControl titleRectForContentRect:]
+-[JMActionSheetItemControl imageRectForContentRect:]
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetItemControl.m
+-[UIView(JMActionSheet) jm_addSubview:withEdgeInsets:]
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/UIView+JMActionSheet.m
+-[JMActionSheetImagesItem images]
+-[JMActionSheetImagesItem setImages:]
+-[JMActionSheetImagesItem imageSize]
+-[JMActionSheetImagesItem setImageSize:]
+-[JMActionSheetImagesItem allowsMultipleSelection]
+-[JMActionSheetImagesItem setAllowsMultipleSelection:]
+-[JMActionSheetImagesItem imagesActionBlock]
+-[JMActionSheetImagesItem setImagesActionBlock:]
+-[JMActionSheetImagesItem .cxx_destruct]
+-[UIImage(JMActionSheetImagesItem) displayableImage]
+_OBJC_IVAR_$_JMActionSheetImagesItem._images
+_OBJC_IVAR_$_JMActionSheetImagesItem._imageSize
+_OBJC_IVAR_$_JMActionSheetImagesItem._allowsMultipleSelection
+_OBJC_IVAR_$_JMActionSheetImagesItem._imagesActionBlock
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_JMActionSheetImagesItemDisplayable
+l_OBJC_LABEL_PROTOCOL_$_JMActionSheetImagesItemDisplayable
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetImagesItem.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetImagesItem.h
+-[UIView(RoundedCorners) applyRoundedCorners:withRadius:]
+-[JMActionSheetViewController viewDidLoad]
+-[JMActionSheetViewController reloadWithActionSheetDescription:delegate:style:]
+-[JMActionSheetViewController dimmingViewPressed:]
+-[JMActionSheetViewController buttonPressed:]
+-[JMActionSheetViewController oneByOneImageWithColor:]
+-[JMActionSheetViewController addViewForItem:forTag:corners:offset:style:]
+-[JMActionSheetViewController addCollectionViewForItem:forTag:corners:offset:style:]
+-[JMActionSheetViewController addPickerViewForItem:forTag:corners:offset:style:]
+-[JMActionSheetViewController pickerViewWithElements:selectedElement:]
+-[JMActionSheetViewController addDatePickerViewForItem:forTag:corners:offset:style:]
+-[JMActionSheetViewController addImageViewForItem:forTag:corners:offset:style:]
+-[JMActionSheetViewController imageViewWithImage:]
+-[JMActionSheetViewController addButtonViewForItem:forTag:corners:offset:style:]
+___80-[JMActionSheetViewController addButtonViewForItem:forTag:corners:offset:style:]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+-[JMActionSheetViewController buttonWithActionSheetItem:]
+-[JMActionSheetViewController addLabelViewForItem:forTag:corners:offset:style:]
+-[JMActionSheetViewController labelWithText:]
+-[JMActionSheetViewController addToolBarForItem:forTag:corners:offset:style:]
+-[JMActionSheetViewController contentSizeForViewInPopover]
+-[JMActionSheetViewController preferredContentSize]
+-[JMActionSheetViewController estimatedContentSizeWithDescription:width:style:]
+-[JMActionSheetViewController willRotateToInterfaceOrientation:duration:]
+-[JMActionSheetViewController viewWillTransitionToSize:withTransitionCoordinator:]
+-[JMActionSheetViewController orientationChanged:]
+-[JMActionSheetViewController toolBarCancelPressed:]
+-[JMActionSheetViewController toolBarValidatePressed:]
+-[JMActionSheetViewController setPreferredContentSize:]
+-[JMActionSheetViewController delegate]
+-[JMActionSheetViewController actions]
+-[JMActionSheetViewController setActions:]
+-[JMActionSheetViewController actionSheetTintColor]
+-[JMActionSheetViewController setActionSheetTintColor:]
+-[JMActionSheetViewController actionSheetCancelButtonFont]
+-[JMActionSheetViewController setActionSheetCancelButtonFont:]
+-[JMActionSheetViewController actionSheetOtherButtonFont]
+-[JMActionSheetViewController setActionSheetOtherButtonFont:]
+-[JMActionSheetViewController .cxx_destruct]
+_OBJC_IVAR_$_JMActionSheetViewController._delegate
+___block_descriptor_tmp
+_OBJC_IVAR_$_JMActionSheetViewController._preferredContentSize
+_OBJC_IVAR_$_JMActionSheetViewController._actions
+_OBJC_IVAR_$_JMActionSheetViewController._actionSheetTintColor
+_OBJC_IVAR_$_JMActionSheetViewController._actionSheetCancelButtonFont
+_OBJC_IVAR_$_JMActionSheetViewController._actionSheetOtherButtonFont
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetViewController.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetViewController.h
+__destroy_helper_block_
+__copy_helper_block_
+__80-[JMActionSheetViewController addButtonViewForItem:forTag:corners:offset:style:]_block_invoke
+-[JMActionSheetCollectionImageCell reuseIdentifier]
+-[JMActionSheetCollectionImageCell updateCollectionViewCellWithObject:atIndexPath:delegate:collectionView:]
+-[JMActionSheetCollectionImageCell cellTaped:]
+-[JMActionSheetCollectionImageCell setSelected:]
+-[JMActionSheetCollectionImageCell actionImageView]
+-[JMActionSheetCollectionImageCell setActionImageView:]
+-[JMActionSheetCollectionImageCell selectionImageView]
+-[JMActionSheetCollectionImageCell setSelectionImageView:]
+-[JMActionSheetCollectionImageCell collectionViewDelegate]
+-[JMActionSheetCollectionImageCell setCollectionViewDelegate:]
+-[JMActionSheetCollectionImageCell collectionView]
+-[JMActionSheetCollectionImageCell setCollectionView:]
+-[JMActionSheetCollectionImageCell indexPath]
+-[JMActionSheetCollectionImageCell setIndexPath:]
+-[JMActionSheetCollectionImageCell gesture]
+-[JMActionSheetCollectionImageCell setGesture:]
+-[JMActionSheetCollectionImageCell .cxx_destruct]
+l_OBJC_PROTOCOL_REFERENCE_$_JMActionSheetImagesItemDisplayable
+_OBJC_IVAR_$_JMActionSheetCollectionImageCell._actionImageView
+_OBJC_IVAR_$_JMActionSheetCollectionImageCell._selectionImageView
+_OBJC_IVAR_$_JMActionSheetCollectionImageCell._collectionViewDelegate
+_OBJC_IVAR_$_JMActionSheetCollectionImageCell._collectionView
+_OBJC_IVAR_$_JMActionSheetCollectionImageCell._indexPath
+_OBJC_IVAR_$_JMActionSheetCollectionImageCell._gesture
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetCollectionImageCell.m
+-[JMActionSheetCollectionItem elements]
+-[JMActionSheetCollectionItem setElements:]
+-[JMActionSheetCollectionItem collectionActionBlock]
+-[JMActionSheetCollectionItem setCollectionActionBlock:]
+-[JMActionSheetCollectionItem .cxx_destruct]
+_OBJC_IVAR_$_JMActionSheetCollectionItem._elements
+_OBJC_IVAR_$_JMActionSheetCollectionItem._collectionActionBlock
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetCollectionItem.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetCollectionItem.h
++[JMActionSheet showActionSheetDescription:inViewController:style:]
++[JMActionSheet showActionSheetDescription:inViewController:fromView:style:]
++[JMActionSheet showActionSheetDescription:inViewController:fromView:permittedArrowDirections:style:]
+-[JMActionSheet configureFramePresentationFromViewController:description:style:]
+-[JMActionSheet presentActionSheetFromViewController:fromView:permittedArrowDirections:]
+___88-[JMActionSheet presentActionSheetFromViewController:fromView:permittedArrowDirections:]_block_invoke
+___88-[JMActionSheet presentActionSheetFromViewController:fromView:permittedArrowDirections:]_block_invoke_2
+-[JMActionSheet popoverControllerDidDismissPopover:]
+-[JMActionSheet popoverPresentationControllerDidDismissPopover:]
+-[JMActionSheet actionSheetWillRotate]
+___38-[JMActionSheet actionSheetWillRotate]_block_invoke
+-[JMActionSheet dismissActionSheet]
+___35-[JMActionSheet dismissActionSheet]_block_invoke
+___35-[JMActionSheet dismissActionSheet]_block_invoke_2
+-[JMActionSheet actionSheetDidSelectPickerView:element:block:]
+-[JMActionSheet actionSheetDidSelectPickerView:element:block:cancelAutoDismiss:]
+-[JMActionSheet actionSheetDidSelectCollectionView:element:block:]
+-[JMActionSheet actionSheetDidSelectCollectionView:element:block:dismissEnable:]
+-[JMActionSheet removingHierarchies]
+___36-[JMActionSheet removingHierarchies]_block_invoke
++[JMActionSheet computeStrategyFromViewController:]
+-[JMActionSheet presentedDescription]
+-[JMActionSheet setPresentedDescription:]
+-[JMActionSheet .cxx_destruct]
+_actionSheet_
+_actionSheetViewController_
+_dimmingView_
+_actionSheetStrategy_
+___block_literal_global
+___block_descriptor_tmp.69
+___block_literal_global.70
+_actionSheetViewPopover_
+___block_descriptor_tmp.84
+___block_literal_global.85
+___block_descriptor_tmp.96
+___block_literal_global.97
+___block_descriptor_tmp.99
+___block_descriptor_tmp.111
+___block_literal_global.112
+_OBJC_IVAR_$_JMActionSheet._presentedDescription
+l_OBJC_PROTOCOL_$_JMActionSheetViewControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_JMActionSheetViewControllerDelegate
+l_OBJC_PROTOCOL_$_UIPopoverControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIPopoverControllerDelegate
+l_OBJC_PROTOCOL_$_UIAdaptivePresentationControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIAdaptivePresentationControllerDelegate
+l_OBJC_PROTOCOL_$_UIPopoverPresentationControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIPopoverPresentationControllerDelegate
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheet.m
+UI_USER_INTERFACE_IDIOM
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDevice.h
+__36-[JMActionSheet removingHierarchies]_block_invoke
+__35-[JMActionSheet dismissActionSheet]_block_invoke_2
+__35-[JMActionSheet dismissActionSheet]_block_invoke
+__38-[JMActionSheet actionSheetWillRotate]_block_invoke
+__88-[JMActionSheet presentActionSheetFromViewController:fromView:permittedArrowDirections:]_block_invoke_2
+__88-[JMActionSheet presentActionSheetFromViewController:fromView:permittedArrowDirections:]_block_invoke
+-[JMActionSheetImageItem image]
+-[JMActionSheetImageItem setImage:]
+-[JMActionSheetImageItem imageHeight]
+-[JMActionSheetImageItem setImageHeight:]
+-[JMActionSheetImageItem .cxx_destruct]
+_OBJC_IVAR_$_JMActionSheetImageItem._image
+_OBJC_IVAR_$_JMActionSheetImageItem._imageHeight
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetImageItem.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetImageItem.h
+-[JMActionSheetDatePickerItem init]
+-[JMActionSheetDatePickerItem minDate]
+-[JMActionSheetDatePickerItem setMinDate:]
+-[JMActionSheetDatePickerItem maxDate]
+-[JMActionSheetDatePickerItem setMaxDate:]
+-[JMActionSheetDatePickerItem selectedDate]
+-[JMActionSheetDatePickerItem setSelectedDate:]
+-[JMActionSheetDatePickerItem pickerUpdateActionBlock]
+-[JMActionSheetDatePickerItem setPickerUpdateActionBlock:]
+-[JMActionSheetDatePickerItem pickerValidateActionBlock]
+-[JMActionSheetDatePickerItem setPickerValidateActionBlock:]
+-[JMActionSheetDatePickerItem datePickerMode]
+-[JMActionSheetDatePickerItem setDatePickerMode:]
+-[JMActionSheetDatePickerItem .cxx_destruct]
+_OBJC_IVAR_$_JMActionSheetDatePickerItem._minDate
+_OBJC_IVAR_$_JMActionSheetDatePickerItem._maxDate
+_OBJC_IVAR_$_JMActionSheetDatePickerItem._selectedDate
+_OBJC_IVAR_$_JMActionSheetDatePickerItem._pickerUpdateActionBlock
+_OBJC_IVAR_$_JMActionSheetDatePickerItem._pickerValidateActionBlock
+_OBJC_IVAR_$_JMActionSheetDatePickerItem._datePickerMode
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetDatePickerItem.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetDatePickerItem.h
+-[JMActionSheetViewController(PickerViewItem) setJm_pickerElements:]
+-[JMActionSheetViewController(PickerViewItem) jm_pickerElements]
+-[JMActionSheetViewController(PickerViewItem) setJm_pickerActionBlock:]
+-[JMActionSheetViewController(PickerViewItem) jm_pickerActionBlock]
+-[JMActionSheetViewController(PickerViewItem) numberOfComponentsInPickerView:]
+-[JMActionSheetViewController(PickerViewItem) pickerView:numberOfRowsInComponent:]
+-[JMActionSheetViewController(PickerViewItem) pickerView:titleForRow:forComponent:]
+-[JMActionSheetViewController(PickerViewItem) pickerView:didSelectRow:inComponent:]
+-[JMActionSheetViewController(PickerViewItem) datePickerValueDidChange:]
+l_OBJC_PROTOCOL_$_UIPickerViewDataSource
+l_OBJC_LABEL_PROTOCOL_$_UIPickerViewDataSource
+l_OBJC_PROTOCOL_$_UIPickerViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIPickerViewDelegate
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetViewController+PickerViewItem.m
+-[JMActionSheetCollectionItemCell reuseIdentifier]
+-[JMActionSheetCollectionItemCell updateCollectionViewCellWithObject:atIndexPath:delegate:collectionView:]
+-[JMActionSheetCollectionItemCell cellTaped:]
+-[JMActionSheetCollectionItemCell actionImageView]
+-[JMActionSheetCollectionItemCell setActionImageView:]
+-[JMActionSheetCollectionItemCell actionLabel]
+-[JMActionSheetCollectionItemCell setActionLabel:]
+-[JMActionSheetCollectionItemCell collectionViewDelegate]
+-[JMActionSheetCollectionItemCell setCollectionViewDelegate:]
+-[JMActionSheetCollectionItemCell collectionView]
+-[JMActionSheetCollectionItemCell setCollectionView:]
+-[JMActionSheetCollectionItemCell indexPath]
+-[JMActionSheetCollectionItemCell setIndexPath:]
+-[JMActionSheetCollectionItemCell gesture]
+-[JMActionSheetCollectionItemCell setGesture:]
+-[JMActionSheetCollectionItemCell .cxx_destruct]
+l_OBJC_PROTOCOL_$_JMActionSheetCollectionItem
+l_OBJC_LABEL_PROTOCOL_$_JMActionSheetCollectionItem
+l_OBJC_PROTOCOL_REFERENCE_$_JMActionSheetCollectionItem
+_OBJC_IVAR_$_JMActionSheetCollectionItemCell._actionImageView
+_OBJC_IVAR_$_JMActionSheetCollectionItemCell._actionLabel
+_OBJC_IVAR_$_JMActionSheetCollectionItemCell._collectionViewDelegate
+_OBJC_IVAR_$_JMActionSheetCollectionItemCell._collectionView
+_OBJC_IVAR_$_JMActionSheetCollectionItemCell._indexPath
+_OBJC_IVAR_$_JMActionSheetCollectionItemCell._gesture
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetCollectionItemCell.m
+-[JMActionSheetCollectionViewController initWithElements:collectionActionBlock:actionDelegate:cellClass:layout:]
+-[JMActionSheetCollectionViewController viewDidLoad]
+-[JMActionSheetCollectionViewController collectionView:numberOfItemsInSection:]
+-[JMActionSheetCollectionViewController collectionView:cellForItemAtIndexPath:]
+-[JMActionSheetCollectionViewController collectionView:didSelectItemAtIndexPath:]
+-[JMActionSheetCollectionViewController collectionView:didDeselectItemAtIndexPath:]
+-[JMActionSheetCollectionViewController collectionViewElements]
+-[JMActionSheetCollectionViewController setCollectionViewElements:]
+-[JMActionSheetCollectionViewController collectionActionBlock]
+-[JMActionSheetCollectionViewController setCollectionActionBlock:]
+-[JMActionSheetCollectionViewController actionSheetDelegate]
+-[JMActionSheetCollectionViewController setActionSheetDelegate:]
+-[JMActionSheetCollectionViewController reuseIdentifier]
+-[JMActionSheetCollectionViewController setReuseIdentifier:]
+-[JMActionSheetCollectionViewController selectedItems]
+-[JMActionSheetCollectionViewController setSelectedItems:]
+-[JMActionSheetCollectionViewController jmCollectionLayout]
+-[JMActionSheetCollectionViewController setJmCollectionLayout:]
+-[JMActionSheetCollectionViewController .cxx_destruct]
+_OBJC_IVAR_$_JMActionSheetCollectionViewController._collectionViewElements
+_OBJC_IVAR_$_JMActionSheetCollectionViewController._collectionActionBlock
+_OBJC_IVAR_$_JMActionSheetCollectionViewController._actionSheetDelegate
+_OBJC_IVAR_$_JMActionSheetCollectionViewController._reuseIdentifier
+_OBJC_IVAR_$_JMActionSheetCollectionViewController._selectedItems
+_OBJC_IVAR_$_JMActionSheetCollectionViewController._jmCollectionLayout
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetCollectionViewController.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetCollectionViewController.h
+-[JMActionSheetDescription title]
+-[JMActionSheetDescription setTitle:]
+-[JMActionSheetDescription cancelItem]
+-[JMActionSheetDescription setCancelItem:]
+-[JMActionSheetDescription items]
+-[JMActionSheetDescription setItems:]
+-[JMActionSheetDescription actionSheetTintColor]
+-[JMActionSheetDescription setActionSheetTintColor:]
+-[JMActionSheetDescription actionSheetCancelButtonFont]
+-[JMActionSheetDescription setActionSheetCancelButtonFont:]
+-[JMActionSheetDescription actionSheetOtherButtonFont]
+-[JMActionSheetDescription setActionSheetOtherButtonFont:]
+-[JMActionSheetDescription .cxx_destruct]
+_OBJC_IVAR_$_JMActionSheetDescription._title
+_OBJC_IVAR_$_JMActionSheetDescription._cancelItem
+_OBJC_IVAR_$_JMActionSheetDescription._items
+_OBJC_IVAR_$_JMActionSheetDescription._actionSheetTintColor
+_OBJC_IVAR_$_JMActionSheetDescription._actionSheetCancelButtonFont
+_OBJC_IVAR_$_JMActionSheetDescription._actionSheetOtherButtonFont
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetDescription.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetDescription.h
++[JMActionSheetItem stringOfClass]
+-[JMActionSheetItem title]
+-[JMActionSheetItem setTitle:]
+-[JMActionSheetItem action]
+-[JMActionSheetItem setAction:]
+-[JMActionSheetItem icon]
+-[JMActionSheetItem setIcon:]
+-[JMActionSheetItem backgroundColor]
+-[JMActionSheetItem setBackgroundColor:]
+-[JMActionSheetItem textColor]
+-[JMActionSheetItem setTextColor:]
+-[JMActionSheetItem textFont]
+-[JMActionSheetItem setTextFont:]
+-[JMActionSheetItem .cxx_destruct]
++[JMActionSheetToolbarItem toolbarItemWithTitle:]
+_OBJC_IVAR_$_JMActionSheetItem._title
+_OBJC_IVAR_$_JMActionSheetItem._action
+_OBJC_IVAR_$_JMActionSheetItem._icon
+_OBJC_IVAR_$_JMActionSheetItem._backgroundColor
+_OBJC_IVAR_$_JMActionSheetItem._textColor
+_OBJC_IVAR_$_JMActionSheetItem._textFont
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetItem.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetItem.h
++[JMImagesActionSheet showImagesActionSheetImages:didSelectBlock:title:inViewController:]
++[JMImagesActionSheet showImagesActionSheetImages:didSelectBlock:title:inViewController:fromView:]
++[JMImagesActionSheet showImagesActionSheetImages:didSelectBlock:title:inViewController:fromView:permittedArrowDirections:]
++[JMImagesActionSheet imagesDescriptionWithImages:didSelectBlock:title:]
+___72+[JMImagesActionSheet imagesDescriptionWithImages:didSelectBlock:title:]_block_invoke
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMImagesActionSheet.m
+__72+[JMImagesActionSheet imagesDescriptionWithImages:didSelectBlock:title:]_block_invoke
++[JMActionSheetViewController(CollectionView) actionSheetViewControllerWithElements:collectionActionBlock:actionDelegate:cellClass:layout:]
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetViewController+CollectionView.m
++[JMDatePickerActionSheet showDatePickerActionSheetMinDate:maxDate:selectedDate:updateBlock:validateBlock:title:inViewController:]
++[JMDatePickerActionSheet datePickerDescriptionMinDate:maxDate:selectedDate:updateBlock:validateBlock:title:]
+___109+[JMDatePickerActionSheet datePickerDescriptionMinDate:maxDate:selectedDate:updateBlock:validateBlock:title:]_block_invoke
+___109+[JMDatePickerActionSheet datePickerDescriptionMinDate:maxDate:selectedDate:updateBlock:validateBlock:title:]_block_invoke.25
+___copy_helper_block_.28
+___destroy_helper_block_.29
+___block_descriptor_tmp.31
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMDatePickerActionSheet.m
+__109+[JMDatePickerActionSheet datePickerDescriptionMinDate:maxDate:selectedDate:updateBlock:validateBlock:title:]_block_invoke.25
+__109+[JMDatePickerActionSheet datePickerDescriptionMinDate:maxDate:selectedDate:updateBlock:validateBlock:title:]_block_invoke
+-[JMActionSheetPickerItem selectedItem]
+-[JMActionSheetPickerItem setSelectedItem:]
+-[JMActionSheetPickerItem pickerElements]
+-[JMActionSheetPickerItem setPickerElements:]
+-[JMActionSheetPickerItem pickerActionBlock]
+-[JMActionSheetPickerItem setPickerActionBlock:]
+-[JMActionSheetPickerItem .cxx_destruct]
+-[NSString(JMActionSheetPickerItem) displayableValueForActionSheetPicker]
+_OBJC_IVAR_$_JMActionSheetPickerItem._selectedItem
+_OBJC_IVAR_$_JMActionSheetPickerItem._pickerElements
+_OBJC_IVAR_$_JMActionSheetPickerItem._pickerActionBlock
+l_OBJC_PROTOCOL_$_JMActionSheetPickerItemDisplayable
+l_OBJC_LABEL_PROTOCOL_$_JMActionSheetPickerItemDisplayable
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetPickerItem.m
+/Users/jeromemorissard/Documents/Projets/Jerome/JMActionSheetDescription/ExampleCarthage/carthagedemo/Carthage/Checkouts/JMActionSheetDescription/Pod/Classes/JMActionSheetPickerItem.h
+/Users/jeromemorissard/Library/Developer/Xcode/DerivedData/JMActionSheetDescription-adstaobgfmcnyjbbgkchkjbomccf/Build/Intermediates/JMActionSheetDescription.build/Release-iphoneos/JMActionSheetDescription.build/DerivedSources/JMActionSheetDescription_vers.c
