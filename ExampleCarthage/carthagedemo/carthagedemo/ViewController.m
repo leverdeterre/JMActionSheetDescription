@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-@import JMActionSheetDescription;
+#import <JMActionSheetDescription/JMDatePickerActionSheet.h>
 
 @interface ViewController ()
 @end
@@ -16,9 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.    
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    NSDate *minDate = [[NSDate date] dateByAddingTimeInterval:-60*60*24*1];
+    NSDate *maxDate = [[NSDate date] dateByAddingTimeInterval:60*60*24*60];
+    NSDate *selectedDate = [NSDate date];
+    
+    [JMDatePickerActionSheet showDatePickerActionSheetMinDate:minDate
+                                                      maxDate:maxDate
+                                                 selectedDate:selectedDate
+                                                  updateBlock:^(id selectedItem) {
+                                                      NSLog(@"updateBlock called %@",selectedItem);
+                                                  }
+                                                validateBlock:^(id selectedItem) {
+                                                    NSLog(@"validateBlock called %@",selectedItem);
+                                                }
+                                                        title:@"MyTitle"
+                                             inViewController:self];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
